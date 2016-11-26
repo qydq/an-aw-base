@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--angle 角度可以改变，如果角度改变可以复写这个drawable，入如果不改变，则可以在你的项目中复写这两个颜色代码值，如果相等就是没有渐变效果-->
+    <gradient
+        android:angle="0"
+        android:endColor="@color/CommColorNightBackgroundClicked"
+        android:startColor="@color/CommColorNightBackground" />
+</shape>
