@@ -1,16 +1,16 @@
 # an-aw-base
 
-[x]项目的主要功能是作为an框架的基类（基础的an-base）的仓库；你可以借助github，jitpack ，bintrary快速集成；
+    [x]项目的主要功能是作为an框架的基类（基础的an-base）的仓库；你可以借助github，jitpack ，bintrary快速集成；
 
-[x]框架来源于本人an-maven-base框架，an-aw-base框架去除了an-maven-base框架不常用的功能，更轻量提升了性能。
+    [x]框架来源于本人an-maven-base框架，an-aw-base框架去除了an-maven-base框架不常用的功能，更轻量提升了性能。
 
 本项目地址：https://github.com/qydq/an-aw-base
 
 使用介绍：如下简介或知乎，或个人网易博客。
 
->个人知乎主页：https://www.zhihu.com/people/qydq
+    >个人知乎主页：https://www.zhihu.com/people/qydq
 
->个人博客主页：https://bgwan.blog.163.com
+    >个人博客主页：https://bgwan.blog.163.com
 
 
 如有使用问题请发送电子邮件。
@@ -44,9 +44,7 @@
 
 ## [![](https://jitpack.io/v/qydq/an-maven-base.svg)](https://jitpack.io/#qydq/an-maven-base)
 
-#7
-
-H7
+#######
 
 # 1。前言
 
