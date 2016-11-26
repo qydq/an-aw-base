@@ -68,15 +68,20 @@
 
 
 >使用建议继承SuperActivity，SuperFragment，BasePresenter，BaseView。
+
 >使用建议在AndroidManifest.xml中加入android:theme="@style/Theme.AppCompat.Light.NoActionBar"`。
+
 >使用建议在编译的build的时候注意an-aw-base需要在API=19或以上版本编译。
 
 + an框架提供了SuperActivity,SuperFragment,BasePresenter,BaseView等基类符合Google material design。
 
-+ an框架提供了网络请求基于xutils模块的封装，http实现XHttps
-   i.   HTTP实现利用了XHttps提供了post,get,upLoadFile,downLoadFile..
-   ii.  集成以上则可以使用注解功能，可以参考xUtils3开源项目。
-   iii. 提供便捷XCallBack ,XParseResponse ,XProgressCallBack操作。
++ an框架提供了网络请求基于xutils模块的封装，http实现XHttps。
+
+>   i.   HTTP实现利用了XHttps提供了post,get,upLoadFile,downLoadFile..
+
+>   ii.  集成以上则可以使用注解功能，可以参考xUtils3开源项目。
+
+>   iii. 提供便捷XCallBack ,XParseResponse ,XProgressCallBack操作。
 
 + an框架包含了许多实用的工具类，像MD5加密，数据校验，夜间模式切换等。
 
