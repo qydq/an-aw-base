@@ -1,16 +1,16 @@
 # an-aw-base
 
-    [x]项目的主要功能是作为an框架的基类（基础的an-base）的仓库；你可以借助github，jitpack ，bintrary快速集成；
+[x]  项目的主要功能是作为an框架的基类（基础的an-base）的仓库；你可以借助github，jitpack ，bintrary快速集成；
 
-    [x]框架来源于本人an-maven-base框架，an-aw-base框架去除了an-maven-base框架不常用的功能，更轻量提升了性能。
+[x]    框架来源于本人an-maven-base框架，an-aw-base框架去除了an-maven-base框架不常用的功能，更轻量提升了性能。
 
 本项目地址：https://github.com/qydq/an-aw-base
 
 使用介绍：如下简介或知乎，或个人网易博客。
 
-    >个人知乎主页：https://www.zhihu.com/people/qydq
+>个人知乎主页：https://www.zhihu.com/people/qydq
 
-    >个人博客主页：https://bgwan.blog.163.com
+>个人博客主页：https://bgwan.blog.163.com
 
 
 如有使用问题请发送电子邮件。
@@ -50,15 +50,15 @@
 
 使用时加入如下依赖即可。（注：也可以使用之前的低稳定版本）
 
->compile 'com.github.qydq:an-maven-base:0.1.3'
+'compile 'com.github.qydq:an-maven-base:0.1.3''
 
 或者加入：
 
->compile 'cn.android.sunst:an-base:0.0.2'
+`compile 'cn.android.sunst:an-base:0.0.2'`
 
 如要使用整套an框架则加入另一个依赖，具体请参考url = https://github.com/qydq/an
 
->compile 'com.github.qydq:an:0.0.1'
+compile 'com.github.qydq:an:0.0.1'
 
 或者加入：
 
@@ -69,9 +69,9 @@
 
   使用时建议继承SuperActivity,或SuperFragment使用，兼容an-maven-base0.0.2及早期版本
 
-+。an框架中实现了比较老的SuperActivity,SuperFragment,使用时直接集成即可。
++  an框架中实现了比较老的SuperActivity,SuperFragment,使用时直接集成即可。
 
-+。an框架提供了一些常用的控件，主要为了解决监听的问题。
++  an框架提供了一些常用的控件，主要为了解决监听的问题。
 
 +。an框架提供了大量的utils。
 
