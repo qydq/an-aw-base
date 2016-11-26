@@ -44,6 +44,10 @@
 
 ## [![](https://jitpack.io/v/qydq/an-maven-base.svg)](https://jitpack.io/#qydq/an-maven-base)
 
+#7
+
+H7
+
 # 1。前言
 
 使用时加入如下依赖即可。（注：也可以使用之前的低稳定版本）
