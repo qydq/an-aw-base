@@ -1,29 +1,31 @@
 # an-aw-base
 
-[x]  项目的主要功能是作为an框架的基类（基础的an-base）的仓库；你可以借助github，jitpack ，bintrary快速集成；
+* 项目的主要功能是作为an框架的基类（基础的an-base）的仓库；你可以借助github，jitpack ，bintrary快速集成；
 
-[x]    框架来源于本人an-maven-base框架，an-aw-base框架去除了an-maven-base框架不常用的功能，更轻量提升了性能。
+* 框架来源于本人an-maven-base框架，an-aw-base框架去除了an-maven-base框架不常用的功能，更轻量提升了性能。
 
 本项目地址：https://github.com/qydq/an-aw-base
 
 使用介绍：如下简介或知乎，或个人网易博客。
-
+---
 >个人知乎主页：https://www.zhihu.com/people/qydq
 
 >个人博客主页：https://bgwan.blog.163.com
 
 
 如有使用问题请发送电子邮件。
+---
+>邮件地址： staryumou@163.com  /  qyddai@gmail.com
 
-邮件地址： staryumou@163.com  /  qyddai@gmail.com
+#######
 
 # 特别说明
 	
-	创建时间 <------2016年09月17日------->
+>创建时间 <------2016年09月17日------->
 	
-	2016年09月17日;最近修改时间：2016年09月19日。
+>2016年09月17日;最近修改时间：2016年09月19日。
 	
-### Tips
+## Tips
 	
 1。前言（包含该项目主要实现的功能的简短说明，运行配置；可选）。
 
@@ -31,9 +33,9 @@
 
 3。思路或使用（代码）。
 
- ## ***   实现思路    *** ##  
+>## ***   实现思路    *** ##  
 
- ## ***   使用方法    *** ##  
+>## ***   使用方法    *** ##  
 
 4。重要知识点（总结，思考）。
 
@@ -42,7 +44,7 @@
 6。联系作者。
 
 
-## [![](https://jitpack.io/v/qydq/an-maven-base.svg)](https://jitpack.io/#qydq/an-maven-base)
+# [![](https://jitpack.io/v/qydq/an-maven-base.svg)](https://jitpack.io/#qydq/an-maven-base)
 
 #######
 
@@ -50,7 +52,7 @@
 
 使用时加入如下依赖即可。（注：也可以使用之前的低稳定版本）
 
-'compile 'com.github.qydq:an-maven-base:0.1.3''
+`compile 'com.github.qydq:an-maven-base:0.1.3'`
 
 或者加入：
 
@@ -58,34 +60,32 @@
 
 如要使用整套an框架则加入另一个依赖，具体请参考url = https://github.com/qydq/an
 
-compile 'com.github.qydq:an:0.0.1'
+`compile 'com.github.qydq:an:0.0.1'`
 
 或者加入：
 
->compile 'cn.android.sunst:an:0.0.1'
+`compile 'cn.android.sunst:an:0.0.1'`
 
 
-该项目主要实现an框架的基础base依赖关系，所有an框架都是以an-maven-base为基础建立的结构，an-maven-base采用mvp的设计模式。 
-
-  使用时建议继承SuperActivity,或SuperFragment使用，兼容an-maven-base0.0.2及早期版本
+项目主要实现an框架的基础base依赖关系，所有an框架都是以an-aw-base(之前为an-maven-base)为基础建立的结构，使用建议继承SuperActivity,或SuperFragment使用，并且在AndroidManifest.xml中加入`android:theme="@style/Theme.AppCompat.Light.NoActionBar"`，在编译的build的时候注意an-aw-base需要在API=19以上编译。
 
 +  an框架中实现了比较老的SuperActivity,SuperFragment,使用时直接集成即可。
 
 +  an框架提供了一些常用的控件，主要为了解决监听的问题。
 
-+。an框架提供了大量的utils。
++ an框架提供了大量的utils。
 
-+。an框架实现了一些常用的activity显示问题。
++ an框架实现了一些常用的activity显示问题。
 
-+。an框架简化了Toast使用，直接showToast。
++ an框架简化了Toast使用，直接showToast。
 
-+。an框架加入了两种夜间模式的功能。
++ an框架加入了两种夜间模式的功能。
 
-+。an框架集成了xutils3.0以上的网络快速开发框架。
++ an框架集成了xutils3.0以上的网络快速开发框架。
 
-+。an框架提供了快速监听网络变化的方法。
++ an框架提供了快速监听网络变化的方法。
 
-+。an框架后期功能正在完善中。
++ an框架后期功能正在完善中。
 
 # 2。实现效果
 
