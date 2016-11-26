@@ -1,6 +1,6 @@
 # an-aw-base
 
-* 项目的主要功能是作为an框架的基类（基础的an-base）的仓库；你可以借助github，jitpack ，bintrary快速集成；
+* 项目的主要功能是作为an框架的基类（基础的an-base）的仓库；你可以借助github，jitpack ，bintrary快速集成。
 
 * 框架来源于本人an-maven-base框架，an-aw-base框架去除了an-maven-base框架不常用的功能，更轻量提升了性能。
 
@@ -67,15 +67,18 @@
 `compile 'cn.android.sunst:an:0.0.1'`
 
 
-项目主要实现an框架的基础base依赖关系，所有an框架都是以an-aw-base(之前为an-maven-base)为基础建立的结构，使用建议继承SuperActivity,或SuperFragment使用，并且在AndroidManifest.xml中加入`android:theme="@style/Theme.AppCompat.Light.NoActionBar"`，在编译的build的时候注意an-aw-base需要在API=19以上编译。
+>使用建议继承SuperActivity，SuperFragment，BasePresenter，BaseView。
+>使用建议在AndroidManifest.xml中加入android:theme="@style/Theme.AppCompat.Light.NoActionBar"`。
+>使用建议在编译的build的时候注意an-aw-base需要在API=19或以上版本编译。
 
-+  an框架中实现了比较老的SuperActivity,SuperFragment,使用时直接集成即可。
++ an框架提供了SuperActivity,SuperFragment,BasePresenter,BaseView等基类符合Google material design。
 
-+  an框架提供了一些常用的控件，主要为了解决监听的问题。
++ an框架提供了网络请求基于xutils模块的封装，http实现XHttps
+   i.   HTTP实现利用了XHttps提供了post,get,upLoadFile,downLoadFile..
+   ii.  集成以上则可以使用注解功能，可以参考xUtils3开源项目。
+   iii. 提供便捷XCallBack ,XParseResponse ,XProgressCallBack操作。
 
-+ an框架提供了大量的utils。
-
-+ an框架实现了一些常用的activity显示问题。
++ an框架包含了许多实用的工具类，像MD5加密，数据校验，夜间模式切换等。
 
 + an框架简化了Toast使用，直接showToast。
 
