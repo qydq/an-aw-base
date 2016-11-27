@@ -23,6 +23,7 @@
         android:layout_below="@+id/tvChangModel"
         android:layout_width="match_parent"
         android:gravity="center"
+        android:id="@+id/btnDialog"
         android:background="@drawable/yy_drawable_selector_md_shape"
         android:layout_height="48dp"
         android:text="Hello World!" />

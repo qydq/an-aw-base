@@ -12,7 +12,7 @@ import android.view.WindowManager;
 /**
  * Created by stary on 2016/8/17.
  * 文件名称：AndroidTranslucentBar
- * 文件描述：
+ * 文件描述：状态栏透明背景设置，加锁的懒汉，线程安全单例模式参考
  * 作者：staryumou@163.com
  * 修改时间：2016/8/17
  */

@@ -1,10 +1,10 @@
 package com.an.base.utils;
 
 /**********************************************************
- * @文件名称：NUtilsNet
+ * @文件名称：NetBroadcastReceiverUtils
  * @文件作者：staryumou@163.com
  * @创建时间：2016/9/14
- * @文件描述：null
+ * @文件描述：判断网络工具类。
  * @修改历史：2016/9/14
  **********************************************************/
 
@@ -12,9 +12,6 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-/**
- * @author cj 判断网络工具类
- */
 public class NetBroadcastReceiverUtils {
     /**
      * 没有连接网络

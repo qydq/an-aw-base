@@ -230,12 +230,14 @@
 
     <!--sunshuntao an fragment new color no changes-->
     <color name="CommColorNightBackground">#CD5C5C</color>
-    <color name="CommColorNightBackgroundClicked">#CD5C5C</color>
+    <color name="CommColorNightBackgroundClicked">#CD5C5C</color><!--CommColorNightBackground-->
     <color name="CommColorDayBackground">#8B008B</color>
-    <color name="CommColorDayBackgroundClicked">#8B008B</color>
+    <color name="CommColorDayBackgroundClicked">#8B008B</color><!--CommColorDayBackgroundClicked-->
     <color name="CommColorTransparent">#00000000</color>
     <color name="CommColorTransparentClicked">#25000000</color>
-    <color name="CommColorBorder">#25000000</color>
-    <color name="CommColorBorderClicked">#00000000</color>
+    <color name="CommColorBorder">#25000000</color><!--CommColorTransparentClicked-->
+    <color name="CommColorBorderClicked">#00000000</color><!--CommColorTransparent-->
+    <color name="CommColorDialog">#8B008B</color><!--CommColorDayBackground-->
+    <color name="CommColorProgressDialog">#8B008B</color><!--CommColorDayBackground-->
 
 </resources>
