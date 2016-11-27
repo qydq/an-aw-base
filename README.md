@@ -30,9 +30,9 @@
 	
 ## Tips
 	
-1¡£Ç°ÑÔ£¨°üº¬¸ÃÏîÄ¿Ö÷ÒªÊµÏÖµÄ¹¦ÄÜµÄ¼ò¶ÌËµÃ÷£¬ÔËÐÐÅäÖÃ£»¿ÉÑ¡£©¡£
+1* Ç°ÑÔ£¨°üº¬¸ÃÏîÄ¿Ö÷ÒªÊµÏÖµÄ¹¦ÄÜµÄ¼ò¶ÌËµÃ÷£¬ÔËÐÐÅäÖÃ£»¿ÉÑ¡£©¡£
 
-2¡£ÊµÏÖÐ§¹û£¨Èç¹ûÃ»ÓÐ¿ÉÒÔÊ¡ÂÔ£¬µ«ÊÇ½¨ÒéÒª°üº¬£¬ÒòÎªÏîÄ¿ÒÔºó×Ô¼º¿´µ½µÄÊ±ºò»á°ïÖú×Ô¼ºÀí½â£©¡£
+2* ÊµÏÖÐ§¹û£¨Èç¹ûÃ»ÓÐ¿ÉÒÔÊ¡ÂÔ£¬µ«ÊÇ½¨ÒéÒª°üº¬£¬ÒòÎªÏîÄ¿ÒÔºó×Ô¼º¿´µ½µÄÊ±ºò»á°ïÖú×Ô¼ºÀí½â£©¡£
 
 3¡£Ë¼Â·»òÊ¹ÓÃ£¨´úÂë£©¡£
 
@@ -51,7 +51,7 @@
 
 #######
 
-# 1¡£Ç°ÑÔ
+# 1* Ç°ÑÔ
 
 **Ê¹ÓÃGradle¹¹½¨Ê±Ìí¼ÓÒÔÏÂÒÀÀµ¼´¿É** * ×¢£ºÒ²¿ÉÒÔÊ¹ÓÃÖ®Ç°µÄµÍÎÈ¶¨°æ±¾£©*
 
@@ -79,29 +79,31 @@
 
 **an-aw-base ¼ò½é**
 
-+ an¿ò¼ÜÌá¹©ÁËSuperActivity,SuperFragment,BasePresenter,BaseViewµÈ»ùÀà·ûºÏGoogle material design¡£
+	+ an¿ò¼ÜÌá¹©ÁËSuperActivity,SuperFragment,BasePresenter,BaseViewµÈ»ùÀà·ûºÏGoogle material design¡£
 
-+ an¿ò¼ÜÌá¹©ÁËÍøÂçÇëÇó»ùÓÚxutilsÄ£¿éµÄ·â×°£¬httpÊµÏÖXHttps¡£
+	+ an¿ò¼ÜÌá¹©ÁËÍøÂçÇëÇó»ùÓÚxutilsÄ£¿éµÄ·â×°£¬httpÊµÏÖXHttps¡£
 
-*i.   HTTPÊµÏÖÀûÓÃÁËXHttpsÌá¹©ÁËpost,get,upLoadFile,downLoadFile...*
+	*i.   HTTPÊµÏÖÀûÓÃÁËXHttpsÌá¹©ÁËpost,get,upLoadFile,downLoadFile...*
 
-*ii.  ¼¯³ÉÒÔÉÏÔò¿ÉÒÔÊ¹ÓÃ×¢½â¹¦ÄÜ£¬¿ÉÒÔ²Î¿¼xUtils3¿ªÔ´ÏîÄ¿¡£*
+	*ii.  ¼¯³ÉÒÔÉÏÔò¿ÉÒÔÊ¹ÓÃ×¢½â¹¦ÄÜ£¬¿ÉÒÔ²Î¿¼xUtils3¿ªÔ´ÏîÄ¿¡£*
 
-*iii. Ìá¹©±ã½ÝXCallBack ,XParseResponse ,XProgressCallBack²Ù×÷¡£*
+	*iii. Ìá¹©±ã½ÝXCallBack ,XParseResponse ,XProgressCallBack²Ù×÷¡£*
 
-+ an¿ò¼Ü°üº¬ÁËÐí¶àÊµÓÃµÄ¹¤¾ßÀà£¬ÏñMD5¼ÓÃÜ£¬Êý¾ÝÐ£Ñé£¬Ò¹¼äÄ£Ê½ÇÐ»»µÈ¡£
+	+ an¿ò¼Ü°üº¬ÁËÐí¶àÊµÓÃµÄ¹¤¾ßÀà£¬ÏñMD5¼ÓÃÜ£¬Êý¾ÝÐ£Ñé£¬Ò¹¼äÄ£Ê½ÇÐ»»µÈ¡£
 
-+ an¿ò¼Ü¼ò»¯ÁËToastÊ¹ÓÃ£¬Ö±½ÓshowToast¡£
+	+ an¿ò¼Ü¼ò»¯ÁËToastÊ¹ÓÃ£¬Ö±½ÓshowToast¡£
 
-+ an¿ò¼Ü¼ÓÈëÁËÁ½ÖÖÒ¹¼äÄ£Ê½µÄ¹¦ÄÜ¡£
+	+ an¿ò¼Ü¼ÓÈëÁËÁ½ÖÖÒ¹¼äÄ£Ê½µÄ¹¦ÄÜ¡£
 
-+ an¿ò¼Ü¼¯³ÉÁËxutils3.0ÒÔÉÏµÄÍøÂç¿ìËÙ¿ª·¢¿ò¼Ü¡£
+	+ an¿ò¼Ü¼¯³ÉÁËxutils3.0ÒÔÉÏµÄÍøÂç¿ìËÙ¿ª·¢¿ò¼Ü¡£
 
-+ an¿ò¼ÜÌá¹©ÁË¿ìËÙ¼àÌýÍøÂç±ä»¯µÄ·½·¨¡£
+	+ an¿ò¼ÜÌá¹©ÁË¿ìËÙ¼àÌýÍøÂç±ä»¯µÄ·½·¨¡£
 
-+ an¿ò¼ÜºóÆÚ¹¦ÄÜÕýÔÚÍêÉÆÖÐ¡£
+	+ an¿ò¼ÜºóÆÚ¹¦ÄÜÕýÔÚÍêÉÆÖÐ¡£
 
-# 2¡£ÊµÏÖÐ§¹û
+#######
+
+# 2* ÊµÏÖÐ§¹û
 
 an¿ò¼Ü£¬0.1.0°æ±¾ÐÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃµÄÊ±ºòÎÞ±³¾°ÑÕÉ«£©¡£ÈçÍ¼
 
@@ -119,7 +121,7 @@ an¿ò¼Ü£¬0.1.0°æ±¾ÐÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃµÄÊ±ºòÎÞ±³¾°ÑÕÉ«£©¡£È
 |Ñ¡ÔñÆ÷Ãû³Æ|±³¾°ËµÃ÷|±ß¿ò|Ô²½Ç|
 |:---------|:------:|:--:|---:|
 |drawable_selector_md|CommColorTransparent< CommColorTransparentClicked <CommColorDayBackground|ÎÞ|ÎÞ|
-|drawable_selector_md_shape|
+|drawable_selector_md_shape|CommColorTransparentClicked <CommColorDayBackground|CommColorBorder|2dp|
 # 4¡£ÖØÒªÖªÊ¶µã¡£
 		
 
