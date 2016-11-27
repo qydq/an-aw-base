@@ -39,11 +39,11 @@
 
 + *Ê¹ÓÃ·½·¨*
 
-4¡£ÖØÒªÖªÊ¶µã£¨×Ü½á£¬Ë¼¿¼£©¡£
+4. ÖØÒªÖªÊ¶µã£¨×Ü½á£¬Ë¼¿¼£©¡£
 
-5¡£ÄÚÈİ²Î¿¼£¨×ğÖØÔ­´´£©¡£
+5. ÄÚÈİ²Î¿¼£¨×ğÖØÔ­´´£©¡£
 
-6¡£ÁªÏµ×÷Õß¡£
+6. ÁªÏµ×÷Õß¡£
 
 
 # [![](https://jitpack.io/v/qydq/an-maven-base.svg)](https://jitpack.io/#qydq/an-maven-base)
@@ -99,7 +99,6 @@
 
 + an¿ò¼ÜºóÆÚ¹¦ÄÜÕıÔÚÍêÉÆÖĞ¡£
 
-########
 ---------
 
 # 2. ÊµÏÖĞ§¹û
@@ -109,7 +108,7 @@ an¿ò¼Ü£¬0.1.0°æ±¾ĞÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃµÄÊ±ºòÎŞ±³¾°ÑÕÉ«£©¡£È
 | ![](https://github.com/qydq/an-maven-base/blob/master/screenpic/base_headview_standard_complex.png)| 
 
 
-#######
+---------
 
 # 3. Ë¼Â·»òÊ¹ÓÃ£¨´úÂë£©
 		
@@ -123,26 +122,28 @@ an¿ò¼Ü£¬0.1.0°æ±¾ĞÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃµÄÊ±ºòÎŞ±³¾°ÑÕÉ«£©¡£È
 |:---------|:-------|:---|---:|
 |drawable_selector_md|CommColorTransparent<br>CommColorTransparentClicked<br>CommColorDayBackground|ÎŞ|ÎŞ|
 |drawable_selector_md_shape|CommColorTransparent<br>CommColorTransparentClicked<br>CommColorDayBackground|CommColorBorder<br>CommColorBorderClicked|2dp|
-# 4¡£ÖØÒªÖªÊ¶µã¡£
-		
 
-# 5¡£ÄÚÈİ²Î¿¼£¨×ğÖØÔ­´´£©¡£
+---------
+
+# 4. ÖØÒªÖªÊ¶µã¡£
+		
+---------
+
+# 5. ÄÚÈİ²Î¿¼£¨×ğÖØÔ­´´£©¡£
 
 ¸öÈËÔ­´´
 
+---------
 
-# 6¡£ÁªÏµ×÷Õß¡£
+# 6. ÁªÏµ×÷Õß¡£
 
 Athor IP£ºsunshuntao£¨qydq£©£¨İªÂÜ»¨£©¡£
 
 Email£ºqyddai@gmail.com¡£
 
-ÖªºõÏîÄ¿µØÖ·£ºhttps://zhuanlan.zhihu.com/qyddai
-
-
 »¶Ó­´ó¼ÒÊ¹ÓÃaN¿ìËÙ¿ª·¢¿ò¼Ü¡£
 If it doesn't work, please send me a email, qyddai@gmail.com
-An¿ò¼ÜÒ²¿ÉÄÜ´æÔÚÒ»Ğ©Ğ¦Ğ¦µÄÈ±Ïİ£¬ÓĞÎÊÌâ»¶Ó­´ó¼Ò·´À¡£¬ÊÕµ½ÓÊ¼şÎÒ»áµÚÒ»´ÎÊ±¼ä»Ø¸´´¦Àí¡£
+An¿ò¼Ü¿ÉÄÜ´æÔÚÒ»Ğ©È±Ïİ£¬ÓĞÎÊÌâ»¶Ó­´ó¼Ò·´À¡£¬ÊÕµ½ÓÊ¼şÎÒ»áµÚÒ»´ÎÊ±¼ä»Ø¸´´¦Àí¡£
 
 Or
 
@@ -198,17 +199,6 @@ http://drakeet.me/android-studio
 		<!-- ÔÚSDCard µÄ¹ÒÔØÈ¨ÏŞ -->
 		<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
 		
-## AndroidManifest.xml
-
-ÒıÓÃµÄµØ·½Ó¦¸ÃÊ¹ÓÃÕâÖÖtheme
-		<application
-        android:allowBackup="true"
-        android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-        android:windowSoftInputMode="stateAlwaysHidden">
-		</application>
-		
 		
 ## ±àÒë¼°Ïà¹ØSDKÅäÖÃ¡£
 
@@ -217,7 +207,7 @@ http://drakeet.me/android-studio
 			buildToolsVersion "24.0.2"
 
 			defaultConfig {
-			minSdkVersion 19£¨ÏÖÔÚ¸ÄÎª21£©
+			minSdkVersion 19
 			targetSdkVersion 24
 			versionCode 1
 			versionName "1.0"
