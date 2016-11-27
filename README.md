@@ -1,25 +1,25 @@
 # an-aw-base
---
+
 * 项目的主要功能是作为an框架的基类（基础的an-base）的仓库；你可以借助github，jitpack ，bintrary快速集成。
 
 * 框架来源于本人an-maven-base框架，an-aw-base框架去除了an-maven-base框架不常用的功能，更轻量提升了性能。
 
-本项目地址：https://github.com/qydq/an-aw-base
+*本项目地址：https://github.com/qydq/an-aw-base*
 
 使用介绍：如下简介或知乎，或个人网易博客。
-----
+-----
 >个人知乎主页：https://www.zhihu.com/people/qydq
 
 >个人博客主页：https://bgwan.blog.163.com
 
 
 如有使用问题请发送电子邮件。
-----
+-----
 >邮件地址： staryumou@163.com  /  qyddai@gmail.com
 
-#######
+########
 
-# 特别说明
+## 特别说明
 	
 >创建时间 <------2016年09月17日------->
 	
@@ -33,9 +33,9 @@
 
 3。思路或使用（代码）。
 
->## ***   实现思路    *** ##  
++     *实现思路*
 
->## ***   使用方法    *** ##  
++     *使用方法*
 
 4。重要知识点（总结，思考）。
 
@@ -50,7 +50,7 @@
 
 # 1。前言
 
-使用时加入如下依赖即可。（注：也可以使用之前的低稳定版本）
+**使用Gradle构建时添加以下依赖即可** * （注：也可以使用之前的低稳定版本）*
 
 `compile 'com.github.qydq:an-maven-base:0.1.3'`
 
@@ -66,6 +66,7 @@
 
 `compile 'cn.android.sunst:an:0.0.1'`
 
+** 使用建议 **
 
 >使用建议继承SuperActivity，SuperFragment，BasePresenter，BaseView。
 
@@ -73,15 +74,17 @@
 
 >使用建议在编译的build的时候注意an-aw-base需要在API=19或以上版本编译。
 
+** an-aw-base 简介 **
+
 + an框架提供了SuperActivity,SuperFragment,BasePresenter,BaseView等基类符合Google material design。
 
 + an框架提供了网络请求基于xutils模块的封装，http实现XHttps。
 
->   i.   HTTP实现利用了XHttps提供了post,get,upLoadFile,downLoadFile..
+*i.   HTTP实现利用了XHttps提供了post,get,upLoadFile,downLoadFile...*
 
->   ii.  集成以上则可以使用注解功能，可以参考xUtils3开源项目。
+*ii.  集成以上则可以使用注解功能，可以参考xUtils3开源项目。*
 
->   iii. 提供便捷XCallBack ,XParseResponse ,XProgressCallBack操作。
+*iii. 提供便捷XCallBack ,XParseResponse ,XProgressCallBack操作。*
 
 + an框架包含了许多实用的工具类，像MD5加密，数据校验，夜间模式切换等。
 
