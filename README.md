@@ -39,11 +39,11 @@
 
 + *使用方法*
 
-4. 重要知识点（总结，思考）。
+4+ 重要知识点（总结，思考）。
 
-5. 内容参考（尊重原创）。
+5+ 内容参考（尊重原创）。
 
-6. 联系作者。
+6* 联系作者。
 
 
 # [![](https://jitpack.io/v/qydq/an-maven-base.svg)](https://jitpack.io/#qydq/an-maven-base)
