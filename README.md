@@ -31,7 +31,7 @@
 	
 1. 前言（包含该项目主要实现的功能的简短说明，运行配置；可选）。
 
-2. 实现效果（如果没有可以省略，但是建议要包含，因为项目以后自己看到的时候会帮助自己理解）。
+2. 实现效果（如果没有可以省略，建议包含）。
 
 3. 思路或使用（代码）。
 
@@ -77,6 +77,7 @@
 >使用建议在编译的build的时候注意an-aw-base需要在API=19或以上版本编译。
 
 **Tips**
+---
 
 + an框架提供了SuperActivity,SuperFragment,BasePresenter,BaseView等基类符合Google material design。
 
@@ -101,17 +102,19 @@
 #######
 
 # 2. 实现效果
-
+---
 an框架，0.1.0版本新增通用的标题栏目方便以后的集成（实际使用的时候无背景颜色）。如图
 
 | ![](https://github.com/qydq/an-maven-base/blob/master/screenpic/base_headview_standard_complex.png)| 
 
 
-# 3。思路或使用（代码）
-		
-### + 实现思路
+---
 
-### + 使用方法
+# 3. 思路或使用（代码）
+		
+### 实现思路
+
+### 使用方法
 
 + **选择器**
 	
