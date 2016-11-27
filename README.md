@@ -52,7 +52,7 @@
 
 # 1. Ç°ÑÔ
 
-**Ê¹ÓÃGradle¹¹½¨Ê±Ìí¼ÓÒÔÏÂÒÀÀµ¼´¿É** * ×¢£ºÒ²¿ÉÒÔÊ¹ÓÃÖ®Ç°µÄµÍÎÈ¶¨°æ±¾£©*
+**Ê¹ÓÃGradle¹¹½¨Ê±Ìí¼ÓÒÔÏÂÒÀÀµ¼´¿É** *£¨×¢£ºÒ²¿ÉÒÔÊ¹ÓÃÖ®Ç°µÄµÍÎÈ¶¨°æ±¾£©*
 
 `compile 'com.github.qydq:an-maven-base:0.1.3'`
 
@@ -116,7 +116,7 @@ an¿ò¼Ü£¬0.1.0°æ±¾ĞÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃµÄÊ±ºòÎŞ±³¾°ÑÕÉ«£©¡£È
 #### Ñ¡ÔñÆ÷
 	
 |Ñ¡ÔñÆ÷Ãû³Æ|±³¾°ËµÃ÷|±ß¿ò|Ô²½Ç|
-|:---------|:------:|:--:|---:|
+|:---------|:-------|:---|---:|
 |drawable_selector_md|CommColorTransparent<br>CommColorTransparentClicked<br>CommColorDayBackground|ÎŞ|ÎŞ|
 |drawable_selector_md_shape|CommColorTransparent<br>CommColorTransparentClicked<br>CommColorDayBackground|CommColorBorder<br>CommColorBorderClicked|2dp|
 # 4¡£ÖØÒªÖªÊ¶µã¡£
