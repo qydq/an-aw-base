@@ -6,20 +6,19 @@
 
 *±¾ÏîÄ¿µØÖ·£ºhttps://github.com/qydq/an-aw-base*
 
-Ê¹ÓÃ½éÉÜ£ºÈçÏÂ¼ò½é»òÖªºõ£¬»ò¸öÈËÍøÒ×²©¿Í¡£
-------
+**Ê¹ÓÃ½éÉÜ£ºÈçÏÂ¼ò½é»òÖªºõ£¬»ò¸öÈËÍøÒ×²©¿Í¡£**
+
 >¸öÈËÖªºõÖ÷Ò³£ºhttps://www.zhihu.com/people/qydq
 
 >¸öÈË²©¿ÍÖ÷Ò³£ºhttps://bgwan.blog.163.com
 
 
-ÈçÓĞÊ¹ÓÃÎÊÌâÇë·¢ËÍµç×ÓÓÊ¼ş¡£
-------
+**ÈçÓĞÊ¹ÓÃÎÊÌâÇë·¢ËÍµç×ÓÓÊ¼ş¡£**
+
 >ÓÊ¼şµØÖ·£º staryumou@163.com  /  qyddai@gmail.com
 
 
-ÌØ±ğËµÃ÷
-------
+**ÌØ±ğËµÃ÷**
 
 	
 >´´½¨Ê±¼ä <------2016Äê09ÔÂ17ÈÕ------->
@@ -30,11 +29,11 @@
 	
 ## Tips
 	
-1* Ç°ÑÔ£¨°üº¬¸ÃÏîÄ¿Ö÷ÒªÊµÏÖµÄ¹¦ÄÜµÄ¼ò¶ÌËµÃ÷£¬ÔËĞĞÅäÖÃ£»¿ÉÑ¡£©¡£
+1. Ç°ÑÔ£¨°üº¬¸ÃÏîÄ¿Ö÷ÒªÊµÏÖµÄ¹¦ÄÜµÄ¼ò¶ÌËµÃ÷£¬ÔËĞĞÅäÖÃ£»¿ÉÑ¡£©¡£
 
-2* ÊµÏÖĞ§¹û£¨Èç¹ûÃ»ÓĞ¿ÉÒÔÊ¡ÂÔ£¬µ«ÊÇ½¨ÒéÒª°üº¬£¬ÒòÎªÏîÄ¿ÒÔºó×Ô¼º¿´µ½µÄÊ±ºò»á°ïÖú×Ô¼ºÀí½â£©¡£
+2. ÊµÏÖĞ§¹û£¨Èç¹ûÃ»ÓĞ¿ÉÒÔÊ¡ÂÔ£¬µ«ÊÇ½¨ÒéÒª°üº¬£¬ÒòÎªÏîÄ¿ÒÔºó×Ô¼º¿´µ½µÄÊ±ºò»á°ïÖú×Ô¼ºÀí½â£©¡£
 
-3¡£Ë¼Â·»òÊ¹ÓÃ£¨´úÂë£©¡£
+3. Ë¼Â·»òÊ¹ÓÃ£¨´úÂë£©¡£
 
 + *ÊµÏÖË¼Â·*
 
@@ -51,7 +50,7 @@
 
 #######
 
-# 1* Ç°ÑÔ
+# 1. Ç°ÑÔ
 
 **Ê¹ÓÃGradle¹¹½¨Ê±Ìí¼ÓÒÔÏÂÒÀÀµ¼´¿É** * ×¢£ºÒ²¿ÉÒÔÊ¹ÓÃÖ®Ç°µÄµÍÎÈ¶¨°æ±¾£©*
 
@@ -79,31 +78,29 @@
 
 **an-aw-base ¼ò½é**
 
-	+ an¿ò¼ÜÌá¹©ÁËSuperActivity,SuperFragment,BasePresenter,BaseViewµÈ»ùÀà·ûºÏGoogle material design¡£
++ an¿ò¼ÜÌá¹©ÁËSuperActivity,SuperFragment,BasePresenter,BaseViewµÈ»ùÀà·ûºÏGoogle material design¡£
 
-	+ an¿ò¼ÜÌá¹©ÁËÍøÂçÇëÇó»ùÓÚxutilsÄ£¿éµÄ·â×°£¬httpÊµÏÖXHttps¡£
++ an¿ò¼ÜÌá¹©ÁËÍøÂçÇëÇó»ùÓÚxutilsÄ£¿éµÄ·â×°£¬httpÊµÏÖXHttps¡£
 
-	*i.   HTTPÊµÏÖÀûÓÃÁËXHttpsÌá¹©ÁËpost,get,upLoadFile,downLoadFile...*
+*i.   HTTPÊµÏÖÀûÓÃÁËXHttpsÌá¹©ÁËpost,get,upLoadFile,downLoadFile...*
 
-	*ii.  ¼¯³ÉÒÔÉÏÔò¿ÉÒÔÊ¹ÓÃ×¢½â¹¦ÄÜ£¬¿ÉÒÔ²Î¿¼xUtils3¿ªÔ´ÏîÄ¿¡£*
+*ii.  ¼¯³ÉÒÔÉÏÔò¿ÉÒÔÊ¹ÓÃ×¢½â¹¦ÄÜ£¬¿ÉÒÔ²Î¿¼xUtils3¿ªÔ´ÏîÄ¿¡£*
 
-	*iii. Ìá¹©±ã½İXCallBack ,XParseResponse ,XProgressCallBack²Ù×÷¡£*
+*iii. Ìá¹©±ã½İXCallBack ,XParseResponse ,XProgressCallBack²Ù×÷¡£*
 
-	+ an¿ò¼Ü°üº¬ÁËĞí¶àÊµÓÃµÄ¹¤¾ßÀà£¬ÏñMD5¼ÓÃÜ£¬Êı¾İĞ£Ñé£¬Ò¹¼äÄ£Ê½ÇĞ»»µÈ¡£
++ an¿ò¼Ü°üº¬ÁËĞí¶àÊµÓÃµÄ¹¤¾ßÀà£¬ÏñMD5¼ÓÃÜ£¬Êı¾İĞ£Ñé£¬Ò¹¼äÄ£Ê½ÇĞ»»µÈ¡£
 
-	+ an¿ò¼Ü¼ò»¯ÁËToastÊ¹ÓÃ£¬Ö±½ÓshowToast¡£
++ an¿ò¼Ü¼ò»¯ÁËToastÊ¹ÓÃ£¬Ö±½ÓshowToast¡£
 
-	+ an¿ò¼Ü¼ÓÈëÁËÁ½ÖÖÒ¹¼äÄ£Ê½µÄ¹¦ÄÜ¡£
++ an¿ò¼Ü¼ÓÈëÁËÁ½ÖÖÒ¹¼äÄ£Ê½µÄ¹¦ÄÜ¡£
 
-	+ an¿ò¼Ü¼¯³ÉÁËxutils3.0ÒÔÉÏµÄÍøÂç¿ìËÙ¿ª·¢¿ò¼Ü¡£
++ an¿ò¼ÜÌá¹©ÁË¿ìËÙ¼àÌıÍøÂç±ä»¯µÄ·½·¨¡£
 
-	+ an¿ò¼ÜÌá¹©ÁË¿ìËÙ¼àÌıÍøÂç±ä»¯µÄ·½·¨¡£
-
-	+ an¿ò¼ÜºóÆÚ¹¦ÄÜÕıÔÚÍêÉÆÖĞ¡£
++ an¿ò¼ÜºóÆÚ¹¦ÄÜÕıÔÚÍêÉÆÖĞ¡£
 
 #######
 
-# 2* ÊµÏÖĞ§¹û
+# 2. ÊµÏÖĞ§¹û
 
 an¿ò¼Ü£¬0.1.0°æ±¾ĞÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃµÄÊ±ºòÎŞ±³¾°ÑÕÉ«£©¡£ÈçÍ¼
 
@@ -120,8 +117,8 @@ an¿ò¼Ü£¬0.1.0°æ±¾ĞÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃµÄÊ±ºòÎŞ±³¾°ÑÕÉ«£©¡£È
 	
 |Ñ¡ÔñÆ÷Ãû³Æ|±³¾°ËµÃ÷|±ß¿ò|Ô²½Ç|
 |:---------|:------:|:--:|---:|
-|drawable_selector_md|CommColorTransparent< CommColorTransparentClicked <CommColorDayBackground|ÎŞ|ÎŞ|
-|drawable_selector_md_shape|CommColorTransparentClicked <CommColorDayBackground|CommColorBorder|2dp|
+|drawable_selector_md|CommColorTransparent<br>CommColorTransparentClicked<br>CommColorDayBackground|ÎŞ|ÎŞ|
+|drawable_selector_md_shape|CommColorTransparent<br>CommColorTransparentClicked<br>CommColorDayBackground|CommColorBorder<br>CommColorBorderClicked|2dp|
 # 4¡£ÖØÒªÖªÊ¶µã¡£
 		
 
