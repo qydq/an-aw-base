@@ -11,13 +11,13 @@
     android:padding="10dp">
 
     <ImageView
-        android:id="@+id/anDgUtilsIv"
+        android:id="@+id/anDialogIv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/base_drawable_loading" />
 
     <TextView
-        android:id="@+id/anDgUtilsTv"
+        android:id="@+id/anDialogTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"

@@ -3,7 +3,7 @@
     android:layout_height="100dp"
     android:layout_centerInParent="true"
     android:layout_gravity="center_horizontal"
-    android:background="@drawable/yy_shape_dcustomdlg_bg"
+    android:background="@drawable/yy_shape_dialog_progress"
     android:orientation="vertical">
 
     <RelativeLayout

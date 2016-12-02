@@ -14,4 +14,28 @@ public class ResponseBaseModel implements Serializable{
     private String ret;
     private String body;
     private boolean hasmore;
+
+    public String getRet() {
+        return ret;
+    }
+
+    public void setRet(String ret) {
+        this.ret = ret;
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
+    }
+
+    public boolean isHasmore() {
+        return hasmore;
+    }
+
+    public void setHasmore(boolean hasmore) {
+        this.hasmore = hasmore;
+    }
 }

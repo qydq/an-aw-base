@@ -26,17 +26,16 @@ public enum DUtilsDialog {
     INSTANCE;
     /**
      * 得到自定义的progressDialog
-     *
      * @param context
      * @param msg 创建一个对话框，msg是提示语，isCancle是否可以取消对话框
      * @return Dialog
      */
     public Dialog createDialog(Context context, String msg, boolean isCancle) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View v = inflater.inflate(R.layout.base_dialog_standard, null);// 得到加载view
+        View v = inflater.inflate(R.layout.base_standard_dialog, null);// 得到加载view
         LinearLayout layout = (LinearLayout) v.findViewById(R.id.anLlHeadView);// 加载布局
-        ImageView spaceshipImage = (ImageView) v.findViewById(R.id.anDgUtilsIv);
-        TextView tipTextView = (TextView) v.findViewById(R.id.anDgUtilsTv);// 提示文字
+        ImageView spaceshipImage = (ImageView) v.findViewById(R.id.anDialogIv);
+        TextView tipTextView = (TextView) v.findViewById(R.id.anDialogTv);// 提示文字
         // 加载动画
         Animation hyperspaceJumpAnimation = AnimationUtils.loadAnimation(context, R.anim.base_anim_dialog_loading);
         // 使用ImageView显示动画
@@ -49,13 +48,21 @@ public enum DUtilsDialog {
                 LinearLayout.LayoutParams.MATCH_PARENT));
         return loadingDialog;
     }
+
+    /**
+     * @param context
+     * @param thems 一般传入${R.style.AnProgressDialog}
+     * @param tips 对话框需要的内容提示
+     * @param isCancle 是否可以取消
+     * @return
+     */
     public ProgressDialog createProgressDialog(Context context,int thems,String tips, boolean isCancle) {
         ProgressDialog progressDialog = new ProgressDialog(context,thems);
         progressDialog.setCancelable(isCancle);
         progressDialog.setCanceledOnTouchOutside(isCancle);
-        progressDialog.setContentView(R.layout.base_dialog_standard_progress);
+        progressDialog.setContentView(R.layout.base_standard_dialog_progress);
         LayoutInflater inflater = LayoutInflater.from(context);
-        View v = inflater.inflate(R.layout.base_dialog_standard_progress, null);
+        View v = inflater.inflate(R.layout.base_standard_dialog_progress, null);
         TextView anProgressTv = (TextView) v.findViewById(R.id.anProgressTv);
         anProgressTv.setText(tips);
         Window window = progressDialog.getWindow();
