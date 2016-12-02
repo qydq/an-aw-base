@@ -120,6 +120,8 @@ an¿ò¼Ü£¬0.1.0°æ±¾ĞÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃµÄÊ±ºòÎŞ±³¾°ÑÕÉ«£©¡£È
 
 [AndroidÀûÓÃaN¿ò¼Ü¿ìËÙÊµÏÖÍøÂçÇëÇó(º¬ÉÏ´«ÏÂÔØÎÄ¼ş£©¸ß¼¶-¼ÓÇ¿°æ](https://zhuanlan.zhihu.com/p/24132012)
 
+[aN¿ò¼ÜÊ¾Àı-XHttpsActivity.java£¨º¬×¢½â£¬ContentVIew£¬£©](https://raw.githubusercontent.com/qydq/an-aw-base/master/app/src/main/java/com/qyddai/an_aw_base/XHttpsActivity.java)
+
 
 
 
