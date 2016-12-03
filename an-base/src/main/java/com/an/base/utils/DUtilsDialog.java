@@ -56,15 +56,16 @@ public enum DUtilsDialog {
      * @param isCancle 是否可以取消
      * @return
      */
-    public ProgressDialog createProgressDialog(Context context,int thems,String tips, boolean isCancle) {
+    public ProgressDialog showProgressDialog(Context context,int thems,String tips, boolean isCancle) {
         ProgressDialog progressDialog = new ProgressDialog(context,thems);
         progressDialog.setCancelable(isCancle);
         progressDialog.setCanceledOnTouchOutside(isCancle);
-        progressDialog.setContentView(R.layout.base_standard_dialog_progress);
         LayoutInflater inflater = LayoutInflater.from(context);
         View v = inflater.inflate(R.layout.base_standard_dialog_progress, null);
         TextView anProgressTv = (TextView) v.findViewById(R.id.anProgressTv);
         anProgressTv.setText(tips);
+        progressDialog.show();
+        progressDialog.setContentView(R.layout.base_standard_dialog_progress);
         Window window = progressDialog.getWindow();
         WindowManager.LayoutParams params = window.getAttributes();
         params.width = WindowManager.LayoutParams.WRAP_CONTENT;

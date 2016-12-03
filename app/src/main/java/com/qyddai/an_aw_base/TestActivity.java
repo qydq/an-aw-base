@@ -18,9 +18,10 @@ import com.an.base.utils.DUtilsDialog;
  * 最后修改：on 2016/11/25.
  */
 
-public class TestActivity extends Activity{
+public class TestActivity extends Activity {
     private Button button;
     private ProgressDialog dialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,8 +31,7 @@ public class TestActivity extends Activity{
             @Override
             public void onClick(View v) {
                 dialog = DUtilsDialog.INSTANCE.
-                        createProgressDialog(TestActivity.this,R.style.AnProgressDialog,"正在登录",true);
-                dialog.show();
+                        showProgressDialog(TestActivity.this, R.style.AnProgressDialog, "正在登录```", true);
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -39,11 +39,12 @@ public class TestActivity extends Activity{
                         msg.what = 1;
                         handler.sendMessage(msg);
                     }
-                },3000);
+                }, 3000);
             }
         });
     }
-    private Handler handler = new Handler(){
+
+    private Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);

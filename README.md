@@ -116,14 +116,25 @@ an¿ò¼Ü£¬0.1.0°æ±¾ĞÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃµÄÊ±ºòÎŞ±³¾°ÑÕÉ«£©¡£È
 
 ### Ê¹ÓÃ·½·¨
 
++ **ÍøÂç×´Ì¬¼àÌı**
+
+[ÍøÂç×´Ì¬¼àÌı-MainActivity.java-onNetChange](https://raw.githubusercontent.com/qydq/an-aw-base/master/app/src/main/java/com/qyddai/an_aw_base/MainActivity.java)
+
++ **DUtilsDialogÊ¹ÓÃ**
+
+[Android ÀûÓÃan¿ò¼Ü¿ìËÙ¼ÓÈëDialog¶Ô»°¿òÊ¾Àı´úÂë](https://zhuanlan.zhihu.com/p/24146818)
+
+//android:background="@color/CommColorDialog"
+[An¿ò¼ÜÊ¾Àı-MainActivity.java¶ÔÓ¦ÆÕÍ¨dialog](https://raw.githubusercontent.com/qydq/an-aw-base/master/app/src/main/java/com/qyddai/an_aw_base/MainActivity.java)
+
+//android:background="@drawable/yy_shape_dialog_progress"
+[An¿ò¼ÜÊ¾Àı-TestActivity.java¶ÔÓ¦ProgressDialog](https://github.com/qydq/an-aw-base/blob/master/app/src/main/java/com/qyddai/an_aw_base/TestActivity.java)
+
 + **XHttpsÍøÂçÇëÇóÊ¹ÓÃ·½·¨**
 
 [AndroidÀûÓÃaN¿ò¼Ü¿ìËÙÊµÏÖÍøÂçÇëÇó(º¬ÉÏ´«ÏÂÔØÎÄ¼ş£©¸ß¼¶-¼ÓÇ¿°æ](https://zhuanlan.zhihu.com/p/24132012)
 
 [aN¿ò¼ÜÊ¾Àı-XHttpsActivity.java£¨º¬×¢½â£¬ContentVIew£¬£©](https://raw.githubusercontent.com/qydq/an-aw-base/master/app/src/main/java/com/qyddai/an_aw_base/XHttpsActivity.java)
-
-
-
 
 + **Ñ¡ÔñÆ÷**
 	
