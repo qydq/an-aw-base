@@ -120,16 +120,17 @@ an¿ò¼Ü£¬0.1.0°æ±¾ĞÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃµÄÊ±ºòÎŞ±³¾°ÑÕÉ«£©¡£È
 
 ¼òµ¥Ò¹¼äÄ£Ê½Ê¹ÓÃ<br>
 	//ÓÃÀ´±£´æÆ¤·ôÇĞ»»Ä£Ê½µÄsp<br>
-   	 	 if (sp.getBoolean("isNight", false)) {
-                    getWindow().getDecorView().setBackground(ContextCompat.getDrawable(mContext, 			                        R.drawable.yy_drawable_bgday_shape));
-                    tvChangModel.setText("ÏÖÔÚÊÇ°×Ìì£¬µã»÷ÇĞ»»ÍíÉÏ");
-                    editor.putBoolean("isNight", false);
-                } else {
-                     getWindow().getDecorView().setBackground(ContextCompat.getDrawable(mContext, 			                          R.drawable.yy_drawable_bgnigt_shape));
-                     tvChangModel.setText("ÏÖÔÚÊÇÍíÉÏ£¬µã»÷ÇĞ»»°×Ìì");
-                      editor.putBoolean("isNight", true);
-                 }
-              editor.commit();
+
+   	 		 if (sp.getBoolean("isNight", false)) {
+             	       getWindow().getDecorView().setBackground(ContextCompat.getDrawable(mContext, 			                    	    R.drawable.yy_drawable_bgday_shape));
+              	      tvChangModel.setText("ÏÖÔÚÊÇ°×Ìì£¬µã»÷ÇĞ»»ÍíÉÏ");
+               	     editor.putBoolean("isNight", false);
+           	     } else {
+            	         getWindow().getDecorView().setBackground(ContextCompat.getDrawable(mContext, 			                    	      R.drawable.yy_drawable_bgnigt_shape));
+                     	tvChangModel.setText("ÏÖÔÚÊÇÍíÉÏ£¬µã»÷ÇĞ»»°×Ìì");
+                     	 editor.putBoolean("isNight", true);
+                 	}
+              		editor.commit();
 
 + **ÍøÂç×´Ì¬¼àÌı**
 
