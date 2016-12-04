@@ -116,6 +116,21 @@ an¿ò¼Ü£¬0.1.0°æ±¾ĞÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃµÄÊ±ºòÎŞ±³¾°ÑÕÉ«£©¡£È
 
 ### Ê¹ÓÃ·½·¨
 
++ **An¿ò¼ÜÒ¹¼äÄ£Ê½**
+
+¼òµ¥Ò¹¼äÄ£Ê½Ê¹ÓÃ<br>
+	//ÓÃÀ´±£´æÆ¤·ôÇĞ»»Ä£Ê½µÄsp
+    	if (sp.getBoolean("isNight", false)) {
+                   getWindow().getDecorView().setBackground(ContextCompat.getDrawable(mContext, 			           R.drawable.yy_drawable_bgday_shape));
+                   tvChangModel.setText("ÏÖÔÚÊÇ°×Ìì£¬µã»÷ÇĞ»»ÍíÉÏ");
+                   editor.putBoolean("isNight", false);
+                } else {
+                   getWindow().getDecorView().setBackground(ContextCompat.getDrawable(mContext, 			                          R.drawable.yy_drawable_bgnigt_shape));
+                    tvChangModel.setText("ÏÖÔÚÊÇÍíÉÏ£¬µã»÷ÇĞ»»°×Ìì");
+                    editor.putBoolean("isNight", true);
+                }
+        editor.commit();
+
 + **ÍøÂç×´Ì¬¼àÌı**
 
 [ÍøÂç×´Ì¬¼àÌı-MainActivity.java-onNetChange](https://raw.githubusercontent.com/qydq/an-aw-base/master/app/src/main/java/com/qyddai/an_aw_base/MainActivity.java)
@@ -124,10 +139,10 @@ an¿ò¼Ü£¬0.1.0°æ±¾ĞÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃµÄÊ±ºòÎŞ±³¾°ÑÕÉ«£©¡£È
 
 [Android ÀûÓÃan¿ò¼Ü¿ìËÙ¼ÓÈëDialog¶Ô»°¿òÊ¾Àı´úÂë](https://zhuanlan.zhihu.com/p/24146818)
 
-//android:background="@color/CommColorDialog"
+//android:background="@color/CommColorDialog"<br>
 [An¿ò¼ÜÊ¾Àı-MainActivity.java¶ÔÓ¦ÆÕÍ¨dialog](https://raw.githubusercontent.com/qydq/an-aw-base/master/app/src/main/java/com/qyddai/an_aw_base/MainActivity.java)
 
-//android:background="@drawable/yy_shape_dialog_progress"
+//android:background="@drawable/yy_shape_dialog_progress"<br>
 [An¿ò¼ÜÊ¾Àı-TestActivity.java¶ÔÓ¦ProgressDialog](https://github.com/qydq/an-aw-base/blob/master/app/src/main/java/com/qyddai/an_aw_base/TestActivity.java)
 
 + **XHttpsÍøÂçÇëÇóÊ¹ÓÃ·½·¨**
