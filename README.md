@@ -118,9 +118,11 @@ an¿ò¼Ü£¬0.1.0°æ±¾ĞÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃµÄÊ±ºòÎŞ±³¾°ÑÕÉ«£©¡£È
 
 + **An¿ò¼ÜÒ¹¼äÄ£Ê½**
 
-¼òµ¥Ò¹¼äÄ£Ê½Ê¹ÓÃ<br>
-	//ÓÃÀ´±£´æÆ¤·ôÇĞ»»Ä£Ê½µÄsp<br>
+£¨1£©¼òµ¥Ò¹¼äÄ£Ê½Ê¹ÓÃ<br>
 
+<font color=#0099ff size=7 face="Î¢ÈíÑÅºÚ">color=#0099ff size=72 face="±¸×¢£ºaN¿ò¼ÜÌá¹©ÁËÊı¾İ±£´æSp£¬Ö±½Ósp.edit¼´¿ÉµÃµ½Editor¶ÔÏó£»Èçeditor = sp.edit();"</font>
+
+	//ÓÃÀ´±£´æÆ¤·ôÇĞ»»Ä£Ê½µÄsp<br>
 	if (sp.getBoolean("isNight", false)) {
                     getWindow().getDecorView().setBackground(ContextCompat.getDrawable(mContext, 	R.drawable.yy_drawable_bgday_shape));
                     tvChangModel.setText("ÏÖÔÚÊÇ°×Ìì£¬µã»÷ÇĞ»»ÍíÉÏ");
@@ -130,6 +132,9 @@ an¿ò¼Ü£¬0.1.0°æ±¾ĞÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃµÄÊ±ºòÎŞ±³¾°ÑÕÉ«£©¡£È
                     tvChangModel.setText("ÏÖÔÚÊÇÍíÉÏ£¬µã»÷ÇĞ»»°×Ìì");
                     editor.putBoolean("isNight", true);
                 }
+£¨2£©·ÂÖªºõ¼òÊéÒ¹¼äÄ£Ê½ÇĞ»»ÊµÏÖÌ×Â·<br>
+
+[Android ÀûÓÃan¿ò¼Ü¿ìËÙÊµÏÖÒ¹¼äÄ£Ê½µÄÁ½ÖÖÌ×Â·](https://zhuanlan.zhihu.com/p/22520818?refer=qyddai)
 
 + **ÍøÂç×´Ì¬¼àÌı**
 
