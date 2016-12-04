@@ -120,19 +120,20 @@ an¿ò¼Ü£¬0.1.0°æ±¾ĞÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃµÄÊ±ºòÎŞ±³¾°ÑÕÉ«£©¡£È
 [An¿ò¼ÜÃüÃû¹æ·¶²Î¿¼](https://zhuanlan.zhihu.com/p/24155927)
 
 £¨1£©layoutÃüÁî²Î¿¼
-base_standard_dialog.xml
-base_standard_dialog_progress.xml
-sst_activity_drawerarrow
-sst_fragment_drawerarrow
-sst_fragment_index2
+
+	base_standard_dialog.xml
+	base_standard_dialog_progress.xml
+	sst_activity_drawerarrow
+	sst_fragment_drawerarrow
+	sst_fragment_index2
 
 £¨2£©drawableÃüÁî²Î¿¼
-base_drawable_loading.png
-yy_drawable_bgday_shape.xml
-yy_drawable_bgnigt_shape.xml
-yy_drawable_selector_md.xml
-yy_drawable_selector_md_shape.xml
 
+	base_drawable_loading.png
+	yy_drawable_bgday_shape.xml
+	yy_drawable_bgnigt_shape.xml
+	yy_drawable_selector_md.xml
+	yy_drawable_selector_md_shape.xml
 
 ### Ê¹ÓÃ·½·¨
 
@@ -140,7 +141,7 @@ yy_drawable_selector_md_shape.xml
 
 £¨1£©¼òµ¥Ò¹¼äÄ£Ê½Ê¹ÓÃ<br>
 
-<font color="#4590a3" size = "6px">±¸×¢£ºaN¿ò¼ÜÌá¹©ÁËÊı¾İ±£´æSp£¬Ö±½Ósp.edit¼´¿ÉµÃµ½Editor¶ÔÏó£»Èçeditor = sp.edit();</font>
+<font color=#0099ff size=12 face="ºÚÌå">±¸×¢£ºaN¿ò¼ÜÌá¹©ÁËÊı¾İ±£´æSp£¬Ö±½Ósp.edit¼´¿ÉµÃµ½Editor¶ÔÏó£»Èçeditor = sp.edit();</font>
 
 	//ÓÃÀ´±£´æÆ¤·ôÇĞ»»Ä£Ê½µÄsp<
 	if (sp.getBoolean("isNight", false)) {
