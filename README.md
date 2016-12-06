@@ -134,6 +134,18 @@ an¿ò¼Ü£¬0.1.0°æ±¾ĞÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃµÄÊ±ºòÎŞ±³¾°ÑÕÉ«£©¡£È
 	yy_drawable_bgnigt_shape.xml
 	yy_drawable_selector_md.xml
 	yy_drawable_selector_md_shape.xml
+	
++ **An¿ò¼Ü×´Ì¬À¸Í¨ÓÃ**
+
+£¨1£©ÆÕÍ¨×´Ì¬À¸²Î¿¼<br>
+
+<font color=#0099ff size=12 face="ºÚÌå">±¸×¢£ºaN¿ò¼ÜÌá¹©×´Ì¬À¸×ó±ßÒıÓÃµ½ÁËyy_drawable_selector_leftbackÑ¡ÔñÆ÷£¬¿ÉĞŞ¸Äbase_drawable_backarrow£¬base_drawable_backarrow_clickÍ¼Æ¬£»×ÖÌå²Î¿¼yy_drawable_selector_txt£¬¿ÉĞŞ¸ÄCommColorGray£¬CommColorWhite£»±êÌâÑÕÉ«CommTxtMainColor¿ÉĞŞ¸Ä£¬±êÌâ´óÒ»×ÖÌå´óĞ¡CommDimenBarTitleMax£¬×óÓÒÎÄ±¾´óĞ¡CommDimenBarTitleSmall¿ÉĞŞ¸Ä;</font>
+
+		<include
+        android:id="@+id/includeHead"
+        layout="@layout/base_headview_standard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 ### Ê¹ÓÃ·½·¨
 
@@ -183,6 +195,8 @@ an¿ò¼Ü£¬0.1.0°æ±¾ĞÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃµÄÊ±ºòÎŞ±³¾°ÑÕÉ«£©¡£È
 |:---------|:-------|:---|---:|
 |drawable_selector_md|CommColorTransparent<br>CommColorTransparentClicked<br>CommColorDayBackground|ÎŞ|ÎŞ|
 |drawable_selector_md_shape|CommColorTransparent<br>CommColorTransparentClicked<br>CommColorDayBackground|CommColorBorder<br>CommColorBorderClicked|2dp|
+|drawable_selector_txt|CommColorGray<br>CommColorWhite|ÎŞ|ÎŞ|
+|drawable_selector_ll_shape|CommEndColor<br>CommStartColor<br>CommMainBgClicked<br>CommMainBg|CommColorLineClicked<br>CommColorLine|2dp|
 
 ---------
 

@@ -51,6 +51,7 @@
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
         android:clickable="true"
+        android:duplicateParentState="true"
         android:visibility="invisible">
 
         <TextView
@@ -61,7 +62,7 @@
             android:duplicateParentState="true"
             android:gravity="center_vertical|start"
             android:text="@string/CommStringRight"
-            android:textColor="@color/CommColorWhite"
+            android:textColor="@drawable/yy_drawable_selector_txt"
             android:textSize="@dimen/CommDimenBarTitleSmall" />
     </LinearLayout>
 </RelativeLayout>
