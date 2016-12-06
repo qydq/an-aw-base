@@ -105,7 +105,7 @@
 
 an框架，0.1.0版本新增通用的标题栏目方便以后的集成（实际使用的时候无背景颜色）。如图
 
-| ![](https://github.com/qydq/an-maven-base/blob/master/screenpic/base_headview_standard_complex.png)| 
+| ![](https://github.com/qydq/an-aw-base/blob/master/screen/base_headview_standard.png)| 
 
 
 ---------
