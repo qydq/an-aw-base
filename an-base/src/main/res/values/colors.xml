@@ -227,13 +227,17 @@
     <color name="CommColorGray">#aaaaaa</color><!--灰色-->
     <color name="CommColorWhite">#ffffff</color><!--白色-->
 
-    <color name="CommBg">#c2c2c2</color><!--背景颜色可以等于主色-->
+    <color name="CommMainBg">#8B008B</color><!--背景颜色可以等于主色-->
+    <color name="CommMainBgClicked">#c2c2c2</color><!--第二主色-->
 
-    <color name="CommTxtMainColor">#c2c2c2</color><!--txt主色-->
+    <color name="CommTxtMainColor">#c2c2c2</color><!--txt主色，txt-->
     <color name="CommTxtMainColorClicked">#8f8da3</color><!--主色选择颜色-->
 
     <color name="CommTxtMainTintColor">#8f8da3</color><!--文本特殊Tint談談的意思-->
     <color name="CommTxtMainTipsColor">#ADFF2F</color><!--文本特殊标记颜色-->
+
+    <color name="CommStartColor">#c0000000</color><!--开始颜色，用于渐变-->
+    <color name="CommEndColor">#c0000000</color><!--结束颜色，用于渐变-->
 
     <color name="CommColorBarTitle">#9a9a9a</color><!--bar,文本文字颜色-->
     <color name="CommColorBarTitleClicked">#38b7ea</color><!--bar文本文字选择颜色#cacaca-->
@@ -246,7 +250,9 @@
 
     <color name="CommColorLine">#eaecec</color><!--分割线的颜色-->
     <color name="CommColorLineClicked">#DDDDDD</color><!--分割线选择颜色-->
-    <color name="CommColorBorder">#25000000</color><!--CommColorTransparentClicked--><!--边框颜色-->
-    <color name="CommColorBorderClicked">#00000000</color><!--CommColorTransparent--><!--边框颜色选择-->
+    <color name="CommColorBorder">#25000000</color><!--md,CommColorTransparentClicked--><!--边框颜色-->
+    <color name="CommColorBorderClicked">#00000000
+    </color><!--md,CommColorTransparent--><!--边框颜色选择-->
+
 
 </resources>

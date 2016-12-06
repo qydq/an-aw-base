@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/anRlHeadView"
+    android:layout_width="match_parent"
+    android:layout_height="68dp"
+    android:background="@color/CommMainBg">
+
+    <LinearLayout
+        android:id="@+id/anLlBack"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:duplicateParentState="true">
+
+        <View
+            android:layout_width="@dimen/CommDimenBarIcon"
+            android:layout_height="@dimen/CommDimenBarIcon"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/yy_drawable_selector_leftback" />
+
+        <TextView
+            android:id="@+id/anBtnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical|start"
+            android:gravity="center_vertical|start"
+            android:text="@string/CommStringBack"
+            android:textColor="@drawable/yy_drawable_selector_txt"
+            android:textSize="@dimen/CommDimenBarTitleSmall" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/anTvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/CommColorTransparent"
+        android:gravity="center_vertical"
+        android:text="@string/CommStringTitle"
+        android:textColor="@color/CommTxtMainColor"
+        android:textSize="@dimen/CommDimenBarTitleMax" />
+
+    <LinearLayout
+        android:id="@+id/anLlRight"
+        android:layout_width="40dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/anTvRight"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical|start"
+            android:duplicateParentState="true"
+            android:gravity="center_vertical|start"
+            android:text="@string/CommStringRight"
+            android:textColor="@color/CommColorWhite"
+            android:textSize="@dimen/CommDimenBarTitleSmall" />
+    </LinearLayout>
+</RelativeLayout>
