@@ -1,35 +1,84 @@
 package com.qyddai.an_aw_base;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.ObjectAnimator;
 import android.app.Dialog;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.RequiresApi;
 import android.support.v4.content.ContextCompat;
+import android.util.TypedValue;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
+import com.an.base.model.ResponseDayNightModel;
 import com.an.base.utils.DUtilsDialog;
+import com.an.base.utils.DayNightHelper;
 import com.an.base.view.SuperActivity;
+import com.an.base.view.widget.WToggleButton;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
 
+import java.util.ArrayList;
+import java.util.List;
+
+//如果添加注解，则夜间模式用不了，只能findViewById实现。
 @ContentView(R.layout.activity_main)
 public class MainActivity extends SuperActivity {
     @ViewInject(R.id.tvChangModel)
     private Button tvChangModel;
     @ViewInject(R.id.btnDialog)
     private Button btnDialog;
+
+    /*以上注解模块如不适用夜间模式可使用，本人已经反复验证过了，具体等待反馈给wyouflf,你可以点击dialog的按钮看看是否崩溃*/
     private SharedPreferences.Editor editor;
     private Dialog dialog;
+
+    private WToggleButton toggleButton;
+    private DayNightHelper dayNightHelper;
+    private RelativeLayout relativeLayout;
+    private LinearLayout linearLayout;
+    private TextView textView;
+
+    private List<LinearLayout> mLayoutList;
+    private List<RelativeLayout> mRelativeList;
+    private List<Button> mButtonList;
+    private List<TextView> mTextViewList;
 
     @Override
     public void initView() {
         editor = sp.edit();
+        dayNightHelper = new DayNightHelper(mContext, sp);
+        _initTheme();
+
+        setContentView(R.layout.activity_main);
+        toggleButton = (WToggleButton) findViewById(R.id.toggleBtn);
+        relativeLayout = (RelativeLayout) findViewById(R.id.activity_main);
+        linearLayout = (LinearLayout) findViewById(R.id.anLlLayout);
+        tvChangModel = (Button) findViewById(R.id.tvChangModel);
+        btnDialog = (Button) findViewById(R.id.btnDialog);
+        textView = (TextView) findViewById(R.id.textView);
+
+        mLayoutList = new ArrayList<>();
+        mTextViewList = new ArrayList<>();
+        mRelativeList = new ArrayList<>();
+        mButtonList = new ArrayList<>();
+        mLayoutList.add(linearLayout);
+        mRelativeList.add(relativeLayout);
+        mButtonList.add(btnDialog);
+        mTextViewList.add(textView);
+
         tvChangModel.setText("现在是白天，点击切换");
         tvChangModel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,11 +95,16 @@ public class MainActivity extends SuperActivity {
                 editor.commit();
             }
         });
+        if (sp.getBoolean(DayNightHelper.BMODE, false)) {
+            toggleButton.setToggleOn();
+        } else {
+            toggleButton.setToggleOff();
+        }
         btnDialog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog = DUtilsDialog.INSTANCE.
-                        createDialog(mContext,"加载中```",true);
+                        createDialog(mContext, "加载中```", true);
                 dialog.show();
 
                 handler.postDelayed(new Runnable() {
@@ -60,16 +114,160 @@ public class MainActivity extends SuperActivity {
                         msg.what = 1;
                         handler.sendMessage(msg);
                     }
-                },1000);
+                }, 1000);
             }
         });
+        //开关切换事件
+        toggleButton.setOnToggleChanged(new WToggleButton.OnToggleChanged() {
+            @Override
+            public void onToggle(boolean on) {
+                editor.putBoolean(DayNightHelper.BMODE, on);
+                if (on) {
+                    changeThemeByZhiHu();//打开夜间模式
+                    showToast("夜间模式打开" + on);
+                } else {
+                    changeThemeByZhiHu();//打开夜间模式
+                    showToast("夜间模式关闭" + on);
+                }
+                editor.commit();
+            }
+        });
+
     }
-    private Handler handler = new Handler(){
+
+    private void _initTheme() {
+        if (dayNightHelper.isDay()) {
+            setTheme(R.style.DayTheme);
+        } else {
+            setTheme(R.style.NightTheme);
+        }
+    }
+
+    /**
+     * 使用知乎的实现套路来切换夜间主题
+     */
+    private void changeThemeByZhiHu() {
+        showAnimation();
+        toggleThemeSetting();
+        refreshUI();
+    }
+
+    /**
+     * 展示一个切换动画
+     */
+    private void showAnimation() {
+        final View decorView = getWindow().getDecorView();
+        Bitmap cacheBitmap = getCacheBitmapFromView(decorView);
+        if (decorView instanceof ViewGroup && cacheBitmap != null) {
+            final View view = new View(this);
+            view.setBackgroundDrawable(new BitmapDrawable(getResources(), cacheBitmap));
+            ViewGroup.LayoutParams layoutParam = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.MATCH_PARENT);
+            ((ViewGroup) decorView).addView(view, layoutParam);
+            ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(view, "alpha", 1f, 0f);
+            objectAnimator.setDuration(300);
+            objectAnimator.addListener(new AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    super.onAnimationEnd(animation);
+                    ((ViewGroup) decorView).removeView(view);
+                }
+            });
+            objectAnimator.start();
+        }
+    }
+
+    /**
+     * 切换主题设置
+     */
+    private void toggleThemeSetting() {
+        if (dayNightHelper.isDay()) {
+            dayNightHelper.setMode(ResponseDayNightModel.NIGHT);
+            setTheme(R.style.NightTheme);
+        } else {
+            dayNightHelper.setMode(ResponseDayNightModel.DAY);
+            setTheme(R.style.DayTheme);
+        }
+    }
+
+    /**
+     * 刷新UI界面
+     */
+
+    private void refreshUI() {
+        TypedValue background = new TypedValue();//背景色
+        TypedValue textColor = new TypedValue();//字体颜色
+        Resources.Theme theme = getTheme();
+        theme.resolveAttribute(R.attr.anBackground, background, true);
+        theme.resolveAttribute(R.attr.anTextColor, textColor, true);
+
+        relativeLayout.setBackgroundResource(background.resourceId);
+        linearLayout.setBackgroundResource(background.resourceId);
+        for (RelativeLayout layout : mRelativeList) {
+            layout.setBackgroundResource(background.resourceId);
+        }
+        for (LinearLayout layout : mLayoutList) {
+            layout.setBackgroundResource(background.resourceId);
+        }
+        for (Button button : mButtonList) {
+            button.setBackgroundResource(background.resourceId);
+        }
+        for (TextView textView : mTextViewList) {
+            textView.setBackgroundResource(background.resourceId);
+        }
+
+        Resources resources = getResources();
+        for (TextView textView : mTextViewList) {
+            textView.setTextColor(resources.getColor(textColor.resourceId));
+        }
+        for (Button button : mButtonList) {
+            button.setTextColor(resources.getColor(textColor.resourceId));
+        }
+        refreshStatusBar();
+    }
+
+    /**
+     * 刷新 StatusBar
+     */
+
+    private void refreshStatusBar() {
+        if (Build.VERSION.SDK_INT >= 21) {
+            TypedValue typedValue = new TypedValue();
+            Resources.Theme theme = getTheme();
+            theme.resolveAttribute(R.attr.colorPrimary, typedValue, true);
+            getWindow().setStatusBarColor(getResources().getColor(typedValue.resourceId));
+        }
+    }
+
+
+    /**
+     * 获取一个 View 的缓存视图
+     *
+     * @param view
+     * @return
+     */
+
+    private Bitmap getCacheBitmapFromView(View view) {
+        final boolean drawingCacheEnabled = true;
+        view.setDrawingCacheEnabled(drawingCacheEnabled);
+        view.buildDrawingCache(drawingCacheEnabled);
+        final Bitmap drawingCache = view.getDrawingCache();
+        Bitmap bitmap;
+        if (drawingCache != null) {
+            bitmap = Bitmap.createBitmap(drawingCache);
+            view.setDrawingCacheEnabled(false);
+        } else {
+            bitmap = null;
+        }
+        return bitmap;
+    }
+
+    private Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             dialog.dismiss();
-            Intent intent = new Intent(MainActivity.this,TestActivity.class);
+            Intent intent = new Intent(MainActivity.this, TestActivity.class);
             startActivity(intent);
         }
     };

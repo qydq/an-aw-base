@@ -36,7 +36,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //xUtils3.0+配置，可放在application中
         x.Ext.init(getApplication());
-        x.Ext.setDebug(BuildConfig.DEBUG); // 是否输出debug日志, 开启debug会影响性能.
+//        x.Ext.setDebug(BuildConfig.DEBUG); // 是否输出debug日志, 开启debug会影响性能.
         // 设置标题栏MD5
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         // 注解的入口

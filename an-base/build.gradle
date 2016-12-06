@@ -1,4 +1,7 @@
 apply plugin: 'com.android.library'
+//配置jitpack
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.qydq'
 
 android {
     compileSdkVersion 24

@@ -208,16 +208,20 @@
 
 
     <!--sunshuntao 2016-11-16 personal-standard;no changes-->
-    <color name="CommColorNightBackground">#CD5C5C</color>
-    <color name="CommColorNightBackgroundClicked">#CD5C5C</color><!--CommColorNightBackground-->
-    <color name="CommColorDayBackground">#8B008B</color>
-    <color name="CommColorDayBackgroundClicked">#8B008B</color><!--CommColorDayBackgroundClicked-->
+
+    <color name="CommColorNightBackground">#CD5C5C</color><!--普通模式颜色-->
+    <color name="CommColorNightBackgroundClicked">#CD5C5C
+    </color><!--CommColorNightBackground--><!--普通模式颜色-->
+    <color name="CommColorDayBackground">#8B008B</color><!--普通模式颜色-->
+    <color name="CommColorDayBackgroundClicked">#8B008B
+    </color><!--CommColorDayBackgroundClicked--><!--普通模式颜色-->
+
     <color name="CommColorTransparent">#00000000</color><!--透明颜色-->
     <color name="CommColorTransparentClicked">#25000000</color><!--透明颜色选择颜色-->
     <color name="CommColorDialog">#8B008B</color><!--CommColorDayBackground-->
     <color name="CommColorProgressDialog">#8B008B</color><!--CommColorDayBackground-->
 
-    <color name="CommColorBg">#091928</color><!--背景颜色-->
+    <color name="CommColorBg">#091928</color><!--背景颜色，适用于各个子View-->
     <color name="CommColorBGLl">#FFFAFA</color><!--ll的背景颜色-->
     <color name="CommColorBGRl">#FFFAFA</color><!--rl的背景颜色-->
     <color name="CommColorBGTt">#ffffff</color><!--tx的背景颜色-->
@@ -227,8 +231,10 @@
     <color name="CommColorGray">#aaaaaa</color><!--灰色-->
     <color name="CommColorWhite">#ffffff</color><!--白色-->
 
-    <color name="CommMainBg">#8B008B</color><!--背景颜色可以等于主色-->
-    <color name="CommMainBgClicked">#c2c2c2</color><!--第二主色-->
+    <!--以下颜色代码如无特殊说明，都指正常状态的演示（白天为主色代码）,晚间为CommMainBgNight类-->
+    <color name="CommMainBg">#8B008B</color><!--背景颜色可以等于主色，适用于头布局，白天模式-->
+    <color name="CommMainBgClicked">#8B008B</color><!--点击后的颜色-->
+    <color name="CommMainBgTips">#c2c2c2</color><!--第二主色-->
 
     <color name="CommTxtMainColor">#c2c2c2</color><!--txt主色，txt-->
     <color name="CommTxtMainColorClicked">#8f8da3</color><!--主色选择颜色-->
@@ -251,8 +257,12 @@
     <color name="CommColorLine">#eaecec</color><!--分割线的颜色-->
     <color name="CommColorLineClicked">#DDDDDD</color><!--分割线选择颜色-->
     <color name="CommColorBorder">#25000000</color><!--md,CommColorTransparentClicked--><!--边框颜色-->
-    <color name="CommColorBorderClicked">#00000000
-    </color><!--md,CommColorTransparent--><!--边框颜色选择-->
+    <color name="CommColorBorderClicked">#00000000</color><!--md,CommColorTransparent边框颜色选择-->
+    <!--对应夜间模式颜色代码-->
+    <color name="CommMainBgNight">#000011</color><!--背景颜色可以等于主色，适用于头布局，晚上模式-->
+    <color name="CommMainBgNightClicked">#000011</color><!--点击后的颜色-->
+    <color name="CommMainBgNightTips">#c2c2c2</color><!--第二主色-->
 
-
+    <color name="CommColorTxtTitleNight">#ffffff</color><!--文本标题颜色=可等于主色CommTxtMainColor=#c2c2c2-->
+    <color name="CommColorTxtTitleNightClicked">#38b7ea</color><!--文本标题选择颜色-->
 </resources>

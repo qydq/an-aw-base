@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 
+import org.xutils.x;
+
 /**
  * Created by stary on 2016/8/18.
  * 文件名称：BaseFragment
@@ -36,8 +38,8 @@ public abstract class BaseFragment extends Fragment implements OnTouchListener {
         this.mContext = inflater.getContext();
 //可以解封，需引用ViewUtils这是注解部分。
 //        ViewUtils.inject(this, view);
+        x.view().inject(this, inflater, container);
         init();
-
         TAG = BaseFragment.class.getSimpleName();
         return view;
     }

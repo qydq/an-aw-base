@@ -40,6 +40,7 @@ public abstract class SuperActivity extends BaseActivity implements NetBroadcast
         mContext = this;
         //an框架的夜间模式。用来保存皮肤切换模式的sp
         sp = this.getSharedPreferences(TAG, Context.MODE_PRIVATE);
+
         Window window = getWindow();
         AndroidTranslucentBar.getInstance().setTranslucentBar(window);
         if (sp.getBoolean("isNight", false)) {
@@ -47,6 +48,7 @@ public abstract class SuperActivity extends BaseActivity implements NetBroadcast
         } else {
             window.getDecorView().setBackground(ContextCompat.getDrawable(mContext, R.drawable.yy_drawable_bgday_shape));
         }
+
 
         //初始化视图
         initView();
