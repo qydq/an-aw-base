@@ -105,8 +105,7 @@
 
 an¿ò¼Ü£¬0.1.0°æ±¾ĞÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃµÄÊ±ºòÎŞ±³¾°ÑÕÉ«£©¡£ÈçÍ¼
 
-| ![](https://github.com/qydq/an-aw-base/blob/master/screen/base_headview_standard.png)| 
-
+| ![](https://github.com/qydq/an-aw-base/blob/master/screen/base_headview_standard.jpg)| 
 
 ---------
 
@@ -144,6 +143,14 @@ an¿ò¼Ü£¬0.1.0°æ±¾ĞÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃµÄÊ±ºòÎŞ±³¾°ÑÕÉ«£©¡£È
 		<include
         android:id="@+id/includeHead"
         layout="@layout/base_headview_standard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+		
+£¨2£©¸´ÔÓ×´Ì¬À¸²Î¿¼<br> Î´Íê³É
+
+		<include
+        android:id="@+id/includeHead"
+        layout="@layout/base_headview_standard_complex"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
