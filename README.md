@@ -103,9 +103,13 @@
 
 # 2. ÊµÏÖĞ§¹û
 
-an¿ò¼Ü£¬0.1.0°æ±¾ĞÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃÊ±±³¾°ÑÕÉ«CommMainBg£©¡£ÈçÍ¼
++ **an¿ò¼Ü£¬0.1.0°æ±¾ĞÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃÊ±±³¾°ÑÕÉ«CommMainBg£©¡£ÈçÍ¼**
 
 | ![](https://github.com/qydq/an-aw-base/blob/master/screen/base_headview_standard.jpg)| 
+
++ **an¿ò¼ÜÌá¹©µÄWToggleButton ÇĞ»»¿Ø¼ş**
+
+| ![](https://github.com/qydq/an-aw-base/blob/master/screen/base_wtogglebutton.gif)| 
 
 ---------
 
@@ -162,19 +166,60 @@ an¿ò¼Ü£¬0.1.0°æ±¾ĞÂÔöÍ¨ÓÃµÄ±êÌâÀ¸Ä¿·½±ãÒÔºóµÄ¼¯³É£¨Êµ¼ÊÊ¹ÓÃÊ±±³¾°ÑÕÉ«CommMainBg£
 
 <font color=#0099ff size=12 face="ºÚÌå">±¸×¢£ºaN¿ò¼ÜÌá¹©ÁËÊı¾İ±£´æSp£¬Ö±½Ósp.edit¼´¿ÉµÃµ½Editor¶ÔÏó£»Èçeditor = sp.edit();</font>
 
-	//ÓÃÀ´±£´æÆ¤·ôÇĞ»»Ä£Ê½µÄsp<
+	//ÓÃÀ´±£´æÆ¤·ôÇĞ»»Ä£Ê½µÄsp
 	if (sp.getBoolean("isNight", false)) {
-                    getWindow().getDecorView().setBackground(ContextCompat.getDrawable(mContext, 	R.drawable.yy_drawable_bgday_shape));
-                    tvChangModel.setText("ÏÖÔÚÊÇ°×Ìì£¬µã»÷ÇĞ»»ÍíÉÏ");
-                    editor.putBoolean("isNight", false);
-                } else {
-                    getWindow().getDecorView().setBackground(ContextCompat.getDrawable(mContext, 	R.drawable.yy_drawable_bgnigt_shape));
-                    tvChangModel.setText("ÏÖÔÚÊÇÍíÉÏ£¬µã»÷ÇĞ»»°×Ìì");
-                    editor.putBoolean("isNight", true);
-                }
+        getWindow().getDecorView().setBackground(ContextCompat.getDrawable(mContext,R.drawable.yy_drawable_bgday_shape));
+        tvChangModel.setText("ÏÖÔÚÊÇ°×Ìì£¬µã»÷ÇĞ»»ÍíÉÏ");
+        editor.putBoolean("isNight", false);
+        } else {
+        getWindow().getDecorView().setBackground(ContextCompat.getDrawable(mContext,R.drawable.yy_drawable_bgnigt_shape));
+        tvChangModel.setText("ÏÖÔÚÊÇÍíÉÏ£¬µã»÷ÇĞ»»°×Ìì");
+        editor.putBoolean("isNight", true);
+        }
 £¨2£©·ÂÖªºõ¼òÊéÒ¹¼äÄ£Ê½ÇĞ»»ÊµÏÖÌ×Â·<br>
 
 [Android ÀûÓÃan¿ò¼Ü¿ìËÙÊµÏÖÒ¹¼äÄ£Ê½µÄÁ½ÖÖÌ×Â·](https://zhuanlan.zhihu.com/p/22520818?refer=qyddai)
+
+[Android ÀûÓÃan¿ò¼Ü¿ìËÙÊµÏÖÒ¹¼äÄ£Ê½µÄÁ½ÖÖÌ×Â·-¼ÓÇ¿°æ](https://zhuanlan.zhihu.com/p/22520818?refer=qyddai)
+
++ **An¿ò¼ÜÌá¹©µÄWToggleButtonµÄÊ¹ÓÃ·½·¨** *£¨Ô´ÂëÖĞÅäºÏÒ¹¼äÄ£Ê½Ê¹ÓÃ£©*
+
+<font color=#0099ff size=12 face="ºÚÌå">±¸×¢£ºDefault Size:width=50dp,height=30dp.£»Èçeditor = sp.edit();</font>
+
+		xmlns:toggle="http://schemas.android.com/apk/res-auto"
+
+		<com.an.base.view.widget.WToggleButton
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/CommDimenMargin"
+            toggle:tbBorderWidth="2dp"
+            toggle:tbOffBorderColor="#000"
+            toggle:tbOffColor="#ddd"
+            toggle:tbOnColor="#f00"
+            toggle:tbSpotColor="#00f" />
+			
+		private WToggleButton toggleBtn;
+		
+		    //ÇĞ»»¿ª¹Ø
+		toggleBtn.toggle();
+		//ÇĞ»»ÎŞ¶¯»­
+		toggleBtn.toggle(false);
+		//¿ª¹ØÇĞ»»ÊÂ¼ş
+		toggleBtn.setOnToggleChanged(new OnToggleChanged(){
+        @Override
+        public void onToggle(boolean on) {
+        }
+		});
+
+		toggleBtn.setToggleOn();
+		toggleBtn.setToggleOff();
+		//ÎŞ¶¯»­ÇĞ»»
+		toggleBtn.setToggleOn(false);
+		toggleBtn.setToggleOff(false);
+
+		//½ûÓÃ¶¯»­
+		toggleBtn.setAnimate(false);
+			
 
 + **ÍøÂç×´Ì¬¼àÌı**
 
