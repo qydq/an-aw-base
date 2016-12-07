@@ -182,7 +182,7 @@
 
 [Android 利用an框架快速实现夜间模式的两种套路-加强版](https://zhuanlan.zhihu.com/p/22520818?refer=qyddai)
 
-+ **An框架提供的WToggleButton的使用方法** *（源码中配合夜间模式使用）*
++ **An框架提供的WToggleButton的使用参考** *（源码中配合夜间模式使用）*
 
 <font color=#0099ff size=12 face="黑体">备注：Default Size:width=50dp,height=30dp.；如editor = sp.edit();</font>
 
@@ -253,6 +253,10 @@
 ---------
 
 # 4. 重要知识点。
+
++ **如何使用MVP架构搭建Android应用程序-(demo+解析)-极简版**
+
++ **Android MVP架构示例项目解析-加强版**
 		
 ---------
 

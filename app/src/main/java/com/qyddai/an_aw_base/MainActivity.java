@@ -43,7 +43,8 @@ public class MainActivity extends SuperActivity implements TaskDayNightContract.
     @ViewInject(R.id.btnDialog)
     private Button btnDialog;
 
-    /*以上注解模块如不适用夜间模式可使用，本人已经反复验证过了，具体等待反馈给wyouflf,你可以点击dialog的按钮看看是否崩溃*/
+    /*以上注解模块如不适用夜间模式可使用，本人已经反复验证过了，
+    具体等待反馈给wyouflf,你可以点击dialog的按钮看看是否崩溃*/
     private SharedPreferences.Editor editor;
     private Dialog dialog;
 
