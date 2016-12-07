@@ -1,4 +1,4 @@
-package com.an.base.model;
+package com.an.base.model.entity;
 
 /**
  * Created by sunshuntao 2016.09.19,枚举定义参考
@@ -11,7 +11,7 @@ public enum ResponseDayNightModel {
     private String name;
     private int code;
 
-    private ResponseDayNightModel(String name, int code) {
+    ResponseDayNightModel(String name, int code) {
         this.name = name;
         this.code = code;
     }

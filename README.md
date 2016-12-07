@@ -103,7 +103,7 @@
 
 # 2. 实现效果
 
-an框架，0.1.0版本新增通用的标题栏目方便以后的集成（实际使用的时候无背景颜色）。如图
+an框架，0.1.0版本新增通用的标题栏目方便以后的集成（实际使用时背景颜色CommMainBg）。如图
 
 | ![](https://github.com/qydq/an-aw-base/blob/master/screen/base_headview_standard.jpg)| 
 
@@ -239,7 +239,7 @@ http://drakeet.me/android-studio
 ## an-base > module /build.gradle
 
 		apply plugin: 'com.android.library'
-		////配置jitpack
+		//配置jitpack
 		apply plugin: 'com.github.dcendents.android-maven'
 		group = 'com.github.qydq'
 		dependencies {
@@ -251,7 +251,7 @@ http://drakeet.me/android-studio
 		testCompile 'junit:junit:4.12'
 		compile 'org.xutils:xutils:3.3.36'
 		compile 'com.google.code.gson:gson:2.7'
-		compile 'com.android.support:design:24.2.0'···
+		compile 'com.android.support:design:24.2.0'<!--android md新特性的引用-->
 	
 ## an-maven-base > project /build.gradle
 

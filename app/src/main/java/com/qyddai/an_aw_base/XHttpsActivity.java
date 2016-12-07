@@ -3,7 +3,7 @@ package com.qyddai.an_aw_base;
 import android.util.Log;
 import android.widget.Button;
 
-import com.an.base.model.ResponseBaseModel;
+import com.an.base.model.entity.ResponseBaseModel;
 import com.an.base.model.utils.XCallBack;
 import com.an.base.model.utils.XHttps;
 import com.an.base.model.utils.XProgressCallBack;

@@ -2,8 +2,9 @@ package com.an.base.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
-import com.an.base.model.ResponseDayNightModel;
+import com.an.base.model.entity.ResponseDayNightModel;
 
 /**
  * Created by sunshuntao 2016.09.19
@@ -11,16 +12,16 @@ import com.an.base.model.ResponseDayNightModel;
 public class DayNightHelper {
 
     public final static String MODE = "day_night_mode";
-    public final static String BMODE = "day_nigt_bmode";
 
     private SharedPreferences mSharedPreferences;
 
-    public DayNightHelper(Context context, SharedPreferences sp) {
+    public DayNightHelper(SharedPreferences sp) {
         this.mSharedPreferences = sp;
     }
 
     /**
      * 保存模式设置
+     *
      * @param mode
      * @return
      */

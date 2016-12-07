@@ -21,7 +21,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.an.base.model.ResponseDayNightModel;
+import com.an.base.contract.TaskDayNightContract;
+import com.an.base.model.entity.ResponseDayNightModel;
+import com.an.base.presenter.TaskDayNightPresenter;
 import com.an.base.utils.DUtilsDialog;
 import com.an.base.utils.DayNightHelper;
 import com.an.base.view.SuperActivity;
@@ -35,7 +37,7 @@ import java.util.List;
 
 //如果添加注解，则夜间模式用不了，只能findViewById实现。
 @ContentView(R.layout.activity_main)
-public class MainActivity extends SuperActivity {
+public class MainActivity extends SuperActivity implements TaskDayNightContract.View {
     @ViewInject(R.id.tvChangModel)
     private Button tvChangModel;
     @ViewInject(R.id.btnDialog)
@@ -46,7 +48,6 @@ public class MainActivity extends SuperActivity {
     private Dialog dialog;
 
     private WToggleButton toggleButton;
-    private DayNightHelper dayNightHelper;
     private RelativeLayout relativeLayout;
     private LinearLayout linearLayout;
     private TextView textView;
@@ -56,13 +57,17 @@ public class MainActivity extends SuperActivity {
     private List<Button> mButtonList;
     private List<TextView> mTextViewList;
 
+    private TaskDayNightContract.Presenter presenter;
+
     @Override
     public void initView() {
         editor = sp.edit();
-        dayNightHelper = new DayNightHelper(mContext, sp);
+        presenter = new TaskDayNightPresenter(sp, this);
+
         _initTheme();
 
         setContentView(R.layout.activity_main);
+
         toggleButton = (WToggleButton) findViewById(R.id.toggleBtn);
         relativeLayout = (RelativeLayout) findViewById(R.id.activity_main);
         linearLayout = (LinearLayout) findViewById(R.id.anLlLayout);
@@ -79,6 +84,7 @@ public class MainActivity extends SuperActivity {
         mButtonList.add(btnDialog);
         mTextViewList.add(textView);
 
+        //该夜间模式
         tvChangModel.setText("现在是白天，点击切换");
         tvChangModel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +101,8 @@ public class MainActivity extends SuperActivity {
                 editor.commit();
             }
         });
-        if (sp.getBoolean(DayNightHelper.BMODE, false)) {
+        //设置初始化打开关闭的开关。
+        if (presenter.isDay()) {
             toggleButton.setToggleOn();
         } else {
             toggleButton.setToggleOff();
@@ -121,22 +128,15 @@ public class MainActivity extends SuperActivity {
         toggleButton.setOnToggleChanged(new WToggleButton.OnToggleChanged() {
             @Override
             public void onToggle(boolean on) {
-                editor.putBoolean(DayNightHelper.BMODE, on);
-                if (on) {
-                    changeThemeByZhiHu();//打开夜间模式
-                    showToast("夜间模式打开" + on);
-                } else {
-                    changeThemeByZhiHu();//打开夜间模式
-                    showToast("夜间模式关闭" + on);
-                }
-                editor.commit();
+                presenter.start();
+                showToast("夜间模式" + on);
             }
         });
-
     }
 
-    private void _initTheme() {
-        if (dayNightHelper.isDay()) {
+    @Override
+    public void _initTheme() {
+        if (presenter.isDay()) {
             setTheme(R.style.DayTheme);
         } else {
             setTheme(R.style.NightTheme);
@@ -146,16 +146,20 @@ public class MainActivity extends SuperActivity {
     /**
      * 使用知乎的实现套路来切换夜间主题
      */
-    private void changeThemeByZhiHu() {
-        showAnimation();
-        toggleThemeSetting();
-        refreshUI();
+    @Override
+    public void changeThemeByZhiHu() {
+        if (presenter.isDay()) {
+            initNightModel();
+        } else {
+            initDayModel();
+        }
     }
 
     /**
      * 展示一个切换动画
      */
-    private void showAnimation() {
+    @Override
+    public void showAnimation() {
         final View decorView = getWindow().getDecorView();
         Bitmap cacheBitmap = getCacheBitmapFromView(decorView);
         if (decorView instanceof ViewGroup && cacheBitmap != null) {
@@ -178,23 +182,28 @@ public class MainActivity extends SuperActivity {
     }
 
     /**
-     * 切换主题设置
+     * 切换主题设置白天模式
      */
-    private void toggleThemeSetting() {
-        if (dayNightHelper.isDay()) {
-            dayNightHelper.setMode(ResponseDayNightModel.NIGHT);
-            setTheme(R.style.NightTheme);
-        } else {
-            dayNightHelper.setMode(ResponseDayNightModel.DAY);
-            setTheme(R.style.DayTheme);
-        }
+    @Override
+    public void initDayModel() {
+        presenter.setDayModel();
+        setTheme(R.style.DayTheme);
+    }
+
+    /**
+     * 切换主题设置夜晚模式
+     */
+    @Override
+    public void initNightModel() {
+        presenter.setNightModel();
+        setTheme(R.style.NightTheme);
     }
 
     /**
      * 刷新UI界面
      */
-
-    private void refreshUI() {
+    @Override
+    public void refreshUI() {
         TypedValue background = new TypedValue();//背景色
         TypedValue textColor = new TypedValue();//字体颜色
         Resources.Theme theme = getTheme();
@@ -281,6 +290,13 @@ public class MainActivity extends SuperActivity {
             showToast("连接移动网络");
         } else if (netModile == -1) {
             showToast("没有连接网络");
+        }
+    }
+
+    @Override
+    public void setPresenter(TaskDayNightContract.Presenter presenter) {
+        if (presenter != null) {
+            this.presenter = presenter;
         }
     }
 }
