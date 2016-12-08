@@ -46,7 +46,7 @@
 6.联系作者。
 
 
-# [![](https://jitpack.io/v/qydq/an-maven-base.svg)](https://jitpack.io/#qydq/an-maven-base)
+# [![](https://jitpack.io/v/qydq/an-maven-base.svg)](https://jitpack.io/#qydq/an-maven-base)   ![](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/res/drawable/base_drawable_art_click.png)
 
 #######
 
@@ -83,11 +83,11 @@
 
 + an框架提供了网络请求基于xutils模块的封装，http实现XHttps。
 
-*i.   HTTP实现利用了XHttps提供了post,get,upLoadFile,downLoadFile...*
+ >*i.   HTTP实现利用了XHttps提供了post,get,upLoadFile,downLoadFile...*
 
-*ii.  集成以上则可以使用注解功能，可以参考xUtils3开源项目。*
+ >*ii.  集成以上则可以使用注解功能，可以参考xUtils3开源项目。*
 
-*iii. 提供便捷XCallBack ,XParseResponse ,XProgressCallBack操作。*
+ >*iii. 提供便捷XCallBack ,XParseResponse ,XProgressCallBack操作。*
 
 + an框架包含了许多实用的工具类，像MD5加密，数据校验，夜间模式切换等。
 
