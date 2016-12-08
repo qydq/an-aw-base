@@ -11,7 +11,7 @@
 
     <include
         android:id="@+id/includeHead"
-        layout="@layout/base_headview_standard"
+        layout="@layout/base_headview_standard_complex"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

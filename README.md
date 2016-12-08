@@ -103,9 +103,15 @@
 
 # 2. 实现效果
 
-+ **an框架，0.1.0版本新增通用的标题栏目方便以后的集成（实际使用时背景颜色CommMainBg）。如图**
++ **an框架提供通用的标题栏头集成（实际使用时背景颜色CommMainBg）。如图**
 
-| ![](https://github.com/qydq/an-aw-base/blob/master/screen/base_headview_standard.jpg)| 
+（1）普通状态栏参考<br>
+
+|![](https://github.com/qydq/an-aw-base/blob/master/screen/base_headview_standard.png)| 
+
+（2）复杂状态栏参考<br>
+
+|![](https://github.com/qydq/an-aw-base/blob/master/screen/base_headview_standard_complex.png)| 
 
 + **an框架提供的WToggleButton 切换控件**
 
@@ -138,11 +144,13 @@
 	yy_drawable_selector_md.xml
 	yy_drawable_selector_md_shape.xml
 	
-+ **An框架状态栏通用**
++ **An框架状态栏**
+
+<font color=#0099ff size=12 face="黑体">备注：aN框架提供通用状态栏可修改改base_drawable_backarrow，base_drawable_backarrow_click图片；文字可修改CommColorGray，CommColorWhite；标题颜色CommTxtMainColor可修改，标题大一字体大小CommDimenBarTitleMax，*修改的时候直接替换即可*。</font>
 
 （1）普通状态栏参考<br>
 
-<font color=#0099ff size=12 face="黑体">备注：aN框架提供状态栏左边引用到了yy_drawable_selector_leftback选择器，可修改base_drawable_backarrow，base_drawable_backarrow_click图片；字体参考yy_drawable_selector_txt，可修改CommColorGray，CommColorWhite；标题颜色CommTxtMainColor可修改，标题大一字体大小CommDimenBarTitleMax，左右文本大小CommDimenBarTitleSmall可修改;</font>
+<font>Tips: 左右文本大小CommDimenBarTitleSmall可修改;</font>
 
 		<include
         android:id="@+id/includeHead"
@@ -150,13 +158,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 		
-（2）复杂状态栏参考<br> 未完成
+（2）复杂状态栏参考<br>
+
+<font color=#0099ff size=12 face="黑体">Tips：aN框架提供复杂状态栏可修改从左到右图片base_drawable_art，base_drawable_art_click，base_drawable_share，base_drawable_share_click。文本大小，CommDimenTxtSSmall，可修改。;</font>
 
 		<include
         android:id="@+id/includeHead"
         layout="@layout/base_headview_standard_complex"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+		
++ **An通用**
+
+###### Style
+
+AnTvContentStyle 提供的文本内容主题。
+
+AnTvTitleStyle 提供的文本标题主题。
+
+
 
 ### 使用方法
 
@@ -302,7 +322,7 @@ http://drakeet.me/android-studio
 		compile 'com.google.code.gson:gson:2.7'
 		compile 'com.android.support:design:24.2.0'<!--android md新特性的引用-->
 	
-## an-maven-base > project /build.gradle
+## an-aw-base > project /build.gradle
 
 		buildscript {
 		repositories {

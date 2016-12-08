@@ -3,4 +3,6 @@
     <string name="CommStringBack">返回</string>
     <string name="CommStringTitle">标题</string>
     <string name="CommStringRight">账单</string>
+    <string name="CommStringArt">加入艺术圈</string>
+    <string name="CommStringShare">分享</string>
 </resources>

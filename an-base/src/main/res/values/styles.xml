@@ -42,4 +42,14 @@
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="colorAccent">#ffE91E63</item>
     </style>
+    <!-- 自定义 通用字体内容的颜色 -->
+    <style name="AnTvContentStyle">
+        <item name="android:textColor">@color/CommColorTxtContent</item>
+        <item name="android:textSize">@dimen/CommDimenTxtContext</item>
+    </style>
+    <!-- 自定义 通用字体主色的颜色 -->
+    <style name="AnTvTitleStyle">
+        <item name="android:textColor">@color/CommColorTxtTitle</item>
+        <item name="android:textSize">@dimen/CommDimenTxtTitle</item>
+    </style>
 </resources>

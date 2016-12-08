@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/anRlHeadView"
+    android:layout_width="match_parent"
+    android:layout_height="68dp"
+    android:background="@color/CommMainBg">
+
+    <LinearLayout
+        android:id="@+id/anLlBack"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:duplicateParentState="true"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="@dimen/CommDimenBarIcon"
+            android:layout_height="@dimen/CommDimenBarIcon"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/yy_drawable_selector_leftback" />
+
+        <TextView
+            android:id="@+id/anTxBack"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:text="@string/CommStringBack"
+            android:textColor="@drawable/yy_drawable_selector_txt"
+            android:textSize="@dimen/CommDimenBarTitleSmall" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/anTvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/CommColorTransparent"
+        android:gravity="center_vertical"
+        android:text="@string/CommStringTitle"
+        android:textColor="@color/CommTxtMainColor"
+        android:textSize="@dimen/CommDimenBarTitleMax" />
+
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/anLlRight"
+            android:layout_width="42dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="2dp"
+            android:clickable="true"
+            android:duplicateParentState="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/CommDimenBarIconSmall"
+                android:layout_height="@dimen/CommDimenBarIconSmall"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/yy_drawable_selector_rightart" />
+
+            <TextView
+                android:id="@+id/anTvRight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="1"
+                android:text="@string/CommStringArt"
+                android:textColor="@drawable/yy_drawable_selector_txt"
+                android:textSize="@dimen/CommDimenTxtSSmall" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/anLlRRight"
+            android:layout_width="42dp"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:duplicateParentState="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/CommDimenBarIconSmall"
+                android:layout_height="@dimen/CommDimenBarIconSmall"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/yy_drawable_selector_rightshare" />
+
+            <TextView
+                android:id="@+id/anTvRRight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="1"
+                android:text="@string/CommStringShare"
+                android:textColor="@drawable/yy_drawable_selector_txt"
+                android:textSize="@dimen/CommDimenTxtSSmall" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

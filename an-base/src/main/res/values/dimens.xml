@@ -10,13 +10,14 @@
     <dimen name="DimenMarginTopSmall">120dp</dimen><!--为空，如null图片上面小间距，建议写死-->
 
     <dimen name="CommDimenMargin">16dp</dimen><!--通用的左右上下间距参考-->
-
+    <!--内容图标参考-->
     <dimen name="CommDimenIconSMax">24dp</dimen><!--超级大图标-->
     <dimen name="CommDimenIconMax">22dp</dimen><!--大图标-->
     <dimen name="CommDimenIconSmall">20dp</dimen><!--小图标-->
     <dimen name="CommDimenIconSSmall">16dp</dimen><!--超级小图标-->
 
     <dimen name="CommDimenBarIcon">28dp</dimen><!--（图标）参考大小-->
+    <dimen name="CommDimenBarIconSmall">20dp</dimen><!--（图标）参考大小-->
 
     <dimen name="CommDimenBarTitleMax">18sp</dimen><!--bar，文本字体大小参考-->
     <dimen name="CommDimenBarTitleSmall">17sp</dimen><!--bar，文本字体大小参考-->
@@ -25,6 +26,7 @@
     <dimen name="CommDimenTxtTitle">17sp</dimen><!--文本标题参考-->
     <dimen name="CommDimenTxtContext">15sp</dimen><!--文本内容字体大小参考-->
     <dimen name="CommDimenTxtSmall">13sp</dimen><!--文本小号字体-->
+    <dimen name="CommDimenTxtSSmall">11sp</dimen><!--文本小号字体-->
 
     <dimen name="CommDimenIconTipsW">120dp</dimen><!--log类图标参考宽度-->
     <dimen name="CommDimenIconTipsH">110dp</dimen><!--log类图标参考高度-->

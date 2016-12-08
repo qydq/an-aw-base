@@ -22,10 +22,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.an.base.contract.TaskDayNightContract;
-import com.an.base.model.entity.ResponseDayNightModel;
 import com.an.base.presenter.TaskDayNightPresenter;
 import com.an.base.utils.DUtilsDialog;
-import com.an.base.utils.DayNightHelper;
 import com.an.base.view.SuperActivity;
 import com.an.base.view.widget.WToggleButton;
 
@@ -60,6 +58,11 @@ public class MainActivity extends SuperActivity implements TaskDayNightContract.
 
     private TaskDayNightContract.Presenter presenter;
 
+    //base_headview_standard_complex的引用
+    private LinearLayout anLlRight;
+    private LinearLayout anLlRRight;
+    private TextView anTvRight;
+
     @Override
     public void initView() {
         editor = sp.edit();
@@ -72,9 +75,12 @@ public class MainActivity extends SuperActivity implements TaskDayNightContract.
         toggleButton = (WToggleButton) findViewById(R.id.toggleBtn);
         relativeLayout = (RelativeLayout) findViewById(R.id.activity_main);
         linearLayout = (LinearLayout) findViewById(R.id.anLlLayout);
+        anLlRRight = (LinearLayout) findViewById(R.id.anLlRRight);
+        anLlRight = (LinearLayout) findViewById(R.id.anLlRight);
         tvChangModel = (Button) findViewById(R.id.tvChangModel);
         btnDialog = (Button) findViewById(R.id.btnDialog);
         textView = (TextView) findViewById(R.id.textView);
+        anTvRight = (TextView) findViewById(R.id.anTvRight);
 
         mLayoutList = new ArrayList<>();
         mTextViewList = new ArrayList<>();
