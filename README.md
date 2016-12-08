@@ -103,19 +103,20 @@
 
 # 2. 实现效果
 
++ **an框架提供的WToggleButton 切换控件**
+
+ ![](https://github.com/qydq/an-aw-base/blob/master/screen/base_wtogglebutton.gif)
+
 + **an框架提供通用的标题栏头集成（实际使用时背景颜色CommMainBg）。如图**
 
 （1）普通状态栏参考<br>
 
-|![](https://github.com/qydq/an-aw-base/blob/master/screen/base_headview_standard.png)| 
+ ![](https://github.com/qydq/an-aw-base/blob/master/screen/base_headview_standard.png)
 
 （2）复杂状态栏参考<br>
 
-|![](https://github.com/qydq/an-aw-base/blob/master/screen/base_headview_standard_complex.png)| 
+ ![](https://github.com/qydq/an-aw-base/blob/master/screen/base_headview_standard_complex.png)
 
-+ **an框架提供的WToggleButton 切换控件**
-
-| ![](https://github.com/qydq/an-aw-base/blob/master/screen/base_wtogglebutton.gif)| 
 
 ---------
 
