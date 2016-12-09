@@ -121,6 +121,10 @@
 ---------
 
 # 3. 思路或使用（代码）
+
+*基本使用方法可以参考如下连接*
+
+[利用aN框架快速开发android应用程序基本使用方法](https://zhuanlan.zhihu.com/p/24273705?refer=sunst)
 		
 ### 实现思路
 
@@ -147,6 +151,8 @@
 	
 + **An框架状态栏**
 
+[利用aN框架快速开发android应用程序基本使用方法](https://zhuanlan.zhihu.com/p/24273705?refer=sunst)
+
 <font color=#0099ff size=12 face="黑体">备注：aN框架提供通用状态栏可修改改base_drawable_backarrow，base_drawable_backarrow_click图片；文字可修改CommColorGray，CommColorWhite；标题颜色CommTxtMainColor可修改，标题大一字体大小CommDimenBarTitleMax，*修改的时候直接替换即可*。</font>
 
 （1）普通状态栏参考<br>
@@ -171,7 +177,7 @@
 		
 + **An通用**
 
-###### Style
+##### Style
 
 AnTvContentStyle 提供的文本内容主题。
 
@@ -184,6 +190,8 @@ AnTvTitleStyle 提供的文本标题主题。
 + **An框架夜间模式**
 
 （1）简单夜间模式使用<br>
+
+[如何使用An框架提供的WToggleButton实现一个漂亮的切换按钮？](https://zhuanlan.zhihu.com/p/24275861?refer=sunst)
 
 <font color=#0099ff size=12 face="黑体">备注：aN框架提供了数据保存Sp，直接sp.edit即可得到Editor对象；如editor = sp.edit();</font>
 
