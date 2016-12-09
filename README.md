@@ -125,6 +125,8 @@
 *基本使用方法可以参考如下连接*
 
 [利用aN框架快速开发android应用程序基本使用方法](https://zhuanlan.zhihu.com/p/24273705?refer=sunst)
+
+[如何使用An框架提供的WToggleButton实现一个漂亮的切换按钮？](https://zhuanlan.zhihu.com/p/24275861?refer=sunst)
 		
 ### 实现思路
 
@@ -190,8 +192,6 @@ AnTvTitleStyle 提供的文本标题主题。
 + **An框架夜间模式**
 
 （1）简单夜间模式使用<br>
-
-[如何使用An框架提供的WToggleButton实现一个漂亮的切换按钮？](https://zhuanlan.zhihu.com/p/24275861?refer=sunst)
 
 <font color=#0099ff size=12 face="黑体">备注：aN框架提供了数据保存Sp，直接sp.edit即可得到Editor对象；如editor = sp.edit();</font>
 
