@@ -140,7 +140,6 @@ public class MainActivity extends SuperActivity implements TaskDayNightContract.
             }
         });
     }
-
     @Override
     public void _initTheme() {
         if (presenter.isDay()) {

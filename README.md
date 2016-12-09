@@ -201,7 +201,7 @@ AnTvTitleStyle 提供的文本标题主题。
 
 [Android 利用an框架快速实现夜间模式的两种套路](https://zhuanlan.zhihu.com/p/22520818?refer=qyddai)
 
-[Android 利用an框架快速实现夜间模式的两种套路-加强版](https://zhuanlan.zhihu.com/p/22520818?refer=qyddai)
+[Android 利用an框架快速实现夜间模式的两种套路-加强版](https://zhuanlan.zhihu.com/p/24269723)
 
 + **An框架提供的WToggleButton的使用参考** *（源码中配合夜间模式使用）*
 
