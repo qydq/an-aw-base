@@ -1,7 +1,12 @@
 apply plugin: 'com.android.library'
 //配置jitpack
-apply plugin: 'com.github.dcendents.android-maven'
-group = 'com.github.qydq'
+//apply plugin: 'com.github.dcendents.android-maven'
+//group = 'com.github.qydq'
+ext {
+    PUBLISH_GROUP_ID = 'cn.android.sunst'
+    PUBLISH_ARTIFACT_ID = 'an-base'
+    PUBLISH_VERSION = '0.0.3'
+}
 
 android {
     compileSdkVersion 24
@@ -36,3 +41,4 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'com.android.support:design:24.2.0'
 }
+apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
