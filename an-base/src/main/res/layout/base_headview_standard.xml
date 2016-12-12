@@ -47,23 +47,31 @@
 
     <LinearLayout
         android:id="@+id/anLlRight"
-        android:layout_width="40dp"
+        android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/DimenMargin08"
         android:clickable="true"
         android:duplicateParentState="true"
-        android:visibility="invisible">
+        android:gravity="center_vertical"
+        android:visibility="visible">
 
         <TextView
             android:id="@+id/anTvRight"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_gravity="center_vertical|start"
-            android:duplicateParentState="true"
             android:gravity="center_vertical|start"
             android:text="@string/CommStringRight"
             android:textColor="@drawable/yy_drawable_selector_txt"
             android:textSize="@dimen/CommDimenBarTitleSmall" />
+
+        <ImageView
+            android:layout_width="@dimen/CommDimenBarIconSmall"
+            android:layout_height="@dimen/CommDimenBarIconSmall"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/DimenMargin08"
+            android:src="@drawable/yy_drawable_selector_rightinfo" />
     </LinearLayout>
 </RelativeLayout>
