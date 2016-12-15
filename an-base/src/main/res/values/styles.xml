@@ -52,4 +52,9 @@
         <item name="android:textColor">@color/CommColorTxtTitle</item>
         <item name="android:textSize">@dimen/CommDimenTxtTitle</item>
     </style>
+
+    <declare-styleable name="AnSlidingDeleteListView">
+        <attr name="anButtonID" format="reference" />
+        <attr name="anEnableSliding" format="boolean" />
+    </declare-styleable>
 </resources>

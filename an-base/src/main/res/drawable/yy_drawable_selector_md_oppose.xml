@@ -14,37 +14,31 @@
 -->
 
 <inset xmlns:android="http://schemas.android.com/apk/res/android"
-    android:insetBottom="2dp"
-    android:insetLeft="2dp"
-    android:insetRight="2dp"
-    android:insetTop="2dp">
-    <ripple android:color="@color/CommColorRipple">
+    android:insetBottom="0dp"
+    android:insetLeft="0dp"
+    android:insetRight="0dp"
+    android:insetTop="0dp">
+    <ripple android:color="@color/CommColorOpposeRipple">
         <item>
             <!-- As we can't use themed ColorStateLists in L, we'll use a Drawable selector which
                  changes the shape's fill color. -->
             <selector>
-                <item android:state_pressed="false">
-                    <shape android:shape="rectangle">
-                        <corners android:radius="10dp" />
-                        <solid android:color="@color/CommColorTransparent" />
-                        <stroke
-                            android:width="0.5dp"
-                            android:color="@color/CommColorBorder" />
-                        <padding
-                            android:bottom="2dp"
-                            android:top="2dp" />
-                    </shape>
-                </item>
                 <item android:state_pressed="true">
                     <shape android:shape="rectangle">
-                        <corners android:radius="10dp" />
-                        <solid android:color="@color/CommColorTransparentClicked" />
-                        <stroke
-                            android:width="0.5dp"
-                            android:color="@color/CommColorBorderClicked" />
+                        <corners android:radius="0dp" />
+                        <solid android:color="@color/CommColorOpposeClicked" />
                         <padding
-                            android:bottom="2dp"
-                            android:top="2dp" />
+                            android:bottom="0dp"
+                            android:top="0dp" />
+                    </shape>
+                </item>
+                <item android:state_pressed="false">
+                    <shape android:shape="rectangle">
+                        <corners android:radius="0dp" />
+                        <solid android:color="@color/CommColorOppose" />
+                        <padding
+                            android:bottom="0dp"
+                            android:top="0dp" />
                     </shape>
                 </item>
             </selector>

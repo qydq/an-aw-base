@@ -1,12 +1,13 @@
 apply plugin: 'com.android.library'
 //配置jitpack
-//apply plugin: 'com.github.dcendents.android-maven'
-//group = 'com.github.qydq'
-ext {
-    PUBLISH_GROUP_ID = 'cn.android.sunst'
-    PUBLISH_ARTIFACT_ID = 'an-base'
-    PUBLISH_VERSION = '1.0.1'
-}
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.qydq'
+//配置bintray
+//ext {
+//    PUBLISH_GROUP_ID = 'cn.android.sunst'
+//    PUBLISH_ARTIFACT_ID = 'an-base'
+//    PUBLISH_VERSION = '1.0.1'
+//}
 
 android {
     compileSdkVersion 24
@@ -28,7 +29,7 @@ android {
     }
     lintOptions {
         abortOnError false
-        disable 'TypographyFractions','TypographyQuotes'
+        disable 'TypographyFractions', 'TypographyQuotes'
     }
 }
 
@@ -43,4 +44,4 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'com.android.support:design:24.2.0'
 }
-apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
+//apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'

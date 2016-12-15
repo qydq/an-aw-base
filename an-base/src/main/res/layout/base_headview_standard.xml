@@ -39,7 +39,6 @@
         android:layout_height="48dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:background="@color/CommColorTransparent"
         android:gravity="center_vertical"
         android:text="@string/CommStringTitle"
         android:textColor="@color/CommTxtMainColor"
@@ -68,6 +67,7 @@
             android:textSize="@dimen/CommDimenBarTitleSmall" />
 
         <ImageView
+            android:id="@+id/anIvRight"
             android:layout_width="@dimen/CommDimenBarIconSmall"
             android:layout_height="@dimen/CommDimenBarIconSmall"
             android:layout_gravity="center_vertical"

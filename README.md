@@ -91,7 +91,7 @@
 
 + an框架包含了许多实用的工具类，像MD5加密，数据校验，夜间模式切换等。
 
-+ an框架简化了Toast使用，直接showToast。
++ an框架提供了一些weight,如WSlidingDeleteListView,WToggleButton等。
 
 + an框架加入了两种夜间模式的功能。
 
@@ -274,9 +274,12 @@ AnTvTitleStyle 提供的文本标题主题。
 	
 |选择器名称|背景说明|边框|圆角|
 |:---------|:-------|:---|---:|
-|drawable_selector_md|CommColorTransparent<br>CommColorTransparentClicked<br>CommColorDayBackground|无|无|
-|drawable_selector_md_shape|CommColorTransparent<br>CommColorTransparentClicked<br>CommColorDayBackground|CommColorBorder<br>CommColorBorderClicked|2dp|
+|drawable_selector_md|CommColorRipple<br>CommColorTransparent<br>CommColorTransparentClicked|无|无|
+|drawable_selector_md_oppose|CommColorOpposeRipple<br>CommColorOpposeClicked<br>CommColorOppose|无|无|
+|drawable_selector_md_shape|CommColorRipple<br>CommColorTransparent<br>CommColorTransparentClicked|CommColorBorder<br>CommColorBorderClicked|2dp|
+|drawable_selector_md_shape_oppose|CommColorOppose<br>CommColorOpposeClicked<br>CommColorOpposeRipple|CommColorBorder<br>CommColorBorderClicked|2dp|
 |drawable_selector_txt|CommColorGray<br>CommColorWhite|无|无|
+|drawable_selector_txt_oppose|CommColorWhite<br>CommColorGray|无|无|
 |drawable_selector_ll_shape|CommEndColor<br>CommStartColor<br>CommMainBgClicked<br>CommMainBg|CommColorLineClicked<br>CommColorLine|2dp|
 
 ---------

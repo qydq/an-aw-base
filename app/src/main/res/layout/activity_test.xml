@@ -107,4 +107,43 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/anLlLayout"
         android:text="测试夜间模式" />
+
+    <Button
+        android:id="@+id/ww"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/textView"
+        android:background="@drawable/yy_drawable_selector_md"
+        android:gravity="center_vertical"
+        android:text="Hello World!"
+        android:textColor="@color/CommColorWhite" />
+
+    <Button
+        android:id="@+id/ee"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/ww"
+        android:background="@drawable/yy_drawable_selector_md_oppose"
+        android:gravity="center_vertical"
+        android:text="Hello World!"
+        android:textColor="@drawable/yy_drawable_selector_txt" />
+
+    <Button
+        android:id="@+id/mm"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/ee"
+        android:background="@drawable/yy_drawable_selector_md_shape"
+        android:gravity="center_vertical"
+        android:text="Hello World!"
+        android:textColor="@color/CommColorWhite" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/mm"
+        android:background="@drawable/yy_drawable_selector_md_shape_oppose"
+        android:gravity="center_vertical"
+        android:text="Hello World!"
+        android:textColor="@drawable/yy_drawable_selector_txt" />
 </RelativeLayout>

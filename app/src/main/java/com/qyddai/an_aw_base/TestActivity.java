@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.an.base.utils.DUtilsDialog;
 
@@ -21,6 +22,7 @@ import com.an.base.utils.DUtilsDialog;
 public class TestActivity extends Activity {
     private Button button;
     private ProgressDialog dialog;
+    private ImageView anIvRight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,8 @@ public class TestActivity extends Activity {
         setContentView(R.layout.activity_test);
         //如果换成activity_main则会崩掉。
         button = (Button) findViewById(R.id.btnDialog);
+        anIvRight = (ImageView) findViewById(R.id.anIvRight);
+        anIvRight.setVisibility(View.GONE);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

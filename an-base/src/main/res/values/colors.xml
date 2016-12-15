@@ -170,8 +170,6 @@
     <color name="ColorLightblue">#ADD8E6</color>
     <!-- 暗灰色 -->
     <color name="ColorDarkgray">#A9A9A9</color>
-    <!-- 暗灰色 -->
-    <color name="ColorDarkgrey">#A9A9A9</color>
     <!-- 褐色 -->
     <color name="ColorBrown">#A52A2A</color>
     <!-- 赭色 -->
@@ -217,7 +215,11 @@
     </color><!--CommColorDayBackgroundClicked--><!--普通模式颜色-->
 
     <color name="CommColorTransparent">#00000000</color><!--透明颜色-->
-    <color name="CommColorTransparentClicked">#25000000</color><!--透明颜色选择颜色-->
+    <color name="CommColorTransparentClicked">#25000000</color><!--CommColorBorderClicked透明颜色选择颜色-->
+    <color name="CommColorOppose">#8B008B</color><!--CommMainBg透明颜色选择颜色oppose主色-->
+    <color name="CommColorOpposeClicked">#25000000</color><!--CommColorTransparentClicked透明颜色选择颜色oppose主色点击-->
+    <color name="CommColorOpposeRipple">#CD5C5C</color><!--oppose ripple -->
+    <color name="CommColorRipple">#CD5C5C</color><!--oppose ripple-->
     <color name="CommColorDialog">#8B008B</color><!--CommColorDayBackground-->
     <color name="CommColorProgressDialog">#8B008B</color><!--CommColorDayBackground-->
 
@@ -256,8 +258,8 @@
 
     <color name="CommColorLine">#eaecec</color><!--分割线的颜色-->
     <color name="CommColorLineClicked">#DDDDDD</color><!--分割线选择颜色-->
-    <color name="CommColorBorder">#25000000</color><!--md,CommColorTransparentClicked--><!--边框颜色-->
-    <color name="CommColorBorderClicked">#00000000</color><!--md,CommColorTransparent边框颜色选择-->
+    <color name="CommColorBorder">#A9A9A9</color><!--md,CommColorTransparentClicked--><!--边框颜色-->
+    <color name="CommColorBorderClicked">#25000000</color><!--md,CommColorTransparent边框颜色选择-->
     <!--对应夜间模式颜色代码-->
     <color name="CommMainBgNight">#000011</color><!--背景颜色可以等于主色，适用于头布局，晚上模式-->
     <color name="CommMainBgNightClicked">#000011</color><!--点击后的颜色-->

@@ -1,9 +1,13 @@
 <resources>
     <!--sunshuntao 2016-11-16 personal-standard;no changes-->
     <dimen name="DimenMargin08">8dp</dimen><!--8特殊间距-->
+    <dimen name="DimenPadding08">8dp</dimen><!--8特殊间距-->
     <dimen name="DimenMargin10">10dp</dimen><!--10特殊间距-->
+    <dimen name="DimenPadding10">10dp</dimen><!--10特殊间距-->
     <dimen name="DimenMargin">16dp</dimen><!--间距-->
+    <dimen name="DimenPadding">16dp</dimen><!--间距-->
     <dimen name="DimenMargin20">20dp</dimen><!--20特殊间距-->
+    <dimen name="DimenPadding20">20dp</dimen><!--20特殊间距-->
 
     <dimen name="DimenNativeNational">48dp</dimen><!--类按钮的高度-->
     <dimen name="DimenMarginTopMax">200dp</dimen><!--为空，如null图片上面大间距,建议写死-->

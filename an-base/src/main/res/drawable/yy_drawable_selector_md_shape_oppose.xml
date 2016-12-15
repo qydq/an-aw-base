@@ -18,15 +18,15 @@
     android:insetLeft="2dp"
     android:insetRight="2dp"
     android:insetTop="2dp">
-    <ripple android:color="@color/CommColorRipple">
+    <ripple android:color="@color/CommColorOpposeRipple">
         <item>
             <!-- As we can't use themed ColorStateLists in L, we'll use a Drawable selector which
                  changes the shape's fill color. -->
             <selector>
-                <item android:state_pressed="false">
+                <item android:state_pressed="true">
                     <shape android:shape="rectangle">
                         <corners android:radius="10dp" />
-                        <solid android:color="@color/CommColorTransparent" />
+                        <solid android:color="@color/CommColorOpposeClicked" />
                         <stroke
                             android:width="0.5dp"
                             android:color="@color/CommColorBorder" />
@@ -35,10 +35,10 @@
                             android:top="2dp" />
                     </shape>
                 </item>
-                <item android:state_pressed="true">
+                <item android:state_pressed="false">
                     <shape android:shape="rectangle">
                         <corners android:radius="10dp" />
-                        <solid android:color="@color/CommColorTransparentClicked" />
+                        <solid android:color="@color/CommColorOppose" />
                         <stroke
                             android:width="0.5dp"
                             android:color="@color/CommColorBorderClicked" />
