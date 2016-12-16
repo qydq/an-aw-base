@@ -122,11 +122,15 @@
 
 # 3. 思路或使用（代码）
 
-*基本使用方法可以参考如下连接*
+## Api Guide --aN框架API指导参考 
+
++ **An框架命名规范**
 
 [利用aN框架快速开发android应用程序基本使用方法](https://zhuanlan.zhihu.com/p/24273705?refer=sunst)
 
 [如何使用An框架提供的WToggleButton实现一个漂亮的切换按钮？](https://zhuanlan.zhihu.com/p/24275861?refer=sunst)
+
+[利用an框架提供的WSlidingDeleteListView防QQ滑动删除。](https://zhuanlan.zhihu.com/p/24408002?refer=sunst)
 		
 ### 实现思路
 
@@ -135,21 +139,6 @@
 命名规范是一个项目中非常重要的部分，任何事情不规范不仅别人看不懂你，自己都不了解自己。<br>
 [An框架命名规范参考](https://zhuanlan.zhihu.com/p/24155927)
 
-（1）layout命令参考
-
-	base_standard_dialog.xml
-	base_standard_dialog_progress.xml
-	sst_activity_drawerarrow
-	sst_fragment_drawerarrow
-	sst_fragment_index2
-
-（2）drawable命令参考
-
-	base_drawable_loading.png
-	yy_drawable_bgday_shape.xml
-	yy_drawable_bgnigt_shape.xml
-	yy_drawable_selector_md.xml
-	yy_drawable_selector_md_shape.xml
 	
 + **An框架状态栏**
 
