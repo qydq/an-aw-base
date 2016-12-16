@@ -152,47 +152,45 @@ public class WSlidingDeleteListView extends ListView {
             break;
 
             case MotionEvent.ACTION_MOVE:
-                try {
-                    mTracker.addMovement(event);
-                    mTracker.computeCurrentVelocity(1000);
-                    int curVelocityX = (int) mTracker.getXVelocity();
+                if (mTracker == null)
+                    mTracker = VelocityTracker.obtain();
+                mTracker.addMovement(event);
+                mTracker.computeCurrentVelocity(1000);
+                int curVelocityX = (int) mTracker.getXVelocity();
 
-                    float curX = event.getX();
-                    float curY = event.getY();
-                    int lastPos = pointToPosition(
-                            (int) mLastMotionX, (int) mLastMotionY);
-                    int curPos = pointToPosition((int) curX, (int) curY);
-                    int distanceX = (int) (mLastMotionX - curX);
-                    if (lastPos == curPos && (distanceX >= MAX_DISTANCE || curVelocityX < -MAX_FLING_VELOCITY)) {
-                        int firstVisiblePos = getFirstVisiblePosition() - getHeaderViewsCount();
-                        int factPos = curPos - firstVisiblePos;
-                        mItemView = getChildAt(factPos);
-                        if (mItemView != null) {
-                            if (mButtonID == -1)
-                                throw new IllegalButtonIDException("Illegal DeleteButton resource id,"
-                                        + "ensure excute the function setButtonID(int id)");
+                float curX = event.getX();
+                float curY = event.getY();
+                int lastPos = pointToPosition(
+                        (int) mLastMotionX, (int) mLastMotionY);
+                int curPos = pointToPosition((int) curX, (int) curY);
+                int distanceX = (int) (mLastMotionX - curX);
+                if (lastPos == curPos && (distanceX >= MAX_DISTANCE || curVelocityX < -MAX_FLING_VELOCITY)) {
+                    int firstVisiblePos = getFirstVisiblePosition() - getHeaderViewsCount();
+                    int factPos = curPos - firstVisiblePos;
+                    mItemView = getChildAt(factPos);
+                    if (mItemView != null) {
+                        if (mButtonID == -1)
+                            throw new IllegalButtonIDException("Illegal DeleteButton resource id,"
+                                    + "ensure excute the function setButtonID(int id)");
 
-                            mButton = mItemView.findViewById(mButtonID);
-                            mButton.setVisibility(View.VISIBLE);
-                            mButton.startAnimation(mShowAnim);
+                        mButton = mItemView.findViewById(mButtonID);
+                        mButton.setVisibility(View.VISIBLE);
+                        mButton.startAnimation(mShowAnim);
 
-                            mLastButtonShowingPos = curPos;
-                            mButton.setOnClickListener(new OnClickListener() {
+                        mLastButtonShowingPos = curPos;
+                        mButton.setOnClickListener(new OnClickListener() {
 
-                                @Override
-                                public void onClick(View v) {
-                                    if (mDeleteItemListener != null)
-                                        mDeleteItemListener.onButtonClick(v, mLastButtonShowingPos);
-                                    mButton.setVisibility(View.GONE);
+                            @Override
+                            public void onClick(View v) {
+                                if (mDeleteItemListener != null)
+                                    mDeleteItemListener.onButtonClick(v, mLastButtonShowingPos);
+                                mButton.setVisibility(View.GONE);
 
-                                    mLastButtonShowingPos = -1;
-                                }
-                            });
-                            mCancelMotionEvent = true;
-                        }
+                                mLastButtonShowingPos = -1;
+                            }
+                        });
+                        mCancelMotionEvent = true;
                     }
-                } catch (IllegalButtonIDException e) {
-                    e.printStackTrace();
                 }
                 break;
 
