@@ -4,13 +4,13 @@
 
 * 框架来源于本人an-maven-base框架，an-aw-base框架去除了an-maven-base框架不常用的功能，更轻量提升了性能。
 
-*本项目地址：https://github.com/qydq/an-aw-base*
+本项目地址：https://github.com/qydq/an-aw-base
 
 **使用介绍：如下简介或知乎，或个人网易博客。**
 
->个人知乎主页：https://www.zhihu.com/people/qydq
+>知乎主页：https://www.zhihu.com/people/qydq
 
->个人博客主页：https://bgwan.blog.163.com
+>博客主页：https://bgwan.blog.163.com
 
 
 **如有使用问题请发送电子邮件。**
@@ -23,7 +23,7 @@
 	
 >创建时间 <------2016年09月17日------->
 	
->2016年09月17日;最近修改时间：2016年09月19日。
+>2016年09月17日;最近修改时间：2016年12月16日。
 
 ########
 	
@@ -46,7 +46,7 @@
 6.联系作者。
 
 
-# [![](https://jitpack.io/v/qydq/an-aw-base.svg)](https://jitpack.io/#qydq/an-aw-base)   ![](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/res/drawable/base_drawable_art_click.png)   <a href='https://bintray.com/qydq/an/an-aw-base?source=watch' alt='Get automatic notifications about new "an-aw-base" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_color.png'></a>  ![](https://github.com/qydq/an-aw-base/blob/master/screen/base_wtogglebutton.gif)
+# [![](https://jitpack.io/v/qydq/an-aw-base.svg)](https://jitpack.io/#qydq/an-aw-base)   ![](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/res/drawable/base_drawable_art_click.png)   <a href='https://bintray.com/qydq/an/an-aw-base?source=watch' alt='Get automatic notifications about new "an-aw-base" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_color.png'></a>  ![](https://github.com/qydq/an-aw-base/blob/master/screen/base_wtogglebutton.gif =100*100)
 
 #######
 
@@ -54,11 +54,11 @@
 
 **使用Gradle构建时添加以下依赖即可** *（注：也可以使用之前的低稳定版本）*
 
-`compile 'com.github.qydq:an-maven-base:0.1.3'`
+`compile 'com.github.qydq:an-aw-base:0.1.1'`
 
 或者加入：
 
-`compile 'cn.android.sunst:an-base:0.0.2'`
+`compile 'cn.android.sunst:an-base:1.0.1'`
 
 如要使用整套an框架则加入另一个依赖，具体请参考url = https://github.com/qydq/an
 
@@ -79,15 +79,15 @@
 **Tips**
 ---
 
-+ an框架提供了SuperActivity,SuperFragment,BasePresenter,BaseView等基类符合Google material design。
++ an框架提供了SuperActivity,SuperFragment,BasePresenter,BaseView等基类符合Google Material Design。
 
 + an框架提供了网络请求基于xutils模块的封装，http实现XHttps。
 
- >*i.   HTTP实现利用了XHttps提供了post,get,upLoadFile,downLoadFile...*
+`*i.   HTTP实现利用了XHttps提供了post,get,upLoadFile,downLoadFile...*`
 
- >*ii.  集成以上则可以使用注解功能，可以参考xUtils3开源项目。*
+`*ii.  集成以上则可以使用注解功能，可以参考xUtils3开源项目。*`
 
- >*iii. 提供便捷XCallBack ,XParseResponse ,XProgressCallBack操作。*
+`*iii. 提供便捷XCallBack ,XParseResponse ,XProgressCallBack操作。*`
 
 + an框架包含了许多实用的工具类，像MD5加密，数据校验，夜间模式切换等。
 
@@ -124,7 +124,7 @@
 
 [如何使用An框架提供的WToggleButton实现一个漂亮的切换按钮？](https://zhuanlan.zhihu.com/p/24275861?refer=sunst)
 
-[利用an框架提供的WSlidingDeleteListView防QQ滑动删除。](https://zhuanlan.zhihu.com/p/24408002?refer=sunst)
+[利用an框架提供的WSlidingDeleteListView仿QQ滑动删除。](https://zhuanlan.zhihu.com/p/24408002?refer=sunst)
 		
 ### 实现思路
 
@@ -160,13 +160,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 		
-+ **An通用**
++ **An通用属性值部分参考**
 
-##### Style
+（1）Style<br>
 
-AnTvContentStyle 提供的文本内容主题。
+AnTvContentStyle 标准文本内容风格。
 
-AnTvTitleStyle 提供的文本标题主题。
+AnTvTitleStyle 标准文本标题风格。
 
 
 
@@ -195,6 +195,8 @@ AnTvTitleStyle 提供的文本标题主题。
 [Android 利用an框架快速实现夜间模式的两种套路-加强版](https://zhuanlan.zhihu.com/p/24269723)
 
 + **An框架提供的WToggleButton的使用参考** *（源码中配合夜间模式使用）*
+
+[如何使用An框架提供的WToggleButton实现一个漂亮的切换按钮？](https://zhuanlan.zhihu.com/p/24275861?refer=sunst)
 
 <font color=#0099ff size=12 face="黑体">备注：Default Size:width=50dp,height=30dp.；如editor = sp.edit();</font>
 

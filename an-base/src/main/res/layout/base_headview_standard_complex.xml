@@ -39,7 +39,7 @@
         android:layout_centerVertical="true"
         android:gravity="center_vertical"
         android:text="@string/CommStringTitle"
-        android:textColor="@color/CommTxtMainColor"
+        android:textColor="@drawable/yy_drawable_selector_txt"
         android:textSize="@dimen/CommDimenBarTitleMax" />
 
     <LinearLayout
