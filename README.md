@@ -46,7 +46,7 @@
 6.联系作者。
 
 
-# [![](https://jitpack.io/v/qydq/an-aw-base.svg)](https://jitpack.io/#qydq/an-aw-base)   ![](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/res/drawable/base_drawable_art_click.png)   <a href='https://bintray.com/qydq/an/an-aw-base?source=watch' alt='Get automatic notifications about new "an-aw-base" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_color.png'></a>  ![](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/res/drawable/base_drawable_art_click.png)
+# [![](https://jitpack.io/v/qydq/an-aw-base.svg)](https://jitpack.io/#qydq/an-aw-base)   ![](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/res/drawable/base_drawable_art_click.png)   <a href='https://bintray.com/qydq/an/an-aw-base?source=watch' alt='Get automatic notifications about new "an-aw-base" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_color.png'></a>  ![](https://github.com/qydq/an-aw-base/blob/master/screen/base_wtogglebutton.gif)
 
 #######
 
@@ -103,10 +103,6 @@
 
 # 2. 实现效果
 
-+ **an框架提供的WToggleButton 切换控件**
-
- ![](https://github.com/qydq/an-aw-base/blob/master/screen/base_wtogglebutton.gif)
-
 + **an框架提供通用的标题栏头集成（实际使用时背景颜色CommMainBg）。如图**
 
 （1）普通状态栏参考<br>
@@ -123,8 +119,6 @@
 # 3. 思路或使用（代码）
 
 [Api Guide --aN框架API指导参考](https://github.com/qydq/an-aw-base/blob/master/an-base/ApiGuide.md)
-
-+ **An框架命名规范**
 
 [利用aN框架快速开发android应用程序基本使用方法](https://zhuanlan.zhihu.com/p/24273705?refer=sunst)
 
