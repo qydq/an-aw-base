@@ -83,11 +83,11 @@
 
 + an框架提供了网络请求基于xutils模块的封装，http实现XHttps。
 
-`*i.   HTTP实现利用了XHttps提供了post,get,upLoadFile,downLoadFile...*`
+`i.   HTTP实现利用了XHttps提供了post,get,upLoadFile,downLoadFile...`
 
-`*ii.  集成以上则可以使用注解功能，可以参考xUtils3开源项目。*`
+`ii.  集成以上则可以使用注解功能，可以参考xUtils3开源项目。`
 
-`*iii. 提供便捷XCallBack ,XParseResponse ,XProgressCallBack操作。*`
+`iii. 提供便捷XCallBack ,XParseResponse ,XProgressCallBack操作。`
 
 + an框架包含了许多实用的工具类，像MD5加密，数据校验，夜间模式切换等。
 
@@ -98,6 +98,10 @@
 + an框架提供了快速监听网络变化的方法。
 
 + an框架后期功能正在完善中。
+
+**兼容性**
+
+`aN框架支持android 4.4+使用，兼容性测试通过，华为Android4.4 ，小米Android5.1，三星Android5.1。`
 
 ---------
 

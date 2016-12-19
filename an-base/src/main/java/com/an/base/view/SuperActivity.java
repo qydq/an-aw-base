@@ -48,8 +48,6 @@ public abstract class SuperActivity extends BaseActivity implements NetBroadcast
         } else {
             window.getDecorView().setBackground(ContextCompat.getDrawable(mContext, R.drawable.yy_drawable_bgday_shape));
         }
-
-
         //初始化视图
         initView();
         //网络变化监听相关
