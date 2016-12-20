@@ -275,7 +275,7 @@ AnTvTitleStyle 标准文本标题风格。
 
 # 4. 重要知识点。
 
-+ **如何使用MVP架构搭建Android应用程序-(demo+解析)-极简版**
++ **[如何使用MVP架构搭建Android应用程序-(demo+解析)-极简版](https://zhuanlan.zhihu.com/p/24452403)**
 
 + **Android MVP架构示例项目解析-加强版**
 		

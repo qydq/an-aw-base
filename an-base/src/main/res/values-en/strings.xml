@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">an-base</string>
+    <string name="CommStringBack">Back</string>
+    <string name="CommStringTitle">Title</string>
+    <string name="CommStringRight">Account</string>
+    <string name="CommStringArt">Join Art</string>
+    <string name="CommStringShare">Share</string>
+</resources>
