@@ -94,7 +94,7 @@ public class MainActivity extends SuperActivity implements TaskDayNightContract.
         mTextViewList.add(textView);
 
         //该夜间模式
-        tvChangModel.setText("现在是白天，点击切换getNetWrokState:" + NetBroadcastReceiverUtils.getNetWrokState(mContext) + "\n--isMobile:" + NetBroadcastReceiverUtils.isMobile(mContext) + "--isWifi:" + NetBroadcastReceiverUtils.isWifi(mContext) + "--isNetworkAvailable:" + NetBroadcastReceiverUtils.isNetworkAvailable(mContext));
+        tvChangModel.setText("现在是白天，点击切换getNetWrokState:" + NetBroadcastReceiverUtils.getNetworkState(mContext) + "\n--isMobile:" + NetBroadcastReceiverUtils.isMobileConnected(mContext) + "--isWifi:" + NetBroadcastReceiverUtils.isWifiConnected(mContext) + "--isNetworkAvailable:" + NetBroadcastReceiverUtils.isConnectedToInternet(mContext));
         tvChangModel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

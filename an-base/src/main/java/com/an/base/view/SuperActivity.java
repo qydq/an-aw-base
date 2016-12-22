@@ -60,7 +60,7 @@ public abstract class SuperActivity extends BaseActivity implements NetBroadcast
      */
 
     public boolean inspectNet() {
-        this.netModel = NetBroadcastReceiverUtils.getNetWrokState(SuperActivity.this);
+        this.netModel = NetBroadcastReceiverUtils.getNetworkState(SuperActivity.this);
         return isNetConnect();
     }
 

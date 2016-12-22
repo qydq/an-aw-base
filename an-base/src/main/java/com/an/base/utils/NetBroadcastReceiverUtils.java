@@ -80,7 +80,7 @@ public class NetBroadcastReceiverUtils {
      * Checking for all possible internet providers
      * 检查是否有网络连接。
      **/
-    public boolean isConnectedToInternet(@NonNull Context context) {
+    public static boolean isConnectedToInternet(@NonNull Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Network[] networks = connectivityManager.getAllNetworks();
