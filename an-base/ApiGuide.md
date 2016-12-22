@@ -1,8 +1,11 @@
-## Api Guide --aN框架API指导参考 
+# Api Guide --aN框架API指导参考 
+
+
+##  aN框架工具类参考。
 
 类 - 方法 - 说明 - 参数 - 返回值 
 
-### DUtilsBitmap 操作图片类的工具 ，枚举单例模式
+### [!DUtilsBitmap](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/java/com/an/base/utils/DUtilsBitmap.java) 操作图片类的工具 ，枚举单例模式
 
 |方法名称|方法说明|参数|返回|
 |:---------|:---|:---|---:|
@@ -19,7 +22,6 @@
 |createReflectionImageWithOrigin|获得带倒影的图片方法|Bitmap bitmap|Bitmap|
 |createWatermarkBitmap|图片水印的生成方法|Bitmap src, Bitmap watermark|Bitmap|
 |zoomBitmap|放大缩小图片|Bitmap bitmap, int w, int h|Bitmap|
-|:---------|:---|:---|---:|
 
 备注：Bitmap largeIcon = ((BitmapDrawable) getResources().getDrawable(R.drawable.ic_launcher)).getBitmap();//过时的解决方法。
 Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_launcher);
@@ -48,4 +50,227 @@ Bitmap largeIcon = bitmapDrawable.getBitmap();
 				return n;
 			}
 			
-### DataService 数据操作类工具 ，枚举单例模式
+### [!DataService](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/java/com/an/base/utils/DataService.java) 数据操作类工具 ，枚举单例模式
+
+|方法名称|方法说明|参数|返回|
+|:---------|:---|:---|---:|
+|checkIp|md5验证ip地址是否合法|String ip|boolean|
+|checkMobiles|验证是否为电话号码|String mobiles|boolean|
+|md5|md5加密字符串|String text|String|
+|byteArrayToHex|Convert hex string to byte[]|String hexString|byte[]|
+|byteArrayToHex|下面这个函数用于将字节数组换成成16进制的字符串|byte[] byteArray|String|
+|getCurrentTimeByDate|得到当前时间|无|String|
+|getCurrentTimeByCalendar|获取今天时间|无|Date|
+|getShotDateTime|获取短时间|无|String|
+|getLongDateTime|获取长时间|无|String|
+|removeItemByName|通过字段来移除某个list中的数据|List<String> lists, String name|List<String>|
+|removeItemByPosition|移除某个位置后的lists|List<String> lists, int position|List<String>|
+
+### [!NetBroadcastReceiverUtils](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/java/com/an/base/utils/NetBroadcastReceiverUtils.java) 网络操作类
+
+|方法名称|方法说明|参数|返回|
+|:---------|:---|:---|---:|
+|getNetworkState|得到网络的连接状态，状态见上面的状态码。为NetBroadcastReceiverUtils提供服务|Context context|int|
+|isWifiConnected|检查是否是WIFI|Context context|boolean|
+|isMobileConnected|检查是否是移动网络|Context context|boolean|
+|isConnectedToInternet|检查是否有网络连接|Context context|boolean|
+
+### [!DUtilsUi](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/java/com/an/base/utils/DUtilsUi.java) UI操作的工具类
+
+|方法名称|方法说明|参数|返回|
+|:---------|:---|:---|---:|
+|playHeartbeatAnimation|按钮模拟心脏跳动|final View view|void|
+
+### [!DUtilsStorage](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/java/com/an/base/utils/DUtilsStorage.java) 网络操作类
+
+|方法名称|方法说明|参数|返回|
+|:---------|:---|:---|---:|
+|checkExistRom|判断内置SDcard是否存在 rom代表内置, 可不判断，因为内置都会有。|void|boolean|
+|getRomPath|获取内置SDcard的路径|void|String|
+|getSdcardPath|获取外置SDcard的路径|void|String|
+|calculate|计算SD卡剩余容量和总容量|void|String 总容量and剩余容量|
+
+##  aN框架Widget
+
+WResizeRelativeLayout ，监听键盘是否弹出关闭，然后做相关操作。
+WResizeRelativeLayout，提供的接口--
+		public interface KeyBordStateListener {
+			void onStateChange(int state);
+		}
+
+        
+		@Override
+			public void onStateChange(int state) {
+				switch (state) {
+					case ResizeRelativeLayout.HIDE:
+		//                card.setVisibility(View.VISIBLE);
+		//                cardSmall.setVisibility(View.INVISIBLE);
+						break;
+					case ResizeRelativeLayout.SHOW:
+		//                card.setVisibility(View.GONE);
+		//                cardSmall.setVisibility(View.VISIBLE);
+						break;
+			}
+		}
+		
+完整布局代码参考。
+		<?xml version="1.0" encoding="utf-8"?>
+		<com.an.base.view.widget.WResizeRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/login_root"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@drawable/shape_login_bg_start">
+
+		<android.support.v7.widget.CardView
+        android:id="@+id/card_small"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="20dp"
+        android:visibility="invisible"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/profile_small"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/login_btn_photo_l"
+            android:scaleType="fitCenter"
+            android:src="@drawable/photo_l"
+            app:riv_corner_radius="2dp" />
+		</android.support.v7.widget.CardView>
+
+		<LinearLayout
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="98dp"
+            android:layout_height="98dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/login_input_height"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="2dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/login_btn_photo_l"
+                android:scaleType="fitCenter"
+                android:src="@drawable/photo_l"
+                app:riv_corner_radius="2dp" />
+        </android.support.v7.widget.CardView>
+
+        <EditText
+            android:id="@+id/et_login_username"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_input_height"
+            android:layout_marginLeft="@dimen/login_margin_left"
+            android:background="@drawable/shape_solid_transparent"
+            android:drawableLeft="@drawable/login_icon_company"
+            android:drawablePadding="@dimen/login_padding"
+            android:hint="@string/login_input_hint_username"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            android:textColor="@color/ColorPrimary"
+            android:textColorHint="@color/text_hint_color"
+            android:textCursorDrawable="@drawable/common_input_cursor"
+            android:textSize="@dimen/login_input_text_size" />
+
+        <TextView
+            android:id="@+id/line1"
+            style="@style/common_login_horizontalLine_matchParent_normal" />
+
+        <EditText
+            android:id="@+id/et_login_employ_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_input_height"
+            android:layout_marginLeft="@dimen/login_margin_left"
+            android:background="@drawable/shape_solid_transparent"
+            android:drawableLeft="@drawable/login_icon_man"
+            android:drawablePadding="@dimen/login_padding"
+            android:hint="@string/login_input_hint_employ"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            android:textColor="@color/ColorPrimary"
+            android:textColorHint="@color/text_hint_color"
+            android:textCursorDrawable="@drawable/common_input_cursor"
+            android:textSize="@dimen/login_input_text_size" />
+
+        <TextView
+            android:id="@+id/line2"
+            style="@style/common_login_horizontalLine_matchParent_normal" />
+
+
+        <EditText
+            android:id="@+id/et_login_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_input_height"
+            android:layout_marginLeft="@dimen/login_margin_left"
+            android:background="@drawable/shape_solid_transparent"
+            android:drawableLeft="@drawable/login_icon_lock"
+            android:drawablePadding="@dimen/login_padding"
+            android:hint="@string/login_input_hint_pwd"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/ColorPrimary"
+            android:textColorHint="@color/text_hint_color"
+            android:textCursorDrawable="@drawable/common_input_cursor"
+            android:textSize="@dimen/login_input_text_size" />
+
+        <TextView
+            android:id="@+id/line3"
+            style="@style/common_login_horizontalLine_matchParent_normal" />
+
+        <CheckBox
+            android:id="@+id/remember_pwd"
+            style="@style/RememberPasswordCheckBox"
+            android:layout_marginLeft="@dimen/login_margin_left"
+            android:text="@string/login_remember_pwd" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/common_green_btn_selector"
+            android:focusable="true"
+            android:text="@string/login_button_text"
+            android:textColor="@color/text_button_login"
+            android:textSize="@dimen/login_btn_text_size" />
+    </LinearLayout>
+
+</com.qianmi.shine.widget.ResizeRelativeLayout>
+
+WRoundImageView 圆形ImageView，可设置最多两个宽度不同且颜色不同的圆形边框。
+
+
+		WRoundImageView.setImageBitmap(bitmap);
+		WRoundImageView.setImageResource(R.drawable.default_avatar);
+		
+	/**
+     * 获取裁剪后的圆形图片
+     * @param radius
+     * 半径
+     */
+    public Bitmap getCroppedRoundBitmap(Bitmap bmp, int radius) {
+	
+	
+WSlidingDeleteListView 滑动删除的ListView
+使用参考：
+https://zhuanlan.zhihu.com/p/24408002
+
+WToggleButton aN提供的公共开关参考。
+https://zhuanlan.zhihu.com/p/24275861?refer=sunst

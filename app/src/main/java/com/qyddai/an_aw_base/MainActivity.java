@@ -24,6 +24,7 @@ import android.widget.TextView;
 import com.an.base.contract.TaskDayNightContract;
 import com.an.base.presenter.TaskDayNightPresenter;
 import com.an.base.utils.DUtilsDialog;
+import com.an.base.utils.NetBroadcastReceiverUtils;
 import com.an.base.view.DUtilsActivity;
 import com.an.base.view.SuperActivity;
 import com.an.base.view.widget.WToggleButton;
@@ -93,7 +94,7 @@ public class MainActivity extends SuperActivity implements TaskDayNightContract.
         mTextViewList.add(textView);
 
         //该夜间模式
-        tvChangModel.setText("现在是白天，点击切换");
+        tvChangModel.setText("现在是白天，点击切换getNetWrokState:" + NetBroadcastReceiverUtils.getNetWrokState(mContext) + "\n--isMobile:" + NetBroadcastReceiverUtils.isMobile(mContext) + "--isWifi:" + NetBroadcastReceiverUtils.isWifi(mContext) + "--isNetworkAvailable:" + NetBroadcastReceiverUtils.isNetworkAvailable(mContext));
         tvChangModel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -141,6 +142,7 @@ public class MainActivity extends SuperActivity implements TaskDayNightContract.
             }
         });
     }
+
     @Override
     public void _initTheme() {
         if (presenter.isDay()) {

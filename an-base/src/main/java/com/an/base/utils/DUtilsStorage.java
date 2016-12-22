@@ -45,7 +45,7 @@ public enum DUtilsStorage {
      * @return boolean
      * @ 获取外置SDcard的路径
      */
-    public String getSDCardPath() {
+    public String getSdcardPath() {
         StringBuilder sdCardStringBuilder = new StringBuilder();
         List<String> sdCardPathList = new ArrayList<String>();
         String sdcardpath = null;
@@ -83,7 +83,7 @@ public enum DUtilsStorage {
      * @return String 总容量and剩余容量
      * @ 计算SD卡剩余容量和总容量
      */
-    public String OnCalculator() {
+    public String calculate() {
         String txt = null;
         //判断是否有插入存储卡
         if (checkExistRom()) {
