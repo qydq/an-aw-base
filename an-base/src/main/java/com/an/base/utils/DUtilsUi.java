@@ -8,7 +8,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.view.animation.ScaleAnimation;
 
 /**
- * Created by Luue on 2016/6/18.
+ * Created by Luue on 2016/6/18。
  */
 
 public class DUtilsUi {
@@ -34,7 +34,7 @@ public class DUtilsUi {
      * sunshuntao ;staryumou@163.com
      * 图片跳动 按钮模拟心脏跳动
      */
-    public static void playHeartbeatAnimation(final View view) {
+    public void playHeartbeatAnimation(final View view) {
         AnimationSet animationSet = new AnimationSet(true);
         animationSet.addAnimation(new ScaleAnimation(1.0f, 1.2f, 1.0f, 1.2f,
                 Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,

@@ -25,7 +25,7 @@ public enum DataService {
      * @return true合法，false不合法。
      * @readme:md5验证ip地址是否合法。
      */
-    public static boolean checkIp(String ip) {
+    public boolean checkIp(String ip) {
         boolean isIp = false;
         if (ip != null && !ip.isEmpty()) {
             // 定义正则表达式
@@ -48,7 +48,7 @@ public enum DataService {
      * @return
      * @ 验证是否为电话号码
      */
-    public static boolean checkMobiles(String mobiles) {
+    public boolean checkMobiles(String mobiles) {
         Pattern p = Pattern.compile("^((13[0-9])|(15[^4,\\D])|(17[6-8])|(18[0-9])|(14[5,7]))\\d{8}$");
         Matcher m = p.matcher(mobiles);
         return m.matches();
@@ -59,7 +59,7 @@ public enum DataService {
      * @return 加密后的字符。
      * @readme:md5加密字符串。
      */
-    public static String md5(String text) {
+    public String md5(String text) {
         try {
             // 拿到一个MD5转换器（如果想要SHA1参数换成”SHA1”）
             MessageDigest messageDigest = MessageDigest.getInstance("MD5");
@@ -81,7 +81,7 @@ public enum DataService {
      * @return byte[]
      * @ Convert hex string to byte[]
      */
-    public static byte[] byteArrayToHex(String hexString) {
+    public byte[] byteArrayToHex(String hexString) {
         if (hexString == null || hexString.equals("")) {
             return null;
         }
@@ -101,7 +101,7 @@ public enum DataService {
      * @return
      * @下面这个函数用于将字节数组换成成16进制的字符串
      */
-    public static String byteArrayToHex(byte[] byteArray) {
+    public String byteArrayToHex(byte[] byteArray) {
         // 首先初始化一个字符数组，用来存放每个16进制字符
         char[] hexDigits = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
                 'a', 'b', 'c', 'd', 'e', 'f'};
@@ -117,7 +117,7 @@ public enum DataService {
     }
 
 
-    public static String getCurrentTimeByDate() {
+    public String getCurrentTimeByDate() {
         Date date = new Date(System.currentTimeMillis());
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss SSS");
         String dayString = sdf.format(date);
@@ -130,7 +130,7 @@ public enum DataService {
      * @return Date    返回类型
      * @Description: TODO 获取今天时间
      */
-    public static Date getCurrentTimeByCalendar() {
+    public Date getCurrentTimeByCalendar() {
         Calendar c = Calendar.getInstance();
         Date date = new Date();
         c.setTime(date);
@@ -140,13 +140,13 @@ public enum DataService {
         return nowDay;
     }
 
-    public static String getShotDateTime() {
+    public String getShotDateTime() {
         SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.dd  HH:mm");
         Date date = new Date(System.currentTimeMillis());
         return format.format(date);
     }
 
-    private static String getLongDateTime() {
+    public String getLongDateTime() {
         SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.dd.  HH:mm:ss");
         Date date = new Date(System.currentTimeMillis());
         return format.format(date);
@@ -165,7 +165,7 @@ public enum DataService {
      * @param name
      * @return 通过字段来移除某个list中的数据。
      */
-    public static List<String> removeItemByName(List<String> lists, String name) {
+    public List<String> removeItemByName(List<String> lists, String name) {
         List<String> resLists = new ArrayList<>();
         if (lists.size() == 0) {
         } else {
@@ -184,10 +184,8 @@ public enum DataService {
      * @param position
      * @return 移除某个位置后的lists
      */
-    private static List<String> removeItemByPosition(List<String> lists, int position) {
+    private List<String> removeItemByPosition(List<String> lists, int position) {
         lists.remove(position);
         return lists;
     }
 }
-
-

@@ -1,11 +1,12 @@
 # Api Guide --aN框架API指导参考 
 
+aN框架API指导参考-Api Guide
 
 ##  aN框架工具类参考。
 
 类 - 方法 - 说明 - 参数 - 返回值 
 
-### [!DUtilsBitmap](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/java/com/an/base/utils/DUtilsBitmap.java) 操作图片类的工具 ，枚举单例模式
+### [!DUtilsBitmap](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/java/com/an/base/utils/DUtilsBitmap.java) 操作图片类的工具 ，（枚举单例模式）
 
 |方法名称|方法说明|参数|返回|
 |:---------|:---|:---|---:|
@@ -50,7 +51,7 @@ Bitmap largeIcon = bitmapDrawable.getBitmap();
 				return n;
 			}
 			
-### [!DataService](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/java/com/an/base/utils/DataService.java) 数据操作类工具 ，枚举单例模式
+### [!DataService](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/java/com/an/base/utils/DataService.java) 数据操作类工具 ，（枚举单例模式）
 
 |方法名称|方法说明|参数|返回|
 |:---------|:---|:---|---:|
@@ -75,13 +76,13 @@ Bitmap largeIcon = bitmapDrawable.getBitmap();
 |isMobileConnected|检查是否是移动网络|Context context|boolean|
 |isConnectedToInternet|检查是否有网络连接|Context context|boolean|
 
-### [!DUtilsUi](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/java/com/an/base/utils/DUtilsUi.java) UI操作的工具类
+### [!DUtilsUi](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/java/com/an/base/utils/DUtilsUi.java) UI操作的工具类普通单列模式
 
 |方法名称|方法说明|参数|返回|
 |:---------|:---|:---|---:|
 |playHeartbeatAnimation|按钮模拟心脏跳动|final View view|void|
 
-### [!DUtilsStorage](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/java/com/an/base/utils/DUtilsStorage.java) 网络操作类
+### [!DUtilsStorage](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/java/com/an/base/utils/DUtilsStorage.java) 网络操作类（枚举单例模式）
 
 |方法名称|方法说明|参数|返回|
 |:---------|:---|:---|---:|

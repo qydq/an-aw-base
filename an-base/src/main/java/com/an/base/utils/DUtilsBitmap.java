@@ -2,6 +2,7 @@ package com.an.base.utils;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.LinearGradient;
@@ -15,7 +16,6 @@ import android.graphics.RectF;
 import android.graphics.Shader;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.graphics.Bitmap.Config;
 import android.util.Log;
 
 import java.io.BufferedOutputStream;
@@ -37,7 +37,7 @@ public enum DUtilsBitmap {
      * @throws IOException
      * @ 保存文件
      */
-    public static void saveAvatarFile(Context context, Bitmap bm, String dir, String fileName) throws IOException {
+    public void saveAvatarFile(Context context, Bitmap bm, String dir, String fileName) throws IOException {
         File dirFile = new File(dir);
         if (!dirFile.exists()) {
             dirFile.mkdir();
@@ -54,7 +54,7 @@ public enum DUtilsBitmap {
      * @param dir
      * @param picName
      */
-    public static void saveBitmap(Bitmap bm, String dir, String picName) {
+    public void saveBitmap(Bitmap bm, String dir, String picName) {
         File f = new File(dir, picName);
         if (f.exists()) {
             f.delete();
@@ -80,7 +80,7 @@ public enum DUtilsBitmap {
      * @throws IOException
      * @ 通过路径获取图片
      */
-    public static byte[] getImage(String path) throws IOException {
+    public byte[] getImage(String path) throws IOException {
         URL url = new URL(path);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");   //设置请求方法为GET
@@ -96,7 +96,7 @@ public enum DUtilsBitmap {
      * @throws IOException
      * @ 得到流数据
      */
-    public static byte[] readInputStream(InputStream inputStream) throws IOException {
+    public byte[] readInputStream(InputStream inputStream) throws IOException {
         byte[] buffer = new byte[1024];
         int len = 0;
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -112,7 +112,7 @@ public enum DUtilsBitmap {
      * @param resId
      * @return读取本地资源的图片
      */
-    public static Bitmap ReadBitmapById(Context context, int resId) {
+    public Bitmap ReadBitmapById(Context context, int resId) {
         BitmapFactory.Options opt = new BitmapFactory.Options();
         opt.inPreferredConfig = Config.RGB_565;
         opt.inPurgeable = true;
@@ -127,8 +127,8 @@ public enum DUtilsBitmap {
      * @param drawableId
      * @return根据资源文件获取Bitmap
      */
-    public static Bitmap ReadBitmapById(Context context, int drawableId,
-                                        int screenWidth, int screenHight) {
+    public Bitmap ReadBitmapById(Context context, int drawableId,
+                                 int screenWidth, int screenHight) {
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inPreferredConfig = Bitmap.Config.ARGB_8888;
         options.inInputShareable = true;
@@ -144,7 +144,7 @@ public enum DUtilsBitmap {
      * @param screenHight
      * @return 等比例压缩图片
      */
-    public static Bitmap getBitmap(Bitmap bitmap, int screenWidth, int screenHight) {
+    public Bitmap getBitmap(Bitmap bitmap, int screenWidth, int screenHight) {
         int w = bitmap.getWidth();
         int h = bitmap.getHeight();
         Matrix matrix = new Matrix();
@@ -160,7 +160,7 @@ public enum DUtilsBitmap {
      * @return 返回Bitmap对象，
      * @把drawable转化成bitmap对象
      */
-    public static Bitmap drawableToBitmap(Drawable drawable) {
+    public Bitmap drawableToBitmap(Drawable drawable) {
         Bitmap bitmap = Bitmap.createBitmap(
                 drawable.getIntrinsicWidth(),
                 drawable.getIntrinsicHeight(),
@@ -176,7 +176,7 @@ public enum DUtilsBitmap {
      * @param bitmap
      * @return 把bitmap转化为drawable
      */
-    public static Drawable bitmapToDrawable(Bitmap bitmap) {
+    public Drawable bitmapToDrawable(Bitmap bitmap) {
         return new BitmapDrawable(bitmap);
     }
 
@@ -185,7 +185,7 @@ public enum DUtilsBitmap {
      * @param roundPx
      * @return得到圆角图片bitmap对象。
      */
-    public static Bitmap createRoundedCornerBitmap(Bitmap bitmap, float roundPx) {
+    public Bitmap createRoundedCornerBitmap(Bitmap bitmap, float roundPx) {
         Bitmap output = Bitmap.createBitmap(bitmap.getWidth(), bitmap
                 .getHeight(), Config.ARGB_8888);
         Canvas canvas = new Canvas(output);
@@ -206,7 +206,7 @@ public enum DUtilsBitmap {
      * @param bitmap
      * @return获得带倒影的图片方法
      */
-    public static Bitmap createReflectionImageWithOrigin(Bitmap bitmap) {
+    public Bitmap createReflectionImageWithOrigin(Bitmap bitmap) {
         final int reflectionGap = 4;
         int width = bitmap.getWidth();
         int height = bitmap.getHeight();
@@ -240,7 +240,7 @@ public enum DUtilsBitmap {
      * @param watermark
      * @return图片水印的生成方法
      */
-    private Bitmap createWatermarkBitmap(Bitmap src, Bitmap watermark) {
+    public Bitmap createWatermarkBitmap(Bitmap src, Bitmap watermark) {
         String tag = "createBitmap";
         Log.d(tag, "create a new bitmap");
         if (src == null) {
@@ -270,7 +270,7 @@ public enum DUtilsBitmap {
      * @param h
      * @return、//放大缩小图片
      */
-    public static Bitmap zoomBitmap(Bitmap bitmap, int w, int h) {
+    public Bitmap zoomBitmap(Bitmap bitmap, int w, int h) {
 //获得原始图片宽高
         int width = bitmap.getWidth();
         int height = bitmap.getHeight();
@@ -282,5 +282,4 @@ public enum DUtilsBitmap {
         Bitmap newbmp = Bitmap.createBitmap(bitmap, 0, 0, width, height, matrix, true);
         return newbmp;
     }
-
 }
