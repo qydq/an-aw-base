@@ -1,5 +1,7 @@
 <resources>
     <!--sunshuntao 2016-11-16 personal-standard;no changes-->
+    <dimen name="DimenMargin05">5dp</dimen><!--5特殊间距-->
+    <dimen name="DimenPadding05">5dp</dimen><!--8特殊间距-->
     <dimen name="DimenMargin08">8dp</dimen><!--8特殊间距-->
     <dimen name="DimenPadding08">8dp</dimen><!--8特殊间距-->
     <dimen name="DimenMargin10">10dp</dimen><!--10特殊间距-->

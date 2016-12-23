@@ -31,6 +31,19 @@
             android:textSize="@dimen/CommDimenBarTitleSmall" />
     </LinearLayout>
 
+    <ProgressBar
+        android:id="@+id/anPb"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="@dimen/CommDimenIconSmall"
+        android:layout_height="@dimen/CommDimenIconSmall"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/DimenMargin05"
+        android:layout_toStartOf="@+id/anTvTitle"
+        android:max="200"
+        android:progress="0"
+        android:visibility="invisible" />
+
     <TextView
         android:id="@+id/anTvTitle"
         android:layout_width="wrap_content"
