@@ -230,7 +230,7 @@
     <color name="CommColorBGBtn">#FFFAFA</color><!--按钮的背景颜色-->
     <color name="CommColorBGFrame">#DC143C</color><!--frame的背景颜色-->
 
-    <color name="CommColorGray">#aaaaaa</color><!--灰色-->
+    <color name="CommColorGray">#8a8a8a</color><!--灰色-->
     <color name="CommColorWhite">#ffffff</color><!--白色-->
 
     <!--以下颜色代码如无特殊说明，都指正常状态的演示（白天为主色代码）,晚间为CommMainBgNight类-->

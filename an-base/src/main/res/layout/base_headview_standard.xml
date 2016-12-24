@@ -62,7 +62,7 @@
         android:layout_height="48dp"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="@dimen/DimenMargin08"
+        android:layout_marginEnd="@dimen/DimenMargin10"
         android:clickable="true"
         android:duplicateParentState="true"
         android:gravity="center_vertical"
