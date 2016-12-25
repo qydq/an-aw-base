@@ -112,4 +112,13 @@
         android:background="?attr/anBackground"
         android:text="测试夜间模式"
         android:textColor="?attr/anTextColor" />
+
+    <TextView
+        android:id="@+id/tv21"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:background="?attr/anBackground"
+        android:text="v21"
+        android:textColor="?attr/anTextColor" />
 </RelativeLayout>

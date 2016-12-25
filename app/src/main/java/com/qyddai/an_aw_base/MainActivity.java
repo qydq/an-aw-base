@@ -84,7 +84,6 @@ public class MainActivity extends SuperActivity implements TaskDayNightContract.
         btnDialog = (Button) findViewById(R.id.btnDialog);
         textView = (TextView) findViewById(R.id.textView);
         anTvRight = (TextView) findViewById(R.id.anTvRight);
-
         mLayoutList = new ArrayList<>();
         mTextViewList = new ArrayList<>();
         mRelativeList = new ArrayList<>();
