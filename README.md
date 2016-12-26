@@ -373,3 +373,5 @@ http://drakeet.me/android-studio
 		
 ## 具体功能的使用可以参考release的日志文件，或者在以后会在个人知乎做一些讲解。
 
+
+	[An框架注解参考](https://raw.githubusercontent.com/qydq/an-aw-base/master/app/src/main/java/com/qyddai/an_aw_base/AnotationActivity.java)
