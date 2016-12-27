@@ -371,7 +371,47 @@ http://drakeet.me/android-studio
 		说明这里面：在调用的Activity时应该super.onCreate(savedInstanceState);，还有setBackUp的属性，建议不要在低版本用高版本的内容。
 		
 		
+## 代码编写规范相关
+
+		/*
+		* 类的声明次序依次是：TAG类--View控件--静态成员变量--普通类成员变量
+		* public 在最前方的位置。
+		* private 在public的位置后面。
+		* */
+		
+		
 ## 具体功能的使用可以参考release的日志文件，或者在以后会在个人知乎做一些讲解。
 
 
 [An框架注解参考](https://raw.githubusercontent.com/qydq/an-aw-base/master/app/src/main/java/com/qyddai/an_aw_base/AnotationActivity.java)
+
+		//以下为headview_standard.xml
+		@ViewInject(R.id.anLlBack)
+		private LinearLayout anLlBack;
+		@ViewInject(R.id.anTvBack)
+		private TextView anTvBack;
+		@ViewInject(R.id.anPb)
+		private ProgressBar anPb;
+		@ViewInject(R.id.anTvTitle)
+		private TextView anTvTitle;
+
+		@ViewInject(R.id.anLlRight)
+		private LinearLayout anLlRight;
+		@ViewInject(R.id.anTvRight)
+		private TextView anTvRight;
+		@ViewInject(R.id.anIvRight)
+		private ImageView anIvRight;
+
+		//分割线0000---complex
+		@ViewInject(R.id.anLlRRight)
+		private LinearLayout anLlRRight;
+		@ViewInject(R.id.anTvRRight)
+		private TextView anTvRRight;
+		@ViewInject(R.id.anIvRRight)
+		private ImageView anIvRRight;
+
+## 2016/12/27
+
+`compile 'com.github.qydq:an-aw-base:0.1.4'`
+
+an-aw-base更新日志，会在这里面做一次纪录，当前an-aw-base

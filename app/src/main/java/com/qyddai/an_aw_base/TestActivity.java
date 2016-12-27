@@ -1,7 +1,7 @@
 package com.qyddai.an_aw_base;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.an.base.utils.DUtilsDialog;
+import com.an.base.view.activity.SlideCloseActivity;
 
 /**
  * Created by stary on 2016/11/25.
@@ -19,7 +20,7 @@ import com.an.base.utils.DUtilsDialog;
  * 最后修改：on 2016/11/25.
  */
 
-public class TestActivity extends Activity {
+public class TestActivity extends SlideCloseActivity {
     private Button button;
     private ProgressDialog dialog;
     private ImageView anIvRight;
@@ -45,6 +46,8 @@ public class TestActivity extends Activity {
                         handler.sendMessage(msg);
                     }
                 }, 3000);
+                Intent intesnt = new Intent(TestActivity.this, AnotationActivity.class);
+                startActivity(intesnt);
             }
         });
     }

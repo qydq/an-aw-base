@@ -102,6 +102,8 @@ public class MainActivity extends SuperActivity implements TaskDayNightContract.
                     getWindow().getDecorView().setBackground(ContextCompat.getDrawable(mContext, R.drawable.yy_drawable_bgday_shape));
                     tvChangModel.setText("现在是白天，点击切换晚上");
                     editor.putBoolean("isNight", false);
+                    Intent intent = new Intent(MainActivity.this, AnotationActivity.class);
+                    startActivity(intent);
                 } else {
                     getWindow().getDecorView().setBackground(ContextCompat.getDrawable(mContext, R.drawable.yy_drawable_bgnigt_shape));
                     tvChangModel.setText("现在是晚上，点击切换白天");

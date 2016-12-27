@@ -1,13 +1,13 @@
 package com.qyddai.an_aw_base;
 
+import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.an.base.view.SuperActivity;
+import com.an.base.view.activity.SlideCloseActivity;
 
-import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
 
 /**
@@ -15,8 +15,7 @@ import org.xutils.view.annotation.ViewInject;
  */
 
 
-@ContentView(R.layout.activity_main)
-public class AnotationActivity extends SuperActivity {
+public class AnotationActivity extends SlideCloseActivity {
     //以下为headview_standard.xml
     @ViewInject(R.id.anLlBack)
     private LinearLayout anLlBack;
@@ -42,9 +41,21 @@ public class AnotationActivity extends SuperActivity {
     @ViewInject(R.id.anIvRRight)
     private ImageView anIvRRight;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_testdefinescrollview);
+    }
 
     @Override
-    public void initView() {
-
+    public void onNetChange(int netModel) {
+        super.onNetChange(netModel);
+        if (netModel == 1) {
+            showToast("连接无线网络");
+        } else if (netModel == 0) {
+            showToast("连接移动网络");
+        } else if (netModel == -1) {
+            showToast("没有连接网络");
+        }
     }
 }
