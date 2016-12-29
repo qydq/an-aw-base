@@ -2,23 +2,19 @@ package com.an.base.view.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.an.base.R;
 import com.an.base.view.SuperActivity;
 import com.an.base.view.widget.WSlideFrameLayout;
 
-public class SlideCloseActivity extends SuperActivity {
+public class SlideCloseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         WSlideFrameLayout rootView = new WSlideFrameLayout(this);
         rootView.bindActivity(this);
-    }
-
-    @Override
-    public void initView() {
-
     }
 
     // 覆盖以下方法,设置动画.

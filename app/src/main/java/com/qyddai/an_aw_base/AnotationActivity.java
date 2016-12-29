@@ -47,15 +47,4 @@ public class AnotationActivity extends SlideCloseActivity {
         setContentView(R.layout.activity_testdefinescrollview);
     }
 
-    @Override
-    public void onNetChange(int netModel) {
-        super.onNetChange(netModel);
-        if (netModel == 1) {
-            showToast("连接无线网络");
-        } else if (netModel == 0) {
-            showToast("连接移动网络");
-        } else if (netModel == -1) {
-            showToast("没有连接网络");
-        }
-    }
 }
