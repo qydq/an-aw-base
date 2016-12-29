@@ -13,9 +13,6 @@ import android.widget.Scroller;
 
 import com.an.base.R;
 
-/**
- * Created by chenyan.wang on 2015/10/29.
- */
 public class WSlideFrameLayout extends FrameLayout {
     private Activity mActivity;
     private Scroller mScroller;

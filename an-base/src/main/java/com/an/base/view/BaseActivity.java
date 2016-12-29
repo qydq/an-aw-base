@@ -56,7 +56,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     // 覆盖以下方法,设置动画.
-
     @Override
     public void startActivity(Intent intent) {
         super.startActivity(intent);

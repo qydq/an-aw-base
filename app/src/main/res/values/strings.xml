@@ -2,4 +2,5 @@
     <string name="app_name">an-aw-base</string>
     <string name="MainActivity">MainActivity</string>
     <string name="SlidingCloseActivity">SlidingCloseActivity</string>
+    <string name="AnotationActivity">AnotationActivity</string>
 </resources>

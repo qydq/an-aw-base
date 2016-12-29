@@ -44,7 +44,9 @@ public class AnotationActivity extends SlideCloseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_testdefinescrollview);
+        setContentView(R.layout.sst_activity_anotation);
+        anTvTitle = (TextView) findViewById(R.id.anTvTitle);
+        anTvTitle.setText(R.string.AnotationActivity);
     }
 
 }

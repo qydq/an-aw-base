@@ -14,12 +14,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <LinearLayout
+    <com.an.base.view.widget.WIoScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/sst_horizontal">
+        android:background="@drawable/sst_horizontal"
+        android:fadingEdge="none"
+        android:focusable="false"
+        android:overScrollMode="never"
+        android:scrollbars="none">
 
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/sst_horizontal">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -31,5 +38,6 @@
                     android:text="hasd" />
             </LinearLayout>
 
-    </LinearLayout>
+        </LinearLayout>
+    </com.an.base.view.widget.WIoScrollView>
 </LinearLayout>
