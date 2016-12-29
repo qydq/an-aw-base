@@ -1,5 +1,6 @@
 package com.qyddai.an_aw_base;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -46,8 +47,6 @@ public class TestActivity extends SlideCloseActivity {
                         handler.sendMessage(msg);
                     }
                 }, 3000);
-                Intent intesnt = new Intent(TestActivity.this, AnotationActivity.class);
-                startActivity(intesnt);
             }
         });
     }
@@ -57,6 +56,8 @@ public class TestActivity extends SlideCloseActivity {
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             dialog.dismiss();
+            Intent intent = new Intent(TestActivity.this, AnotationActivity.class);
+            startActivity(intent);
         }
     };
 }
