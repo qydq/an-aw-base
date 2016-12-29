@@ -1,6 +1,5 @@
 package com.qyddai.an_aw_base;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +8,7 @@ import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.an.base.utils.DUtilsDialog;
 import com.an.base.view.activity.SlideCloseActivity;
@@ -21,24 +21,27 @@ import com.an.base.view.activity.SlideCloseActivity;
  * 最后修改：on 2016/11/25.
  */
 
-public class TestActivity extends SlideCloseActivity {
+public class SlidingCloseActivity extends SlideCloseActivity {
     private Button button;
     private ProgressDialog dialog;
     private ImageView anIvRight;
+    private TextView anTvTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test);
+        setContentView(R.layout.sst_activity_slidingclose);
         //如果换成activity_main则会崩掉。
         button = (Button) findViewById(R.id.btnDialog);
         anIvRight = (ImageView) findViewById(R.id.anIvRight);
         anIvRight.setVisibility(View.GONE);
+        anTvTitle = (TextView) findViewById(R.id.anTvTitle);
+        anTvTitle.setText(R.string.SlidingCloseActivity);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog = DUtilsDialog.INSTANCE.
-                        showProgressDialog(TestActivity.this, R.style.AnProgressDialog, "正在登录```", true);
+                        showProgressDialog(SlidingCloseActivity.this, R.style.AnProgressDialog, "正在登录```", true);
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -56,7 +59,7 @@ public class TestActivity extends SlideCloseActivity {
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             dialog.dismiss();
-            Intent intent = new Intent(TestActivity.this, AnotationActivity.class);
+            Intent intent = new Intent(SlidingCloseActivity.this, AnotationActivity.class);
             startActivity(intent);
         }
     };

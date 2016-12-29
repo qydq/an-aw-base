@@ -24,10 +24,8 @@ import android.widget.TextView;
 import com.an.base.contract.TaskDayNightContract;
 import com.an.base.presenter.TaskDayNightPresenter;
 import com.an.base.utils.DUtilsDialog;
-import com.an.base.utils.DUtilsUi;
 import com.an.base.utils.DataService;
 import com.an.base.utils.NetBroadcastReceiverUtils;
-import com.an.base.view.DUtilsActivity;
 import com.an.base.view.SuperActivity;
 import com.an.base.view.widget.WToggleButton;
 
@@ -54,6 +52,7 @@ public class MainActivity extends SuperActivity implements TaskDayNightContract.
     private RelativeLayout relativeLayout;
     private LinearLayout linearLayout;
     private TextView textView;
+    private TextView anTvTitle;
 
     private List<LinearLayout> mLayoutList;
     private List<RelativeLayout> mRelativeList;
@@ -84,6 +83,7 @@ public class MainActivity extends SuperActivity implements TaskDayNightContract.
         btnDialog = (Button) findViewById(R.id.btnDialog);
         textView = (TextView) findViewById(R.id.textView);
         anTvRight = (TextView) findViewById(R.id.anTvRight);
+        anTvTitle = (TextView) findViewById(R.id.anTvTitle);
         mLayoutList = new ArrayList<>();
         mTextViewList = new ArrayList<>();
         mRelativeList = new ArrayList<>();
@@ -92,6 +92,7 @@ public class MainActivity extends SuperActivity implements TaskDayNightContract.
         mRelativeList.add(relativeLayout);
         mButtonList.add(btnDialog);
         mTextViewList.add(textView);
+        anTvTitle.setText(R.string.MainActivity);
 
         //该夜间模式
         tvChangModel.setText(DataService.INSTANCE.checkIp("") + "现在是白天，点击切换getNetWrokState:" + NetBroadcastReceiverUtils.getNetworkState(mContext) + "\n--isMobile:" + NetBroadcastReceiverUtils.isMobileConnected(mContext) + "--isWifi:" + NetBroadcastReceiverUtils.isWifiConnected(mContext) + "--isNetworkAvailable:" + NetBroadcastReceiverUtils.isConnectedToInternet(mContext));
@@ -102,8 +103,6 @@ public class MainActivity extends SuperActivity implements TaskDayNightContract.
                     getWindow().getDecorView().setBackground(ContextCompat.getDrawable(mContext, R.drawable.yy_drawable_bgday_shape));
                     tvChangModel.setText("现在是白天，点击切换晚上");
                     editor.putBoolean("isNight", false);
-                    Intent intent = new Intent(MainActivity.this, AnotationActivity.class);
-                    startActivity(intent);
                 } else {
                     getWindow().getDecorView().setBackground(ContextCompat.getDrawable(mContext, R.drawable.yy_drawable_bgnigt_shape));
                     tvChangModel.setText("现在是晚上，点击切换白天");
@@ -287,7 +286,7 @@ public class MainActivity extends SuperActivity implements TaskDayNightContract.
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             dialog.dismiss();
-            Intent intent = new Intent(MainActivity.this, TestActivity.class);
+            Intent intent = new Intent(MainActivity.this, SlidingCloseActivity.class);
             startActivity(intent);
         }
     };

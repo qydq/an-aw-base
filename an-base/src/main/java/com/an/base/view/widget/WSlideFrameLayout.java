@@ -61,7 +61,7 @@ public class WSlideFrameLayout extends FrameLayout {
         mActivity = activity;
         mScroller = new Scroller(mActivity);
 //        mLeftShadow = getResources().getDrawable(R.drawable.yy_drawable_slidingclose_shadow);
-        mLeftShadow = ContextCompat.getDrawable(mActivity, R.drawable.yy_drawable_slidingclose_shadow);
+        mLeftShadow = ContextCompat.getDrawable(mActivity, R.drawable.yy_drawable_slideclose_shadow);
         int density = (int) activity.getResources().getDisplayMetrics().density;
         mShadowWidth = SHADOW_WIDTH * density;
     }
