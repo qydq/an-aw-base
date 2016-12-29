@@ -49,4 +49,9 @@ public class AnotationActivity extends SlideCloseActivity {
         anTvTitle.setText(R.string.AnotationActivity);
     }
 
+    @Override
+    public void initView() {
+
+    }
+
 }

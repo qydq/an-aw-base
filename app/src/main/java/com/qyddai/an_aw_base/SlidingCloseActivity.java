@@ -27,9 +27,9 @@ public class SlidingCloseActivity extends SlideCloseActivity {
     private ImageView anIvRight;
     private TextView anTvTitle;
 
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void initView() {
         setContentView(R.layout.sst_activity_slidingclose);
         //如果换成activity_main则会崩掉。
         button = (Button) findViewById(R.id.btnDialog);

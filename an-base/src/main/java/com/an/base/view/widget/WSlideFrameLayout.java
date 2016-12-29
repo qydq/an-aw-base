@@ -81,6 +81,7 @@ public class WSlideFrameLayout extends FrameLayout {
                 mLastMotionX = (int) event.getX();
                 mWidth = getWidth();
                 mMinX = mWidth / 10;
+                System.out.println("RTLayout---onTouchEvent---DOWN");
                 break;
             case MotionEvent.ACTION_MOVE:
                 int rightMovedX = mLastMotionX - (int) event.getX();
@@ -90,6 +91,7 @@ public class WSlideFrameLayout extends FrameLayout {
                     scrollBy(rightMovedX, 0);
                 }
                 mLastMotionX = (int) event.getX();
+                System.out.println("RTLayout---onTouchEvent---ACTION_MOVE");
                 break;
             case MotionEvent.ACTION_UP:
                 if (-getScrollX() < mWidth / 2) {
@@ -97,6 +99,7 @@ public class WSlideFrameLayout extends FrameLayout {
                 } else {
                     scrollClose();
                 }
+                System.out.println("RTLayout---onTouchEvent---ACTION_UP");
                 break;
         }
         return true;
@@ -153,5 +156,42 @@ public class WSlideFrameLayout extends FrameLayout {
         mLeftShadow.draw(canvas);
         // 恢复画布的状态
         canvas.restore();
+    }
+
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent event) {
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                System.out.println("RTLayout---onInterceptTouchEvent---DOWN");
+                break;
+            case MotionEvent.ACTION_MOVE:
+                System.out.println("RTLayout---onInterceptTouchEvent---MOVE");
+                break;
+            case MotionEvent.ACTION_UP:
+                System.out.println("RTLayout---onInterceptTouchEvent---UP");
+                break;
+            default:
+                break;
+        }
+        return super.onInterceptTouchEvent(event);
+
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                System.out.println("RTLayout---dispatchTouchEvent---DOWN");
+                break;
+            case MotionEvent.ACTION_MOVE:
+                System.out.println("RTLayout---dispatchTouchEvent---MOVE");
+                break;
+            case MotionEvent.ACTION_UP:
+                System.out.println("RTLayout---dispatchTouchEvent---UP");
+                break;
+            default:
+                break;
+        }
+        return super.dispatchTouchEvent(event);
     }
 }
