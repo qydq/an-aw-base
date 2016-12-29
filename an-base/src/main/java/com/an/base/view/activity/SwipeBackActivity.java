@@ -1,6 +1,5 @@
 package com.an.base.view.activity;
 
-import android.app.Activity;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 
@@ -10,7 +9,7 @@ import com.an.base.view.SuperActivity;
  * Created by qydda on 2016/12/27.
  */
 
-public class SlideBackActivity extends SuperActivity {
+public class SwipeBackActivity extends SuperActivity {
 
     //手指上下滑动时的最小速度
     private static final int YSPEED_MIN = 1000;

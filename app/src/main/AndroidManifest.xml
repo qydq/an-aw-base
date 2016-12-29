@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".SlidingCloseActivity" />
         <activity android:name=".AnotationActivity" />
+        <activity android:name=".SlidingFinishActivity" />
+        <activity android:name=".SlidingFinishDetailActivity" />
     </application>
 
 </manifest>

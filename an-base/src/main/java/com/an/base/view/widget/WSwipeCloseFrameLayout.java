@@ -13,7 +13,7 @@ import android.widget.Scroller;
 
 import com.an.base.R;
 
-public class WSlideFrameLayout extends FrameLayout {
+public class WSwipeCloseFrameLayout extends FrameLayout {
     private Activity mActivity;
     private Scroller mScroller;
     /**
@@ -41,15 +41,15 @@ public class WSlideFrameLayout extends FrameLayout {
      */
     private int mShadowWidth;
 
-    public WSlideFrameLayout(Activity activity) {
+    public WSwipeCloseFrameLayout(Activity activity) {
         this(activity, null);
     }
 
-    public WSlideFrameLayout(Activity activity, AttributeSet attrs) {
+    public WSwipeCloseFrameLayout(Activity activity, AttributeSet attrs) {
         this(activity, attrs, 0);
     }
 
-    public WSlideFrameLayout(Activity activity, AttributeSet attrs, int defStyleAttr) {
+    public WSwipeCloseFrameLayout(Activity activity, AttributeSet attrs, int defStyleAttr) {
         super(activity, attrs, defStyleAttr);
         initView(activity);
     }
@@ -58,7 +58,7 @@ public class WSlideFrameLayout extends FrameLayout {
         mActivity = activity;
         mScroller = new Scroller(mActivity);
 //        mLeftShadow = getResources().getDrawable(R.drawable.yy_drawable_slidingclose_shadow);
-        mLeftShadow = ContextCompat.getDrawable(mActivity, R.drawable.yy_drawable_slideclose_shadow);
+        mLeftShadow = ContextCompat.getDrawable(mActivity, R.drawable.yy_drawable_swipe_shadow);
         int density = (int) activity.getResources().getDisplayMetrics().density;
         mShadowWidth = SHADOW_WIDTH * density;
     }

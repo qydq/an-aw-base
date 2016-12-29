@@ -286,7 +286,7 @@ public class MainActivity extends SuperActivity implements TaskDayNightContract.
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             dialog.dismiss();
-            Intent intent = new Intent(MainActivity.this, SlidingCloseActivity.class);
+            Intent intent = new Intent(MainActivity.this, SlidingFinishActivity.class);
             startActivity(intent);
         }
     };

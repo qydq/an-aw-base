@@ -3,4 +3,6 @@
     <string name="MainActivity">MainActivity</string>
     <string name="SlidingCloseActivity">SlidingCloseActivity</string>
     <string name="AnotationActivity">AnotationActivity</string>
+    <string name="SlidingFinishDetailActivity">SlidingFinishDetailActivity</string>
+    <string name="SlidingFinishActivity">SlidingFinishActivity</string>
 </resources>

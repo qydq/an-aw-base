@@ -6,6 +6,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -16,6 +17,8 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.Scroller;
 
+import com.an.base.R;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -24,8 +27,8 @@ import java.util.List;
  * @author xiaanming
  * @blog http://blog.csdn.net/xiaanming
  */
-public class SwipeBackLayout extends FrameLayout {
-    private static final String TAG = SwipeBackLayout.class.getSimpleName();
+public class WSwipeFinishFrameLayout extends FrameLayout {
+    private static final String TAG = WSwipeFinishFrameLayout.class.getSimpleName();
     private View mContentView;
     private int mTouchSlop;
     private int downX;
@@ -37,19 +40,29 @@ public class SwipeBackLayout extends FrameLayout {
     private boolean isFinish;
     private Drawable mShadowDrawable;
     private Activity mActivity;
+    /**
+     * 页面边缘阴影的宽度
+     */
+    private int mShadowWidth;
+    /**
+     * 页面边缘阴影的宽度默认值
+     */
+    private static final int SHADOW_WIDTH = 16;
     private List<ViewPager> mViewPagers = new LinkedList<ViewPager>();
 
-    public SwipeBackLayout(Context context, AttributeSet attrs) {
+    public WSwipeFinishFrameLayout(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public SwipeBackLayout(Context context, AttributeSet attrs, int defStyle) {
+    public WSwipeFinishFrameLayout(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-
         mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
         mScroller = new Scroller(context);
 
-        mShadowDrawable = getResources().getDrawable(R.drawable.shadow_left);
+//        mShadowDrawable = getResources().getDrawable(R.drawable.yy_drawable_slideclose_shadow);
+        mShadowDrawable = ContextCompat.getDrawable(context, R.drawable.yy_drawable_swipe_shadow);
+        int density = (int) context.getResources().getDisplayMetrics().density;
+        mShadowWidth = SHADOW_WIDTH * density;
     }
 
 
@@ -190,6 +203,14 @@ public class SwipeBackLayout extends FrameLayout {
     @Override
     protected void dispatchDraw(Canvas canvas) {
         super.dispatchDraw(canvas);
+        drawShadow(canvas);
+    }
+
+    /**
+     * 绘制边缘的阴影
+     */
+    private void drawShadow(Canvas canvas) {
+        //方法一，暂时没有用。
         if (mShadowDrawable != null && mContentView != null) {
 
             int left = mContentView.getLeft()
@@ -201,9 +222,20 @@ public class SwipeBackLayout extends FrameLayout {
             mShadowDrawable.setBounds(left, top, right, bottom);
             mShadowDrawable.draw(canvas);
         }
-
+//        //上面这部分需要调用mShadowDrawable = getResources().getDrawable(R.drawable.shadow_left);
+//        // 图片来设置，图片太占内存了不考虑。。
+//        //方法二：正常使用。
+        // 保存画布当前的状态
+        canvas.save();
+        // 设置drawable的大小范围
+        mShadowDrawable.setBounds(0, 0, mShadowWidth, getHeight());
+        // 让画布平移一定距离
+        canvas.translate(-mShadowWidth, 0);
+        // 绘制Drawable
+        mShadowDrawable.draw(canvas);
+        // 恢复画布的状态
+        canvas.restore();
     }
-
 
     /**
      * 滚动出界面

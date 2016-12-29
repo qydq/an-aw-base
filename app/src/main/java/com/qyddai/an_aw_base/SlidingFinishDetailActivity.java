@@ -6,8 +6,6 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.an.base.view.activity.SwipeCloseActivity;
-
 import org.xutils.view.annotation.ViewInject;
 
 /**
@@ -15,7 +13,7 @@ import org.xutils.view.annotation.ViewInject;
  */
 
 
-public class AnotationActivity extends SwipeCloseActivity {
+public class SlidingFinishDetailActivity extends SlidingFinishActivity {
     //以下为headview_standard.xml
     @ViewInject(R.id.anLlBack)
     private LinearLayout anLlBack;
@@ -44,14 +42,13 @@ public class AnotationActivity extends SwipeCloseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sst_activity_anotation);
+        setContentView(R.layout.sst_activity_finishdetail);
         anTvTitle = (TextView) findViewById(R.id.anTvTitle);
-        anTvTitle.setText(R.string.AnotationActivity);
+        anTvTitle.setText(R.string.SlidingFinishDetailActivity);
     }
-
+    
     @Override
     public void initView() {
 
     }
-
 }
