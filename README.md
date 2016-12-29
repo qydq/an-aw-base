@@ -415,3 +415,19 @@ http://drakeet.me/android-studio
 `compile 'com.github.qydq:an-aw-base:0.1.4'`
 
 an-aw-base更新日志，会在这里面做一次纪录，当前an-aw-base
+
+SlideBackActiivity,修改为SwipeBackActivity
+SlideCloseActivity,修改为SwipeCloseActivity
+添加SwipeFinishActivity（通用。）
+WIoScrollView,
+WSlideFrameLayout,修改为WSwipeCloseFrameLayout
+添加WSwipeFinishFrameLayout
+yy_drawable_slidingclose_shadow修改为yy_drawable_swipe_shadow.xml
+修改为SwipeCloseActivity继承BaseActivity，修复bug.可用其它属性。但设置间隔。
+添加一个base_swipe_finish Layout布局。
+完成SwipeCloseActivity，SwipeFinishActivity使用参考例子，详细见app，src目录。
+
+SwipeBackActivity //为单独使用。不能使用an框架其它功能。
+SwipeCloseActivity //集成baseActivity可以使用an框架所有功能。（内部可修改为SwipeFinishActivity）
+SwipeFinishActivity //集成baseActivity，可以使用an框架所有功能。（通用，推荐使用。）
+
