@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:background="@android:color/white">
+    android:background="@color/CommMainBg"
+    android:fitsSystemWindows="true">
 
     <include
         android:id="@+id/includeHead"
@@ -11,23 +11,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/includeHead"
-        android:text="SecondActivity" />
-
     <com.an.base.view.widget.WIoScrollView
         android:id="@+id/scrollView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/button">
+        android:layout_below="@+id/includeHead"
+        android:background="@color/CommColorWhite"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="25dp"
             android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="120dp"
+                android:layout_height="120dp" />
 
             <Button
                 android:layout_width="wrap_content"

@@ -46,7 +46,7 @@
 6.联系作者。
 
 
-# [![](https://jitpack.io/v/qydq/an-aw-base.svg)](https://jitpack.io/#qydq/an-aw-base)   ![](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/res/drawable/base_drawable_art_click.png)   <a href='https://bintray.com/qydq/an/an-aw-base?source=watch' alt='Get automatic notifications about new "an-aw-base" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_color.png'></a>  ![](https://github.com/qydq/an-aw-base/blob/master/screen/base_wtogglebutton.gif)
+# [![](https://jitpack.io/v/qydq/an-aw-base.svg)](https://jitpack.io/#qydq/an-aw-base)   ![](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/res/drawable/base_drawable_art_click.png)   <a href='https://bintray.com/qydq/an/an-aw-base?source=watch' alt='Get automatic notifications about new "an-aw-base" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_color.png'></a>
 
 #######
 
@@ -417,17 +417,27 @@ http://drakeet.me/android-studio
 an-aw-base更新日志，会在这里面做一次纪录，当前an-aw-base
 
 SlideBackActiivity,修改为SwipeBackActivity
+
 SlideCloseActivity,修改为SwipeCloseActivity
+
 添加SwipeFinishActivity（通用。）
 WIoScrollView,
+
 WSlideFrameLayout,修改为WSwipeCloseFrameLayout
+
 添加WSwipeFinishFrameLayout
+
 yy_drawable_slidingclose_shadow修改为yy_drawable_swipe_shadow.xml
+
 修改为SwipeCloseActivity继承BaseActivity，修复bug.可用其它属性。但设置间隔。
+
 添加一个base_swipe_finish Layout布局。
+
 完成SwipeCloseActivity，SwipeFinishActivity使用参考例子，详细见app，src目录。
 
 SwipeBackActivity //为单独使用。不能使用an框架其它功能。
+
 SwipeCloseActivity //集成baseActivity可以使用an框架所有功能。（内部可修改为SwipeFinishActivity）
+
 SwipeFinishActivity //集成baseActivity，可以使用an框架所有功能。（通用，推荐使用。）
 
