@@ -21,7 +21,6 @@ import java.util.List;
 public class CaptureHelper {
 
     private final static String TIMESTAMP_FORMAT = "yyyy_MM_dd_HH_mm_ss";//拍照保存为年月日，时分秒的png照片。
-
     public final static int CAPTURE_PHOTO_REQUEST_CODE = 0x1111;//// Take Picture
     public final static int SELECT_IMAGE_KITKAT = 0x0000;//// // Local Image4.4版本以上。LOLLIPOP21BANBEN
     public final static int IMAGE_REQUEST_CODE = 0x0001;//// // Local Image4.4及4.4版本以下。

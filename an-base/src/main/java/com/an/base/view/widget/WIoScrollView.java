@@ -7,6 +7,7 @@ package com.an.base.view.widget;
 import android.content.Context;
 import android.graphics.Rect;
 import android.util.AttributeSet;
+import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.TranslateAnimation;
@@ -16,7 +17,7 @@ import android.widget.ScrollView;
 /**
  *  * 有弹性的ScrollView 实现下拉弹回和上拉弹回
  *  * 
- *  * @author shaozuhceng
+ *  * @author sunshuntao
  *  
  */
 public class WIoScrollView extends ScrollView {
@@ -25,7 +26,7 @@ public class WIoScrollView extends ScrollView {
 // 目的是达到一个延迟的效果
     private static final float MOVE_FACTOR = 0.5f;
     // 松开手指后, 界面回到正常位置需要的动画时间
-    private static final int ANIM_TIME = 300;
+    private static final int ANIM_TIME = 280;
     // ScrollView的子View， 也是ScrollView的唯一一个子View
     private View contentView;
     // 手指按下时的Y值, 用于在移动时计算移动距离
@@ -40,12 +41,20 @@ public class WIoScrollView extends ScrollView {
     // 在手指滑动的过程中记录是否移动了布局
     private boolean isMoved = false;
 
+    private GestureDetector mGestureDetector;
+
+    View.OnTouchListener mGestureListener;
+
     public WIoScrollView(Context context) {
         super(context);
+        mGestureDetector = new GestureDetector(new YSrollDetector());
+        setFadingEdgeLength(0);
     }
 
     public WIoScrollView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        mGestureDetector = new GestureDetector(new YSrollDetector());
+        setFadingEdgeLength(0);
     }
 
     @Override
@@ -152,5 +161,20 @@ public class WIoScrollView extends ScrollView {
      */
     private boolean isCanPullUp() {
         return contentView.getHeight() <= getHeight() + getScrollY();
+    }
+
+    @Override
+    public void fling(int velocityY) {
+        super.fling(velocityY / 2);//这里设置滑动的速度。
+    }
+
+    class YSrollDetector extends GestureDetector.SimpleOnGestureListener {
+        @Override
+        public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+            if (Math.abs(distanceY) > Math.abs(distanceX)) {
+                return true;
+            }
+            return false;
+        }
     }
 }

@@ -1,6 +1,7 @@
 package com.an.base.utils;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
@@ -278,8 +279,77 @@ public enum DUtilsBitmap {
 //计算缩放比（目标宽高/原始宽高）
         float scaleWidht = ((float) w / width);
         float scaleHeight = ((float) h / height);
-        matrix.postScale(scaleWidht, scaleHeight);
+        matrix.postScale(scaleWidht, scaleHeight);// 利用矩阵进行缩放不会造成内存溢出  
         Bitmap newbmp = Bitmap.createBitmap(bitmap, 0, 0, width, height, matrix, true);
         return newbmp;
+    }
+
+    //设置收缩的图片，scale为收缩比例
+    //为防止原始图片过大导致内存溢出，这里先缩小原图显示，然后释放原始Bitmap占用的内存
+    //这里缩小了1/2,但图片过大时仍然会出现加载不了,但系统中一个BITMAP最大是在10M左右,
+    // 我们可以根据BITMAP的大小根据当前的比例缩小,即如果当前是15M,那如果定缩小后是6M,那么SCALE= 15/6
+    public Bitmap zoomBitmap(Bitmap photo, int SCALE) {
+        if (photo != null) {
+            Bitmap smallBitmap = zoomBitmap(photo, photo.getWidth() / SCALE, photo.getHeight() / SCALE);
+            //释放原始图片占用的内存，防止out of memory异常发生
+            photo.recycle();
+            return smallBitmap;
+        }
+        return null;
+    }
+
+    //为了避免OOM异常，最好在解析每张图片的时候都先检查一下图片的大小
+//    预估一下加载整张图片所需占用的内存。
+//    为了加载这一张图片你所愿意提供多少内存。
+//    用于展示这张图片的控件的实际大小。
+//    当前设备的屏幕尺寸和分辨率
+//    将BitmapFactory.Options连同期望的宽度和高度一起传递到到calculateInSampleSize方法
+    public Bitmap decodeBitmapFromResource(Resources res, int resId,
+                                           int reqWidth, int reqHeight) {
+        // 第一次解析将inJustDecodeBounds设置为true，来获取图片大小
+        final BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeResource(res, resId, options);
+        // 调用上面定义的方法计算inSampleSize值
+        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
+        // 使用获取到的inSampleSize值再次解析图片
+        options.inJustDecodeBounds = false;
+        return BitmapFactory.decodeResource(res, resId, options);
+    }
+
+    //调用的时候需要判空
+    public Bitmap decodeBitmapFromPath(String path,
+                                       int reqWidth, int reqHeight) {
+        // 第一次解析将inJustDecodeBounds设置为true，来获取图片大小
+        final BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        File file = new File(path);
+        if (file.exists())
+            BitmapFactory.decodeFile(path, options);
+        else
+            return null;
+        // 计算inSampleSize值
+        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
+        // 使用获取到的inSampleSize值再次解析图片
+        options.inJustDecodeBounds = false;
+        return BitmapFactory.decodeFile(path, options);
+    }
+
+    //为上面方法服务
+    private int calculateInSampleSize(BitmapFactory.Options options,
+                                      int reqWidth, int reqHeight) {
+        // 源图片的高度和宽度
+        final int height = options.outHeight;
+        final int width = options.outWidth;
+        int inSampleSize = 1;
+        if (height > reqHeight || width > reqWidth) {
+            // 计算出实际宽高和目标宽高的比率
+            final int heightRatio = Math.round((float) height / (float) reqHeight);
+            final int widthRatio = Math.round((float) width / (float) reqWidth);
+            // 选择宽和高中最小的比率作为inSampleSize的值，这样可以保证最终图片的宽和高
+            // 一定都会大于等于目标的宽和高。
+            inSampleSize = heightRatio < widthRatio ? heightRatio : widthRatio;
+        }
+        return inSampleSize;
     }
 }

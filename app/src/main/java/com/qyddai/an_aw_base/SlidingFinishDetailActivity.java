@@ -25,7 +25,6 @@ import android.widget.TextView;
 
 import com.an.base.model.utils.XCallBack;
 import com.an.base.model.utils.XHttps;
-import com.an.base.utils.CaptureHelper;
 import com.an.base.utils.DUtilsBitmap;
 import com.an.base.view.activity.SwipeFinishActivity;
 
@@ -70,27 +69,38 @@ public class SlidingFinishDetailActivity extends SwipeFinishActivity {
     private ImageView anIvRRight;
     @ViewInject(R.id.iv)
     private ImageView iv;
+    private Uri imageUri;
+    private Uri imageCropUri;
 
     private String[] items = new String[]{"图库", "拍照"};
     /* 头像名称 */
     private static final String IMAGE_FILE_NAME = "face.jpg";
+    private static final String IMAGE_FILE_MAX_NAME = "face_max.jpg";
     /* 请求码 */
     private static final int IMAGE_REQUEST_CODE = 0;
     private static final int CAMERA_REQUEST_CODE = 1;
     private static final int RESULT_REQUEST_CODE = 2;
     private static final int SELECT_PIC_KITKAT = 3;
+    private static final int RESULT_CAMERA_CROP_PATH_RESULT = 4;
+    private Bitmap bitmap;
+    private String path;
+    private File f;
 
     @Override
     public void initView() {
         anTvTitle = (TextView) findViewById(R.id.anTvTitle);
         anTvTitle.setText(R.string.SlidingFinishDetailActivity);
-        String path = Environment.getExternalStorageDirectory() + "/" + IMAGE_FILE_NAME;
-        File f = new File(path);
+        path = Environment.getExternalStorageDirectory() + "/" + IMAGE_FILE_NAME;
+        f = new File(path);
+        imageCropUri = Uri.fromFile(f);
         if (f.exists()) {
             Bitmap bitmap = BitmapFactory.decodeFile(path);
-            Bitmap roundBitmap = DUtilsBitmap.INSTANCE.createReflectionImageWithOrigin(bitmap);
+            Bitmap roundBitmap = DUtilsBitmap.INSTANCE.zoomBitmap(bitmap, 120, 120);
             iv.setImageBitmap(roundBitmap);
         }
+        String imagePath = Environment.getExternalStorageDirectory() + "/" + IMAGE_FILE_MAX_NAME;
+        File imageFile = new File(imagePath);
+        imageUri = Uri.fromFile(imageFile);
         anTvRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -138,9 +148,12 @@ public class SlidingFinishDetailActivity extends SwipeFinishActivity {
                             case 1:// Take Picture
                                 Intent intentFromCapture = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                                 // 判断存储卡是否可以用，可用进行存储
+                                intentFromCapture.putExtra("return-data", false);
                                 intentFromCapture.putExtra(MediaStore.EXTRA_OUTPUT,
                                         Uri.fromFile(new File(Environment.getExternalStorageDirectory(),
-                                                IMAGE_FILE_NAME)));
+                                                IMAGE_FILE_MAX_NAME)));
+                                intentFromCapture.putExtra("outputFormat", Bitmap.CompressFormat.JPEG.toString());
+                                intentFromCapture.putExtra("noFaceDetection", true);
                                 startActivityForResult(intentFromCapture,
                                         CAMERA_REQUEST_CODE);
                                 break;
@@ -159,6 +172,21 @@ public class SlidingFinishDetailActivity extends SwipeFinishActivity {
 
     }
 
+    public void cropImg(Uri uri) {
+        Intent intent = new Intent("com.android.camera.action.CROP");
+        intent.setDataAndType(uri, "image/*");
+        intent.putExtra("crop", "true");
+        intent.putExtra("aspectX", 1);
+        intent.putExtra("aspectY", 1);
+        intent.putExtra("outputX", 700);
+        intent.putExtra("outputY", 700);
+        intent.putExtra("return-data", false);
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, imageCropUri);
+        intent.putExtra("outputFormat", Bitmap.CompressFormat.JPEG.toString());
+        intent.putExtra("noFaceDetection", true);
+        startActivityForResult(intent, RESULT_CAMERA_CROP_PATH_RESULT);
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // 结果码不等于取消时候
@@ -173,17 +201,22 @@ public class SlidingFinishDetailActivity extends SwipeFinishActivity {
                     break;
                 //照相机Take Picture
                 case CAMERA_REQUEST_CODE:
-                    if (Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED)) {
-                        File tempFile = new File(Environment.getExternalStorageDirectory(), IMAGE_FILE_NAME);
-                        startPhotoZoom(Uri.fromFile(tempFile));
-                    } else {
-                        showToast("未找到存储卡，无法存储照片！");
-                    }
-
+                    cropImg(imageUri);
                     break;
                 case RESULT_REQUEST_CODE:
                     if (data != null) {
                         setImageToView(data, iv);
+                    }
+                    break;
+                case RESULT_CAMERA_CROP_PATH_RESULT:
+                    Bundle extras = data.getExtras();
+                    if (extras != null) {
+                        try {
+                            Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageCropUri));
+                            iv.setImageBitmap(bitmap);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
                     break;
             }
