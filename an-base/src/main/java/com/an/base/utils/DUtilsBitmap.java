@@ -317,7 +317,13 @@ public enum DUtilsBitmap {
         return BitmapFactory.decodeResource(res, resId, options);
     }
 
-    //调用的时候需要判空
+    /**
+     * @param path 绝对路径
+     * @param reqWidth
+     * @param reqHeight
+     * @ 为了避免OOM异常，最好在解析每张图片的时候都先检查一下图片的大小，从已知路径返回一张不会OOM的图片
+     * @return
+     */
     public Bitmap decodeBitmapFromPath(String path,
                                        int reqWidth, int reqHeight) {
         // 第一次解析将inJustDecodeBounds设置为true，来获取图片大小

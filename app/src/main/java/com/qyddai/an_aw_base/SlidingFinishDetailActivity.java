@@ -91,10 +91,7 @@ public class SlidingFinishDetailActivity extends SwipeFinishActivity {
             Bitmap bitmap = BitmapFactory.decodeFile(path);
             iv.setImageBitmap(bitmap);
         }
-        //拍照的原始未裁剪照片face_max.jpg
-        String imagePath = skRoot + "/" + IMAGE_FILE_MAX_NAME;
-        File imageFile = new File(imagePath);
-        imageUri = Uri.fromFile(imageFile);
+
         //初始化CaptureHelper
         captureHelper = new CaptureHelper(SlidingFinishDetailActivity.this, skRoot);
         anTvRight.setOnClickListener(new View.OnClickListener() {
@@ -123,7 +120,7 @@ public class SlidingFinishDetailActivity extends SwipeFinishActivity {
                             case 0:// Local Image(调用相册会返回PHOTO_REQUEST_LOLLIPOP_CODE，PHOTO_REQUEST_KITKAT_CODE)
                                 captureHelper.photo();
                                 break;
-                            case 1:// Take Picture
+                            case 1:// 拍照，保存名为IMAGE_FILE_MAX_NAME的jpg未裁剪照片。
                                 captureHelper.capture(IMAGE_FILE_MAX_NAME, true);
                                 break;
                         }
@@ -147,7 +144,7 @@ public class SlidingFinishDetailActivity extends SwipeFinishActivity {
             switch (requestCode) {
                 //选取照片后返回。
                 case RESULT_PHOTO_CODE:
-                    //需要裁剪则调用该方法。
+                    //选取照片需要裁剪则调用该方法。
                     captureHelper.startPhotoZoom(data.getData(), 200, 200);
                     break;
                 //选取照片裁剪后返回。可以在这里设置图片显示到控件中。
@@ -165,10 +162,10 @@ public class SlidingFinishDetailActivity extends SwipeFinishActivity {
                     break;
                 //照相机照相以后返回。
                 case RESULT_CAPTURE_CODE:
-                    //需要裁剪照相后的图片调用该方法。（会保存名为imageCropUri的值）
-                    captureHelper.cropImg(imageUri, imageCropUri);
+                    //需要裁剪照相后的图片调用该方法。（会保存名为IMAGE_FILE_NAME的值）
+                    captureHelper.startCaptureZoom(IMAGE_FILE_MAX_NAME, IMAGE_FILE_NAME);
                     break;
-                //照相机拍照后裁剪图片的显示
+                //照相机拍照后裁剪图片的返回
                 case RESULT_CAPTURE_CROP_CODE:
                     Bundle extras = data.getExtras();
                     if (extras != null) {

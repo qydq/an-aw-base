@@ -23,10 +23,22 @@ aN框架API指导参考-Api Guide
 |createReflectionImageWithOrigin|获得带倒影的图片方法|Bitmap bitmap|Bitmap|
 |createWatermarkBitmap|图片水印的生成方法|Bitmap src, Bitmap watermark|Bitmap|
 |zoomBitmap|放大缩小图片|Bitmap bitmap, int w, int h|Bitmap|
+|zoomBitmap|设置收缩的图片，scale为收缩比例
+    <br>为防止原始图片过大导致内存溢出，这里先缩小原图显示，然后释放原始Bitmap占用的内存
+    <br>这里缩小了1/2,但图片过大时仍然会出现加载不了,但系统中一个BITMAP最大是在10M左右,
+    <br>我们可以根据BITMAP的大小根据当前的比例缩小,即如果当前是15M,那如果定缩小后是6M,那么SCALE= 15/6|Bitmap photo, int SCALE|Bitmap|
+|decodeBitmapFromResource|为了避免OOM异常，最好在解析每张图片的时候都先检查一下图片的大小|Resources res, int resId,
+                                           int reqWidth, int reqHeight|Bitmap|
+|decodeBitmapFromPath|为了避免OOM异常，最好在解析每张图片的时候都先检查一下图片的大小,path为绝对路径|String path,
+                                       int reqWidth, int reqHeight|Bitmap|
 
-备注：Bitmap largeIcon = ((BitmapDrawable) getResources().getDrawable(R.drawable.ic_launcher)).getBitmap();//过时的解决方法。
+备注：Bitmap largeIcon = ((BitmapDrawable) getResources().getDrawable(R.drawable.ic_launcher)).getBitmap();
+
+//过时的解决方法。
 Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_launcher);
+
 BitmapDrawable bitmapDrawable = (BitmapDrawable) drawable;
+
 Bitmap largeIcon = bitmapDrawable.getBitmap();
 
 		//设置通知栏Notification
@@ -275,3 +287,34 @@ https://zhuanlan.zhihu.com/p/24408002
 
 WToggleButton aN提供的公共开关参考。
 https://zhuanlan.zhihu.com/p/24275861?refer=sunst
+
+### [!CaptureHelper](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/java/com/an/base/utils/CaptureHelper.java) 拍照辅助类
+
+使用方法 CaptureHelper helper = new CaptureHelper(skRoot,mcontext);
+
+|方法名称|方法说明|参数|返回|
+|:---------|:---|:---|---:|
+|capture|拍照，以时间命名，可以调用getPhoto得到时间命名的file照片|无|mActivity.startActivityForResult(captureIntent, RESULT_CAPTURE_CODE);|
+|capture|拍照，以时间命名，可以调用getPhoto得到时间命名的file照片|String saveName, boolean isNoFaceDetection|mActivity.startActivityForResult(captureIntent, RESULT_CAPTURE_CODE);|
+|photo|调用系统相册，并返回RESULT_PHOTO_CODE|无|无|
+|startPhotoZoom|原始uri。一般未data.getData()  裁剪图片方法实现,系统会自动根据android版本调用合适的方法。|Uri uri, int cropWidthSize, int cropHeightSize|mActivity.startActivityForResult(intent, RESULT_PHOTO_CROP_CODE);|
+|startPhotoZoom|原始uri。一般未data.getData()  ,裁剪并保存名为cropName的jpg照片,裁剪图片方法实现,系统会自动根据android版本调用合适的方法。|Uri uri, String cropName,int cropWidthSize, int cropHeightSize|mActivity.startActivityForResult(intent, RESULT_PHOTO_CROP_CODE);|
+|startCaptureZoom|调用系统相机后可以调用该方法为照片裁剪|String originName, String cropName|void|
+|saveBitmap|该方法单独使用，保存名为saveName的照片到内存卡,使用方法如下|Bitmap mBitmap, String saveName|String|
+|getPath|以下是关键，原本uri返回的是file:///...来着的，android4.4返回的是content:///..|final Context context, final Uri uri|String|
+
+使用参考
+
+		//选取照片裁剪后返回。可以在这里设置图片显示到控件中。
+                case RESULT_PHOTO_CROP_CODE:
+                    if (data != null) {
+                        Bundle extras = data.getExtras();
+                        if (extras != null) {
+                            Bitmap bitmap = extras.getParcelable("data");
+                            Bitmap roundBitmap = DUtilsBitmap.INSTANCE.createReflectionImageWithOrigin(bitmap);
+                            iv.setImageBitmap(roundBitmap);
+                            //保存
+                            captureHelper.saveBitmap(bitmap, IMAGE_FILE_NAME);
+                        }
+                    }
+                    break;

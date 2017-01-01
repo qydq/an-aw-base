@@ -93,7 +93,9 @@ public class CaptureHelper {
         }
     }
 
-    //调用系统相册，并返回RESULT_PHOTO_CODE
+    /**
+     * 调用系统相册，并返回RESULT_PHOTO_CODE
+     */
     public void photo() {
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
@@ -102,8 +104,10 @@ public class CaptureHelper {
     }
 
     /**
-     * @param uri 裁剪图片方法实现,系统会自动根据android版本调用合适的方法。
-     */
+     * @param uri            原始uri。一般未data.getData()  裁剪图片方法实现,系统会自动根据android版本调用合适的方法。
+     * @param cropWidthSize  裁剪的宽度
+     * @param cropHeightSize 裁剪的高度
+     **/
     public void startPhotoZoom(Uri uri, int cropWidthSize, int cropHeightSize) {
         if (uri == null) {
             Log.i("tag", "The uri is not exist.");
@@ -131,16 +135,70 @@ public class CaptureHelper {
         intent.putExtra("outputX", cropWidthSize);
         intent.putExtra("outputY", cropHeightSize);
         intent.putExtra("return-data", true);
+        intent.putExtra("outputFormat", Bitmap.CompressFormat.JPEG.toString());
+        intent.putExtra("noFaceDetection", true);
         mActivity.startActivityForResult(intent, RESULT_PHOTO_CROP_CODE);
     }
 
     /**
-     * @param uri
-     * @param imageCropUri 裁剪的后的Uri名字。
+     * @param uri            原始uri。一般未data.getData()  裁剪图片方法实现,系统会自动根据android版本调用合适的方法。
+     * @param cropName       裁剪并保存名为cropName的jpg照片
+     * @param cropWidthSize  裁剪的宽度
+     * @param cropHeightSize 裁剪的高度
      */
-    public void cropImg(Uri uri, Uri imageCropUri) {
+    public void startPhotoZoom(Uri uri, String cropName, int cropWidthSize, int cropHeightSize) {
+        if (uri == null) {
+            Log.i("tag", "The uri is not exist.");
+            return;
+        }
+        String cropPath = skRoot + "/" + cropName;
+        File cropFile = new File(cropPath);
+        Uri imageCropUri = Uri.fromFile(cropFile);//裁剪后图片的Uri
+        //默认
+        if (cropHeightSize < 150) {
+            cropWidthSize = 150;
+            cropHeightSize = 150;
+        }
         Intent intent = new Intent("com.android.camera.action.CROP");
-        intent.setDataAndType(uri, "image/*");
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+            String url = getPath(mActivity, uri);
+            intent.setDataAndType(Uri.fromFile(new File(url)), "image/*");
+        } else {
+            intent.setDataAndType(uri, "image/*");
+        }
+
+        // 设置裁剪
+        intent.putExtra("crop", "true");
+        // aspectX aspectY 是宽高的比例
+        intent.putExtra("aspectX", 1);
+        intent.putExtra("aspectY", 1);
+        // outputX outputY 是裁剪图片宽高
+        intent.putExtra("outputX", cropWidthSize);
+        intent.putExtra("outputY", cropHeightSize);
+        intent.putExtra("return-data", true);
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, imageCropUri);//输出裁剪后的名字为face.jpg
+        intent.putExtra("outputFormat", Bitmap.CompressFormat.JPEG.toString());
+        intent.putExtra("noFaceDetection", true);
+        mActivity.startActivityForResult(intent, RESULT_PHOTO_CROP_CODE);
+    }
+
+
+    /**
+     * @param originName
+     * @param cropName
+     */
+    public void startCaptureZoom(String originName, String cropName) {
+        //拍照的原始未裁剪照片face_max.jpg
+        String imagePath = skRoot + "/" + originName;
+        File imageFile = new File(imagePath);
+        Uri imageUri = Uri.fromFile(imageFile);//原始图片的Uri
+
+        String cropPath = skRoot + "/" + cropName;
+        File cropFile = new File(cropPath);
+        Uri imageCropUri = Uri.fromFile(cropFile);//裁剪后图片的Uri
+
+        Intent intent = new Intent("com.android.camera.action.CROP");
+        intent.setDataAndType(imageUri, "image/*");
         intent.putExtra("crop", "true");
         intent.putExtra("aspectX", 1);
         intent.putExtra("aspectY", 1);
@@ -178,7 +236,11 @@ public class CaptureHelper {
         }
     }
 
-    //保存名为saveName的照片到内存卡
+    /**
+     * @param mBitmap  bitmap
+     * @param saveName 保存的名字
+     * @ 该方法单独使用，保存名为saveName的照片到内存卡
+     */
     public void saveBitmap(Bitmap mBitmap, String saveName) {
         File f = new File(skRoot, saveName);
         try {
