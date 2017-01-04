@@ -76,6 +76,18 @@ public enum DataService {
         }
     }
 
+    //检查字符串是否合法，合法返回true，不合法返回false
+    public boolean islegalInput(String txt) {
+        String regEx = "[`~!@#$%^&*()+=|{}':;',\\[\\].<>/?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？]";
+        Pattern p = Pattern.compile(regEx);
+        Matcher m = p.matcher(txt);
+        if (m.find()) {
+//            姓名不允许输入特殊符号
+            return false;
+        }
+        return true;
+    }
+
     /**
      * @param hexString the hex string
      * @return byte[]
@@ -184,7 +196,7 @@ public enum DataService {
      * @param position
      * @return 移除某个位置后的lists
      */
-    private List<String> removeItemByPosition(List<String> lists, int position) {
+    public List<String> removeItemByPosition(List<String> lists, int position) {
         lists.remove(position);
         return lists;
     }

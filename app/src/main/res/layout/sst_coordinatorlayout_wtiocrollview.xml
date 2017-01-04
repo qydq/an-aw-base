@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.MainActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.an.base.view.widget.WIoScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/CommColorLine"
+            android:fadingEdge="none"
+            android:focusable="false"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/CommColorWhite"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/CommColorLine"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/base_drawable_art_click" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/CommDimenBarIcon"
+                    android:background="@color/CommColorLine" />
+
+                <TextView
+                    android:id="@+id/tvTips"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="@dimen/CommDimenMargin"
+                    android:gravity="center_vertical"
+                    android:text="請輸入正確可用的配置信息，成功配置設備必不可少"
+                    android:textColor="@color/CommTxtMainTintColor"
+                    android:textSize="@dimen/CommDimenTxtSmall" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/CommColorLine" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="@dimen/CommDimenMargin"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:orientation="horizontal"
+                        android:textColorHint="@color/ndkGray3">
+
+                        <EditText
+                            android:id="@+id/etName"
+                            android:layout_width="match_parent"
+                            android:layout_height="47dp"
+                            android:background="@null"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:hint="請輸入WiFi名稱"
+                            android:maxLines="1"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/ColorGreenyellow"
+                            android:textColorHint="@color/ndkGray3" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/vwLine2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="@dimen/CommDimenMargin"
+                    android:background="@color/CommColorLine" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="@dimen/CommDimenMargin"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/til_pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:orientation="horizontal"
+                        android:textColorHint="@color/ndkGray3">
+
+                        <EditText
+                            android:id="@+id/etNewPwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="47dp"
+                            android:background="@null"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:hint="請輸入WiFi密碼"
+                            android:maxLines="1"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/ColorGreenyellow"
+                            android:textColorHint="@color/ndkGray3" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/vwLine3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="@dimen/CommDimenMargin"
+                    android:background="@color/CommColorLine" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DimenPadding08"
+                    android:background="@color/CommColorWhite" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/CommColorWhite"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/DimenPadding08"
+                        android:background="@color/CommColorLine" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="@dimen/CommDimenMargin"
+                        android:gravity="center_vertical"
+                        android:text="歷史紀錄"
+                        android:textColor="@color/CommTxtMainTintColor"
+                        android:textSize="@dimen/CommDimenTxtSmall" />
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.an.base.view.widget.WIoScrollView>
+
+        <include
+            android:id="@+id/includeHead"
+            layout="@layout/base_headview_standard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|top" />
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>

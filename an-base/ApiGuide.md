@@ -23,10 +23,7 @@ aN框架API指导参考-Api Guide
 |createReflectionImageWithOrigin|获得带倒影的图片方法|Bitmap bitmap|Bitmap|
 |createWatermarkBitmap|图片水印的生成方法|Bitmap src, Bitmap watermark|Bitmap|
 |zoomBitmap|放大缩小图片|Bitmap bitmap, int w, int h|Bitmap|
-|zoomBitmap|设置收缩的图片，scale为收缩比例
-    <br>为防止原始图片过大导致内存溢出，这里先缩小原图显示，然后释放原始Bitmap占用的内存
-    <br>这里缩小了1/2,但图片过大时仍然会出现加载不了,但系统中一个BITMAP最大是在10M左右,
-    <br>我们可以根据BITMAP的大小根据当前的比例缩小,即如果当前是15M,那如果定缩小后是6M,那么SCALE= 15/6|Bitmap photo, int SCALE|Bitmap|
+|zoomBitmap|设置收缩的图片，scale为收缩比例<br>为防止原始图片过大导致内存溢出，这里先缩小原图显示，然后释放原始Bitmap占用的内存<br>这里缩小了1/2,但图片过大时仍然会出现加载不了,但系统中一个BITMAP最大是在10M左右,<br>我们可以根据BITMAP的大小根据当前的比例缩小,即如果当前是15M,那如果定缩小后是6M,那么SCALE= 15/6|Bitmap photo, int SCALE|Bitmap|
 |decodeBitmapFromResource|为了避免OOM异常，最好在解析每张图片的时候都先检查一下图片的大小|Resources res, int resId,
                                            int reqWidth, int reqHeight|Bitmap|
 |decodeBitmapFromPath|为了避免OOM异常，最好在解析每张图片的时候都先检查一下图片的大小,path为绝对路径|String path,
@@ -78,6 +75,7 @@ Bitmap largeIcon = bitmapDrawable.getBitmap();
 |getLongDateTime|获取长时间|无|String|
 |removeItemByName|通过字段来移除某个list中的数据|List<String> lists, String name|List<String>|
 |removeItemByPosition|移除某个位置后的lists|List<String> lists, int position|List<String>|
+|islegalInput|//检查字符串是否合法，合法返回true，不合法返回false|String txt|boolean|
 
 ### [!NetBroadcastReceiverUtils](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/java/com/an/base/utils/NetBroadcastReceiverUtils.java) 网络操作类
 
@@ -147,7 +145,7 @@ WResizeRelativeLayout，提供的接口--
         app:cardCornerRadius="2dp"
         app:cardElevation="2dp">
 
-        <com.makeramen.roundedimageview.RoundedImageView
+        <com.an.base.view.widget.WRoundedImageView
             android:id="@+id/profile_small"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -280,7 +278,11 @@ WRoundImageView 圆形ImageView，可设置最多两个宽度不同且颜色不同的圆形边框。
      */
     public Bitmap getCroppedRoundBitmap(Bitmap bmp, int radius) {
 	
-	
+WIoScrollView 可以仿IOS實現下拉彈性佈局的效果。
+使用經典參考：
+
+[sst_coordinatorlayout_wtiocrollview.xml](https://github.com/qydq/an-aw-base/tree/master/app/src/main/res/layout/sst_coordinatorlayout_wtiocrollview.xml) 
+
 WSlidingDeleteListView 滑动删除的ListView
 使用参考：
 https://zhuanlan.zhihu.com/p/24408002

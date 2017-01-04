@@ -19,7 +19,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/includeHead"
-        android:background="@drawable/sst_horizontal"
         android:fadingEdge="none"
         android:focusable="false"
         android:overScrollMode="never"
