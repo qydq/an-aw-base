@@ -288,6 +288,10 @@ AnTvTitleStyle 标准文本标题风格。
 
 个人原创
 
+an框架列表控件借鉴[yanzhenjie](https://github.com/dalong982242260/SwipeRecyclerView)开源框架、并切做了相应的优化，在这里由衷感谢。
+
+[列表控件借鉴](https://github.com/qydq/an-aw-base/blob/master/an-base/README.md)
+
 ---------
 
 # 6. 联系作者。
@@ -325,7 +329,9 @@ http://drakeet.me/android-studio
 		compile 'org.xutils:xutils:3.3.36'
 		compile 'com.google.code.gson:gson:2.7'
 		compile 'com.android.support:design:24.2.0'<!--android md新特性的引用-->
-	
+		compile 'com.android.support:recyclerview-v7:24.2.0'
+		//apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
+		
 ## an-aw-base > project /build.gradle
 
 		buildscript {
@@ -343,16 +349,18 @@ http://drakeet.me/android-studio
 		
 ## 权限相关。an-mave-base /AndroidManifest.xml	
 
-		<!-- 网络相关权限 -->
-		<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-		<uses-permission android:name="android.permission.INTERNET" />
-		<!-- 往SDCard写入数据权限 -->
-		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-		<!-- WIFI状态监听相关权限-->
-		<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-		<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-		<!-- 在SDCard 的挂载权限 -->
-		<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 网络相关权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- WIFI状态监听相关权限-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 往SDCard读取数据权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 在SDCard 的挂载权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
 		
 		
 ## 编译及相关SDK配置。
@@ -466,7 +474,7 @@ SwipeFinishActivity //集成baseActivity，可以使用an框架所有功能。（通用，推荐使用
 
 （2）增加
 
-新增CaptureHelper拍照辅助工具类，向下支持华为，小米低版本兼容性问题。
+新增CaptureHelper拍照辅助工具类，向下支持华为，小米低版本兼容性问题[samples参考SlidingFinishDetailActivity](https://raw.githubusercontent.com/qydq/an-aw-base/master/app/src/main/java/com/qyddai/an_aw_base/SlidingFinishDetailActivity.java)。
 
 ListView ,Recycleview的待更新状态，md的新特性即将在下一个版本体现出来。
 

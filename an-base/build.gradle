@@ -43,5 +43,6 @@ dependencies {
     compile 'org.xutils:xutils:3.3.38'
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'com.android.support:design:24.2.0'
+    compile 'com.android.support:recyclerview-v7:24.2.0'
 }
 //apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
