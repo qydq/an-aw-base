@@ -1,12 +1,14 @@
 package com.qyddai.an_aw_base;
 
 import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
-import com.an.base.view.SuperActivity;
 import com.qyddai.an_aw_base.adapter.MainItemAdapter;
 import com.qyddai.an_aw_base.view.ListViewDecoration;
 import com.qyddai.an_aw_base.view.LittleTrickActivity;
@@ -18,7 +20,7 @@ import java.util.List;
 
 //如果添加注解，则夜间模式用不了，只能findViewById实现。
 @ContentView(R.layout.activity_main)
-public class MainActivity extends SuperActivity implements OnItemClickListener {
+public class MainActivity extends AppCompatActivity implements OnItemClickListener {
 
     private RecyclerView recyclerView;
     private List<String> titles;
@@ -59,7 +61,8 @@ public class MainActivity extends SuperActivity implements OnItemClickListener {
     }
 
     @Override
-    public void initView() {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
