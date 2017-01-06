@@ -476,6 +476,7 @@ SwipeFinishActivity //集成baseActivity，可以使用an框架所有功能。（通用，推荐使用
 
 新增CaptureHelper拍照辅助工具类，向下支持华为，小米低版本兼容性问题[samples参考SlidingFinishDetailActivity](https://raw.githubusercontent.com/qydq/an-aw-base/master/app/src/main/java/com/qyddai/an_aw_base/SlidingFinishDetailActivity.java)。
 
-ListView ,Recycleview的待更新状态，md的新特性即将在下一个版本体现出来。
+ListView ,Recycleview的待更新状态，md的新特性即将在下一个版本体现出来。（代码已上传）
+
 
 `compile 'com.github.qydq:an-aw-base:0.1.5'`应该与maven-jcenter对应起来了。
