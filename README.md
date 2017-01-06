@@ -72,7 +72,7 @@
 
 >使用建议继承SuperActivity，SuperFragment，BasePresenter，BaseView。
 
->使用建议在AndroidManifest.xml中加入android:theme="@style/Theme.AppCompat.Light.NoActionBar"`。
+>使用建议在AndroidManifest.xml中加入android:theme="@style/AnAppTheme"/||/Theme.AppCompat.Light.NoActionBar"`。
 
 >使用建议在编译的build的时候注意an-aw-base需要在API=19或以上版本编译。
 
@@ -109,15 +109,18 @@
 
 + **an框架提供通用的标题栏头集成（实际使用时背景颜色CommMainBg）。如图**
 
-（1）普通状态栏参考<br>
+（1）普通状态栏参考(anPb)<br>
 
  ![](https://github.com/qydq/an-aw-base/blob/master/screen/base_headview_standard.png)
+ 
+ `新增，android:transitionName="anllbacktrans"，android:transitionName="anllrighttrans"`
 
-（2）复杂状态栏参考<br>
+（2）复杂状态栏参考(anPb)<br>
 
  ![](https://github.com/qydq/an-aw-base/blob/master/screen/base_headview_standard_complex.png)
 
-
+ `新增，android:transitionName="anllbacktrans"，android:transitionName="anllrighttrans"， android:transitionName="anllrrighttrans"`
+ 
 ---------
 
 # 3. 思路或使用（代码）
@@ -441,3 +444,30 @@ SwipeCloseActivity //集成baseActivity可以使用an框架所有功能。（内部可修改为Swipe
 
 SwipeFinishActivity //集成baseActivity，可以使用an框架所有功能。（通用，推荐使用。）
 
+## 2017/01/06
+
+`compile 'com.github.qydq:an-aw-base:0.1.5'`
+
+（1）完善
+
+解决了WIoScrollView和ListView嵌套时滑动冲突的解决办法，[详见issue](https://github.com/qydq/an-aw-base/issues)。
+
+完善WIosCrollView中setListViewHeightBasedOnChildren方法防止listView只显示部分，[详见API指导参考](https://github.com/qydq/an-aw-base/blob/master/an-base/ApiGuide.md)
+
+完善WIosCrollView使用参考，见api，sst_coordinnatorlayout_wtiocrollview.xml … 
+
+完善DataService中增加了验证字符串是否合法islegalInput，[详见API指导参考](https://github.com/qydq/an-aw-base/blob/master/an-base/ApiGuide.md)
+
+更新了ApiGuide中指导和README。
+
+新增布局文件加入了layout-v21，支持android高版本head切换的效果,[详见API指导参考](https://github.com/qydq/an-aw-base/blob/master/an-base/ApiGuide.md)
+
+完善了DUtilsBitmap工具类，旨在解决android手机OOM的处理方法，[详见API指导参考](https://github.com/qydq/an-aw-base/blob/master/an-base/ApiGuide.md)
+
+（2）增加
+
+新增CaptureHelper拍照辅助工具类，向下支持华为，小米低版本兼容性问题。
+
+ListView ,Recycleview的待更新状态，md的新特性即将在下一个版本体现出来。
+
+`compile 'com.github.qydq:an-aw-base:0.1.5'`应该与maven-jcenter对应起来了。
