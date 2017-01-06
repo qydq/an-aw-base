@@ -10,7 +10,7 @@
         android:theme="@style/AnAppTheme">
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme">
+            android:theme="@style/NoBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
