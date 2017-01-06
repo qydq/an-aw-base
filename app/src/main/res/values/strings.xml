@@ -5,4 +5,5 @@
     <string name="AnotationActivity">AnotationActivity</string>
     <string name="SlidingFinishDetailActivity">SlidingFinishDetailActivity</string>
     <string name="SlidingFinishActivity">SlidingFinishActivity</string>
+    <string name="LittleTrickActivity">LittleTrickActivity</string>
 </resources>

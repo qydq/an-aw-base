@@ -21,6 +21,7 @@
         <activity android:name=".AnotationActivity" />
         <activity android:name=".SlidingFinishActivity" />
         <activity android:name=".SlidingFinishDetailActivity" />
+        <activity android:name=".view.LittleTrickActivity" />
     </application>
 
 </manifest>

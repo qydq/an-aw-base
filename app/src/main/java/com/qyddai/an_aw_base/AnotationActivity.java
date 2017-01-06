@@ -44,7 +44,7 @@ public class AnotationActivity extends SwipeCloseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sst_activity_anotation);
+        setContentView(R.layout.sst_activity_littletrck);
         anTvTitle = (TextView) findViewById(R.id.anTvTitle);
         anTvTitle.setText(R.string.AnotationActivity);
     }
