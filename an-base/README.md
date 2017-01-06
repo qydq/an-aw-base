@@ -8,7 +8,7 @@
 ### @所有人  ，重要提示 
 
 
-`列表控件参考严振杰README.md，但在使用an框架集成的时候，需要把<com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView的标签修改为<com.an.base.view.recyclerview.SwipMenuRecyclerView标签。，其它大致相同`
+`列表控件参考严振杰README.md，但在使用an框架集成的时候，需要把<com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView的标签修改为<com.an.base.view.recyclerview.SwipMenuRecyclerView标签。，其它大致相同，有不懂怎么使用的同学可以加严振杰交流群或者找到我的邮箱给我留言`
 
 
 ########
@@ -54,16 +54,16 @@ compile 'com.android.support:recyclerview-v7:23.4.0'
 gif有一些失真，且网页加载速度慢，可以[下载demo的apk][3]看效果。  
 
 ## 侧滑菜单
-<image src="./image/1.gif" width="300px"/> <image src="./image/2.gif" width="300px"/>  
+<image src="./screen/1.gif" width="300px"/> <image src="./screen/2.gif" width="300px"/>  
 
 ## 拖拽、侧滑菜单  
-<image src="./image/3.gif" width="300px"/> <image src="./image/4.gif" width="300px"/>  
+<image src="./screen/3.gif" width="300px"/> <image src="./screen/4.gif" width="300px"/>  
 
 ## 拖拽、侧滑删除  
-<image src="./image/5.gif" width="300px"/> <image src="./image/6.gif" width="300px"/> 
+<image src="./screen/5.gif" width="300px"/> <image src="./screen/6.gif" width="300px"/> 
 
 ## 用户自定义菜单 下拉刷新、上拉加载更多
-<image src="./image/7.gif" width="300px"/> <image src="./image/8.gif" width="300px"/> 
+<image src="./screen/7.gif" width="300px"/> <image src="./screen/8.gif" width="300px"/> 
 
 # 使用介绍
 这里列出关键实现，具体请参考demo，或者加最上面的交流群一起讨论。
