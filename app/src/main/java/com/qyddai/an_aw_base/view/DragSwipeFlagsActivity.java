@@ -56,7 +56,7 @@ public class DragSwipeFlagsActivity extends AppCompatActivity {
 
         mContext = this;
 
-        setContentView(R.layout.activity);
+        setContentView(R.layout.sst_activity_recycler_comm);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

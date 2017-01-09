@@ -15,4 +15,5 @@
     <string name="DefineActivity">DefineActivity</string>
     <string name="ViewTypeMenuActivity">ViewTypeMenuActivity</string>
     <string name="AllMenuActivity">AllMenuActivity</string>
+    <string name="ListDragSwipeActivity">ListDragSwipeActivity</string>
 </resources>

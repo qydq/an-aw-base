@@ -58,6 +58,10 @@
             android:name=".view.ListDragMenuActivity"
             android:label="@string/ListDragMenuActivity"
             android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.ListDragSwipeActivity"
+            android:label="@string/ListDragMenuActivity"
+            android:theme="@style/NoBarTheme" />
     </application>
 
 </manifest>

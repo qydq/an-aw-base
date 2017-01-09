@@ -37,8 +37,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static com.an.base.view.recyclerview.touch.OnItemStateChangedListener.*;
-
 /**
  * Created by Yan Zhenjie on 2016/8/3.
  */
@@ -58,7 +56,7 @@ public class ListDragSwipeActivity extends AppCompatActivity {
 
         mContext = this;
 
-        setContentView(R.layout.activity);
+        setContentView(R.layout.sst_activity_recycler_comm);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
