@@ -66,6 +66,7 @@ public class LittleTrickActivity extends SuperActivity implements TaskDayNightCo
     //base_headview_standard_complex的引用
     private LinearLayout anLlRight;
     private LinearLayout anLlRRight;
+    private LinearLayout anLlBack;
     private TextView anTvRight;
 
     @Override
@@ -81,6 +82,7 @@ public class LittleTrickActivity extends SuperActivity implements TaskDayNightCo
         linearLayout = (LinearLayout) findViewById(R.id.anLlLayout);
         anLlRRight = (LinearLayout) findViewById(R.id.anLlRRight);
         anLlRight = (LinearLayout) findViewById(R.id.anLlRight);
+        anLlBack = (LinearLayout) findViewById(R.id.anLlBack);
         tvChangModel = (Button) findViewById(R.id.tvChangModel);
         btnDialog = (Button) findViewById(R.id.btnDialog);
         textView = (TextView) findViewById(R.id.textView);
@@ -142,6 +144,12 @@ public class LittleTrickActivity extends SuperActivity implements TaskDayNightCo
             public void onToggle(boolean on) {
                 presenter.start();
                 showToast("夜间模式" + on);
+            }
+        });
+        anLlBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }

@@ -9,6 +9,7 @@
         <item name="anBackground">@android:color/white</item>
         <item name="anTextColor">@android:color/black</item>
     </style>
+
     <style name="NoBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -17,13 +18,14 @@
         <item name="anBackground">@android:color/white</item>
         <item name="anTextColor">@android:color/black</item>
     </style>
+
     <style name="AnAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="anBackground">@android:color/white</item>
         <item name="anTextColor">@android:color/black</item>
-        <!--Required-->
+        <!--Required滑动透明背景-->
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowAnimationStyle">@android:style/Animation</item>

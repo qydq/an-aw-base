@@ -6,4 +6,13 @@
     <string name="SlidingFinishDetailActivity">SlidingFinishDetailActivity</string>
     <string name="SlidingFinishActivity">SlidingFinishActivity</string>
     <string name="LittleTrickActivity">LittleTrickActivity</string>
+    <string name="SwipeRecyclerActivity">SwipeRecyclerActivity</string>
+    <string name="GridDragMenuActivity">GridDragMenuActivity</string>
+    <string name="ViewPagerMenuActivity">ViewPagerMenuActivity</string>
+    <string name="RefreshLoadMoreActivity">RefreshLoadMoreActivity</string>
+    <string name="ListDragMenuActivity">ListDragMenuActivity</string>
+    <string name="DragSwipeFlagsActivity">DragSwipeFlagsActivity</string>
+    <string name="DefineActivity">DefineActivity</string>
+    <string name="ViewTypeMenuActivity">ViewTypeMenuActivity</string>
+    <string name="AllMenuActivity">AllMenuActivity</string>
 </resources>

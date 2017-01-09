@@ -1,4 +1,4 @@
-package com.qyddai.an_aw_base;
+package com.qyddai.an_aw_base.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,17 +8,17 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 
+import com.qyddai.an_aw_base.OnItemClickListener;
+import com.qyddai.an_aw_base.R;
 import com.qyddai.an_aw_base.adapter.MainItemAdapter;
-import com.qyddai.an_aw_base.view.AllMenuActivity;
-import com.qyddai.an_aw_base.view.ListViewDecoration;
-import com.qyddai.an_aw_base.view.LittleTrickActivity;
-import com.qyddai.an_aw_base.view.SwipeRecyclerActivity;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements OnItemClickListener {
+//如果添加注解，则夜间模式用不了，只能findViewById实现。
+public class SwipeRecyclerActivity extends AppCompatActivity implements OnItemClickListener {
 
     private RecyclerView recyclerView;
     private List<String> titles;
@@ -29,31 +29,31 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
     public void onItemClick(int position) {
         switch (position) {
             case 0:
-                startActivity(new Intent(this, LittleTrickActivity.class));
-                break;
-            case 1:
-                startActivity(new Intent(this, SwipeRecyclerActivity.class));
-                break;
-            case 2:
                 startActivity(new Intent(this, AllMenuActivity.class));
                 break;
+            case 1:
+                startActivity(new Intent(this, ViewTypeMenuActivity.class));
+                break;
+            case 2:
+                startActivity(new Intent(this, ViewPagerMenuActivity.class));
+                break;
             case 3:
-//                startActivity(new Intent(this, RefreshLoadMoreActivity.class));
+                startActivity(new Intent(this, RefreshLoadMoreActivity.class));
                 break;
             case 4:
-//                startActivity(new Intent(this, ListDragMenuActivity.class));
+                startActivity(new Intent(this, ListDragMenuActivity.class));
                 break;
             case 5:
-//                startActivity(new Intent(this, GridDragMenuActivity.class));
+                startActivity(new Intent(this, GridDragMenuActivity.class));
                 break;
             case 6:
-//                startActivity(new Intent(this, ListDragSwipeActivity.class));
+                startActivity(new Intent(this, ListDragSwipeActivity.class));
                 break;
             case 7:
-//                startActivity(new Intent(this, DragSwipeFlagsActivity.class));
+                startActivity(new Intent(this, DragSwipeFlagsActivity.class));
                 break;
             case 8:
-//                startActivity(new Intent(this, DefineActivity.class));
+                startActivity(new Intent(this, DefineActivity.class));
                 break;
         }
     }
@@ -64,17 +64,29 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.addItemDecoration(new ListViewDecoration());
 
-        titles = Arrays.asList(getResources().getStringArray(R.array.main_item));
-        descriptions = Arrays.asList(getResources().getStringArray(R.array.main_item_des));
+        titles = Arrays.asList(getResources().getStringArray(R.array.main_item1));
+        descriptions = Arrays.asList(getResources().getStringArray(R.array.main_item_des1));
         mMainItemAdapter = new MainItemAdapter(titles, descriptions);
         mMainItemAdapter.setOnItemClickListener(this);
         recyclerView.setAdapter(mMainItemAdapter);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        } else if (item.getItemId() == R.id.menu_open_rv_menu) {
+            //如果点击右边，则打开第一个滑动+
+//            mSwipeMenuRecyclerView.openRightMenu(0);
+        }
+        return true;
     }
 
 }
