@@ -54,10 +54,10 @@ compile 'com.android.support:recyclerview-v7:23.4.0'
 gif有一些失真，且网页加载速度慢，可以[下载demo的apk][3]看效果。  
 
 ## 侧滑菜单
-<image src="./screen/1.gif" width="300px"/> <image src="./screen/2.gif" width="300px"/>  
+<image src="screen/1.gif" width="300px"/> <image src="./screen/2.gif" width="300px"/>  
 
 ## 拖拽、侧滑菜单  
-<image src="./screen/3.gif" width="300px"/> <image src="./screen/4.gif" width="300px"/>  
+<image src="screen/3.gif" width="300px"/> <image src="./screen/4.gif" width="300px"/>  
 
 ## 拖拽、侧滑删除  
 <image src="./screen/5.gif" width="300px"/> <image src="./screen/6.gif" width="300px"/> 
