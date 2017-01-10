@@ -22,7 +22,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.an.base.AnApplication;
-import com.an.base.view.recyclerview.ResCompat;
+import com.an.base.view.swipelayout.ResCompat;
 import com.qyddai.an_aw_base.R;
 
 /**

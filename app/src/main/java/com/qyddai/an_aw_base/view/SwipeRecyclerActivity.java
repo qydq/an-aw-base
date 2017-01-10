@@ -12,7 +12,17 @@ import android.view.MenuItem;
 
 import com.qyddai.an_aw_base.OnItemClickListener;
 import com.qyddai.an_aw_base.R;
-import com.qyddai.an_aw_base.adapter.MainItemAdapter;
+import com.qyddai.an_aw_base.model.adapter.MainItemAdapter;
+import com.qyddai.an_aw_base.view.activity.AllMenuActivity;
+import com.qyddai.an_aw_base.view.activity.DefineActivity;
+import com.qyddai.an_aw_base.view.activity.DragSwipeFlagsActivity;
+import com.qyddai.an_aw_base.view.activity.GridDragMenuActivity;
+import com.qyddai.an_aw_base.view.activity.ListDragMenuActivity;
+import com.qyddai.an_aw_base.view.activity.ListDragSwipeActivity;
+import com.qyddai.an_aw_base.view.activity.ListViewDecoration;
+import com.qyddai.an_aw_base.view.activity.RefreshLoadMoreActivity;
+import com.qyddai.an_aw_base.view.activity.ViewPagerMenuActivity;
+import com.qyddai.an_aw_base.view.activity.ViewTypeMenuActivity;
 
 import java.util.Arrays;
 import java.util.List;

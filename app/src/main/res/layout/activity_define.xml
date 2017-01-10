@@ -19,7 +19,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <com.an.base.view.recyclerview.SwipeMenuLayout xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    <com.an.base.view.swipelayout.SwipeMenuLayout xmlns:swipe="http://schemas.android.com/apk/res-auto"
         android:id="@+id/swipe_layout"
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -50,6 +50,6 @@
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:text="右面Button" />
-    </com.an.base.view.recyclerview.SwipeMenuLayout>
+    </com.an.base.view.swipelayout.SwipeMenuLayout>
 
 </android.support.design.widget.CoordinatorLayout>

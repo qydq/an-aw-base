@@ -9,10 +9,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
-import com.qyddai.an_aw_base.adapter.MainItemAdapter;
-import com.qyddai.an_aw_base.view.AllMenuActivity;
-import com.qyddai.an_aw_base.view.ListViewDecoration;
+import com.qyddai.an_aw_base.model.adapter.MainItemAdapter;
+import com.qyddai.an_aw_base.view.activity.ListViewDecoration;
 import com.qyddai.an_aw_base.view.LittleTrickActivity;
+import com.qyddai.an_aw_base.view.RefreshLayoutActivity;
 import com.qyddai.an_aw_base.view.SwipeRecyclerActivity;
 
 import java.util.Arrays;
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
                 startActivity(new Intent(this, SwipeRecyclerActivity.class));
                 break;
             case 2:
-                startActivity(new Intent(this, AllMenuActivity.class));
+                startActivity(new Intent(this, RefreshLayoutActivity.class));
                 break;
             case 3:
 //                startActivity(new Intent(this, RefreshLoadMoreActivity.class));

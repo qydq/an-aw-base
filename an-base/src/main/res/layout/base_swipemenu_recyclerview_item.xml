@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.an.base.view.recyclerview.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.an.base.view.swipelayout.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:swipe="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -7,7 +7,7 @@
     swipe:leftViewId="@+id/swipe_left"
     swipe:rightViewId="@+id/swipe_right">
 
-    <com.an.base.view.recyclerview.SwipeMenuView
+    <com.an.base.view.swipelayout.SwipeMenuView
         android:id="@id/swipe_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -17,9 +17,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <com.an.base.view.recyclerview.SwipeMenuView
+    <com.an.base.view.swipelayout.SwipeMenuView
         android:id="@id/swipe_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-</com.an.base.view.recyclerview.SwipeMenuLayout>
+</com.an.base.view.swipelayout.SwipeMenuLayout>

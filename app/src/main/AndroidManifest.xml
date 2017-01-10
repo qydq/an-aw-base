@@ -27,39 +27,43 @@
             android:label="@string/SwipeRecyclerActivity"
             android:theme="@style/NoBarTheme" />
         <activity
-            android:name=".view.AllMenuActivity"
+            android:name=".view.activity.AllMenuActivity"
             android:label="@string/AllMenuActivity"
             android:theme="@style/NoBarTheme" />
         <activity
-            android:name=".view.ViewTypeMenuActivity"
+            android:name=".view.activity.ViewTypeMenuActivity"
             android:label="@string/ViewTypeMenuActivity"
             android:theme="@style/NoBarTheme" />
         <activity
-            android:name=".view.DefineActivity"
+            android:name=".view.activity.DefineActivity"
             android:label="@string/DefineActivity"
             android:theme="@style/NoBarTheme" />
         <activity
-            android:name=".view.DragSwipeFlagsActivity"
+            android:name=".view.activity.DragSwipeFlagsActivity"
             android:label="@string/DragSwipeFlagsActivity"
             android:theme="@style/NoBarTheme" />
         <activity
-            android:name=".view.GridDragMenuActivity"
+            android:name=".view.activity.GridDragMenuActivity"
             android:label="@string/GridDragMenuActivity"
             android:theme="@style/NoBarTheme" />
         <activity
-            android:name=".view.ViewPagerMenuActivity"
+            android:name=".view.activity.ViewPagerMenuActivity"
             android:label="@string/ViewPagerMenuActivity"
             android:theme="@style/NoBarTheme" />
         <activity
-            android:name=".view.RefreshLoadMoreActivity"
+            android:name=".view.activity.RefreshLoadMoreActivity"
             android:label="@string/RefreshLoadMoreActivity"
             android:theme="@style/NoBarTheme" />
         <activity
-            android:name=".view.ListDragMenuActivity"
+            android:name=".view.activity.ListDragMenuActivity"
             android:label="@string/ListDragMenuActivity"
             android:theme="@style/NoBarTheme" />
         <activity
-            android:name=".view.ListDragSwipeActivity"
+            android:name=".view.activity.ListDragSwipeActivity"
+            android:label="@string/ListDragMenuActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.RefreshLayoutActivity"
             android:label="@string/ListDragMenuActivity"
             android:theme="@style/NoBarTheme" />
     </application>
