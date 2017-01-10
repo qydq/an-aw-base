@@ -28,7 +28,7 @@ public class RefreshLayoutActivity extends SuperActivity implements BGARefreshLa
         // 设置下拉刷新和上拉加载更多的风格     参数1：应用程序上下文，参数2：是否具有上拉加载更多功能
 //        BGARefreshViewHolder refreshViewHolder = new BGAStickinessRefreshViewHolder(this, true);
         final BGAStickinessRefreshViewHolder refreshViewHolder = new BGAStickinessRefreshViewHolder(this, true);
-        refreshViewHolder.setRotateImage(R.drawable.bga_refresh_loding);
+        refreshViewHolder.setRotateImage(R.drawable.base_refresh_loding);
         refreshViewHolder.setStickinessColor(R.color.CommMainBgClicked);
         // 设置下拉刷新和上拉加载更多的风格
         mRefreshLayout.setRefreshViewHolder(refreshViewHolder);

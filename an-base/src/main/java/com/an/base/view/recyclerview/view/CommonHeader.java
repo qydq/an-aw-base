@@ -29,7 +29,7 @@ public class CommonHeader extends RelativeLayout {
 
     public void init(Context context) {
 
-        inflate(context, R.layout.layout_recyclerview_header, this);
+        inflate(context, R.layout.base_recyclerview_header, this);
     }
     public void init(Context context,int resId) {
 

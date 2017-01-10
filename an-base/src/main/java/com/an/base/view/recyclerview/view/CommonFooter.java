@@ -29,7 +29,7 @@ public class CommonFooter extends RelativeLayout {
 
     public void init(Context context) {
 
-        inflate(context, R.layout.layout_recyclerview_footer, this);
+        inflate(context, R.layout.base_recyclerview_footer, this);
     }
 
     public void init(Context context,int resId) {

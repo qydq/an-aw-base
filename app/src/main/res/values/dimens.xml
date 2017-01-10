@@ -4,4 +4,18 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="item_height">60dp</dimen>
     <dimen name="item_margin">10dp</dimen>
+
+    <dimen name="default_divider_height">1dp</dimen>
+    <dimen name="default_divider_padding">4dp</dimen>
+
+    <dimen name="pager_item_horizontal_margin">15dp</dimen>
+    <dimen name="pager_item_vertical_margin">100dp</dimen>
+    <dimen name="pager_item_big_margin">36dp</dimen>
+
+    <dimen name="related_thumbnail_width">90dp</dimen>
+    <dimen name="related_thumbnail_height">130dp</dimen>
+    <dimen name="related_item_height">140dp</dimen>
+    <dimen name="padding_size_small">3dp</dimen>
+    <dimen name="padding_size_default">8dp</dimen>
+    <dimen name="padding_size_medium">6dp</dimen>
 </resources>

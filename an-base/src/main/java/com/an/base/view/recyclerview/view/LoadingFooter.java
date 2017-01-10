@@ -51,7 +51,7 @@ public class LoadingFooter extends RelativeLayout {
 
     public void init(Context context) {
 
-        inflate(context, R.layout.layout_recyclerview_list_footer, this);
+        inflate(context, R.layout.base_recyclerview_list_footer, this);
         setOnClickListener(null);
 
         setState(State.Normal, true);
@@ -100,7 +100,7 @@ public class LoadingFooter extends RelativeLayout {
         if (style == ProgressStyle.SysProgress) {
             return new ProgressBar(getContext(), null, android.R.attr.progressBarStyle);
         } else {
-            AVLoadingIndicatorView progressView = (AVLoadingIndicatorView) LayoutInflater.from(getContext()).inflate(R.layout.layout_indicator_view, null);
+            AVLoadingIndicatorView progressView = (AVLoadingIndicatorView) LayoutInflater.from(getContext()).inflate(R.layout.base_indicator_view, null);
             progressView.setIndicatorId(style);
             progressView.setIndicatorColor(indicatorColor);
             return progressView;

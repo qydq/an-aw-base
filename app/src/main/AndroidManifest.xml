@@ -66,6 +66,14 @@
             android:name=".view.RefreshLayoutActivity"
             android:label="@string/ListDragMenuActivity"
             android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.LRecyclerViewActivity"
+            android:label="@string/ListDragMenuActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.EndlessLinearLayoutActivity"
+            android:label="@string/EndlessLinearLayoutActivity"
+            android:theme="@style/NoBarTheme" />
     </application>
 
 </manifest>
