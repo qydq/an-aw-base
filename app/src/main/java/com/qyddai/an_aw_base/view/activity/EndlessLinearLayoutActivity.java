@@ -134,9 +134,9 @@ public class EndlessLinearLayoutActivity extends AppCompatActivity{
         });
 
         //设置头部加载颜色
-        mRecyclerView.setHeaderViewColor(R.color.colorAccent, R.color.ColorDarkviolet ,R.color.ColorPowderblue);
+        mRecyclerView.setHeaderViewColor(R.color.colorAccent, R.color.ColorDarkviolet ,R.color.CommColorLineClicked);
         //设置底部加载颜色
-        mRecyclerView.setFooterViewColor(R.color.colorAccent, R.color.ColorDarkviolet ,R.color.ColorPowderblue);
+        mRecyclerView.setFooterViewColor(R.color.colorAccent, R.color.ColorDarkviolet ,R.color.CommColorLineClicked);
         //设置底部加载文字提示
         mRecyclerView.setFooterViewHint("拼命加载中","我是有底线的","网络不给力啊，点击再试一次吧");
 
