@@ -55,7 +55,7 @@ public class MenuFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_menu, container, false);
+        return inflater.inflate(R.layout.sst_fragment_swipelayout_menu, container, false);
     }
 
     private Context mContext;

@@ -60,7 +60,7 @@ public class RefreshLoadMoreActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_refresh_load_more);
+        setContentView(R.layout.sst_activity_swipelayout_refreshload_more);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -216,7 +216,7 @@ public class RefreshLoadMoreActivity extends AppCompatActivity {
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_all_activity, menu);
+        getMenuInflater().inflate(R.menu.menu_swipe_all_activity, menu);
         return true;
     }
 

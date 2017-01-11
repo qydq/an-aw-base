@@ -51,7 +51,7 @@ public class MenuAdapter extends SwipeMenuAdapter<MenuAdapter.DefaultViewHolder>
 
     @Override
     public View onCreateContentView(ViewGroup parent, int viewType) {
-        return LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false);
+        return LayoutInflater.from(parent.getContext()).inflate(R.layout.item_menu, parent, false);
     }
 
     @Override

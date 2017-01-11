@@ -21,7 +21,7 @@ public class DataAdapter extends ListBaseAdapter<ItemModel> {
 
     @Override
     public int getLayoutId() {
-        return R.layout.sample_item_text;
+        return R.layout.item_recyclerview_text;
     }
 
     @Override

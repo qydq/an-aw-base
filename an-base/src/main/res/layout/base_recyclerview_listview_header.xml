@@ -27,7 +27,7 @@
                 android:layout_marginTop="15dp"
                 android:text="下拉刷新"
                 android:textColor="#777"
-                android:textSize="12sp" />
+                android:textSize="@dimen/CommDimenTxtSmall" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -39,13 +39,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/listview_header_last_time"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/CommDimenTxtSmall" />
 
                 <TextView
                     android:id="@+id/last_refresh_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/CommDimenTxtSmall" />
             </LinearLayout>
         </LinearLayout>
 
@@ -61,8 +61,8 @@
 
         <com.an.base.view.recyclerview.view.SimpleViewSwitcher
             android:id="@+id/listview_header_progressbar"
-            android:layout_width="30dip"
-            android:layout_height="30dip"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="10dp"

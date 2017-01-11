@@ -57,7 +57,7 @@ public class AllMenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sst_activity_recycler_comm);
+        setContentView(R.layout.sst_activity_swipelayout_comm);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -181,7 +181,7 @@ public class AllMenuActivity extends AppCompatActivity {
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_all_activity, menu);
+        getMenuInflater().inflate(R.menu.menu_swipe_all_activity, menu);
         return true;
     }
 

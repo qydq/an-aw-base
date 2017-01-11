@@ -12,6 +12,10 @@
     <dimen name="DimenPadding20">20dp</dimen><!--20特殊间距-->
 
     <dimen name="DimenNativeNational">48dp</dimen><!--类按钮的高度-->
+    <dimen name="DimenNativeNationalSmall">40dp</dimen><!--类按钮的高度-->
+    <dimen name="DimenNativeNationalMax">60dp</dimen><!--类按钮的高度-->
+    <dimen name="DimenNativeNationalSMax">68dp</dimen><!--超大大按钮类高度-->
+
     <dimen name="DimenMarginTopMax">200dp</dimen><!--为空，如null图片上面大间距,建议写死-->
     <dimen name="DimenMarginTopSmall">120dp</dimen><!--为空，如null图片上面小间距，建议写死-->
 
@@ -37,21 +41,8 @@
     <dimen name="CommDimenIconTipsW">120dp</dimen><!--log类图标参考宽度-->
     <dimen name="CommDimenIconTipsH">110dp</dimen><!--log类图标参考高度-->
 
-    <dimen name="dp_066">0.66dp</dimen>
-    <dimen name="dp_4">4dp</dimen>
-    <dimen name="dp_6">6dp</dimen>
-    <dimen name="dp_10">10dp</dimen>
-    <dimen name="dp_14">14dp</dimen>
-    <dimen name="dp_18">18dp</dimen>
-    <dimen name="dp_22">22dp</dimen>
-    <dimen name="dp_36">36dp</dimen>
-    <dimen name="dp_40">40dp</dimen>
-    <dimen name="dp_60">60dp</dimen>
-    <dimen name="dp_72">72dp</dimen>
+    <dimen name="CommDimenLine">0.5dp</dimen>
+    <dimen name="CommDimenLineMax">1dp</dimen>
 
-    <dimen name="sp_12">12sp</dimen>
-    <dimen name="sp_14">14sp</dimen>
-    <dimen name="sp_16">16sp</dimen>
-
-    <dimen name="textandiconmargin">10dp</dimen>
+    <dimen name="CommDimenHorizontal">72dp</dimen>
 </resources>

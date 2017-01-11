@@ -56,7 +56,7 @@ public class ListDragSwipeActivity extends AppCompatActivity {
 
         mContext = this;
 
-        setContentView(R.layout.sst_activity_recycler_comm);
+        setContentView(R.layout.sst_activity_swipelayout_comm);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

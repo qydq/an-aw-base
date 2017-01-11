@@ -4,7 +4,6 @@ import android.os.Handler;
 
 import com.an.base.view.SuperActivity;
 import com.an.base.view.refreshlayout.BGARefreshLayout;
-import com.an.base.view.refreshlayout.BGARefreshViewHolder;
 import com.an.base.view.refreshlayout.BGAStickinessRefreshViewHolder;
 import com.qyddai.an_aw_base.R;
 
@@ -16,7 +15,7 @@ import org.xutils.view.annotation.ViewInject;
  * 创建时间:15/7/10 14:11
  * 描述:
  */
-@ContentView(R.layout.sst_activity_refresh_layout)
+@ContentView(R.layout.sst_activity_refreshlayout)
 public class RefreshLayoutActivity extends SuperActivity implements BGARefreshLayout.BGARefreshLayoutDelegate {
     @ViewInject(R.id.rl_modulename_refresh)
     private BGARefreshLayout mRefreshLayout;

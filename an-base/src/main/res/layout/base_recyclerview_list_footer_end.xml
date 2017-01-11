@@ -9,8 +9,8 @@
         android:id="@+id/loading_end_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp_4"
+        android:layout_marginLeft="@dimen/DimenMargin05"
         android:text="@string/list_footer_end"
         android:textColor="@color/colorAccent"
-        android:textSize="@dimen/sp_14" />
+        android:textSize="@dimen/CommDimenTxtContext" />
 </LinearLayout>

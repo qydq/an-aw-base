@@ -55,7 +55,7 @@ public class EndlessLinearLayoutActivity extends AppCompatActivity{
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sample_ll_activity);
+        setContentView(R.layout.sst_activity_recyclerview_endless);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -66,13 +66,14 @@ public class EndlessLinearLayoutActivity extends AppCompatActivity{
         mLRecyclerViewAdapter = new LRecyclerViewAdapter(mDataAdapter);
         mRecyclerView.setAdapter(mLRecyclerViewAdapter);
 
-        DividerDecoration divider = new DividerDecoration.Builder(this)
-                .setHeight(R.dimen.default_divider_height)
-                .setPadding(R.dimen.default_divider_padding)
-                .setColorResource(R.color.CommMainBgTips)
-                .build();
+//        DividerDecoration divider = new DividerDecoration.Builder(this)
+//                .setHeight(R.dimen.default_divider_height)
+//                .setPadding(R.dimen.default_divider_padding)
+//                .setColorResource(R.color.CommMainBgTips)
+//                .build();
+        ListViewDecoration divider = new ListViewDecoration();
 
-        //mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setHasFixedSize(true);
         mRecyclerView.addItemDecoration(divider);
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -82,7 +83,7 @@ public class EndlessLinearLayoutActivity extends AppCompatActivity{
         mRecyclerView.setLoadingMoreProgressStyle(ProgressStyle.BallSpinFadeLoader);
 
         //add a HeaderView
-        final View header = LayoutInflater.from(this).inflate(R.layout.sample_header,(ViewGroup)findViewById(android.R.id.content), false);
+        final View header = LayoutInflater.from(this).inflate(R.layout.base_recyclerview_header,(ViewGroup)findViewById(android.R.id.content), false);
         mLRecyclerViewAdapter.addHeaderView(header);
 
         mRecyclerView.setOnRefreshListener(new OnRefreshListener() {
@@ -133,11 +134,11 @@ public class EndlessLinearLayoutActivity extends AppCompatActivity{
         });
 
         //设置头部加载颜色
-        mRecyclerView.setHeaderViewColor(R.color.colorAccent, R.color.CommStartColor ,android.R.color.white);
+        mRecyclerView.setHeaderViewColor(R.color.colorAccent, R.color.ColorDarkviolet ,R.color.ColorPowderblue);
         //设置底部加载颜色
-        mRecyclerView.setFooterViewColor(R.color.colorAccent, R.color.CommStartColor ,android.R.color.white);
+        mRecyclerView.setFooterViewColor(R.color.colorAccent, R.color.ColorDarkviolet ,R.color.ColorPowderblue);
         //设置底部加载文字提示
-        mRecyclerView.setFooterViewHint("拼命加载中","已经全部为你呈现了","网络不给力啊，点击再试一次吧");
+        mRecyclerView.setFooterViewHint("拼命加载中","我是有底线的","网络不给力啊，点击再试一次吧");
 
         mRecyclerView.setRefreshing(true);
 
@@ -274,7 +275,7 @@ public class EndlessLinearLayoutActivity extends AppCompatActivity{
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main_refresh, menu);
+        getMenuInflater().inflate(R.menu.menu_recyclerview_main_refresh, menu);
         return true;
     }
 

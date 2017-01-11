@@ -44,7 +44,7 @@ public class DefineActivity extends AppCompatActivity {
 
         mContext = this;
 
-        setContentView(R.layout.activity_define);
+        setContentView(R.layout.sst_activity_swipelayout_define);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

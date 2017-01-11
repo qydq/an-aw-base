@@ -31,7 +31,7 @@ public class SlidingFinishActivity extends SwipeFinishActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sst_activity_slidingclose);
+        setContentView(R.layout.sst_activity_littletrick_slidingclose);
         //如果换成activity_main则会崩掉。
         button = (Button) findViewById(R.id.btnDialog);
         anIvRight = (ImageView) findViewById(R.id.anIvRight);

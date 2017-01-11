@@ -6,17 +6,17 @@
     android:orientation="horizontal">
 
     <ImageView
-        android:layout_width="@dimen/dp_22"
-        android:layout_height="@dimen/dp_22"
-        android:layout_marginRight="@dimen/dp_4"
+        android:layout_width="@dimen/CommDimenIconMax"
+        android:layout_height="@dimen/CommDimenIconMax"
+        android:layout_marginRight="@dimen/DimenMargin05"
         android:src="@drawable/base_refresh_loading_tip" />
 
     <TextView
         android:id="@+id/network_error_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp_4"
+        android:layout_marginLeft="@dimen/DimenMargin05"
         android:text="@string/list_footer_network_error"
         android:textColor="@color/colorAccent"
-        android:textSize="@dimen/sp_14" />
+        android:textSize="@dimen/CommDimenTxtContext" />
 </LinearLayout>

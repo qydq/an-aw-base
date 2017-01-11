@@ -53,7 +53,7 @@ public class MainItemAdapter extends RecyclerView.Adapter<MainItemAdapter.Defaul
 
     @Override
     public DefaultViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new DefaultViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_main, parent, false));
+        return new DefaultViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_activity_main, parent, false));
     }
 
     @Override

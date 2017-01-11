@@ -41,7 +41,7 @@ public class ViewPagerMenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_pager_menu);
+        setContentView(R.layout.sst_activity_swipelayout_viewpager_menu);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
