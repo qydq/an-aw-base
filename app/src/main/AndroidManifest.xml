@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AnAppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:theme="@style/NoBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,6 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/NoBarTheme" />
         <activity android:name=".SlidingCloseActivity" />
         <activity android:name=".AnotationActivity" />
         <activity android:name=".SlidingFinishActivity" />
@@ -68,11 +71,15 @@
             android:theme="@style/NoBarTheme" />
         <activity
             android:name=".view.LRecyclerViewActivity"
-            android:label="@string/ListDragMenuActivity"
+            android:label="@string/LRecyclerViewActivity"
             android:theme="@style/NoBarTheme" />
         <activity
             android:name=".view.activity.EndlessLinearLayoutActivity"
             android:label="@string/EndlessLinearLayoutActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.MulItemLinearLayoutActivity"
+            android:label="@string/MulItemLinearLayoutActivity"
             android:theme="@style/NoBarTheme" />
     </application>
 

@@ -18,6 +18,6 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/DimenMargin"
         android:text="@string/list_footer_loading"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/CommPauseFont"
         android:textSize="@dimen/CommDimenTxtContext" />
 </LinearLayout>

@@ -17,6 +17,6 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/DimenMargin05"
         android:text="@string/list_footer_network_error"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/CommPauseFont"
         android:textSize="@dimen/CommDimenTxtContext" />
 </LinearLayout>

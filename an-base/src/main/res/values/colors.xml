@@ -217,7 +217,8 @@
     <color name="CommColorTransparent">#00000000</color><!--透明颜色-->
     <color name="CommColorTransparentClicked">#25000000</color><!--CommColorBorderClicked透明颜色选择颜色-->
     <color name="CommColorOppose">#8B008B</color><!--CommMainBg透明颜色选择颜色oppose主色-->
-    <color name="CommColorOpposeClicked">#25000000</color><!--CommColorTransparentClicked透明颜色选择颜色oppose主色点击-->
+    <color name="CommColorOpposeClicked">#25000000
+    </color><!--CommColorTransparentClicked透明颜色选择颜色oppose主色点击-->
     <color name="CommColorOpposeRipple">#CD5C5C</color><!--oppose ripple -->
     <color name="CommColorRipple">#CD5C5C</color><!--oppose ripple-->
     <color name="CommColorDialog">#8B008B</color><!--CommColorDayBackground-->
@@ -267,4 +268,7 @@
 
     <color name="CommColorTxtTitleNight">#ffffff</color><!--文本标题颜色=可等于主色CommTxtMainColor=#c2c2c2-->
     <color name="CommColorTxtTitleNightClicked">#38b7ea</color><!--文本标题选择颜色-->
+
+    <color name="CommPauseFont">#777</color>
+    <color name="CommPauseBg">#DC143C</color>
 </resources>

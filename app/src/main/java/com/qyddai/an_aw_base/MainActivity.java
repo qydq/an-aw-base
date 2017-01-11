@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 import com.qyddai.an_aw_base.model.adapter.MainItemAdapter;
+import com.qyddai.an_aw_base.view.LRecyclerViewActivity;
 import com.qyddai.an_aw_base.view.LittleTrickActivity;
 import com.qyddai.an_aw_base.view.RefreshLayoutActivity;
 import com.qyddai.an_aw_base.view.SwipeRecyclerActivity;
@@ -39,7 +40,8 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
                 startActivity(new Intent(this, RefreshLayoutActivity.class));
                 break;
             case 3:
-                startActivity(new Intent(this, EndlessLinearLayoutActivity.class));
+//                startActivity(new Intent(this, EndlessLinearLayoutActivity.class));
+                startActivity(new Intent(this, LRecyclerViewActivity.class));
                 break;
             case 4:
 //                startActivity(new Intent(this, ListDragMenuActivity.class));
