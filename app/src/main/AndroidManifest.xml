@@ -105,6 +105,10 @@
             android:name=".view.activity.LinearLayoutActivity"
             android:label="@string/LinearLayoutActivity"
             android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.SwipeDeleteActivity"
+            android:label="@string/SwipeDeleteActivity"
+            android:theme="@style/NoBarTheme" />
     </application>
 
 </manifest>

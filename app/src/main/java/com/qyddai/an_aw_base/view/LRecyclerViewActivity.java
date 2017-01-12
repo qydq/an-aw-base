@@ -32,6 +32,7 @@ import com.qyddai.an_aw_base.view.activity.LinearLayoutActivity;
 import com.qyddai.an_aw_base.view.activity.ListViewDecoration;
 import com.qyddai.an_aw_base.view.activity.MulItemLinearLayoutActivity;
 import com.qyddai.an_aw_base.view.activity.PartialRefreshActivity;
+import com.qyddai.an_aw_base.view.activity.SwipeDeleteActivity;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -114,13 +115,6 @@ public class LRecyclerViewActivity extends AppCompatActivity {
         dataList.add(item11);
         dataList.add(item12);
 
-        for (int i = 0; i < 10; i++) {
-            ItemModel item = new ItemModel();
-            item.id = i;
-            item.title = "item" + i;
-            dataList.add(item);
-        }
-
         mCurrentCounter = dataList.size();
 
         mDataAdapter = new DataAdapter(this);
@@ -186,6 +180,9 @@ public class LRecyclerViewActivity extends AppCompatActivity {
                 }
                 if (item.title.equals("MulItemLinearLayoutActivity")) {
                     startActivity(new Intent(LRecyclerViewActivity.this, MulItemLinearLayoutActivity.class));
+                }
+                if (item.title.equals("SwipeDeleteActivity")) {
+                    startActivity(new Intent(LRecyclerViewActivity.this, SwipeDeleteActivity.class));
                 }
                 if (position == 6) {
                     startActivity(new Intent(LRecyclerViewActivity.this, LinearLayoutActivity.class));
