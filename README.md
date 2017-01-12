@@ -480,3 +480,28 @@ ListView ,RecycleviewµÄ´ı¸üĞÂ×´Ì¬£¬mdµÄĞÂÌØĞÔ¼´½«ÔÚÏÂÒ»¸ö°æ±¾ÌåÏÖ³öÀ´¡££¨´úÂëÒÑÉ
 
 
 `compile 'com.github.qydq:an-aw-base:0.1.5'`Ó¦¸ÃÓëmaven-jcenter¶ÔÓ¦ÆğÀ´ÁË¡£
+
+
+## 2017/01/12
+
+`compile 'com.github.qydq:an-aw-base:0.2'`
+
+£¨1£©ÍêÉÆ
+
+È¥³ı¿ò¼ÜÎŞÓÃµÄ´úÂë£¬±¾×Å½âñîµÄÔ­Ôò¼õÉÙ´úÂëÌå»ı¡£
+
+ÍêÉÆan¿ò¼Üsample¡£
+
+ÍêÉÆswipelayouÏµÁĞ¡£
+
+£¨2£©Ôö¼Ó
+
+ĞÂÔö2+1£¨ÉÏ¸ö°æ±¾µÄswipelayout°üÏµÁĞ£©=3ÖÖÀà±ğµÄrecyclerview£»
+
+Ö§³ÖÏÂÀ­Ë¢ĞÂ£¬×Ô¶¯¼ÓÔØ¸ü¶à£¬¶¯»­ÌØĞÔµÄÁĞ±íË¢ĞÂ¿Ø¼ş²¼¾Ö£¬´øÄãÊµÏÖÍêÃÀ¶¯»­ÌØĞ§£¬·ÂIOSµÄ²à»¬É¾³ı£¨ÉÏ¸ö°æ±¾Ò²ÓĞ£©¡£
+
+sampleÖ÷Òª²Î¿¼£¬refreshlayout,swipelayout,recyclerview°üÏÂÃæ¡£
+
+tips:Õë¶ÔrecyclerviewÌí¼ÓÁËÈçÏÂ¸¨Öú£¬ListBaseAdapter,MultiAdapter,MultiItemEntity,SuperViewHolder¡£
+
+¾ßÌåµÄÊ¹ÓÃ»áÔÚºóÃæ¸üĞÂÁ½Æª²©¿Í¡£

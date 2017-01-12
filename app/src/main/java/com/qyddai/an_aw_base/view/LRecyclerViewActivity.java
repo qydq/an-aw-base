@@ -23,9 +23,15 @@ import com.an.base.view.recyclerview.recyclerview.ProgressStyle;
 import com.qyddai.an_aw_base.R;
 import com.qyddai.an_aw_base.model.adapter.DataAdapter;
 import com.qyddai.an_aw_base.model.entity.ItemModel;
+import com.qyddai.an_aw_base.view.activity.CollapsingToolbarLayoutActivity;
+import com.qyddai.an_aw_base.view.activity.EndlessGridLayoutActivity;
 import com.qyddai.an_aw_base.view.activity.EndlessLinearLayoutActivity;
+import com.qyddai.an_aw_base.view.activity.EndlessStaggeredGridLayoutActivity;
+import com.qyddai.an_aw_base.view.activity.ExpandableRecyclerViewOneActivity;
+import com.qyddai.an_aw_base.view.activity.LinearLayoutActivity;
 import com.qyddai.an_aw_base.view.activity.ListViewDecoration;
 import com.qyddai.an_aw_base.view.activity.MulItemLinearLayoutActivity;
+import com.qyddai.an_aw_base.view.activity.PartialRefreshActivity;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -76,16 +82,37 @@ public class LRecyclerViewActivity extends AppCompatActivity {
         ItemModel item3 = new ItemModel();
         ItemModel item4 = new ItemModel();
         ItemModel item5 = new ItemModel();
+        ItemModel item6 = new ItemModel();
+        ItemModel item7 = new ItemModel();
+        ItemModel item8 = new ItemModel();
+        ItemModel item9 = new ItemModel();
+        ItemModel item10 = new ItemModel();
+        ItemModel item11 = new ItemModel();
+        ItemModel item12 = new ItemModel();
         item1.title = "SectionLayoutActivity";
         item2.title = "SectionAnimalActivity";
         item3.title = "SwipeMenuActivity";
         item4.title = "EndlessLinearLayoutActivity";
         item5.title = "MulItemLinearLayoutActivity";
+        item6.title = "SwipeDeleteActivity";
+        item7.title = "LinearLayoutSample";
+        item8.title = "EndlessGridLayoutActivity";
+        item9.title = "EndlessStaggeredGridLayoutActivity";
+        item10.title = "CollapsingToolbarLayoutActivity";
+        item11.title = "ExpandableRecyclerViewOneActivity";
+        item12.title = "PartialRefreshActivity(局部刷新)";
         dataList.add(item1);
         dataList.add(item2);
         dataList.add(item3);
         dataList.add(item4);
         dataList.add(item5);
+        dataList.add(item6);
+        dataList.add(item7);
+        dataList.add(item8);
+        dataList.add(item9);
+        dataList.add(item10);
+        dataList.add(item11);
+        dataList.add(item12);
 
         for (int i = 0; i < 10; i++) {
             ItemModel item = new ItemModel();
@@ -144,6 +171,7 @@ public class LRecyclerViewActivity extends AppCompatActivity {
             public void onItemClick(View view, int position) {
                 ItemModel item = mDataAdapter.getDataList().get(position);
                 Toast.makeText(getApplicationContext(), item.title, Toast.LENGTH_SHORT).show();
+
                 if (item.title.equals("SectionLayoutActivity")) {
 
                 }
@@ -158,6 +186,24 @@ public class LRecyclerViewActivity extends AppCompatActivity {
                 }
                 if (item.title.equals("MulItemLinearLayoutActivity")) {
                     startActivity(new Intent(LRecyclerViewActivity.this, MulItemLinearLayoutActivity.class));
+                }
+                if (position == 6) {
+                    startActivity(new Intent(LRecyclerViewActivity.this, LinearLayoutActivity.class));
+                }
+                if (position == 7) {
+                    startActivity(new Intent(LRecyclerViewActivity.this, EndlessGridLayoutActivity.class));
+                }
+                if (position == 8) {
+                    startActivity(new Intent(LRecyclerViewActivity.this, EndlessStaggeredGridLayoutActivity.class));
+                }
+                if (position == 9) {
+                    startActivity(new Intent(LRecyclerViewActivity.this, CollapsingToolbarLayoutActivity.class));
+                }
+                if (position == 10) {
+                    startActivity(new Intent(LRecyclerViewActivity.this, ExpandableRecyclerViewOneActivity.class));
+                }
+                if (position == 11) {
+                    startActivity(new Intent(LRecyclerViewActivity.this, PartialRefreshActivity.class));
                 }
             }
 
@@ -220,11 +266,25 @@ public class LRecyclerViewActivity extends AppCompatActivity {
                     ItemModel item3 = new ItemModel();
                     ItemModel item4 = new ItemModel();
                     ItemModel item5 = new ItemModel();
+                    ItemModel item6 = new ItemModel();
+                    ItemModel item7 = new ItemModel();
+                    ItemModel item8 = new ItemModel();
+                    ItemModel item9 = new ItemModel();
+                    ItemModel item10 = new ItemModel();
+                    ItemModel item11 = new ItemModel();
+                    ItemModel item12 = new ItemModel();
                     item1.title = "SectionLayoutActivity";
                     item2.title = "SectionAnimalActivity";
                     item3.title = "SwipeMenuActivity";
                     item4.title = "EndlessLinearLayoutActivity";
                     item5.title = "MulItemLinearLayoutActivity";
+                    item6.title = "SwipeDeleteActivity";
+                    item7.title = "LinearLayoutSample";
+                    item8.title = "EndlessGridLayoutActivity";
+                    item9.title = "EndlessStaggeredGridLayoutActivity";
+                    item10.title = "CollapsingToolbarLayoutActivity";
+                    item11.title = "ExpandableRecyclerViewOneActivity";
+                    item12.title = "PartialRefreshActivity(局部刷新)";
 
                     //模拟组装10个数据
                     ArrayList<ItemModel> newList = new ArrayList<>();
@@ -234,6 +294,13 @@ public class LRecyclerViewActivity extends AppCompatActivity {
                     newList.add(item3);
                     newList.add(item4);
                     newList.add(item5);
+                    newList.add(item6);
+                    newList.add(item7);
+                    newList.add(item8);
+                    newList.add(item9);
+                    newList.add(item10);
+                    newList.add(item11);
+                    newList.add(item12);
 
                     for (int i = 0; i < 10; i++) {
                         if (newList.size() + currentSize >= TOTAL_COUNTER) {

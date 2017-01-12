@@ -19,15 +19,21 @@
     <string name="EndlessLinearLayoutActivity">EndlessLinearLayoutActivity</string>
     <string name="LRecyclerViewActivity">LRecyclerViewActivity</string>
     <string name="MulItemLinearLayoutActivity">MulItemLinearLayoutActivity</string>
+    <string name="PartialRefreshActivity">PartialRefreshActivity</string>
+    <string name="ExpandableRecyclerViewOneActivity">ExpandableRecyclerViewOneActivity</string>
+    <string name="EndlessGridLayoutActivity">EndlessGridLayoutActivity</string>
+    <string name="CollapsingToolbarLayoutActivity">CollapsingToolbarLayoutActivity</string>
+    <string name="EndlessStaggeredGridLayoutActivity">EndlessStaggeredGridLayoutActivity</string>
+    <string name="LinearLayoutActivity">LinearLayoutActivity</string>
 
 <!--    &lt;!&ndash;footer&ndash;&gt;
     <string name="list_footer_loading">正在加载中…</string>
     <string name="list_footer_network_error">点击重新加载</string>
     <string name="list_footer_end">已经到底了</string>
-
+-->
     <string name="about">About</string>
     <string name="clear_cache">Clear Cache</string>
 
     <string name="expand_all">Expand All</string>
-    <string name="collapse_all">Collapse All</string>-->
+    <string name="collapse_all">Collapse All</string>
 </resources>

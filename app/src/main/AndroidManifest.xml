@@ -81,6 +81,30 @@
             android:name=".view.activity.MulItemLinearLayoutActivity"
             android:label="@string/MulItemLinearLayoutActivity"
             android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.PartialRefreshActivity"
+            android:label="@string/PartialRefreshActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.ExpandableRecyclerViewOneActivity"
+            android:label="@string/ExpandableRecyclerViewOneActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.EndlessGridLayoutActivity"
+            android:label="@string/EndlessGridLayoutActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.CollapsingToolbarLayoutActivity"
+            android:label="@string/CollapsingToolbarLayoutActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.EndlessStaggeredGridLayoutActivity"
+            android:label="@string/EndlessStaggeredGridLayoutActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.LinearLayoutActivity"
+            android:label="@string/LinearLayoutActivity"
+            android:theme="@style/NoBarTheme" />
     </application>
 
 </manifest>
