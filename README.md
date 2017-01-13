@@ -33,18 +33,14 @@
 
 2.实现效果（如果没有可以省略，建议包含）。
 
-3.思路或使用（代码）。
-
-+ *实现思路*
-
-+ *使用方法*
+3.使用方法（代码）。
 
 4.重要知识点（总结，思考）。
 
 5.联系作者。
 
 
-# [![](https://jitpack.io/v/qydq/an-aw-base.svg)](https://jitpack.io/#qydq/an-aw-base)   ![](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/res/drawable/base_drawable_art_click.png)   <a href='https://bintray.com/qydq/an/an-aw-base?source=watch' alt='Get automatic notifications about new "an-aw-base" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_color.png'></a>
+# [![](https://jitpack.io/v/qydq/an-aw-base.svg)](https://jitpack.io/#qydq/an-aw-base)     <a href='https://bintray.com/qydq/an/an-aw-base?source=watch' alt='Get automatic notifications about new "an-aw-base" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_color.png'></a>
 
 #######
 
@@ -61,6 +57,7 @@ allprojects {
         maven { url "https://jitpack.io" }
     }
 }
+```
 
 加入以后Step 2:
 
@@ -86,7 +83,7 @@ allprojects {
 ```
 ##samples apk demo下载参考
 
-[点我下载](https://raw.githubusercontent.com/jdsjlzx/LRecyclerView/master/app/app-release.apk)
+[点我下载](https://github.com/qydq/an-aw-base/raw/master/app/app-release.apk)
 
 **Tips**
 ---
@@ -115,6 +112,14 @@ allprojects {
 
 # 2. 实现效果
 
++ **项目部分效果截图。如图**
+
+ <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_main.png" width=280 height=480 />
+
+ <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_recyclerview.png" width=280 height=480 />
+ 
+ <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_littlertrick.png" width=280 height=480 />
+
 + **an框架提供通用的标题栏头集成（实际使用时背景颜色CommMainBg）。如图**
 
 （1）普通状态栏参考(anPb)<br>
@@ -133,7 +138,7 @@ allprojects {
 
 ---------
 
-# 3. 思路或使用（代码）
+# 3. 使用方法（代码）
 
 [简单帮助文档-aN框架API指导参考](https://github.com/qydq/an-aw-base/blob/master/an-base/ApiGuide.md)
 
@@ -142,8 +147,10 @@ allprojects {
 [如何使用An框架提供的WToggleButton实现一个漂亮的切换按钮？](https://zhuanlan.zhihu.com/p/24275861?refer=sunst)
 
 [利用an框架提供的WSlidingDeleteListView仿QQ滑动删除。](https://zhuanlan.zhihu.com/p/24408002?refer=sunst)
-		
-### 实现思路
+
+[利用an框架提供的recyclerview系列实现下拉刷新、分页加载数据](https://github.com/qydq/an-aw-base/blob/master/app/README.md)
+
+--------
 
 + **An框架命名规范**
 
@@ -179,13 +186,15 @@ allprojects {
 		
 + **An通用属性值部分参考**
 
-（1）Style<br>
+（1）Style通用参考
 
 AnTvContentStyle 标准文本内容风格。
 
 AnTvTitleStyle 标准文本标题风格。
 
+NoBarTheme 无标题栏。提供（覆盖an框架默认的AnAppTheme透明效果的作用）。
 
+AnAppTheme an框架默认的风格。
 
 ### 使用方法
 
@@ -327,7 +336,7 @@ http://drakeet.me/android-studio
 
 觉得本框架对你有帮助，不妨打赏赞助我一下，让我有动力走的更远。
 
-<img src="http://img0.ph.126.net/1gDvw3-W3Gw5X0voBIu5zA==/6632106804188340891.png" width=280 height=280 />
+<img src="http://img0.ph.126.net/1gDvw3-W3Gw5X0voBIu5zA==/6632106804188340891.png" width=280 height=480 />
 
 ---------
 

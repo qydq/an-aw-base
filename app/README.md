@@ -347,7 +347,6 @@ GridItemDecoration divider = new GridItemDecoration.Builder(this)
 
 
 
-
 ##代码混淆
 
 ```java
@@ -369,9 +368,3 @@ mLRecyclerViewAdapter.addFooterView(new SampleFooter(this));
 ```
 
 2.不要SwipeRefreshLayout与LRecyclerView一起使用，会有冲突，为了更好的满足广大用户，新增了LuRecyclerView类，可以与SwipeRefreshLayout搭配使用，详细请参考SwipeRefreshLayoutActivity类的实现。
-
-##打赏
-
-觉得本框架对你有帮助，不妨打赏赞助我一下，让我有动力走的更远。
-
-<img src="http://img.blog.csdn.net/20160812223409875" width=280 height=280 />
