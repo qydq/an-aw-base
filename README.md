@@ -23,7 +23,7 @@
 	
 >创建时间 <------2016年09月17日------->
 	
->2016年09月17日;最近修改时间：2016年12月16日。
+>2016年09月17日;最近修改时间：2017年01月13日。
 
 ########
 	
@@ -41,9 +41,7 @@
 
 4.重要知识点（总结，思考）。
 
-5.内容参考（尊重原创）。
-
-6.联系作者。
+5.联系作者。
 
 
 # [![](https://jitpack.io/v/qydq/an-aw-base.svg)](https://jitpack.io/#qydq/an-aw-base)   ![](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/res/drawable/base_drawable_art_click.png)   <a href='https://bintray.com/qydq/an/an-aw-base?source=watch' alt='Get automatic notifications about new "an-aw-base" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_color.png'></a>
@@ -54,19 +52,26 @@
 
 **使用Gradle构建时添加以下依赖即可** *（注：也可以使用之前的低稳定版本）*
 
+加入依赖之前Step 1（在你的根build.gradle文件中增加如下代码。）
+
+```groovy
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+加入以后Step 2:
+
 `compile 'com.github.qydq:an-aw-base:0.1.1'`
 
 或者加入：
 
 `compile 'cn.android.sunst:an-base:1.0.1'`
 
-如要使用整套an框架则加入另一个依赖，具体请参考url = https://github.com/qydq/an
+使用整套an框架则加入另一个依赖，具体请参考url = https://github.com/qydq/an
 
-`compile 'com.github.qydq:an:0.0.1'`
-
-或者加入：
-
-`compile 'cn.android.sunst:an:0.0.1'`
 
 **使用建议**
 
@@ -75,6 +80,13 @@
 >使用建议在AndroidManifest.xml中加入android:theme="@style/AnAppTheme"/||/Theme.AppCompat.Light.NoActionBar"`。
 
 >使用建议在编译的build的时候注意an-aw-base需要在API=19或以上版本编译。
+
+```groovy
+`aN框架支持android 4.4+使用，兼容性测试通过，华为Android4.4 ，小米Android5.1，三星Android5.1。`
+```
+##samples apk demo下载参考
+
+[点我下载](https://raw.githubusercontent.com/jdsjlzx/LRecyclerView/master/app/app-release.apk)
 
 **Tips**
 ---
@@ -99,10 +111,6 @@
 
 + an框架后期功能正在完善中。
 
-**兼容性**
-
-`aN框架支持android 4.4+使用，兼容性测试通过，华为Android4.4 ，小米Android5.1，三星Android5.1。`
-
 ---------
 
 # 2. 实现效果
@@ -121,12 +129,13 @@
 
  `新增，android:transitionName="anllbacktrans"，android:transitionName="anllrighttrans"， android:transitionName="anllrrighttrans"`
  
- 备注：transition的作用是点击某个位置上下打开弹出到另一个界面
+备注：新增（不影响使用）transition支持MD动画（[Transition用法请点击-一片枫叶_刘超](http://blog.csdn.net/qq_23547831/article/details/51821159)）
+
 ---------
 
 # 3. 思路或使用（代码）
 
-[Api Guide --aN框架API指导参考](https://github.com/qydq/an-aw-base/blob/master/an-base/ApiGuide.md)
+[简单帮助文档-aN框架API指导参考](https://github.com/qydq/an-aw-base/blob/master/an-base/ApiGuide.md)
 
 [利用aN框架快速开发android应用程序基本使用方法](https://zhuanlan.zhihu.com/p/24273705?refer=sunst)
 
@@ -282,20 +291,12 @@ AnTvTitleStyle 标准文本标题风格。
 + **[如何使用MVP架构搭建Android应用程序-(demo+解析)-极简版](https://zhuanlan.zhihu.com/p/24452403)**
 
 + **Android MVP架构示例项目解析-加强版**
+
++ **[列表控件借鉴使用swipelayout系列](https://github.com/qydq/an-aw-base/blob/master/an-base/README.md)
 		
 ---------
 
-# 5. 内容参考（尊重原创）。
-
-个人原创
-
-an框架列表控件借鉴[yanzhenjie](https://github.com/dalong982242260/SwipeRecyclerView)开源框架、并切做了相应的优化，在这里由衷感谢。
-
-[列表控件借鉴](https://github.com/qydq/an-aw-base/blob/master/an-base/README.md)
-
----------
-
-# 6. 联系作者。
+# 5. 联系作者。
 
 Athor IP：sunshuntao（qydq）（莳萝花）。
 
@@ -310,6 +311,25 @@ Or
 Import the library, then add it to your /settings.gradle and /app/build.gradle, if you don't know how to do it, you can read my blog for help.
 http://drakeet.me/android-studio
 
+
+# Thanks
+
+1.[xUtils3-- wyouflf](https://github.com/wyouflf/xUtils3)
+
+2.[严振杰CSDN](http://my.csdn.net/yanzhenjie1003)
+
+3.[一片枫叶_刘超CSDN](http://blog.csdn.net/qq_23547831/article/details/46423599)
+
+4.[BGARefreshLayout-Android-refreshlayout系列](https://github.com/bingoogolapple/BGARefreshLayout-Android/wiki/Advanced)
+
+
+#打赏
+
+觉得本框架对你有帮助，不妨打赏赞助我一下，让我有动力走的更远。
+
+<img src="http://img0.ph.126.net/1gDvw3-W3Gw5X0voBIu5zA==/6632106804188340891.png" width=280 height=280 />
+
+---------
 
 #### 后记：
 
