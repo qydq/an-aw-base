@@ -30,4 +30,10 @@
                 android:text="asdfasd" />
         </com.an.base.view.refreshlayout.BGARefreshLayout>
     </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="测试底部" />
 </RelativeLayout>

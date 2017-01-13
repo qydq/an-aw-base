@@ -23,6 +23,7 @@
         android:focusable="false"
         android:overScrollMode="never"
         android:scrollbars="none">
+
         <!--android:background="?attr/anBackground"-->
         <RelativeLayout
             android:layout_width="match_parent"

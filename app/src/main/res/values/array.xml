@@ -9,7 +9,7 @@
     </string-array>
 
     <string-array name="main_item_des">
-        <item>Little TrickActivity,小动作activity;base:0.1.4使用samples</item>
+        <item>Little TrickActivity,小动作activity;base:0.1.4使用samples,该系列模块需注意-v21-layout</item>
         <item>最强RecyclerView，Item侧滑菜单，长按拖拽Item，滑动删除Item。可以和任何下拉刷新框架结合使用;base:0.1.5使用samples</item>
         <item>动画特性的列表刷新控件布局，带你实现完美的动画特效，更好的用户体验;base:0.2使用samples</item>
         <item>RecyclerView下拉刷新，自动加载更多；仿IOS侧滑Item删除菜单;base:0.2使用samples</item>
