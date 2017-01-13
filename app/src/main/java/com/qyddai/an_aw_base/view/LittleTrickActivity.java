@@ -96,6 +96,7 @@ public class LittleTrickActivity extends SuperActivity implements TaskDayNightCo
         mRelativeList.add(relativeLayout);
         mButtonList.add(btnDialog);
         mTextViewList.add(textView);
+        mTextViewList.add(tvChangModel);
         anTvTitle.setText(R.string.LittleTrickActivity);
 
         //该夜间模式

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.qyddai.an_aw_base.view.activity;
+package com.an.base.view.swipelayout;
 
 import android.graphics.Canvas;
 import android.graphics.Rect;
@@ -22,9 +22,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.an.base.AnApplication;
-import com.an.base.view.swipelayout.ResCompat;
-import com.qyddai.an_aw_base.R;
-
+import com.an.base.R;
 
 /**
  * Created by Yan Zhenjie on 2016/7/27.
@@ -34,7 +32,7 @@ public class ListViewDecoration extends RecyclerView.ItemDecoration {
     private Drawable mDrawable;
 
     public ListViewDecoration() {
-        mDrawable = ResCompat.getDrawable(AnApplication.getInstance(), R.drawable.divider_recycler);
+        mDrawable = ResCompat.getDrawable(AnApplication.getInstance(), R.drawable.base_drawable_decorationdivider);
     }
 
     @Override

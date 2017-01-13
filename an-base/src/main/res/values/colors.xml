@@ -208,10 +208,10 @@
     <!--sunshuntao 2016-11-16 personal-standard;no changes-->
 
     <color name="CommColorNightBackground">#CD5C5C</color><!--普通模式颜色-->
-    <color name="CommColorNightBackgroundClicked">#CD5C5C
+    <color name="CommColorNightBackgroundClicked">#ffc53929
     </color><!--CommColorNightBackground--><!--普通模式颜色-->
     <color name="CommColorDayBackground">#8B008B</color><!--普通模式颜色-->
-    <color name="CommColorDayBackgroundClicked">#8B008B
+    <color name="CommColorDayBackgroundClicked">#ff7b1fa2
     </color><!--CommColorDayBackgroundClicked--><!--普通模式颜色-->
 
     <color name="CommColorTransparent">#00000000</color><!--透明颜色-->
@@ -227,7 +227,7 @@
     <color name="CommColorBg">#091928</color><!--背景颜色，适用于各个子View-->
     <color name="CommColorBGLl">#FFFAFA</color><!--ll的背景颜色-->
     <color name="CommColorBGRl">#FFFAFA</color><!--rl的背景颜色-->
-    <color name="CommColorBGTt">#ffffff</color><!--tx的背景颜色-->
+    <color name="CommColorBGTt">#FFFAFA</color><!--tx的背景颜色-->
     <color name="CommColorBGBtn">#FFFAFA</color><!--按钮的背景颜色-->
     <color name="CommColorBGFrame">#DC143C</color><!--frame的背景颜色-->
 
@@ -257,18 +257,18 @@
     <color name="CommColorTxtTitle">#757575</color><!--文本标题颜色=可等于主色CommTxtMainColor=#c2c2c2-->
     <color name="CommColorTxtTitleClicked">#38b7ea</color><!--文本标题选择颜色-->
 
-    <color name="CommColorLine">#eaecec</color><!--分割线的颜色-->
+    <color name="CommColorLine">#aaa</color><!--分割线的颜色-->
     <color name="CommColorLineClicked">#DDDDDD</color><!--分割线选择颜色-->
     <color name="CommColorBorder">#A9A9A9</color><!--md,CommColorTransparentClicked--><!--边框颜色-->
     <color name="CommColorBorderClicked">#25000000</color><!--md,CommColorTransparent边框颜色选择-->
     <!--对应夜间模式颜色代码-->
-    <color name="CommMainBgNight">#000011</color><!--背景颜色可以等于主色，适用于头布局，晚上模式-->
+    <color name="CommMainBgNight">#CD5C5C</color><!--背景颜色可以等于主色，适用于头布局，晚上模式-->
     <color name="CommMainBgNightClicked">#000011</color><!--点击后的颜色-->
     <color name="CommMainBgNightTips">#c2c2c2</color><!--第二主色-->
 
     <color name="CommColorTxtTitleNight">#ffffff</color><!--文本标题颜色=可等于主色CommTxtMainColor=#c2c2c2-->
     <color name="CommColorTxtTitleNightClicked">#38b7ea</color><!--文本标题选择颜色-->
 
-    <color name="CommPauseFont">#777</color>
-    <color name="CommPauseBg">#DC143C</color>
+    <color name="CommPauseFont">#777</color><!--暂时使用的字体颜色-->
+    <color name="CommPauseBg">#DC143C</color><!--暂时使用的背景颜色-->
 </resources>

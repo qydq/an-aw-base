@@ -34,6 +34,7 @@ import com.qyddai.an_aw_base.OnItemClickListener;
 import com.qyddai.an_aw_base.R;
 import com.qyddai.an_aw_base.model.adapter.MenuAdapter;
 import com.qyddai.an_aw_base.model.adapter.MenuViewTypeAdapter;
+import com.qyddai.an_aw_base.utils.ListViewDecoration;
 
 import java.util.ArrayList;
 import java.util.List;

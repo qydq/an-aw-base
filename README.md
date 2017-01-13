@@ -121,6 +121,7 @@
 
  `新增，android:transitionName="anllbacktrans"，android:transitionName="anllrighttrans"， android:transitionName="anllrrighttrans"`
  
+ 备注：transition的作用是点击某个位置上下打开弹出到另一个界面
 ---------
 
 # 3. 思路或使用（代码）

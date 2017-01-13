@@ -25,6 +25,7 @@ import com.qyddai.an_aw_base.R;
 import com.qyddai.an_aw_base.model.ListBaseAdapter;
 import com.qyddai.an_aw_base.model.SuperViewHolder;
 import com.qyddai.an_aw_base.model.entity.ItemModel;
+import com.qyddai.an_aw_base.utils.ListViewDecoration;
 import com.qyddai.an_aw_base.utils.SampleFooter;
 import com.qyddai.an_aw_base.utils.SampleHeader;
 

@@ -27,6 +27,7 @@ import com.an.base.view.recyclerview.recyclerview.ProgressStyle;
 import com.qyddai.an_aw_base.R;
 import com.qyddai.an_aw_base.model.adapter.DataAdapter;
 import com.qyddai.an_aw_base.model.entity.ItemModel;
+import com.qyddai.an_aw_base.utils.ListViewDecoration;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;

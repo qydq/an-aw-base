@@ -33,7 +33,7 @@ public class ListViewDecoration extends RecyclerView.ItemDecoration {
     private Drawable mDrawable;
 
     public ListViewDecoration() {
-        mDrawable = ResCompat.getDrawable(AnApplication.getInstance(), R.drawable.divider_recycler);
+        mDrawable = ResCompat.getDrawable(AnApplication.getInstance(), R.drawable.base_drawable_decorationdivider);
     }
 
     @Override

@@ -10,12 +10,11 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 import com.qyddai.an_aw_base.model.adapter.MainItemAdapter;
+import com.qyddai.an_aw_base.utils.ListViewDecoration;
 import com.qyddai.an_aw_base.view.LRecyclerViewActivity;
 import com.qyddai.an_aw_base.view.LittleTrickActivity;
 import com.qyddai.an_aw_base.view.RefreshLayoutActivity;
 import com.qyddai.an_aw_base.view.SwipeRecyclerActivity;
-import com.qyddai.an_aw_base.view.activity.EndlessLinearLayoutActivity;
-import com.qyddai.an_aw_base.view.activity.ListViewDecoration;
 
 import java.util.Arrays;
 import java.util.List;
