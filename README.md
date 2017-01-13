@@ -79,7 +79,7 @@ allprojects {
 >使用建议在编译的build的时候注意an-aw-base需要在API=19或以上版本编译。
 
 ```groovy
-`aN框架支持android 4.4+使用，兼容性测试通过，华为Android4.4 ，小米Android5.1，三星Android5.1。`
+aN框架支持android 4.4+使用，兼容性测试通过，华为Android4.4 ，小米Android5.1，三星Android5.1。
 ```
 ##samples apk demo下载参考
 
@@ -92,12 +92,13 @@ allprojects {
 
 + an框架提供了网络请求基于xutils模块的封装，http实现XHttps。
 
-`i.   HTTP实现利用了XHttps提供了post,get,upLoadFile,downLoadFile...`
+```groovy
+   i.   HTTP实现利用了XHttps提供了post,get,upLoadFile,downLoadFile...`
 
-`ii.  集成以上则可以使用注解功能，可以参考xUtils3开源项目。`
+   ii.  集成以上则可以使用注解功能，可以参考xUtils3开源项目。`
 
-`iii. 提供便捷XCallBack ,XParseResponse ,XProgressCallBack操作。`
-
+   iii. 提供便捷XCallBack ,XParseResponse ,XProgressCallBack操作。`
+```
 + an框架包含了许多实用的工具类，像MD5加密，数据校验，夜间模式切换等。
 
 + an框架提供了一些weight,如WSlidingDeleteListView,WToggleButton等。
@@ -114,9 +115,7 @@ allprojects {
 
 + **项目部分效果截图。如图**
 
- <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_main.png" width=280 height=480 />
-
- <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_recyclerview.png" width=280 height=480 />
+ <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_main.png" width=280 height=480 />   <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_recyclerview.png" width=280 height=480 />
  
  <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_littlertrick.png" width=280 height=480 />
 
@@ -336,7 +335,7 @@ http://drakeet.me/android-studio
 
 觉得本框架对你有帮助，不妨打赏赞助我一下，让我有动力走的更远。
 
-<img src="http://img0.ph.126.net/1gDvw3-W3Gw5X0voBIu5zA==/6632106804188340891.png" width=280 height=480 />
+<img src="http://img0.ph.126.net/1gDvw3-W3Gw5X0voBIu5zA==/6632106804188340891.png" width=280 height=780 />
 
 ---------
 
