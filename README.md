@@ -40,7 +40,7 @@
 5.ÁªÏµ×÷Õß¡£
 
 
-# [![](https://jitpack.io/v/qydq/an-aw-base.svg)](https://jitpack.io/#qydq/an-aw-base)     <a href='https://bintray.com/qydq/an/an-aw-base?source=watch' alt='Get automatic notifications about new "an-aw-base" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_color.png'></a>
+# [![](https://jitpack.io/v/qydq/an-aw-base.svg)](https://jitpack.io/#qydq/an-aw-base)       <a href='https://bintray.com/qydq/an/an-aw-base?source=watch' alt='Get automatic notifications about new "an-aw-base" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_color.png'></a>
 
 #######
 
@@ -101,7 +101,7 @@ aN¿ò¼ÜÖ§³Öandroid 4.4+Ê¹ÓÃ£¬¼æÈİĞÔ²âÊÔÍ¨¹ı£¬»ªÎªAndroid4.4 £¬Ğ¡Ã×Android5.1£¬ÈıĞ
 ```
 + an¿ò¼Ü°üº¬ÁËĞí¶àÊµÓÃµÄ¹¤¾ßÀà£¬ÏñMD5¼ÓÃÜ£¬Êı¾İĞ£Ñé£¬Ò¹¼äÄ£Ê½ÇĞ»»µÈ¡£
 
-+ an¿ò¼ÜÌá¹©»ù±¾weight,ÈçWSlidingDeleteListView,WToggleButton£»Í¬Ê±Ò²°üº¬ÁËrecyclerview,refreshlayout,swipelayoutÏµÁĞ¡£
++ an¿ò¼ÜÌá¹©»ù±¾weight,ÈçWSlidingDeleteListView,WToggleButton¡¢Ìá¹©ÁËrecyclerview,refreshlayout,swipelayoutÏµÁĞ¡£
 
 + an¿ò¼Ü¼ÓÈëÁËÁ½ÖÖÒ¹¼äÄ£Ê½µÄ¹¦ÄÜ¡£
 
@@ -304,7 +304,7 @@ AnAppTheme an¿ò¼ÜÄ¬ÈÏµÄ·ç¸ñ¡£
 
 + **Android MVP¼Ü¹¹Ê¾ÀıÏîÄ¿½âÎö-¼ÓÇ¿°æ**
 
-+ **[ÁĞ±í¿Ø¼ş½è¼øÊ¹ÓÃswipelayoutÏµÁĞ](https://github.com/qydq/an-aw-base/blob/master/an-base/README.md)
++ **[ÁĞ±í¿Ø¼ş½è¼øÊ¹ÓÃswipelayoutÏµÁĞ](https://github.com/qydq/an-aw-base/blob/master/an-base/README.md)**
 		
 ---------
 
@@ -339,7 +339,7 @@ http://drakeet.me/android-studio
 
 ¾õµÃ±¾¿ò¼Ü¶ÔÄãÓĞ°ïÖú£¬²»·Á´òÉÍÔŞÖúÎÒÒ»ÏÂ£¬ÈÃÎÒÓĞ¶¯Á¦×ßµÄ¸üÔ¶¡£
 
-<img src="http://img0.ph.126.net/1gDvw3-W3Gw5X0voBIu5zA==/6632106804188340891.png" width=280 />
+<img src="http://img0.ph.126.net/1gDvw3-W3Gw5X0voBIu5zA==/6632106804188340891.png" />
 
 ---------
 
