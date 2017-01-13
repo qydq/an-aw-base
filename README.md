@@ -339,9 +339,9 @@ http://drakeet.me/android-studio
 
 觉得本框架对你有帮助，不妨打赏赞助我一下，让我有动力走的更远。
 
- ![](http://img0.ph.126.net/1gDvw3-W3Gw5X0voBIu5zA==/6632106804188340891.png)
+ <img src="https://github.com/qydq/an-aw-base/blob/master/app/src/main/res/mipmap-xxhdpi/qydq_an_alipay.png" width=280 />
  
- ![](https://github.com/qydq/an-aw-base/blob/master/app/src/main/res/drawable/qydq_an_alipay.png)
+ ![](https://github.com/qydq/an-aw-base/blob/master/app/src/main/res/mipmap-xxhdpi/qydq_an_alipay.png)
 
 ---------
 
