@@ -339,7 +339,7 @@ http://drakeet.me/android-studio
 
 觉得本框架对你有帮助，不妨打赏赞助我一下，让我有动力走的更远。
 
-<img src="http://img0.ph.126.net/1gDvw3-W3Gw5X0voBIu5zA==/6632106804188340891.png" />
+[! ](http://img0.ph.126.net/1gDvw3-W3Gw5X0voBIu5zA==/6632106804188340891.png)
 
 ---------
 
