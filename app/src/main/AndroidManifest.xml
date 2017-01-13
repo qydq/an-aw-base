@@ -20,11 +20,26 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/NoBarTheme" />
-        <activity android:name=".SlidingCloseActivity" />
-        <activity android:name=".AnotationActivity" />
-        <activity android:name=".SlidingFinishActivity" />
-        <activity android:name=".SlidingFinishDetailActivity" />
-        <activity android:name=".view.LittleTrickActivity" />
+        <activity
+            android:name=".SlidingCloseActivity"
+            android:label="@string/SwipeRecyclerActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".AnotationActivity"
+            android:label="@string/SwipeRecyclerActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".SlidingFinishActivity"
+            android:label="@string/SwipeRecyclerActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".SlidingFinishDetailActivity"
+            android:label="@string/SwipeRecyclerActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.LittleTrickActivity"
+            android:label="@string/SwipeRecyclerActivity"
+            android:theme="@style/NoBarTheme" />
         <activity
             android:name=".view.SwipeRecyclerActivity"
             android:label="@string/SwipeRecyclerActivity"
