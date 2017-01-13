@@ -74,7 +74,7 @@ allprojects {
 
 >Ê¹ÓÃ½¨Òé¼Ì³ĞSuperActivity£¬SuperFragment£¬BasePresenter£¬BaseView¡£
 
->Ê¹ÓÃ½¨ÒéÔÚAndroidManifest.xmlÖĞ¼ÓÈëandroid:theme="@style/AnAppTheme"/||/Theme.AppCompat.Light.NoActionBar"`¡£
+>Ê¹ÓÃ½¨ÒéÔÚAndroidManifest.xmlÖĞ¼ÓÈëandroid:theme="@style/AnAppTheme"/||/NoBarTheme(¸²¸ÇĞ´·¨)"`¡£
 
 >Ê¹ÓÃ½¨ÒéÔÚ±àÒëµÄbuildµÄÊ±ºò×¢Òâan-aw-baseĞèÒªÔÚAPI=19»òÒÔÉÏ°æ±¾±àÒë¡£
 
@@ -101,7 +101,7 @@ aN¿ò¼ÜÖ§³Öandroid 4.4+Ê¹ÓÃ£¬¼æÈİĞÔ²âÊÔÍ¨¹ı£¬»ªÎªAndroid4.4 £¬Ğ¡Ã×Android5.1£¬ÈıĞ
 ```
 + an¿ò¼Ü°üº¬ÁËĞí¶àÊµÓÃµÄ¹¤¾ßÀà£¬ÏñMD5¼ÓÃÜ£¬Êı¾İĞ£Ñé£¬Ò¹¼äÄ£Ê½ÇĞ»»µÈ¡£
 
-+ an¿ò¼ÜÌá¹©ÁËÒ»Ğ©weight,ÈçWSlidingDeleteListView,WToggleButtonµÈ¡£
++ an¿ò¼ÜÌá¹©»ù±¾weight,ÈçWSlidingDeleteListView,WToggleButton£»Í¬Ê±Ò²°üº¬ÁËrecyclerview,refreshlayout,swipelayoutÏµÁĞ¡£
 
 + an¿ò¼Ü¼ÓÈëÁËÁ½ÖÖÒ¹¼äÄ£Ê½µÄ¹¦ÄÜ¡£
 
@@ -115,9 +115,7 @@ aN¿ò¼ÜÖ§³Öandroid 4.4+Ê¹ÓÃ£¬¼æÈİĞÔ²âÊÔÍ¨¹ı£¬»ªÎªAndroid4.4 £¬Ğ¡Ã×Android5.1£¬ÈıĞ
 
 + **ÏîÄ¿²¿·ÖĞ§¹û½ØÍ¼¡£ÈçÍ¼**
 
- <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_main.png" width=280 height=480 />   <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_recyclerview.png" width=280 height=480 />
- 
- <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_littlertrick.png" width=280 height=480 />
+ <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_main.png" width=280 height=480 />   <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_recyclerview.png" width=280 height=480 />  <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_littlertrick.png" width=280 height=480 />
 
 + **an¿ò¼ÜÌá¹©Í¨ÓÃµÄ±êÌâÀ¸Í·¼¯³É£¨Êµ¼ÊÊ¹ÓÃÊ±±³¾°ÑÕÉ«CommMainBg£©¡£ÈçÍ¼**
 
@@ -155,8 +153,14 @@ aN¿ò¼ÜÖ§³Öandroid 4.4+Ê¹ÓÃ£¬¼æÈİĞÔ²âÊÔÍ¨¹ı£¬»ªÎªAndroid4.4 £¬Ğ¡Ã×Android5.1£¬ÈıĞ
 
 ÃüÃû¹æ·¶ÊÇÒ»¸öÏîÄ¿ÖĞ·Ç³£ÖØÒªµÄ²¿·Ö£¬ÈÎºÎÊÂÇé²»¹æ·¶²»½ö±ğÈË¿´²»¶®Äã£¬×Ô¼º¶¼²»ÁË½â×Ô¼º¡£<br>
 [An¿ò¼ÜÃüÃû¹æ·¶²Î¿¼](https://zhuanlan.zhihu.com/p/24155927)
+```groovy
+		/*
+		* ÀàµÄÉùÃ÷´ÎĞòÒÀ´ÎÊÇ£ºTAGÀà--View¿Ø¼ş--¾²Ì¬³ÉÔ±±äÁ¿--ÆÕÍ¨Àà³ÉÔ±±äÁ¿
+		* public ÔÚ×îÇ°·½µÄÎ»ÖÃ¡£
+		* private ÔÚpublicµÄÎ»ÖÃºóÃæ¡£
+		* */
+```
 
-	
 + **An¿ò¼Ü×´Ì¬À¸**
 
 [ÀûÓÃaN¿ò¼Ü¿ìËÙ¿ª·¢androidÓ¦ÓÃ³ÌĞò»ù±¾Ê¹ÓÃ·½·¨](https://zhuanlan.zhihu.com/p/24273705?refer=sunst)
@@ -191,7 +195,7 @@ AnTvContentStyle ±ê×¼ÎÄ±¾ÄÚÈİ·ç¸ñ¡£
 
 AnTvTitleStyle ±ê×¼ÎÄ±¾±êÌâ·ç¸ñ¡£
 
-NoBarTheme ÎŞ±êÌâÀ¸¡£Ìá¹©£¨¸²¸Çan¿ò¼ÜÄ¬ÈÏµÄAnAppThemeÍ¸Ã÷Ğ§¹ûµÄ×÷ÓÃ£©¡£
+NoBarTheme ÎŞ±êÌâÀ¸¡£Ìá¹©£¨[¸²¸Çan¿ò¼ÜÄ¬ÈÏµÄAnAppThemeÍ¸Ã÷Ğ§¹ûµÄ×÷ÓÃ](https://github.com/qydq/an-aw-base/issues/6)£©¡£
 
 AnAppTheme an¿ò¼ÜÄ¬ÈÏµÄ·ç¸ñ¡£
 
@@ -335,7 +339,7 @@ http://drakeet.me/android-studio
 
 ¾õµÃ±¾¿ò¼Ü¶ÔÄãÓĞ°ïÖú£¬²»·Á´òÉÍÔŞÖúÎÒÒ»ÏÂ£¬ÈÃÎÒÓĞ¶¯Á¦×ßµÄ¸üÔ¶¡£
 
-<img src="http://img0.ph.126.net/1gDvw3-W3Gw5X0voBIu5zA==/6632106804188340891.png" width=280 height=780 />
+<img src="http://img0.ph.126.net/1gDvw3-W3Gw5X0voBIu5zA==/6632106804188340891.png" width=280 />
 
 ---------
 
@@ -411,15 +415,6 @@ http://drakeet.me/android-studio
 		ËµÃ÷ÕâÀïÃæ£ºÔÚµ÷ÓÃµÄActivityÊ±Ó¦¸Ãsuper.onCreate(savedInstanceState);£¬»¹ÓĞsetBackUpµÄÊôĞÔ£¬½¨Òé²»ÒªÔÚµÍ°æ±¾ÓÃ¸ß°æ±¾µÄÄÚÈİ¡£
 		
 		
-## ´úÂë±àĞ´¹æ·¶Ïà¹Ø
-
-		/*
-		* ÀàµÄÉùÃ÷´ÎĞòÒÀ´ÎÊÇ£ºTAGÀà--View¿Ø¼ş--¾²Ì¬³ÉÔ±±äÁ¿--ÆÕÍ¨Àà³ÉÔ±±äÁ¿
-		* public ÔÚ×îÇ°·½µÄÎ»ÖÃ¡£
-		* private ÔÚpublicµÄÎ»ÖÃºóÃæ¡£
-		* */
-		
-		
 ## ¾ßÌå¹¦ÄÜµÄÊ¹ÓÃ¿ÉÒÔ²Î¿¼releaseµÄÈÕÖ¾ÎÄ¼ş£¬»òÕßÔÚÒÔºó»áÔÚ¸öÈËÖªºõ×öÒ»Ğ©½²½â¡£
 
 
@@ -449,6 +444,20 @@ http://drakeet.me/android-studio
 		private TextView anTvRRight;
 		@ViewInject(R.id.anIvRRight)
 		private ImageView anIvRRight;
+		
+		//FINDVIEWBY ID
+		anLlBack = (LinearLayout) findViewById(R.id.anLlBack);
+        anTvBack = (TextView) findViewById(R.id.anTvBack);
+        anPb = (ProgressBar) findViewById(R.id.anPb);
+        anTvTitle = (TextView) findViewById(R.id.anTvTitle);
+
+        anLlRight = (LinearLayout) findViewById(R.id.anLlRight);
+        anTvRight = (TextView) findViewById(R.id.anTvRight);
+        anIvRight = (ImageView) findViewById(R.id.anIvRight);
+
+        anLlRRight = (LinearLayout) findViewById(R.id.anLlRRight);
+        anTvRRight = (TextView) findViewById(R.id.anTvRRight);
+        anIvRRight = (ImageView) findViewById(R.id.anIvRRight);
 
 ## 2016/12/27
 
