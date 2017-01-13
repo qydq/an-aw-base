@@ -341,6 +341,8 @@ http://drakeet.me/android-studio
 
 ![](http://img0.ph.126.net/1gDvw3-W3Gw5X0voBIu5zA==/6632106804188340891.png)
 
+<img src="http://img0.ph.126.net/1gDvw3-W3Gw5X0voBIu5zA==/6632106804188340891.png" width="100" />
+
 ---------
 
 #### ºó¼Ç£º
