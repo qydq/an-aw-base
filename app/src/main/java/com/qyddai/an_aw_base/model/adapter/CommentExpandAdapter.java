@@ -81,10 +81,10 @@ public class CommentExpandAdapter extends ExpandableRecyclerAdapter<CommentItem>
         switch (viewType) {
             case TYPE_HEADER:
                 //header中的箭头默认隐藏，如有需要，item_arrow设置为visible即可
-                return new CommentViewHolder(inflate(R.layout.item_comment, parent), recyclerView);
+                return new CommentViewHolder(inflate(R.layout.item_recyclerview_comment, parent), recyclerView);
             case TYPE_PERSON:
             default:
-                return new CommentChildViewHolder(inflate(R.layout.item_child_comment, parent));
+                return new CommentChildViewHolder(inflate(R.layout.item_recyclerview_child_comment, parent));
         }
     }
 

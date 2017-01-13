@@ -24,7 +24,7 @@ public class SwipeMenuAdapter extends ListBaseAdapter<ItemModel> {
 
     @Override
     public int getLayoutId() {
-        return R.layout.list_item_swipe;
+        return R.layout.item_recyclerview_swipedelete;
     }
 
     @Override

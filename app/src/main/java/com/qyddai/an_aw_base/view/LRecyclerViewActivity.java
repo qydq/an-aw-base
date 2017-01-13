@@ -32,6 +32,8 @@ import com.qyddai.an_aw_base.view.activity.LinearLayoutActivity;
 import com.qyddai.an_aw_base.view.activity.ListViewDecoration;
 import com.qyddai.an_aw_base.view.activity.MulItemLinearLayoutActivity;
 import com.qyddai.an_aw_base.view.activity.PartialRefreshActivity;
+import com.qyddai.an_aw_base.view.activity.SectionAnimalActivity;
+import com.qyddai.an_aw_base.view.activity.SectionLayoutActivity;
 import com.qyddai.an_aw_base.view.activity.SwipeDeleteActivity;
 
 import java.lang.ref.WeakReference;
@@ -92,7 +94,7 @@ public class LRecyclerViewActivity extends AppCompatActivity {
         ItemModel item12 = new ItemModel();
         item1.title = "SectionLayoutActivity";
         item2.title = "SectionAnimalActivity";
-        item3.title = "SwipeMenuActivity";
+        item3.title = "SwipeMenuActivity=SwipeDeleteActivity";
         item4.title = "EndlessLinearLayoutActivity";
         item5.title = "MulItemLinearLayoutActivity";
         item6.title = "SwipeDeleteActivity";
@@ -167,10 +169,10 @@ public class LRecyclerViewActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), item.title, Toast.LENGTH_SHORT).show();
 
                 if (item.title.equals("SectionLayoutActivity")) {
-
+                    startActivity(new Intent(LRecyclerViewActivity.this, SectionLayoutActivity.class));
                 }
                 if (position == 1) {
-
+                    startActivity(new Intent(LRecyclerViewActivity.this, SectionAnimalActivity.class));
                 }
                 if (item.title.equals("SwipeMenuActivity")) {
 

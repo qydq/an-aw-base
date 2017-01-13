@@ -12,8 +12,6 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.an.base.utils.NetBroadcastReceiverUtils;
-import com.an.base.view.recyclerview.ItemDecoration.GridItemDecoration;
-import com.an.base.view.recyclerview.ItemDecoration.SpacesItemDecoration;
 import com.an.base.view.recyclerview.ListBaseAdapter;
 import com.an.base.view.recyclerview.SuperViewHolder;
 import com.an.base.view.recyclerview.interfaces.OnLoadMoreListener;
@@ -22,7 +20,6 @@ import com.an.base.view.recyclerview.interfaces.OnRefreshListener;
 import com.an.base.view.recyclerview.recyclerview.LRecyclerView;
 import com.an.base.view.recyclerview.recyclerview.LRecyclerViewAdapter;
 import com.qyddai.an_aw_base.R;
-import com.qyddai.an_aw_base.model.adapter.DataAdapter;
 import com.qyddai.an_aw_base.model.entity.ItemModel;
 import com.qyddai.an_aw_base.utils.SampleHeader;
 
@@ -218,7 +215,7 @@ public class EndlessStaggeredGridLayoutActivity extends AppCompatActivity {
 
         @Override
         public int getLayoutId() {
-            return R.layout.sample_item_card;
+            return R.layout.item_recyclerview_endless_gridecard;
         }
 
         @Override

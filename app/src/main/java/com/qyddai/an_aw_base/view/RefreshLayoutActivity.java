@@ -11,9 +11,8 @@ import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
 
 /**
- * 作者:王浩 邮件:bingoogolapple@gmail.com
- * 创建时间:15/7/10 14:11
- * 描述:
+ * 作者:孙顺涛 邮件:qyddai@gmail.com
+ * 描述: * 创建时间:15/7/10 14:11修改王皓大神
  */
 @ContentView(R.layout.sst_activity_refreshlayout)
 public class RefreshLayoutActivity extends SuperActivity implements BGARefreshLayout.BGARefreshLayoutDelegate {
@@ -54,7 +53,7 @@ public class RefreshLayoutActivity extends SuperActivity implements BGARefreshLa
 //                mRefreshLayout.endLoadingMore();
                 refreshViewHolder.onEndRefreshing();
             }
-        },5000);
+        }, 5000);
 
     }
 

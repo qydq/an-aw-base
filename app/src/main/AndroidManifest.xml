@@ -109,6 +109,14 @@
             android:name=".view.activity.SwipeDeleteActivity"
             android:label="@string/SwipeDeleteActivity"
             android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.SectionLayoutActivity"
+            android:label="@string/SectionLayoutActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.SectionAnimalActivity"
+            android:label="@string/SectionAnimalActivity"
+            android:theme="@style/NoBarTheme" />
     </application>
 
 </manifest>
