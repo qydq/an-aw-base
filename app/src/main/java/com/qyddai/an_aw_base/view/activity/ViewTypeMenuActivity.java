@@ -91,7 +91,7 @@ public class ViewTypeMenuActivity extends AppCompatActivity {
                 int size = getResources().getDimensionPixelSize(R.dimen.item_height);
 
                 SwipeMenuItem deleteItem = new SwipeMenuItem(mContext)
-                        .setBackgroundDrawable(R.drawable.selector_purple)
+                        .setBackgroundDrawable(R.drawable.yy_drawable_selector_purple)
                         .setImage(R.mipmap.ic_action_wechat)
                         .setText("微信")
                         .setWidth(size)
@@ -101,7 +101,7 @@ public class ViewTypeMenuActivity extends AppCompatActivity {
                 swipeRightMenu.addMenuItem(deleteItem);
 
                 SwipeMenuItem wechatItem = new SwipeMenuItem(mContext)
-                        .setBackgroundDrawable(R.drawable.selector_green)
+                        .setBackgroundDrawable(R.drawable.yy_drawable__selector_green)
                         .setImage(R.mipmap.ic_action_add)
                         .setText("添加")
                         .setWidth(size)

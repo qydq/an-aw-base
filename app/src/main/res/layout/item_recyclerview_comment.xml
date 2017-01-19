@@ -40,7 +40,7 @@
 				android:layout_height="38dp"
 				android:layout_alignParentTop="true"
 				android:scaleType="fitCenter"
-				android:src="@drawable/profile_anonymous_user"/>
+				android:src="@drawable/yy_drawable_profile_anonymous"/>
 
 			<TextView
 				android:id="@+id/tvComment"
@@ -81,7 +81,7 @@
 				android:layout_alignTop="@+id/tvname"
 				android:layout_toLeftOf="@+id/tvTime"
 				android:layout_toStartOf="@+id/tvTime"
-				android:src="@drawable/profile_anonymous_user"
+				android:src="@drawable/yy_drawable_profile_anonymous"
 				android:visibility="gone"/>
 
 			<TextView

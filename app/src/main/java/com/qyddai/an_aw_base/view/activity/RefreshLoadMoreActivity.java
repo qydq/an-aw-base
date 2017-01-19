@@ -135,14 +135,14 @@ public class RefreshLoadMoreActivity extends AppCompatActivity {
             // 添加左侧的，如果不添加，则左侧不会出现菜单。
             {
                 SwipeMenuItem addItem = new SwipeMenuItem(mContext)
-                        .setBackgroundDrawable(R.drawable.selector_green)// 点击的背景。
+                        .setBackgroundDrawable(R.drawable.yy_drawable__selector_green)// 点击的背景。
                         .setImage(R.mipmap.ic_action_add) // 图标。
                         .setWidth(size) // 宽度。
                         .setHeight(size); // 高度。
                 swipeLeftMenu.addMenuItem(addItem); // 添加一个按钮到左侧菜单。
 
                 SwipeMenuItem closeItem = new SwipeMenuItem(mContext)
-                        .setBackgroundDrawable(R.drawable.selector_red)
+                        .setBackgroundDrawable(R.drawable.yy_drawable_selector_red)
                         .setImage(R.mipmap.ic_action_close)
                         .setWidth(size)
                         .setHeight(size);
@@ -153,7 +153,7 @@ public class RefreshLoadMoreActivity extends AppCompatActivity {
             // 添加右侧的，如果不添加，则右侧不会出现菜单。
             {
                 SwipeMenuItem deleteItem = new SwipeMenuItem(mContext)
-                        .setBackgroundDrawable(R.drawable.selector_red)
+                        .setBackgroundDrawable(R.drawable.yy_drawable_selector_red)
                         .setImage(R.mipmap.ic_action_delete)
                         .setText("删除") // 文字，还可以设置文字颜色，大小等。。
                         .setTextColor(Color.WHITE)
@@ -162,14 +162,14 @@ public class RefreshLoadMoreActivity extends AppCompatActivity {
                 swipeRightMenu.addMenuItem(deleteItem);// 添加一个按钮到右侧侧菜单。
 
                 SwipeMenuItem closeItem = new SwipeMenuItem(mContext)
-                        .setBackgroundDrawable(R.drawable.selector_purple)
+                        .setBackgroundDrawable(R.drawable.yy_drawable_selector_purple)
                         .setImage(R.mipmap.ic_action_close)
                         .setWidth(size)
                         .setHeight(size);
                 swipeRightMenu.addMenuItem(closeItem); // 添加一个按钮到右侧菜单。
 
                 SwipeMenuItem addItem = new SwipeMenuItem(mContext)
-                        .setBackgroundDrawable(R.drawable.selector_green)
+                        .setBackgroundDrawable(R.drawable.yy_drawable__selector_green)
                         .setText("添加")
                         .setTextColor(Color.WHITE)
                         .setWidth(size)

@@ -10,7 +10,7 @@
         android:id="@+id/swipe_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/selector_white_preferences_item"
+        android:background="@drawable/yy_drawable_selector_preferences"
         android:gravity="center_vertical"
         android:padding="@dimen/DimenPadding08"
         android:orientation="horizontal">

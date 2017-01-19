@@ -117,7 +117,7 @@ public class ListDragMenuActivity extends AppCompatActivity {
             int size = getResources().getDimensionPixelSize(R.dimen.item_height);
 
             SwipeMenuItem deleteItem = new SwipeMenuItem(mContext)
-                    .setBackgroundDrawable(R.drawable.selector_red)
+                    .setBackgroundDrawable(R.drawable.yy_drawable_selector_red)
                     .setImage(R.mipmap.ic_action_delete)
                     .setWidth(size)
                     .setHeight(size);
@@ -125,7 +125,7 @@ public class ListDragMenuActivity extends AppCompatActivity {
             swipeRightMenu.addMenuItem(deleteItem);// 添加一个按钮到右侧菜单。
 
             SwipeMenuItem wechatItem = new SwipeMenuItem(mContext)
-                    .setBackgroundDrawable(R.drawable.selector_green)
+                    .setBackgroundDrawable(R.drawable.yy_drawable__selector_green)
                     .setImage(R.mipmap.ic_action_wechat)
                     .setWidth(size)
                     .setHeight(size);
