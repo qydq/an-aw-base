@@ -28,4 +28,11 @@ dependencies {
     })
     testCompile 'junit:junit:4.12'
     compile project(':an-base')
+    compile 'cn.bingoogolapple:bga-banner:2.1.4@aar'
+    compile 'cn.bingoogolapple:bga-adapter:1.1.5@aar'
+    compile 'cn.bingoogolapple:bga-swipeitemlayout:1.0.4@aar'
+    compile 'cn.bingoogolapple:bga-indicator:1.0.1@aar'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
 }

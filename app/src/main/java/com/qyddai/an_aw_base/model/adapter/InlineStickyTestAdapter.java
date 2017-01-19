@@ -44,7 +44,7 @@ public class InlineStickyTestAdapter
 
     @Override
     public HeaderHolder onCreateHeaderViewHolder(ViewGroup parent) {
-        final View view = mInflater.inflate(R.layout.header_inline_test, parent, false);
+        final View view = mInflater.inflate(R.layout.yy_view_header_inline_test, parent, false);
         return new HeaderHolder(view);
     }
 

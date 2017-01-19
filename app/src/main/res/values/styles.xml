@@ -5,4 +5,20 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="TestBtn" parent="MatchWrap">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/CommDimenTxtTitle</item>
+        <item name="android:padding">@dimen/DimenPadding</item>
+        <item name="android:layout_margin">@dimen/CommDimenMargin</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/yy_drawable_selector_ll_shape</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="TestTv" parent="MatchWrap">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:text">张露月 我爱你 你回来</item>
+        <item name="android:gravity">center</item>
+    </style>
 </resources>

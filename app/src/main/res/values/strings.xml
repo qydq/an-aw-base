@@ -39,4 +39,7 @@
 
     <string name="expand_all">Expand All</string>
     <string name="collapse_all">Collapse All</string>
+
+    <string name="test_custom_header_title">小月，你回来吧</string>
+    <string name="test_custom_header_desc">小月你回来吧，你回来吧，你回来吧，我再也不会让你生气了，再也不让你受到一丝一毫的伤害了，苍天在上，天地为证，我若违背，天大雷劈，不得好死。 以前是我错了，做的不够好，没能好好的疼你。我一定加倍补偿回来，只求你再给一个机会。</string>
 </resources>

@@ -16,18 +16,100 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/includeHead"
-        android:background="@color/ColorWheat">
+        android:background="@android:color/white"
+        android:layout_below="@+id/includeHead">
 
         <com.an.base.view.refreshlayout.BGARefreshLayout
             android:id="@+id/rl_modulename_refresh"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="asdfasd" />
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/yy_drawable_selector_md_shape"
+                    android:text="GridViewDemo" />
+
+                <Button
+                    android:id="@+id/btn2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/yy_drawable_selector_md_shape"
+                    android:text="NormalListViewDemo" />
+
+                <Button
+                    android:id="@+id/btn3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/yy_drawable_selector_md_shape"
+                    android:text="NormalRecyclerViewDemo" />
+
+                <Button
+                    android:id="@+id/btn4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/yy_drawable_selector_md_shape"
+                    android:text="SwipeListViewDemo" />
+
+                <Button
+                    android:id="@+id/btn5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/yy_drawable_selector_md_shape"
+                    android:text="SwipeRecyclerViewDemo" />
+
+                <Button
+                    android:id="@+id/btn6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/yy_drawable_selector_md_shape"
+                    android:text="StaggeredGridDemo" />
+
+                <Button
+                    android:id="@+id/btn7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/yy_drawable_selector_md_shape"
+                    android:text="ScrollViewDemo" />
+
+                <Button
+                    android:id="@+id/btn8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/yy_drawable_selector_md_shape"
+                    android:text="NormalViewDemo" />
+
+                <Button
+                    android:id="@+id/btn9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/yy_drawable_selector_md_shape"
+                    android:text="WebViewDemo" />
+
+                <Button
+                    android:id="@+id/btn10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/yy_drawable_selector_md_shape"
+                    android:text="StickyNavDemo" />
+            </LinearLayout>
         </com.an.base.view.refreshlayout.BGARefreshLayout>
     </RelativeLayout>
 

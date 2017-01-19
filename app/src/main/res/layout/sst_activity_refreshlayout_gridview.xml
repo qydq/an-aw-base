@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch.Vertical"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/includeHead"
+        layout="@layout/base_headview_standard_complex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/beginRefreshing"
+        style="@style/TestBtn"
+        android:text="BeginRefreshing" />
+
+    <TextView
+        android:id="@+id/beginLoadingMore"
+        style="@style/TestBtn"
+        android:text="BeginLoadingMore" />
+
+    <com.an.base.view.refreshlayout.BGARefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rl_gridview_refresh"
+        style="@style/MatchMatch">
+
+        <GridView
+            android:id="@+id/lv_gridview_data"
+            style="@style/MatchAuto"
+            android:numColumns="2"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+    </com.an.base.view.refreshlayout.BGARefreshLayout>
+</LinearLayout>

@@ -117,6 +117,43 @@
             android:name=".view.activity.SectionAnimalActivity"
             android:label="@string/SectionAnimalActivity"
             android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.RefreshGridViewActivity"
+            android:label="@string/SectionAnimalActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.RefreshListViewActivity"
+            android:label="@string/SectionAnimalActivity"
+            android:theme="@style/NoBarTheme" />
+
+        <activity
+            android:name=".view.activity.RefreshRecyclerViewActivity"
+            android:label="@string/SectionAnimalActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.RefreshSwipeListViewActivity"
+            android:label="@string/SectionAnimalActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.RefreshSwipeRecyclerViewActivity"
+            android:label="@string/SectionAnimalActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.RefreshStaggeredRecyclerViewActivity"
+            android:label="@string/SectionAnimalActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.RefreshScrollViewActivity"
+            android:label="@string/SectionAnimalActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.RefreshNormalViewActivity"
+            android:label="@string/SectionAnimalActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.RefreshWebViewActivity"
+            android:label="@string/SectionAnimalActivity"
+            android:theme="@style/NoBarTheme" />
     </application>
 
 </manifest>
