@@ -2,11 +2,9 @@ package com.qyddai.an_aw_base.view.activity;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,16 +14,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.an.base.view.recyclerview.ListBaseAdapter;
+import com.an.base.view.recyclerview.SuperViewHolder;
 import com.an.base.view.recyclerview.interfaces.OnItemClickListener;
 import com.an.base.view.recyclerview.interfaces.OnItemLongClickListener;
 import com.an.base.view.recyclerview.recyclerview.LRecyclerView;
 import com.an.base.view.recyclerview.recyclerview.LRecyclerViewAdapter;
-import com.an.base.view.recyclerview.recyclerview.ProgressStyle;
 import com.qyddai.an_aw_base.R;
-import com.qyddai.an_aw_base.model.ListBaseAdapter;
-import com.qyddai.an_aw_base.model.SuperViewHolder;
 import com.qyddai.an_aw_base.model.entity.ItemModel;
-import com.qyddai.an_aw_base.utils.ListViewDecoration;
 import com.qyddai.an_aw_base.utils.SampleFooter;
 import com.qyddai.an_aw_base.utils.SampleHeader;
 
@@ -35,11 +31,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by qydda on 2017/1/12.
+ * 局部刷新
  */
-
 public class PartialRefreshActivity extends AppCompatActivity {
-    private static String TAG = "PartialRefreshActivity";
 
     private LRecyclerView mRecyclerView = null;
 
@@ -48,10 +42,9 @@ public class PartialRefreshActivity extends AppCompatActivity {
     private LRecyclerViewAdapter mLRecyclerViewAdapter = null;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sst_activity_recyclerview_endless);
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -68,21 +61,12 @@ public class PartialRefreshActivity extends AppCompatActivity {
         }
 
         mDataAdapter = new DataAdapter(this);
-        mDataAdapter.addAll(dataList);
-        mLRecyclerViewAdapter = new LRecyclerViewAdapter(mDataAdapter);
+        mDataAdapter.setDataList(dataList);
 
+        mLRecyclerViewAdapter = new LRecyclerViewAdapter(mDataAdapter);
         mRecyclerView.setAdapter(mLRecyclerViewAdapter);
 
-        ListViewDecoration divider = new ListViewDecoration();
-        mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.addItemDecoration(divider);
-
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        mRecyclerView.setRefreshProgressStyle(ProgressStyle.LineSpinFadeLoader);
-        mRecyclerView.setArrowImageView(R.mipmap.base_refresh_head_arrow);
-        mRecyclerView.setLoadingMoreProgressStyle(ProgressStyle.BallSpinFadeLoader);
-
 
         //add a HeaderView
         View header = LayoutInflater.from(this).inflate(R.layout.base_recyclerview_header, (ViewGroup) findViewById(android.R.id.content), false);
@@ -100,7 +84,7 @@ public class PartialRefreshActivity extends AppCompatActivity {
             @Override
             public void onItemClick(View view, int position) {
                 ItemModel item = mDataAdapter.getDataList().get(position);
-                Toast.makeText(getApplicationContext(), item.title + "url" + item.imgUrl, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "onItemLongClick - " + item.title, Toast.LENGTH_SHORT).show();
             }
 
         });
@@ -112,6 +96,7 @@ public class PartialRefreshActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "onItemLongClick - " + item.title, Toast.LENGTH_SHORT).show();
             }
         });
+
     }
 
     private class DataAdapter extends ListBaseAdapter<ItemModel> {
@@ -137,7 +122,7 @@ public class PartialRefreshActivity extends AppCompatActivity {
 
             //注意：payloads的size总是1
             String payload = (String) payloads.get(0);
-            Log.d(TAG, "payload = " + payload);
+//            TLog.error("payload = " + payload);
 
             TextView textView = holder.getView(R.id.info_text);
             //需要更新的控件
@@ -152,7 +137,6 @@ public class PartialRefreshActivity extends AppCompatActivity {
             ImageView avatarImage = holder.getView(R.id.avatar_image);
 
             textView.setText(itemModel.title);
-
             x.image().bind(avatarImage, itemModel.imgUrl);
 //            ImageLoaderUtil imageLoaderUtil = new ImageLoaderUtil();
 //            ImageLoader imageLoader = new ImageLoader.Builder()
@@ -182,7 +166,7 @@ public class PartialRefreshActivity extends AppCompatActivity {
 
             ItemModel itemModel = mDataAdapter.getDataList().get(position);
             itemModel.id = 100;
-            itemModel.title = "refresh item the pic comefrom network" + itemModel.id;
+            itemModel.title = "refresh item " + itemModel.id;
             mDataAdapter.getDataList().set(position, itemModel);
 
             //RecyclerView局部刷新
@@ -192,4 +176,5 @@ public class PartialRefreshActivity extends AppCompatActivity {
         }
         return true;
     }
+
 }

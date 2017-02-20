@@ -12,6 +12,8 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.an.base.utils.NetBroadcastReceiverUtils;
+import com.an.base.view.recyclerview.ItemDecoration.GridItemDecoration;
+import com.an.base.view.recyclerview.ItemDecoration.SpacesItemDecoration;
 import com.an.base.view.recyclerview.ListBaseAdapter;
 import com.an.base.view.recyclerview.SuperViewHolder;
 import com.an.base.view.recyclerview.interfaces.OnLoadMoreListener;
@@ -20,11 +22,13 @@ import com.an.base.view.recyclerview.interfaces.OnRefreshListener;
 import com.an.base.view.recyclerview.recyclerview.LRecyclerView;
 import com.an.base.view.recyclerview.recyclerview.LRecyclerViewAdapter;
 import com.qyddai.an_aw_base.R;
+import com.qyddai.an_aw_base.model.adapter.DataAdapter;
 import com.qyddai.an_aw_base.model.entity.ItemModel;
 import com.qyddai.an_aw_base.utils.SampleHeader;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * 带HeaderView的分页加载GridLayout RecyclerView
@@ -76,7 +80,7 @@ public class EndlessStaggeredGridLayoutActivity extends AppCompatActivity {
             @Override
             public void onRefresh() {
                 mCurrentCounter = 0;
-                isRefresh = true;
+                mDataAdapter.clear();
                 requestData();
             }
         });
@@ -95,7 +99,7 @@ public class EndlessStaggeredGridLayoutActivity extends AppCompatActivity {
         });
 
 
-        mRecyclerView.setRefreshing(true);
+        mRecyclerView.refresh();
 
     }
 
@@ -125,10 +129,6 @@ public class EndlessStaggeredGridLayoutActivity extends AppCompatActivity {
 
             switch (msg.what) {
                 case -1:
-                    if(activity.mRecyclerView.isPulldownToRefresh()){
-                        activity.mDataAdapter.clear();
-                        mCurrentCounter = 0;
-                    }
 
                     int currentSize = activity.mDataAdapter.getItemCount();
 
@@ -141,35 +141,31 @@ public class EndlessStaggeredGridLayoutActivity extends AppCompatActivity {
                         ItemModel item = new ItemModel();
                         item.id = currentSize + i;
                         item.title = "item" + (item.id);
+                        item.height = new Random().nextInt(1000);
+                        if(item.height < 100) {
+                            item.height += 400;
+                        }
 
                         newList.add(item);
                     }
 
-
                     activity.addItems(newList);
 
-                    if(activity.mRecyclerView.isPulldownToRefresh()){
-                        activity.mRecyclerView.refreshComplete();
-                        activity.notifyDataSetChanged();
-                    }else {
-                        activity.mRecyclerView.loadMoreComplete();
-                    }
+                    activity.mRecyclerView.refreshComplete(REQUEST_COUNT);
                     break;
                 case -2:
                     activity.notifyDataSetChanged();
                     break;
                 case -3:
-                    if(activity.mRecyclerView.isPulldownToRefresh()){
-                        activity.mRecyclerView.refreshComplete();
-                        activity.notifyDataSetChanged();
-                    }else {
-                        activity.mRecyclerView.setOnNetWorkErrorListener(new OnNetWorkErrorListener() {
-                            @Override
-                            public void reload() {
-                                requestData();
-                            }
-                        });
-                    }
+                    activity.mRecyclerView.refreshComplete(REQUEST_COUNT);
+                    activity.notifyDataSetChanged();
+                    activity.mRecyclerView.setOnNetWorkErrorListener(new OnNetWorkErrorListener() {
+                        @Override
+                        public void reload() {
+
+                            requestData();
+                        }
+                    });
                     break;
             }
         }
@@ -204,12 +200,8 @@ public class EndlessStaggeredGridLayoutActivity extends AppCompatActivity {
 
     private class DataAdapter  extends ListBaseAdapter<ItemModel> {
 
-        private int largeCardHeight, smallCardHeight;
-
         public DataAdapter(Context context) {
             super(context);
-            largeCardHeight = (int)context.getResources().getDisplayMetrics().density * 300;
-            smallCardHeight = (int)context.getResources().getDisplayMetrics().density * 200;
         }
 
 
@@ -228,7 +220,7 @@ public class EndlessStaggeredGridLayoutActivity extends AppCompatActivity {
             textView.setText(itemModel.title);
 
             //修改高度，模拟交错效果
-            textView.getLayoutParams().height = position % 2 != 0 ? largeCardHeight : smallCardHeight;
+            textView.getLayoutParams().height = itemModel.height;
         }
 
     }

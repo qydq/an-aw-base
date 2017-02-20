@@ -6,10 +6,13 @@ import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+
 import com.an.base.utils.NetBroadcastReceiverUtils;
+import com.an.base.view.recyclerview.ExpandableRecyclerAdapter;
 import com.an.base.view.recyclerview.interfaces.OnNetWorkErrorListener;
 import com.an.base.view.recyclerview.interfaces.OnRefreshListener;
 import com.an.base.view.recyclerview.recyclerview.LRecyclerView;
@@ -17,7 +20,6 @@ import com.an.base.view.recyclerview.recyclerview.LRecyclerViewAdapter;
 import com.an.base.view.recyclerview.recyclerview.ProgressStyle;
 import com.qyddai.an_aw_base.R;
 import com.qyddai.an_aw_base.model.adapter.CommentExpandAdapter;
-import com.qyddai.an_aw_base.model.adapter.ExpandableRecyclerAdapter;
 import com.qyddai.an_aw_base.model.entity.CommentItem;
 import com.qyddai.an_aw_base.model.entity.ItemModel;
 import com.qyddai.an_aw_base.utils.SampleHeader;
@@ -26,11 +28,10 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
 /**
- * Created by qydda on 2017/1/12.
+ * 带HeaderView的分页加载LinearLayout RecyclerView
  */
-
 public class ExpandableRecyclerViewOneActivity extends AppCompatActivity {
-    private static final String TAG = "ExpandableRecyclerViewOneActivity";
+    private static final String TAG = "lzx";
 
     /**
      * 服务器端一共多少条数据
@@ -88,7 +89,7 @@ public class ExpandableRecyclerViewOneActivity extends AppCompatActivity {
             }
         });
 
-        mRecyclerView.setRefreshing(true);
+        mRecyclerView.refresh();
 
         //不要在调用下面代码
         /*mLRecyclerViewAdapter.setOnItemClickListener(new OnItemClickListener() {
@@ -158,29 +159,22 @@ public class ExpandableRecyclerViewOneActivity extends AppCompatActivity {
 
                     activity.addItems(activity.mDataAdapter.getSampleItems());
 
-                    if (activity.mRecyclerView.isPulldownToRefresh()) {
-                        activity.mRecyclerView.refreshComplete();
-                        activity.notifyDataSetChanged();
-                    } else {
-                        activity.mRecyclerView.loadMoreComplete();
-                    }
+                    activity.mRecyclerView.refreshComplete(10);
+                    activity.notifyDataSetChanged();
                     break;
                 case -2:
                     activity.notifyDataSetChanged();
                     break;
                 case -3:
 
-                    if (activity.mRecyclerView.isPulldownToRefresh()) {
-                        activity.mRecyclerView.refreshComplete();
-                        activity.notifyDataSetChanged();
-                    } else {
-                        activity.mRecyclerView.setOnNetWorkErrorListener(new OnNetWorkErrorListener() {
-                            @Override
-                            public void reload() {
-                                requestData();
-                            }
-                        });
-                    }
+                    activity.mRecyclerView.refreshComplete(10);
+                    activity.notifyDataSetChanged();
+                    activity.mRecyclerView.setOnNetWorkErrorListener(new OnNetWorkErrorListener() {
+                        @Override
+                        public void reload() {
+                            requestData();
+                        }
+                    });
                     break;
                 default:
                     break;
@@ -192,7 +186,9 @@ public class ExpandableRecyclerViewOneActivity extends AppCompatActivity {
      * 模拟请求网络
      */
     private void requestData() {
+        Log.d(TAG, "requestData");
         new Thread() {
+
             @Override
             public void run() {
                 super.run();
@@ -236,5 +232,8 @@ public class ExpandableRecyclerViewOneActivity extends AppCompatActivity {
             default:
                 return true;
         }
+
+
     }
+
 }

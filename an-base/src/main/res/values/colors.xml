@@ -271,4 +271,10 @@
 
     <color name="CommPauseFont">#777</color><!--暂时使用的字体颜色-->
     <color name="CommPauseBg">#DC143C</color><!--暂时使用的背景颜色-->
+
+    <color name="CommTipsColor">#A9A9A9</color><!--提示文字，如网络错误，为空的提示-->
+    <color name="CommTipsColorClicked">#25000000</color><!--提示文字，tips第二中颜色，如网络错误，为空-->
+
+    <color name="CommBaseHeadviewTxtColor">#fff</color><!--base_headview文字颜色-->
+    <color name="CommBaseHeadviewTxtColorClicked">#8a8a8a</color><!--base_headview文字点击颜色-->
 </resources>

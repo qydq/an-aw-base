@@ -1,3 +1,11 @@
+我亲爱的小月（莳萝花），生命不过一场幻觉，我只要你在--2017年2月20日 16:18:35。
+
+她离开。该框架已经一个多月没有维护了，今天重拾记忆，只为情故 。. 。
+
+写给张露月的一篇文章
+
+[你存活在我记忆最原始的荒原，可淡不可忘](https://github.com/qydq/an-aw-base/raw/master/app/app-release.apk)）
+
 # an-aw-base
 
 * 项目的主要功能是作为an框架的基类（基础的an-base）的仓库；你可以借助github，jitpack ，bintrary快速集成。
@@ -292,8 +300,8 @@ AnAppTheme an框架默认的风格。
 |drawable_selector_md_oppose|CommColorOpposeRipple<br>CommColorOpposeClicked<br>CommColorOppose|无|无|
 |drawable_selector_md_shape|CommColorRipple<br>CommColorTransparent<br>CommColorTransparentClicked|CommColorBorder<br>CommColorBorderClicked|2dp|
 |drawable_selector_md_shape_oppose|CommColorOppose<br>CommColorOpposeClicked<br>CommColorOpposeRipple|CommColorBorder<br>CommColorBorderClicked|2dp|
-|drawable_selector_txt|CommColorGray<br>CommColorWhite|无|无|
-|drawable_selector_txt_oppose|CommColorWhite<br>CommColorGray|无|无|
+|drawable_selector_txt|CommBaseHeadviewTxtColorClicked<br>CommBaseHeadviewTxtColor|无|无|
+|drawable_selector_txt_oppose|CommBaseHeadviewTxtColor<br>CommBaseHeadviewTxtColorClicked|无|无|
 |drawable_selector_ll_shape|CommEndColor<br>CommStartColor<br>CommMainBgClicked<br>CommMainBg|CommColorLineClicked<br>CommColorLine|2dp|
 
 ---------

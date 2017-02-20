@@ -31,19 +31,13 @@ import java.util.ArrayList;
  */
 public class EndlessGridLayoutActivity extends AppCompatActivity {
 
-    /**
-     * 服务器端一共多少条数据
-     */
+    /**服务器端一共多少条数据*/
     private static final int TOTAL_COUNTER = 64;
 
-    /**
-     * 每一页展示多少条数据
-     */
+    /**每一页展示多少条数据*/
     private static final int REQUEST_COUNT = 10;
 
-    /**
-     * 已经获取到多少条数据了
-     */
+    /**已经获取到多少条数据了*/
     private static int mCurrentCounter = 0;
 
     private LRecyclerView mRecyclerView = null;
@@ -108,6 +102,7 @@ public class EndlessGridLayoutActivity extends AppCompatActivity {
             @Override
             public void onRefresh() {
                 mCurrentCounter = 0;
+                mDataAdapter.clear();
                 requestData();
             }
         });
@@ -125,7 +120,7 @@ public class EndlessGridLayoutActivity extends AppCompatActivity {
             }
         });
 
-        mRecyclerView.setRefreshing(true);
+        mRecyclerView.refresh();
 
     }
 
@@ -155,10 +150,6 @@ public class EndlessGridLayoutActivity extends AppCompatActivity {
 
             switch (msg.what) {
                 case -1:
-                    if (activity.mRecyclerView.isPulldownToRefresh()) {
-                        activity.mDataAdapter.clear();
-                        mCurrentCounter = 0;
-                    }
 
                     int currentSize = activity.mDataAdapter.getItemCount();
 
@@ -178,30 +169,21 @@ public class EndlessGridLayoutActivity extends AppCompatActivity {
 
                     activity.addItems(newList);
 
-                    if (activity.mRecyclerView.isPulldownToRefresh()) {
-                        activity.mRecyclerView.refreshComplete();
-                        activity.notifyDataSetChanged();
-                    } else {
-                        activity.mRecyclerView.loadMoreComplete();
-                    }
+                    activity.mRecyclerView.refreshComplete(10);
 
                     break;
                 case -2:
                     activity.notifyDataSetChanged();
                     break;
                 case -3:
-                    if (activity.mRecyclerView.isPulldownToRefresh()) {
-                        activity.mRecyclerView.refreshComplete();
-                        activity.notifyDataSetChanged();
-                    } else {
-                        activity.mRecyclerView.setOnNetWorkErrorListener(new OnNetWorkErrorListener() {
-                            @Override
-                            public void reload() {
-                                requestData();
-                            }
-                        });
-                    }
-
+                    activity.mRecyclerView.refreshComplete(10);
+                    activity.notifyDataSetChanged();
+                    activity.mRecyclerView.setOnNetWorkErrorListener(new OnNetWorkErrorListener() {
+                        @Override
+                        public void reload() {
+                            requestData();
+                        }
+                    });
                     break;
             }
         }
@@ -225,7 +207,7 @@ public class EndlessGridLayoutActivity extends AppCompatActivity {
                 }
 
                 //模拟一下网络请求失败的情况
-                if (NetBroadcastReceiverUtils.isConnectedToInternet(EndlessGridLayoutActivity.this)) {
+                if(NetBroadcastReceiverUtils.isConnectedToInternet(EndlessGridLayoutActivity.this)) {
                     mHandler.sendEmptyMessage(-1);
                 } else {
                     mHandler.sendEmptyMessage(-3);

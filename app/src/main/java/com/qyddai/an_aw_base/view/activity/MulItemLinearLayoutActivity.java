@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+
 import com.an.base.utils.NetBroadcastReceiverUtils;
 import com.an.base.view.recyclerview.ItemDecoration.DividerDecoration;
 import com.an.base.view.recyclerview.interfaces.OnItemClickListener;
@@ -133,13 +134,13 @@ public class MulItemLinearLayoutActivity extends AppCompatActivity {
         });
 
 
-        mRecyclerView.setRefreshing(true);
+        mRecyclerView.refresh();
 
         mLRecyclerViewAdapter.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
                 MultipleItem item = mMultipleItemAdapter.getDataList().get(position);
-                Toast.makeText(getApplicationContext(), item.getTitle(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MulItemLinearLayoutActivity.this, item.getTitle(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -147,7 +148,7 @@ public class MulItemLinearLayoutActivity extends AppCompatActivity {
             @Override
             public void onItemLongClick(View view, int position) {
                 MultipleItem item = mMultipleItemAdapter.getDataList().get(position);
-                Toast.makeText(getApplicationContext(), "onItemLongClick - " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MulItemLinearLayoutActivity.this, "onItemLongClick - " + item.getTitle(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -182,10 +183,6 @@ public class MulItemLinearLayoutActivity extends AppCompatActivity {
             switch (msg.what) {
 
                 case -1:
-                    if (activity.mRecyclerView.isPulldownToRefresh()) {
-                        activity.mMultipleItemAdapter.clear();
-                        mCurrentCounter = 0;
-                    }
 
                     int currentSize = activity.mMultipleItemAdapter.getItemCount();
 
@@ -197,7 +194,7 @@ public class MulItemLinearLayoutActivity extends AppCompatActivity {
                         }
 
                         MultipleItem item;
-                        if (i % 2 == 0) {
+                        if (i == 2) {
                             item = new MultipleItem(MultipleItem.IMG);
                         } else {
                             item = new MultipleItem(MultipleItem.TEXT);
@@ -207,30 +204,24 @@ public class MulItemLinearLayoutActivity extends AppCompatActivity {
                         newList.add(item);
                     }
 
+
                     activity.addItems(newList);
 
-                    if (activity.mRecyclerView.isPulldownToRefresh()) {
-                        activity.mRecyclerView.refreshComplete();
-                        activity.notifyDataSetChanged();
-                    } else {
-                        activity.mRecyclerView.loadMoreComplete();
-                    }
+                    activity.mRecyclerView.refreshComplete(REQUEST_COUNT);
+                    activity.notifyDataSetChanged();
                     break;
                 case -2:
                     activity.notifyDataSetChanged();
                     break;
                 case -3:
-                    if (activity.mRecyclerView.isPulldownToRefresh()) {
-                        activity.mRecyclerView.refreshComplete();
-                        activity.notifyDataSetChanged();
-                    } else {
-                        activity.mRecyclerView.setOnNetWorkErrorListener(new OnNetWorkErrorListener() {
-                            @Override
-                            public void reload() {
-                                requestData();
-                            }
-                        });
-                    }
+                    activity.mRecyclerView.refreshComplete(REQUEST_COUNT);
+                    activity.notifyDataSetChanged();
+                    activity.mRecyclerView.setOnNetWorkErrorListener(new OnNetWorkErrorListener() {
+                        @Override
+                        public void reload() {
+                            requestData();
+                        }
+                    });
                     break;
                 default:
                     break;

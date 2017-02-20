@@ -30,6 +30,7 @@ import com.qyddai.an_aw_base.view.activity.EndlessLinearLayoutActivity;
 import com.qyddai.an_aw_base.view.activity.EndlessStaggeredGridLayoutActivity;
 import com.qyddai.an_aw_base.view.activity.ExpandableRecyclerViewOneActivity;
 import com.qyddai.an_aw_base.view.activity.LinearLayoutActivity;
+import com.qyddai.an_aw_base.view.activity.LinearLayoutDelActivity;
 import com.qyddai.an_aw_base.view.activity.MulItemLinearLayoutActivity;
 import com.qyddai.an_aw_base.view.activity.PartialRefreshActivity;
 import com.qyddai.an_aw_base.view.activity.SectionAnimalActivity;
@@ -92,6 +93,7 @@ public class LRecyclerViewActivity extends AppCompatActivity {
         ItemModel item10 = new ItemModel();
         ItemModel item11 = new ItemModel();
         ItemModel item12 = new ItemModel();
+        ItemModel item13 = new ItemModel();
         item1.title = "SectionLayoutActivity";
         item2.title = "SectionAnimalActivity";
         item3.title = "SwipeMenuActivity=SwipeDeleteActivity";
@@ -104,6 +106,7 @@ public class LRecyclerViewActivity extends AppCompatActivity {
         item10.title = "CollapsingToolbarLayoutActivity";
         item11.title = "ExpandableRecyclerViewOneActivity";
         item12.title = "PartialRefreshActivity(局部刷新)";
+        item13.title = "LinearLayoutDelActivity";
         dataList.add(item1);
         dataList.add(item2);
         dataList.add(item3);
@@ -116,6 +119,7 @@ public class LRecyclerViewActivity extends AppCompatActivity {
         dataList.add(item10);
         dataList.add(item11);
         dataList.add(item12);
+        dataList.add(item13);
 
         mCurrentCounter = dataList.size();
 
@@ -175,7 +179,6 @@ public class LRecyclerViewActivity extends AppCompatActivity {
                     startActivity(new Intent(LRecyclerViewActivity.this, SectionAnimalActivity.class));
                 }
                 if (item.title.equals("SwipeMenuActivity")) {
-
                 }
                 if (position == 3) {
                     startActivity(new Intent(LRecyclerViewActivity.this, EndlessLinearLayoutActivity.class));
@@ -204,6 +207,9 @@ public class LRecyclerViewActivity extends AppCompatActivity {
                 if (position == 11) {
                     startActivity(new Intent(LRecyclerViewActivity.this, PartialRefreshActivity.class));
                 }
+                if (position == 12) {
+                    startActivity(new Intent(LRecyclerViewActivity.this, LinearLayoutDelActivity.class));
+                }
             }
 
         });
@@ -218,7 +224,6 @@ public class LRecyclerViewActivity extends AppCompatActivity {
             @Override
             public void run() {
                 super.run();
-
                 try {
                     Thread.sleep(800);
                 } catch (InterruptedException e) {
@@ -252,10 +257,6 @@ public class LRecyclerViewActivity extends AppCompatActivity {
             switch (msg.what) {
 
                 case -1:
-                    if (activity.mRecyclerView.isPulldownToRefresh()) {
-                        activity.mDataAdapter.clear();
-                        mCurrentCounter = 0;
-                    }
 
                     int currentSize = activity.mDataAdapter.getItemCount();
 
@@ -272,6 +273,7 @@ public class LRecyclerViewActivity extends AppCompatActivity {
                     ItemModel item10 = new ItemModel();
                     ItemModel item11 = new ItemModel();
                     ItemModel item12 = new ItemModel();
+                    ItemModel item13 = new ItemModel();
                     item1.title = "SectionLayoutActivity";
                     item2.title = "SectionAnimalActivity";
                     item3.title = "SwipeMenuActivity";
@@ -284,6 +286,7 @@ public class LRecyclerViewActivity extends AppCompatActivity {
                     item10.title = "CollapsingToolbarLayoutActivity";
                     item11.title = "ExpandableRecyclerViewOneActivity";
                     item12.title = "PartialRefreshActivity(局部刷新)";
+                    item13.title = "LinearLayoutDelActivity";
 
                     //模拟组装10个数据
                     ArrayList<ItemModel> newList = new ArrayList<>();
@@ -300,6 +303,7 @@ public class LRecyclerViewActivity extends AppCompatActivity {
                     newList.add(item10);
                     newList.add(item11);
                     newList.add(item12);
+                    newList.add(item13);
 
                     for (int i = 0; i < 10; i++) {
                         if (newList.size() + currentSize >= TOTAL_COUNTER) {
@@ -316,29 +320,21 @@ public class LRecyclerViewActivity extends AppCompatActivity {
 
                     activity.addItems(newList);
 
-                    if (activity.mRecyclerView.isPulldownToRefresh()) {
-                        activity.mRecyclerView.refreshComplete();
-                        activity.notifyDataSetChanged();
-                    } else {
-                        activity.mRecyclerView.loadMoreComplete();
-                    }
-
+                    activity.mRecyclerView.refreshComplete(REQUEST_COUNT);
+                    activity.notifyDataSetChanged();
                     break;
                 case -2:
                     activity.notifyDataSetChanged();
                     break;
                 case -3:
-                    if (activity.mRecyclerView.isPulldownToRefresh()) {
-                        activity.mRecyclerView.refreshComplete();
-                        activity.notifyDataSetChanged();
-                    } else {
-                        activity.mRecyclerView.setOnNetWorkErrorListener(new OnNetWorkErrorListener() {
-                            @Override
-                            public void reload() {
-                                requestData();
-                            }
-                        });
-                    }
+                    activity.mRecyclerView.refreshComplete(REQUEST_COUNT);
+                    activity.notifyDataSetChanged();
+                    activity.mRecyclerView.setOnNetWorkErrorListener(new OnNetWorkErrorListener() {
+                        @Override
+                        public void reload() {
+                            requestData();
+                        }
+                    });
                     break;
                 default:
                     break;

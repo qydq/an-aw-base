@@ -17,6 +17,7 @@
     <dimen name="DimenNativeNationalSMax">68dp</dimen><!--超大大按钮类高度-->
 
     <dimen name="DimenMarginTopMax">200dp</dimen><!--为空，如null图片上面大间距,建议写死-->
+    <dimen name="DimenMarginTop">145dp</dimen>
     <dimen name="DimenMarginTopSmall">120dp</dimen><!--为空，如null图片上面小间距，建议写死-->
 
     <dimen name="CommDimenMargin">16dp</dimen><!--通用的左右上下间距参考-->
@@ -26,6 +27,7 @@
     <dimen name="CommDimenIconSmall">20dp</dimen><!--小图标-->
     <dimen name="CommDimenIconSSmall">16dp</dimen><!--超级小图标-->
 
+    <dimen name="CommDimenBarIconMax">36dp</dimen><!--（图标）参考大小-->
     <dimen name="CommDimenBarIcon">28dp</dimen><!--（图标）参考大小-->
     <dimen name="CommDimenBarIconSmall">21dp</dimen><!--（图标）参考大小-->
 

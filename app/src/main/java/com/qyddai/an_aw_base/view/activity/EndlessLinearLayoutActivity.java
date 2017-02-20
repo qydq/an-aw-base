@@ -27,7 +27,6 @@ import com.an.base.view.recyclerview.recyclerview.ProgressStyle;
 import com.qyddai.an_aw_base.R;
 import com.qyddai.an_aw_base.model.adapter.DataAdapter;
 import com.qyddai.an_aw_base.model.entity.ItemModel;
-import com.qyddai.an_aw_base.utils.ListViewDecoration;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -35,16 +34,22 @@ import java.util.ArrayList;
 /**
  * 带HeaderView的分页加载LinearLayout RecyclerView
  */
-public class EndlessLinearLayoutActivity extends AppCompatActivity{
+public class EndlessLinearLayoutActivity extends AppCompatActivity {
     private static final String TAG = "lzx";
 
-    /**服务器端一共多少条数据*/
+    /**
+     * 服务器端一共多少条数据
+     */
     private static final int TOTAL_COUNTER = 34;//如果服务器没有返回总数据或者总页数，这里设置为最大值比如10000，什么时候没有数据了根据接口返回判断
 
-    /**每一页展示多少条数据*/
+    /**
+     * 每一页展示多少条数据
+     */
     private static final int REQUEST_COUNT = 10;
 
-    /**已经获取到多少条数据了*/
+    /**
+     * 已经获取到多少条数据了
+     */
     private static int mCurrentCounter = 0;
 
     private LRecyclerView mRecyclerView = null;
@@ -67,14 +72,13 @@ public class EndlessLinearLayoutActivity extends AppCompatActivity{
         mLRecyclerViewAdapter = new LRecyclerViewAdapter(mDataAdapter);
         mRecyclerView.setAdapter(mLRecyclerViewAdapter);
 
-//        DividerDecoration divider = new DividerDecoration.Builder(this)
-//                .setHeight(R.dimen.default_divider_height)
-//                .setPadding(R.dimen.default_divider_padding)
-//                .setColorResource(R.color.CommMainBgTips)
-//                .build();
-        ListViewDecoration divider = new ListViewDecoration();
+        DividerDecoration divider = new DividerDecoration.Builder(this)
+                .setHeight(R.dimen.default_divider_height)
+                .setPadding(R.dimen.default_divider_padding)
+                .setColorResource(R.color.split)
+                .build();
 
-        mRecyclerView.setHasFixedSize(true);
+        //mRecyclerView.setHasFixedSize(true);
         mRecyclerView.addItemDecoration(divider);
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -84,7 +88,7 @@ public class EndlessLinearLayoutActivity extends AppCompatActivity{
         mRecyclerView.setLoadingMoreProgressStyle(ProgressStyle.BallSpinFadeLoader);
 
         //add a HeaderView
-        final View header = LayoutInflater.from(this).inflate(R.layout.base_recyclerview_header,(ViewGroup)findViewById(android.R.id.content), false);
+        final View header = LayoutInflater.from(this).inflate(R.layout.base_recyclerview_header, (ViewGroup) findViewById(android.R.id.content), false);
         mLRecyclerViewAdapter.addHeaderView(header);
 
         mRecyclerView.setOnRefreshListener(new OnRefreshListener() {
@@ -95,6 +99,7 @@ public class EndlessLinearLayoutActivity extends AppCompatActivity{
                 mLRecyclerViewAdapter.notifyDataSetChanged();//fix bug:crapped or attached views may not be recycled. isScrap:false isAttached:true
                 mCurrentCounter = 0;
                 requestData();
+
             }
         });
 
@@ -135,20 +140,23 @@ public class EndlessLinearLayoutActivity extends AppCompatActivity{
         });
 
         //设置头部加载颜色
-        mRecyclerView.setHeaderViewColor(R.color.colorAccent, R.color.CommPauseFont ,R.color.CommColorLineClicked);
+        mRecyclerView.setHeaderViewColor(R.color.colorAccent, R.color.dark, android.R.color.white);
         //设置底部加载颜色
-        mRecyclerView.setFooterViewColor(R.color.colorAccent, R.color.CommPauseFont ,R.color.CommColorLineClicked);
+        mRecyclerView.setFooterViewColor(R.color.colorAccent, R.color.dark, android.R.color.white);
         //设置底部加载文字提示
-        mRecyclerView.setFooterViewHint("拼命加载中","我是有底线的","网络不给力啊，点击再试一次吧");
+        mRecyclerView.setFooterViewHint("拼命加载中", "已经全部为你呈现了", "网络不给力啊，点击再试一次吧");
 
-        mRecyclerView.setRefreshing(true);
+        mRecyclerView.refresh();
 
         mLRecyclerViewAdapter.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                ItemModel item = mDataAdapter.getDataList().get(position);
-                Toast.makeText(getApplicationContext(),item.title,Toast.LENGTH_SHORT).show();
-                mDataAdapter.remove(position);
+                if (mDataAdapter.getDataList().size() > position) {
+                    ItemModel item = mDataAdapter.getDataList().get(position);
+                    Toast.makeText(getApplicationContext(), item.title, Toast.LENGTH_SHORT).show();
+                    mDataAdapter.remove(position);
+                }
+
             }
 
         });
@@ -157,10 +165,9 @@ public class EndlessLinearLayoutActivity extends AppCompatActivity{
             @Override
             public void onItemLongClick(View view, int position) {
                 ItemModel item = mDataAdapter.getDataList().get(position);
-                Toast.makeText(getApplicationContext(),"onItemLongClick - "+ item.title,Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "onItemLongClick - " + item.title, Toast.LENGTH_SHORT).show();
             }
         });
-
 
 
     }
@@ -193,10 +200,6 @@ public class EndlessLinearLayoutActivity extends AppCompatActivity{
             switch (msg.what) {
 
                 case -1:
-                    if(activity.mRecyclerView.isPulldownToRefresh()){
-                        activity.mDataAdapter.clear();
-                        mCurrentCounter = 0;
-                    }
 
                     int currentSize = activity.mDataAdapter.getItemCount();
 
@@ -216,29 +219,18 @@ public class EndlessLinearLayoutActivity extends AppCompatActivity{
 
                     activity.addItems(newList);
 
-                    if(activity.mRecyclerView.isPulldownToRefresh()){
-                        activity.mRecyclerView.refreshComplete();
-                        activity.notifyDataSetChanged();
-                    }else {
-                        activity.mRecyclerView.loadMoreComplete();
-                    }
+                    activity.mRecyclerView.refreshComplete(REQUEST_COUNT);
 
                     break;
-                case -2:
-                    activity.notifyDataSetChanged();
-                    break;
                 case -3:
-                    if(activity.mRecyclerView.isPulldownToRefresh()){
-                        activity.mRecyclerView.refreshComplete();
-                        activity.notifyDataSetChanged();
-                    }else {
-                        activity.mRecyclerView.setOnNetWorkErrorListener(new OnNetWorkErrorListener() {
-                            @Override
-                            public void reload() {
-                                requestData();
-                            }
-                        });
-                    }
+                    activity.mRecyclerView.refreshComplete(REQUEST_COUNT);
+                    activity.notifyDataSetChanged();
+                    activity.mRecyclerView.setOnNetWorkErrorListener(new OnNetWorkErrorListener() {
+                        @Override
+                        public void reload() {
+                            requestData();
+                        }
+                    });
 
                     break;
                 default:
@@ -265,7 +257,7 @@ public class EndlessLinearLayoutActivity extends AppCompatActivity{
                 }
 
                 //模拟一下网络请求失败的情况
-                if(NetBroadcastReceiverUtils.isConnectedToInternet(EndlessLinearLayoutActivity.this)) {
+                if (NetBroadcastReceiverUtils.isConnectedToInternet(EndlessLinearLayoutActivity.this)) {
                     mHandler.sendEmptyMessage(-1);
                 } else {
                     mHandler.sendEmptyMessage(-3);
