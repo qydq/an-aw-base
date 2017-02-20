@@ -411,12 +411,12 @@ http://drakeet.me/android-studio
 ## 编译及相关SDK配置。
 
 		android {
-			compileSdkVersion 24
-			buildToolsVersion "24.0.2"
+			compileSdkVersion 25
+			buildToolsVersion "24.0.3"
 
 			defaultConfig {
 			minSdkVersion 19
-			targetSdkVersion 24
+			targetSdkVersion 25
 			versionCode 1
 			versionName "1.0"
 
@@ -555,3 +555,18 @@ sample主要参考，refreshlayout,swipelayout,recyclerview包下面。
 tips:针对recyclerview添加了如下辅助，ListBaseAdapter,MultiAdapter,MultiItemEntity,SuperViewHolder。
 
 具体的使用会在后面更新两篇博客。
+
+## 2017/02/20
+
+我只能把亲亲小月写进代码里面。我想她，很想很想。
+
+`compile 'com.github.qydq:an-aw-base:0.2.1'`
+
+（1）完善
+
+完善an框架sample。LRecyclerView fix bug，优化。
+
+
+（2）增加
+
+无增加内容
