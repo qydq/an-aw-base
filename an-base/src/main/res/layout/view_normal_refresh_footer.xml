@@ -19,6 +19,6 @@
         android:layout_marginBottom="15dp"
         android:layout_marginTop="15dp"
         android:text="@string/listview_loading"
-        android:textColor="@color/CommPauseFont"
+        android:textColor="@color/CommTxtPauseColor"
         android:textSize="12sp" />
 </LinearLayout>

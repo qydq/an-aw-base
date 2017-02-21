@@ -129,6 +129,10 @@
             android:name=".view.activity.RefreshListViewActivity"
             android:label="@string/SectionAnimalActivity"
             android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.YYTipsActivity"
+            android:label="@string/SectionAnimalActivity"
+            android:theme="@style/NoBarTheme" />
 
         <activity
             android:name=".view.activity.RefreshRecyclerViewActivity"

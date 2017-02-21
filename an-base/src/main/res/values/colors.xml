@@ -269,12 +269,21 @@
     <color name="CommColorTxtTitleNight">#ffffff</color><!--文本标题颜色=可等于主色CommTxtMainColor=#c2c2c2-->
     <color name="CommColorTxtTitleNightClicked">#38b7ea</color><!--文本标题选择颜色-->
 
-    <color name="CommPauseFont">#777</color><!--暂时使用的字体颜色-->
-    <color name="CommPauseBg">#DC143C</color><!--暂时使用的背景颜色-->
+    <color name="CommTxtPauseColor">#777</color><!--暂时使用的字体颜色-->
+    <color name="CommBgPauseColor">#DC143C</color><!--暂时使用的背景颜色-->
 
-    <color name="CommTipsColor">#A9A9A9</color><!--提示文字，如网络错误，为空的提示-->
-    <color name="CommTipsColorClicked">#25000000</color><!--提示文字，tips第二中颜色，如网络错误，为空-->
+    <color name="CommTxtTipsColor">#A9A9A9</color><!--提示文字，如网络错误，为空的提示-->
+    <color name="CommTxtTipsColorClicked">#25000000</color><!--提示文字，tips第二中颜色，如网络错误，为空-->
 
-    <color name="CommBaseHeadviewTxtColor">#fff</color><!--base_headview文字颜色-->
-    <color name="CommBaseHeadviewTxtColorClicked">#8a8a8a</color><!--base_headview文字点击颜色-->
+    <color name="CommTxtHeadviewColor">#fff</color><!--base_headview文字颜色-->
+    <color name="CommTxtHeadviewColorClicked">#8a8a8a</color><!--base_headview文字点击颜色-->
+
+    <color name="CommBarBgColor">#8a8a8a</color><!--通用Bar背景颜色颜色-->
+    <color name="CommBarBgColorClicked">#8a8a8a</color><!--通用Bar背景颜色点击颜色-->
+
+    <color name="CommBgPickerViewColor">#fff</color><!--pickerview上面的背景颜色-->
+    <color name="CommBgPickerViewColorTips">#fff</color><!--pickerview下面的背景颜色-->
+
+    <color name="CommTxtPickerViewColor">#3F51B5</color>
+    <color name="CommTxtPickerViewColorClick">#333333</color>
 </resources>

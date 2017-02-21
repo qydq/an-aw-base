@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:color="@color/CommBaseHeadviewTxtColorClicked" android:state_pressed="true" />
-    <item android:color="@color/CommBaseHeadviewTxtColorClicked" android:state_focused="true" />
-    <item android:color="@color/CommBaseHeadviewTxtColor" />
+    <item android:color="@color/CommTxtHeadviewColorClicked" android:state_pressed="true" />
+    <item android:color="@color/CommTxtHeadviewColorClicked" android:state_focused="true" />
+    <item android:color="@color/CommTxtHeadviewColor" />
 </selector>

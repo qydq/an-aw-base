@@ -18,7 +18,7 @@
         android:layout_marginLeft="@dimen/DimenMargin05"
         android:layout_marginRight="@dimen/DimenPadding10"
         android:text="@string/footer_text"
-        android:textColor="@color/CommPauseFont"
+        android:textColor="@color/CommTxtPauseColor"
         android:textSize="@dimen/CommDimenTxtContext"
         android:textStyle="bold" />
 

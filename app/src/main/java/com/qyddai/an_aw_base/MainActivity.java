@@ -1,6 +1,7 @@
 package com.qyddai.an_aw_base;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,8 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.qyddai.an_aw_base.model.adapter.MainItemAdapter;
 import com.qyddai.an_aw_base.utils.ListViewDecoration;
@@ -15,6 +18,7 @@ import com.qyddai.an_aw_base.view.LRecyclerViewActivity;
 import com.qyddai.an_aw_base.view.LittleTrickActivity;
 import com.qyddai.an_aw_base.view.RefreshLayoutActivity;
 import com.qyddai.an_aw_base.view.SwipeRecyclerActivity;
+import com.qyddai.an_aw_base.view.activity.YYTipsActivity;
 
 import java.util.Arrays;
 import java.util.List;
@@ -39,11 +43,10 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
                 startActivity(new Intent(this, RefreshLayoutActivity.class));
                 break;
             case 3:
-//                startActivity(new Intent(this, EndlessLinearLayoutActivity.class));
                 startActivity(new Intent(this, LRecyclerViewActivity.class));
                 break;
             case 4:
-//                startActivity(new Intent(this, ListDragMenuActivity.class));
+                startActivity(new Intent(this, YYTipsActivity.class));
                 break;
             case 5:
 //                startActivity(new Intent(this, GridDragMenuActivity.class));
@@ -77,6 +80,25 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
         mMainItemAdapter = new MainItemAdapter(titles, descriptions);
         mMainItemAdapter.setOnItemClickListener(this);
         recyclerView.setAdapter(mMainItemAdapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        this.getMenuInflater().inflate(R.menu.menu_recyclerview_setion, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        if (item.getItemId() == R.id.action_about) {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/qydq/an-aw-base/blob/master/README.md"));
+            this.startActivity(intent);
+            return true;
+        }
+        return true;
     }
 
 }
