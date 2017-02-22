@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/base_pickerview_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DimenNativeNationalSmall" />
+
+    <LinearLayout
+        android:id="@+id/optionspicker"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/CommBgPickerViewColor"
+        android:orientation="horizontal">
+
+        <com.an.base.view.tips.pickerview.widget.wheelview.WheelView
+            android:id="@+id/options1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <com.an.base.view.tips.pickerview.widget.wheelview.WheelView
+            android:id="@+id/options2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.an.base.view.tips.pickerview.widget.wheelview.WheelView
+            android:id="@+id/options3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

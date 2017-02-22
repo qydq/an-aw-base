@@ -1,6 +1,8 @@
 package com.qyddai.an_aw_base;
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,6 +13,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.qyddai.an_aw_base.model.adapter.MainItemAdapter;
 import com.qyddai.an_aw_base.utils.ListViewDecoration;
@@ -98,7 +101,23 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
             this.startActivity(intent);
             return true;
         }
+        if (item.getItemId() == R.id.action_clear_cache) {
+            Toast.makeText(this, getVersion(), Toast.LENGTH_SHORT).show();
+        }
         return true;
+    }
+
+    //获取app当前的版本号
+    public String getVersion() {
+        try {
+            PackageManager manager = this.getPackageManager();
+            PackageInfo info = manager.getPackageInfo(this.getPackageName(), 0);
+            String version = info.versionName;
+            return version;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return getString(R.string.StringNoVersion);
+        }
     }
 
 }

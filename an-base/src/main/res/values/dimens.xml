@@ -1,7 +1,9 @@
 <resources>
     <!--sunshuntao 2016-11-16 personal-standard;no changes-->
+    <dimen name="DimenMargin01">1dp</dimen><!--5特殊间距-->
     <dimen name="DimenMargin05">5dp</dimen><!--5特殊间距-->
     <dimen name="DimenPadding05">5dp</dimen><!--8特殊间距-->
+    <dimen name="DimenPadding01">1dp</dimen><!--8特殊间距-->
     <dimen name="DimenMargin08">8dp</dimen><!--8特殊间距-->
     <dimen name="DimenPadding08">8dp</dimen><!--8特殊间距-->
     <dimen name="DimenMargin10">10dp</dimen><!--10特殊间距-->
@@ -13,6 +15,7 @@
 
     <dimen name="DimenNativeNational">48dp</dimen><!--类按钮的高度-->
     <dimen name="DimenNativeNationalSmall">40dp</dimen><!--类按钮的高度-->
+    <dimen name="DimenNativeNationalSSmall">36dp</dimen><!--类按钮的高度-->
     <dimen name="DimenNativeNationalMax">60dp</dimen><!--类按钮的高度-->
     <dimen name="DimenNativeNationalSMax">68dp</dimen><!--超大大按钮类高度-->
 
@@ -21,6 +24,7 @@
     <dimen name="DimenMarginTopSmall">120dp</dimen><!--为空，如null图片上面小间距，建议写死-->
 
     <dimen name="CommDimenMargin">16dp</dimen><!--通用的左右上下间距参考-->
+    <dimen name="CommDimenPadding">16dp</dimen><!--通用的左右上下间距参考-->
     <!--内容图标参考-->
     <dimen name="CommDimenIconSMax">24dp</dimen><!--超级大图标-->
     <dimen name="CommDimenIconMax">22dp</dimen><!--大图标-->

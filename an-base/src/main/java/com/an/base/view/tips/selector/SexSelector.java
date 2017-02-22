@@ -1,8 +1,7 @@
-package com.an.base.view.tips;
+package com.an.base.view.tips.selector;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
@@ -14,7 +13,6 @@ import com.an.base.utils.DScreenUtil;
 import com.an.base.view.widget.PickerSimpleView;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -59,7 +57,7 @@ public class SexSelector {
             seletorDialog = new Dialog(context, R.style.time_dialog);
             seletorDialog.setCancelable(false);
             seletorDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-            seletorDialog.setContentView(R.layout.base_pickerview_sex_selector);
+            seletorDialog.setContentView(R.layout.base_selector_sex_selector);
             Window window = seletorDialog.getWindow();
             window.setGravity(Gravity.BOTTOM);
             WindowManager.LayoutParams lp = window.getAttributes();

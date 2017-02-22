@@ -145,10 +145,14 @@ aN¿ò¼ÜÖ§³Öandroid 4.4+Ê¹ÓÃ£¬¼æÈİĞÔ²âÊÔÍ¨¹ı£¬»ªÎªAndroid4.4 £¬Ğ¡Ã×Android5.1£¬ÈıĞ
  
 ±¸×¢£ºĞÂÔö£¨²»Ó°ÏìÊ¹ÓÃ£©transitionÖ§³ÖMD¶¯»­£¨[TransitionÓÃ·¨Çëµã»÷-Ò»Æ¬·ãÒ¶_Áõ³¬](http://blog.csdn.net/qq_23547831/article/details/51821159)£©
 
-+ **an¿ò¼ÜÌá¹©Í¨ÓÃµÄPickerView•rég£¬ÈÕÆÚßx“ñ¿Ø¼ş¡£ÈçÍ¼**
++ **an¿ò¼ÜÌá¹©Í¨ÓÃµÄPickerView•rég£¬ÈÕÆÚßx“ñ¿Ø¼ş¡££¨Á½ÖÖ·½·¨Ê¹ÓÃ£©ÈçÍ¼**
 
- <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_tips.png" width=280 height=480 /> 
+2017Äê2ÔÂ20ÈÕ ÀÏÆÅ ÔõÃ´°ì°¡ ±ğÀë¿ªÎÒ ºÃ²»ºÃ¡£
 
+ <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_tips.png" width=280 height=480 />  <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_tips_ios.png" width=280 height=480 /> 
+
+±¸×¢£ºÊ¹ÓÃ½éÉÜ´ı¸üĞÂÖÁÖªºõ¡£ÔİÊ±¿ÉÒÔ²Î¿¼![YYTipsActivity](https://github.com/qydq/an-aw-base/blob/master/app/src/main/java/com/qyddai/an_aw_base/view/activity/YYTipsActivity.java)
+ 
 ---------
 
 # 3. Ê¹ÓÃ·½·¨£¨´úÂë£©
@@ -574,3 +578,33 @@ tips:Õë¶ÔrecyclerviewÌí¼ÓÁËÈçÏÂ¸¨Öú£¬ListBaseAdapter,MultiAdapter,MultiItemEntit
 £¨2£©Ôö¼Ó
 
 ÎŞÔö¼ÓÄÚÈİ
+
+## 2017/02/22
+
+ÀÏÆÅ Äã±ğÀë¿ªÎÒÀ²£¬ÎÒÏëÄã£¬ÇóÄãÀ²¡£
+
+`compile 'com.github.qydq:an-aw-base:0.2.2'`
+
+£¨1£©ÍêÉÆ
+
+ÍêÉÆan¿ò¼Üsample¡£LRecyclerView fix bug£¬ÓÅ»¯´úÂë£¬ÈçÊôĞÔÊ²Ã´µÄ£¬Íê³ÉÑ¡Ôñ¿Ø¼şµÄdemo¡£¹ØÓÚÎÒÃÇ£¬¼ì²é¸üĞÂ¡£
+
+
+£¨2£©Ôö¼Ó
+
+Ôö¼ÓandroidÖĞ¿ÉÄÜÓÃµ½µÄ¿Ø¼ş£¬Ìá¹©ÁËÁ½ÖÖÑ¡ÔñÆ÷¡£
+
+
+ÖØÒªÏÂÒ»²½¹¤×÷ÄÚÈİ£¬×¼±¸ÔÚÕâ¸öÏîÄ¿µÄ»ù´¡ÉÏ£¨ÎªÇ×°®µÄ×ÏÏ¼¹«Ö÷£¬Ğ¡ÔÂÍ¬Ñ§£©¿ª·¢Ò»¿î¼´Ê±Í¨ĞÅÈí¼ş£¬Ï£ÍûÀÏÆÅÄÜ¹»Ï²»¶£¬Ò²Ï£ÍûËıÄÜ¹»»ØÀ´¡£
+
+Ö÷ÒªÊµÏÖµÄ¹¦ÄÜÓ¦¸Ã¾ß±¸
+
+1.»ù±¾µÄÁÄÌì¹¦ÄÜ£¬·şÎñÆ÷£¬£¨²ÉÓÃ¹«Ë¾£¬ĞèÒª¼¼ÇÉ£©¡£
+
+2.°æ±¾¸üĞÂ¹¦ÄÜ¡£
+
+3.ÍÆËÍµÄ¹¦ÄÜ¡£
+
+
+### ÕÅÂ¶ÔÂ  ÕÅÂ¶ÔÂ ÕÅÂ¶ÔÂ  
+

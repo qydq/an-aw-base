@@ -131,8 +131,7 @@
             android:theme="@style/NoBarTheme" />
         <activity
             android:name=".view.activity.YYTipsActivity"
-            android:label="@string/SectionAnimalActivity"
-            android:theme="@style/NoBarTheme" />
+            android:label="@string/SectionAnimalActivity" />
 
         <activity
             android:name=".view.activity.RefreshRecyclerViewActivity"

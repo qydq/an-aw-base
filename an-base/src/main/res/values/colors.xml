@@ -258,6 +258,7 @@
     <color name="CommColorTxtTitleClicked">#38b7ea</color><!--文本标题选择颜色-->
 
     <color name="CommColorLine">#aaa</color><!--分割线的颜色-->
+    <color name="CommColorLineTips">#d5d5d5</color><!--分割线的颜色-->
     <color name="CommColorLineClicked">#DDDDDD</color><!--分割线选择颜色-->
     <color name="CommColorBorder">#A9A9A9</color><!--md,CommColorTransparentClicked--><!--边框颜色-->
     <color name="CommColorBorderClicked">#25000000</color><!--md,CommColorTransparent边框颜色选择-->
@@ -282,8 +283,16 @@
     <color name="CommBarBgColorClicked">#8a8a8a</color><!--通用Bar背景颜色点击颜色-->
 
     <color name="CommBgPickerViewColor">#fff</color><!--pickerview上面的背景颜色-->
-    <color name="CommBgPickerViewColorTips">#fff</color><!--pickerview下面的背景颜色-->
+    <color name="CommBgPickerViewColorTips">#f5f5f5</color><!--pickerview下面的背景颜色-->
+    <color name="CommBgPickerViewColorClicked">#fff</color><!--pickerview下面的背景颜色-->
 
-    <color name="CommTxtPickerViewColor">#3F51B5</color>
-    <color name="CommTxtPickerViewColorClick">#333333</color>
+    <color name="CommTxtPickerViewColor">#057dff</color>
+    <color name="CommTxtPickerViewColorClicked">#c2daf5</color>
+
+    <color name="pickerview_timebtn_nor">#057dff</color>
+    <color name="pickerview_timebtn_pre">#c2daf5</color>
+    <color name="pickerview_topbar_title">#000000</color>
+    <color name="pickerview_wheelview_textcolor_out">#a8a8a8</color>
+    <color name="pickerview_wheelview_textcolor_center">#2a2a2a</color>
+    <color name="bgColor_overlay">#60000000</color>
 </resources>

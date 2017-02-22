@@ -1,4 +1,4 @@
-package com.an.base.view.tips;
+package com.an.base.view.tips.selector;
 
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
@@ -128,7 +128,7 @@ public class TimeSelector {
             seletorDialog = new Dialog(context, R.style.time_dialog);
             seletorDialog.setCancelable(false);
             seletorDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-            seletorDialog.setContentView(R.layout.base_pickerview_time_selector);
+            seletorDialog.setContentView(R.layout.base_selector_time_selector);
             Window window = seletorDialog.getWindow();
             window.setGravity(Gravity.BOTTOM);
             WindowManager.LayoutParams lp = window.getAttributes();

@@ -3,14 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/CommColorNightBackground"
     android:orientation="vertical">
-
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
+        android:padding="15dp"
+        android:text="向右滑動可以返回到上個界面哦"
+        android:textColor="@color/CommBgPickerViewColor"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:onClick="showTime"
         android:padding="15dp"
         android:text="日期选择Click"
@@ -21,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:onClick="showDigitWeight"
         android:padding="15dp"
         android:text="体重选择Click"
@@ -32,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:onClick="showDigitHeight"
         android:padding="15dp"
         android:text="身高选择Click"
@@ -43,10 +53,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:onClick="showDigitSex"
         android:padding="15dp"
         android:text="性别选择Click"
+        android:textColor="@color/colorPrimary"
+        android:textSize="21sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:onClick="showTimeiOS"
+        android:padding="15dp"
+        android:text="仿iOS日期选择Click"
+        android:textColor="@color/colorPrimary"
+        android:textSize="21sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:onClick="showCityiOS"
+        android:padding="15dp"
+        android:text="仿iOS城市选择Click"
+        android:textColor="@color/colorPrimary"
+        android:textSize="21sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:onClick="showSexiOS"
+        android:padding="15dp"
+        android:text="仿iOS性别选择Click"
         android:textColor="@color/colorPrimary"
         android:textSize="21sp" />
 </LinearLayout>

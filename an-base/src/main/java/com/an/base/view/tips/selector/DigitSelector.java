@@ -1,4 +1,4 @@
-package com.an.base.view.tips;
+package com.an.base.view.tips.selector;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -121,7 +121,7 @@ public class DigitSelector {
             seletorDialog = new Dialog(context, R.style.time_dialog);
             seletorDialog.setCancelable(false);
             seletorDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-            seletorDialog.setContentView(R.layout.base_pickerview_digit_selector);
+            seletorDialog.setContentView(R.layout.base_selector_digit_selector);
             Window window = seletorDialog.getWindow();
             window.setGravity(Gravity.BOTTOM);
             WindowManager.LayoutParams lp = window.getAttributes();
