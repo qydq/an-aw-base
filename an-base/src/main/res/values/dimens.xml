@@ -36,7 +36,8 @@
     <dimen name="CommDimenBarIconSmall">21dp</dimen><!--（图标）参考大小-->
 
     <dimen name="CommDimenBarTitleMax">19sp</dimen><!--bar，文本字体大小参考-->
-    <dimen name="CommDimenBarTitleSmall">18sp</dimen><!--bar，文本字体大小参考-->
+    <dimen name="CommDimenBarTitleSmall">17sp</dimen><!--bar，文本字体大小参考 小-->
+    <dimen name="CommDimenBarTitleSSmall">14sp</dimen><!--bar，文本字体大小参考 超小-->
 
     <dimen name="CommDimenTxtMax">20sp</dimen><!--文本大号字体参考-->
     <dimen name="CommDimenTxtTitle">17sp</dimen><!--文本标题参考-->

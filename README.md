@@ -304,7 +304,7 @@ AnAppTheme an框架默认的风格。
 
 [aN框架示例-XHttpsActivity.java（含注解，ContentVIew，）](https://raw.githubusercontent.com/qydq/an-aw-base/master/app/src/main/java/com/qyddai/an_aw_base/XHttpsActivity.java)
 
-+ **选择器**
++ **选择器（已省略yy前缀）**
 	
 |选择器名称|背景说明|边框|圆角|
 |:---------|:-------|:---|---:|
@@ -314,6 +314,7 @@ AnAppTheme an框架默认的风格。
 |drawable_selector_md_shape_oppose|CommColorOppose<br>CommColorOpposeClicked<br>CommColorOpposeRipple|CommColorBorder<br>CommColorBorderClicked|2dp|
 |drawable_selector_txt|CommBaseHeadviewTxtColorClicked<br>CommBaseHeadviewTxtColor|无|无|
 |drawable_selector_txt_oppose|CommBaseHeadviewTxtColor<br>CommBaseHeadviewTxtColorClicked|无|无|
+|drawable_selector_txt_pickerview|CommTxtPickerViewColorClicked<br>CommTxtPickerViewColor|无|无|
 |drawable_selector_ll_shape|CommEndColor<br>CommStartColor<br>CommMainBgClicked<br>CommMainBg|CommColorLineClicked<br>CommColorLine|2dp|
 
 ---------
