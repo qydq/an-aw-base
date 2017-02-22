@@ -4,7 +4,7 @@
 
 她离开。该框架已经一个多月没有维护了，而今重拾记忆，只为情故 。. 。
 
-写给张露月的一篇文章
+写给张露月的一篇文章（已手抄录）
 
 [你存活在我记忆最原始的荒原，可淡不可忘](https://github.com/qydq/an-aw-base/raw/master/app/app-release.apk)
 
