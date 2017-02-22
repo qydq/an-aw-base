@@ -149,7 +149,7 @@ aN¿ò¼ÜÖ§³Öandroid 4.4+Ê¹ÓÃ£¬¼æÈİĞÔ²âÊÔÍ¨¹ı£¬»ªÎªAndroid4.4 £¬Ğ¡Ã×Android5.1£¬ÈıĞ
 
 2017Äê2ÔÂ20ÈÕ ÀÏÆÅ ÔõÃ´°ì°¡ ±ğÀë¿ªÎÒ ºÃ²»ºÃ¡£
 
- <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_tips.png" width=280 height=480 />  <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_tips_ios.png" width=280 height=480 /> 
+ <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_tips.png" width=280 height=480 />  <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_tips_ios.png" width=280 height=480 />  <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_recyclerview_partipal.png" width=280 height=480 />
 
 ±¸×¢£ºÊ¹ÓÃ½éÉÜ´ı¸üĞÂÖÁÖªºõ¡£ÔİÊ±¿ÉÒÔ²Î¿¼![YYTipsActivity](https://github.com/qydq/an-aw-base/blob/master/app/src/main/java/com/qyddai/an_aw_base/view/activity/YYTipsActivity.java)
  
