@@ -8,7 +8,7 @@
 
 [Äã´æ»îÔÚÎÒ¼ÇÒä×îÔ­Ê¼µÄ»ÄÔ­£¬¿Éµ­²»¿ÉÍü](https://github.com/qydq/an-aw-base/raw/master/app/app-release.apk)
 
---2017Äê2ÔÂ20ÈÕ 16:18:35¡£
+---2017Äê2ÔÂ20ÈÕ 16:18:35¡£
 
 # an-aw-base
 
@@ -144,6 +144,10 @@ aN¿ò¼ÜÖ§³Öandroid 4.4+Ê¹ÓÃ£¬¼æÈİĞÔ²âÊÔÍ¨¹ı£¬»ªÎªAndroid4.4 £¬Ğ¡Ã×Android5.1£¬ÈıĞ
  `ĞÂÔö£¬android:transitionName="anllbacktrans"£¬android:transitionName="anllrighttrans"£¬ android:transitionName="anllrrighttrans"`
  
 ±¸×¢£ºĞÂÔö£¨²»Ó°ÏìÊ¹ÓÃ£©transitionÖ§³ÖMD¶¯»­£¨[TransitionÓÃ·¨Çëµã»÷-Ò»Æ¬·ãÒ¶_Áõ³¬](http://blog.csdn.net/qq_23547831/article/details/51821159)£©
+
++ **an¿ò¼ÜÌá¹©Í¨ÓÃµÄPickerView•rég£¬ÈÕÆÚßx“ñ¿Ø¼ş¡£ÈçÍ¼**
+
+ <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_tips.png" width=280 height=480 /> 
 
 ---------
 
