@@ -14,13 +14,14 @@
         android:clickable="true"
         android:duplicateParentState="true"
         android:gravity="center_vertical"
+        android:paddingLeft="@dimen/DimenMargin"
         android:transitionName="anllbacktrans">
 
         <ImageView
+            android:id="@+id/anIvBack"
             android:layout_width="@dimen/CommDimenBarIcon"
             android:layout_height="@dimen/CommDimenBarIcon"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/DimenMargin"
             android:src="@drawable/yy_drawable_selector_leftback" />
 
         <TextView

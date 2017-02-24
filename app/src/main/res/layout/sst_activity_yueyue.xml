@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/CommColorXiaoBgBar"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.an.base.view.widget.WIoScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DimenNativeNationalMax" />
+
+            <TextView
+                android:id="@+id/tvTips3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DimenNativeNationalSmall"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/CommDimenMargin"
+                android:gravity="center_vertical"
+                android:text="登陆系统 YueYue"
+                android:textColor="@color/CommColorXiaoTxtBar"
+                android:textSize="@dimen/CommDimenBarTitleMax" />
+            <!-- -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DimenNativeNationalMax" />
+
+            <EditText
+                android:id="@+id/etNewPwd2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DimenNativeNationalSmall"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/CommDimenMargin"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="请输入小月的生日（4位数字）"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textColor="@color/CommColorXiaoMainTxt"
+                android:textColorHint="@color/CommColorHintColor"
+                android:textSize="@dimen/CommDimenTxtContext" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/CommDimenLine"
+                android:layout_marginLeft="@dimen/CommDimenMargin"
+                android:layout_marginRight="@dimen/CommDimenMargin"
+                android:background="@mipmap/base_list_divider" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DimenMargin" />
+
+            <com.an.base.view.widget.WRoundImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/CommDimenBarIcon"
+                android:layout_height="@dimen/CommDimenBarIcon"
+                android:layout_marginLeft="@dimen/CommDimenMargin"
+                android:src="@mipmap/yy" />
+        </LinearLayout>
+    </com.an.base.view.widget.WIoScrollView>
+</LinearLayout>

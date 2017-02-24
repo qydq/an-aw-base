@@ -36,4 +36,10 @@
     <color name="color_ff4a57">#ff4a57</color>
     <color name="color_light_blue">#14acae</color>
     <color name="CommPauseFont">#777</color>
+
+    <color name="CommColorXiaoHintColor">#F8F8FF</color>
+    <color name="CommColorXiaoMainTxtTips">#3a7eec</color>
+    <color name="CommColorXiaoMainTxt">#803a7eec</color>
+    <color name="CommColorXiaoTxtBar">#3a7eec</color>
+    <color name="CommColorXiaoBgBar">#2D2D39</color>
 </resources>

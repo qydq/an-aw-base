@@ -4,12 +4,13 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/yy"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AnAppTheme">
         <activity
-            android:name=".SplashActivity"
+            android:name=".YueYueActivity"
             android:theme="@style/NoBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,6 +20,9 @@
         </activity>
         <activity
             android:name=".MainActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".SplashActivity"
             android:theme="@style/NoBarTheme" />
         <activity android:name=".SlidingCloseActivity" />
         <activity android:name=".AnotationActivity" />
@@ -131,6 +135,9 @@
             android:theme="@style/NoBarTheme" />
         <activity
             android:name=".view.activity.YYTipsActivity"
+            android:label="@string/SectionAnimalActivity" />
+        <activity
+            android:name=".view.activity.YYChatTipsActivity"
             android:label="@string/SectionAnimalActivity" />
 
         <activity

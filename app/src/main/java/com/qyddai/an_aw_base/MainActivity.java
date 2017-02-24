@@ -37,22 +37,22 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
     public void onItemClick(int position) {
         switch (position) {
             case 0:
-                startActivity(new Intent(this, LittleTrickActivity.class));
+                startActivity(new Intent(this, YueYueActivity.class));
                 break;
             case 1:
-                startActivity(new Intent(this, SwipeRecyclerActivity.class));
+                startActivity(new Intent(this, LittleTrickActivity.class));
                 break;
             case 2:
-                startActivity(new Intent(this, RefreshLayoutActivity.class));
+                startActivity(new Intent(this, SwipeRecyclerActivity.class));
                 break;
             case 3:
-                startActivity(new Intent(this, LRecyclerViewActivity.class));
+                startActivity(new Intent(this, RefreshLayoutActivity.class));
                 break;
             case 4:
-                startActivity(new Intent(this, YYTipsActivity.class));
+                startActivity(new Intent(this, LRecyclerViewActivity.class));
                 break;
             case 5:
-//                startActivity(new Intent(this, GridDragMenuActivity.class));
+                startActivity(new Intent(this, YYTipsActivity.class));
                 break;
             case 6:
 //                startActivity(new Intent(this, ListDragSwipeActivity.class));

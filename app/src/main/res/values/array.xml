@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="main_item">
+        <item>写给小月</item>
         <item>Little TrickActivity</item>
         <item>SwipeRecyclerActivity</item>
         <item>RefreshLayoutActivity</item>
         <item>LRecyclerView Activity</item>
         <item>YYTipsActivity Activity</item>
-        <item>登陆聊天系统</item>
 
     </string-array>
 
     <string-array name="main_item_des">
+        <item>没有更好的办法了，我忘不了，只能把你藏进代码里面，希望你能够看到，希望你能想我，希望你能感动。</item>
         <item>Little TrickActivity,小动作activity;base:0.1.4使用samples,该系列模块需注意-v21-layout</item>
         <item>最强RecyclerView，Item侧滑菜单，长按拖拽Item，滑动删除Item。可以和任何下拉刷新框架结合使用;base:0.1.5使用samples</item>
         <item>动画特性的列表刷新控件布局，带你实现完美的动画特效，更好的用户体验;base:0.2使用samples</item>
         <item>RecyclerView下拉刷新，自动加载更多；仿IOS侧滑Item删除菜单;base:0.2使用samples</item>
         <item>YYTipsActivity，该内容为测试控件位置，为了更好的完善an-aw-base，YY为月月。</item>
-        <item>空了重新为张露月完成这个聊天系统。</item>
     </string-array>
     <string-array name="main_item1">
         <item>左右两侧都有</item>
@@ -52,4 +52,5 @@
         <item>用SwipeMenuLayout实现你自己的侧滑</item>
 
     </string-array>
+
 </resources>

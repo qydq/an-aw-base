@@ -27,7 +27,8 @@
     <dimen name="CommDimenPadding">16dp</dimen><!--通用的左右上下间距参考-->
     <!--内容图标参考-->
     <dimen name="CommDimenIconSMax">24dp</dimen><!--超级大图标-->
-    <dimen name="CommDimenIconMax">22dp</dimen><!--大图标-->
+    <dimen name="CommDimenIcon">22dp</dimen>
+    <dimen name="CommDimenIconMax">23dp</dimen><!--大图标-->
     <dimen name="CommDimenIconSmall">20dp</dimen><!--小图标-->
     <dimen name="CommDimenIconSSmall">16dp</dimen><!--超级小图标-->
 
@@ -37,11 +38,13 @@
 
     <dimen name="CommDimenBarTitleMax">19sp</dimen><!--bar，文本字体大小参考-->
     <dimen name="CommDimenBarTitleSmall">17sp</dimen><!--bar，文本字体大小参考 小-->
+    <dimen name="CommDimenBarTitle">17sp</dimen>
     <dimen name="CommDimenBarTitleSSmall">14sp</dimen><!--bar，文本字体大小参考 超小-->
 
     <dimen name="CommDimenTxtMax">20sp</dimen><!--文本大号字体参考-->
     <dimen name="CommDimenTxtTitle">17sp</dimen><!--文本标题参考-->
     <dimen name="CommDimenTxtContext">15sp</dimen><!--文本内容字体大小参考-->
+    <dimen name="CommDimenTxtTips">13sp</dimen>
     <dimen name="CommDimenTxtSmall">13sp</dimen><!--文本小号字体-->
     <dimen name="CommDimenTxtSSmall">11sp</dimen><!--文本小号字体-->
 

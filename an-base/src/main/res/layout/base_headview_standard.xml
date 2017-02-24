@@ -13,13 +13,14 @@
         android:layout_centerVertical="true"
         android:clickable="true"
         android:duplicateParentState="true"
+        android:paddingLeft="@dimen/DimenMargin"
         android:gravity="center_vertical">
 
         <ImageView
+            android:id="@+id/anIvBack"
             android:layout_width="@dimen/CommDimenBarIcon"
             android:layout_height="@dimen/CommDimenBarIcon"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/DimenMargin"
             android:src="@drawable/yy_drawable_selector_leftback" />
 
         <TextView

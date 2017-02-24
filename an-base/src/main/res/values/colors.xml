@@ -262,6 +262,7 @@
     <color name="CommColorLineClicked">#DDDDDD</color><!--分割线选择颜色-->
     <color name="CommColorBorder">#A9A9A9</color><!--md,CommColorTransparentClicked--><!--边框颜色-->
     <color name="CommColorBorderClicked">#25000000</color><!--md,CommColorTransparent边框颜色选择-->
+    <color name="CommColorHintColor">#25000000</color>
     <!--对应夜间模式颜色代码-->
     <color name="CommMainBgNight">#CD5C5C</color><!--背景颜色可以等于主色，适用于头布局，晚上模式-->
     <color name="CommMainBgNightClicked">#000011</color><!--点击后的颜色-->
@@ -269,6 +270,7 @@
 
     <color name="CommColorTxtTitleNight">#ffffff</color><!--文本标题颜色=可等于主色CommTxtMainColor=#c2c2c2-->
     <color name="CommColorTxtTitleNightClicked">#38b7ea</color><!--文本标题选择颜色-->
+    <color name="CommColorTxtTitleNightTips">#909090</color>
 
     <color name="CommTxtPauseColor">#777</color><!--暂时使用的字体颜色-->
     <color name="CommBgPauseColor">#DC143C</color><!--暂时使用的背景颜色-->

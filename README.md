@@ -153,6 +153,8 @@ aN¿ò¼ÜÖ§³Öandroid 4.4+Ê¹ÓÃ£¬¼æÈİĞÔ²âÊÔÍ¨¹ı£¬»ªÎªAndroid4.4 £¬Ğ¡Ã×Android5.1£¬ÈıĞ
 
 ±¸×¢£ºÊ¹ÓÃ½éÉÜ´ı¸üĞÂÖÁÖªºõ¡£ÔİÊ±¿ÉÒÔ²Î¿¼![YYTipsActivity](https://github.com/qydq/an-aw-base/blob/master/app/src/main/java/com/qyddai/an_aw_base/view/activity/YYTipsActivity.java)
  
+ËµÃ÷£ºÕâÊÇÒ»¸ö¸ß·Â IOS PickerView ¿Ø¼şµÄ¿â¡£´úÂëÀ´×Ô£ºhttps://github.com/saiwu-bigkoo/Android-PickerView £¬ÔÚÔ­ÓĞ´úÂë»ù´¡ÉÏ½øĞĞ·â×°£¬²¢Ìá¹©ÁËÒ»Ğ©ĞŞ¸ÄÊôĞÔ·½·¨¡£
+
 ---------
 
 # 3. Ê¹ÓÃ·½·¨£¨´úÂë£©
