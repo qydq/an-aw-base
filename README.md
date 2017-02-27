@@ -6,7 +6,7 @@
 
 写给张露月的一篇文章（已手抄录）
 
-[你存活在我记忆最原始的荒原，可淡不可忘](https://github.com/qydq/an-aw-base/raw/master/app/app-release.apk)
+[你存活在我记忆最原始的荒原，可淡不可忘](https://zhuanlan.zhihu.com/p/25279447)
 
 ---2017年2月20日 16:18:35。
 

@@ -6,7 +6,7 @@
         android:endColor="@color/CommEndColor"
         android:startColor="@color/CommStartColor" />
     <!-- 背景填充颜色 -->
-    <solid android:color="@color/CommMainBgClicked" />
+    <solid android:color="@color/CommColorBgSelectorClicked" />
     <!-- 描边，边框宽度、颜色 -->
     <stroke
         android:width="0.5dp"

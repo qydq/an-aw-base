@@ -3,14 +3,14 @@
     <item android:state_pressed="false">
         <shape android:shape="rectangle">
             <corners android:radius="0dp" />
-            <solid android:color="@color/CommColorTransparent" />
+            <solid android:color="@color/CommColorBgSelector" />
             <padding android:bottom="0dp" android:top="0dp" />
         </shape>
     </item>
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
             <corners android:radius="0dp" />
-            <solid android:color="@color/CommColorTransparentClicked" />
+            <solid android:color="@color/CommColorBgSelectorClicked" />
             <padding android:bottom="0dp" android:top="0dp" />
         </shape>
     </item>

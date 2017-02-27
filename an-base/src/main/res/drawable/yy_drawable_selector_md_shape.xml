@@ -3,7 +3,7 @@
     <item android:state_pressed="false">
         <shape android:shape="rectangle">
             <corners android:radius="10dp" />
-            <solid android:color="@color/CommColorTransparent" />
+            <solid android:color="@color/CommColorBgSelector" />
             <stroke android:width="0.5dp" android:color="@color/CommColorBorder" />
             <padding android:bottom="2dp" android:top="2dp" />
         </shape>
@@ -11,7 +11,7 @@
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
             <corners android:radius="10dp" />
-            <solid android:color="@color/CommColorTransparentClicked" />
+            <solid android:color="@color/CommColorBgSelectorClicked" />
             <stroke android:width="0.5dp" android:color="@color/CommColorBorderClicked" />
             <padding android:bottom="2dp" android:top="2dp" />
         </shape>
