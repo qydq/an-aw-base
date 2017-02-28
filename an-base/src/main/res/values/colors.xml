@@ -305,8 +305,8 @@
     <color name="CommTxtColorLevel3Clicked">#77A9A9A9</color>
     <color name="CommColorHintColor">#404040</color>
 
-    <color name="CommBgColorLevel1">#404040</color>
-    <color name="CommBgColorLevel2">#404040</color>
+    <color name="CommBgColorLevel1">#fff</color>
+    <color name="CommBgColorLevel2">#057dff</color>
     <color name="CommBgColorLevel3">#404040</color>
 
     <color name="CommColorBgSelector">#00000000</color>
