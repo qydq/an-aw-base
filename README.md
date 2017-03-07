@@ -14,7 +14,9 @@
 
 * 项目的主要功能是作为an框架的基类（基础的an-base）的仓库；你可以借助github，jitpack ，bintrary快速集成。
 
-* 框架来源于本人an-maven-base框架，an-aw-base框架去除了an-maven-base框架不常用的功能，更轻量提升了性能。
+* 框架来源于本人an-maven-base框架（已停止维护），an-aw-base框架去除了an-maven-base框架不常用的功能，更轻量提升了性能。
+
+* 框架架构基于MVP，利用an-aw-base框架可以快速帮助开发者针对多种场景的开发。
 
 本项目地址：https://github.com/qydq/an-aw-base
 
@@ -73,11 +75,11 @@ allprojects {
 
 加入以后Step 2:
 
-`compile 'com.github.qydq:an-aw-base:0.1.1'`
+`compile 'com.github.qydq:an-aw-base:0.2.3'`
 
 或者加入：
 
-`compile 'cn.android.sunst:an-base:1.0.1'`
+`compile 'cn.android.sunst:an-base:2.0.1'`
 
 使用整套an框架则加入另一个依赖，具体请参考url = https://github.com/qydq/an
 
