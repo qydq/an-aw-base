@@ -24,6 +24,10 @@
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
+        <activity
+            android:name=".view.activity.AnPicDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoBarTheme" />
     </application>
 
 </manifest>

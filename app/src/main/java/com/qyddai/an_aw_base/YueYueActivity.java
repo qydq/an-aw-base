@@ -1,5 +1,6 @@
 package com.qyddai.an_aw_base;
 
+import android.content.Intent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 import com.an.base.view.activity.SwipeFinishActivity;
 import com.an.base.view.tips.pickerview.TimePickerView;
 import com.an.base.view.widget.WRoundImageView;
+import com.qyddai.an_aw_base.view.activity.BeiSaiErActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -169,6 +171,7 @@ public class YueYueActivity extends SwipeFinishActivity implements View.OnClickL
 
                 if (editText.getText().toString().trim().equals("1217") || (editText.getText().toString().trim().contains("12-17")) && editText.getText().toString().trim().contains("19")) {
                     showToast("成功");
+                    startActivity(new Intent(mContext, BeiSaiErActivity.class));
                 } else {
                     showToast("输入错误");
                 }
