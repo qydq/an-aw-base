@@ -54,7 +54,7 @@
 5.联系作者。
 
 
-# [![](https://jitpack.io/v/qydq/an-aw-base.svg)](https://jitpack.io/#qydq/an-aw-base)       <a href='https://bintray.com/qydq/an/an-aw-base?source=watch' alt='Get automatic notifications about new "an-aw-base" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_color.png'></a>
+# [![](https://jitpack.io/v/qydq/an-aw-base.svg)](https://jitpack.io/#qydq/an-aw-base)       [ ![Download](https://api.bintray.com/packages/qydq/an/an-aw-base/images/download.svg?version=an-aw-base%3A2.0.1) ](https://bintray.com/qydq/an/an-aw-base/an-aw-base%3A2.0.1/link)
 
 #######
 
@@ -586,7 +586,7 @@ tips:针对recyclerview添加了如下辅助，ListBaseAdapter,MultiAdapter,MultiItemEntit
 
 ## 2017/02/22
 
-老婆 你别离开我啦，我想你，求你啦。
+>老婆 你别离开我啦，我想你，求你啦。
 
 `compile 'com.github.qydq:an-aw-base:0.2.2'`
 
@@ -612,4 +612,24 @@ tips:针对recyclerview添加了如下辅助，ListBaseAdapter,MultiAdapter,MultiItemEntit
 
 
 ### 张露月  张露月 张露月  
+
+
+## 2017/03/10  09：50
+
+>都说字迹里面款款深情，而我却把代码当做字，念成诗句，想着她。
+
+`compile 'com.github.qydq:an-aw-base:0.2.4'`
+
+build.gradle更新发布至jitpack和jcenter中心。
+compile 'cn.android.sunst:an-base:2.0.1'
+
+更新说明：
+
+compile 'com.github.qydq:an-aw-base:0.2.4'
+对应 sunst:an-base:2.0.1
+提供了一组LuueWeightView控件（来源于an-maven-base框架）
+提供了更新软件的操作。
+修复了之前存在的bug。
+增加了第一个Activity类 ，图片的放大缩小。
+优化代码结构。
 
