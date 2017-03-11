@@ -16,8 +16,8 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.an.base.model.utils.XCallBack;
-import com.an.base.model.utils.XHttps;
+import com.an.base.model.ytips.XCallBack;
+import com.an.base.model.ytips.XHttps;
 import com.an.base.utils.CaptureHelper;
 import com.an.base.utils.DUtilsBitmap;
 import com.an.base.view.activity.SwipeFinishActivity;

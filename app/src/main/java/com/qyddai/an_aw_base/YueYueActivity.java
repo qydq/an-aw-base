@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.an.base.view.activity.SwipeFinishActivity;
-import com.an.base.view.tips.pickerview.TimePickerView;
+import com.an.base.view.ytips.pickerview.TimePickerView;
 import com.an.base.view.widget.WRoundImageView;
 import com.qyddai.an_aw_base.view.activity.BeiSaiErActivity;
 

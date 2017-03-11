@@ -5,13 +5,13 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.an.base.view.activity.SwipeFinishActivity;
-import com.an.base.view.tips.pickerview.CityPickerView;
-import com.an.base.view.tips.pickerview.OptionsPickerView;
-import com.an.base.view.tips.pickerview.TimePickerView;
-import com.an.base.view.tips.pickerview.listener.OnSimpleCitySelectListener;
-import com.an.base.view.tips.selector.DigitSelector;
-import com.an.base.view.tips.selector.SexSelector;
-import com.an.base.view.tips.selector.TimeSelector;
+import com.an.base.view.ytips.pickerview.CityPickerView;
+import com.an.base.view.ytips.pickerview.OptionsPickerView;
+import com.an.base.view.ytips.pickerview.TimePickerView;
+import com.an.base.view.ytips.pickerview.listener.OnSimpleCitySelectListener;
+import com.an.base.view.ytips.selector.DigitSelector;
+import com.an.base.view.ytips.selector.SexSelector;
+import com.an.base.view.ytips.selector.TimeSelector;
 import com.an.base.view.widget.PickerView;
 import com.qyddai.an_aw_base.R;
 

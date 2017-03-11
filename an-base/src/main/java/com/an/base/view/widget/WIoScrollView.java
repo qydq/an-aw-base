@@ -23,7 +23,7 @@ import android.widget.ScrollView;
  *  
  */
 public class WIoScrollView extends ScrollView {
-    private static final String TAG = "UserDefineScrollView ";
+    private static final String TAG = "WIoScrollView ";
     // 移动因子, 是一个百分比, 比如手指移动了100px, 那么View就只移动50px
 // 目的是达到一个延迟的效果
     private static final float MOVE_FACTOR = 0.5f;

@@ -22,7 +22,7 @@
 
 **使用介绍：如下简介或知乎，或个人网易博客。**
 
->知乎主页：https://www.zhihu.com/people/qydq
+>知乎主页：https://zhihu.com/people/qydq
 
 >博客主页：https://bgwan.blog.163.com
 
@@ -62,7 +62,7 @@
 
 **使用Gradle构建时添加以下依赖即可** *（注：也可以使用之前的低稳定版本）*
 
-加入依赖之前Step 1（在你的根build.gradle文件中增加如下代码。）
+Step 1：加入依赖之前（在你的根build.gradle文件中增加如下代码。）
 
 ```groovy
 allprojects {
@@ -73,7 +73,7 @@ allprojects {
 }
 ```
 
-加入以后Step 2:
+Step 2：加入以后（在你的子build.gradle文件中添加如下依赖关系。）
 
 `compile 'com.github.qydq:an-aw-base:0.2.3'`
 
@@ -571,7 +571,7 @@ tips:针对recyclerview添加了如下辅助，ListBaseAdapter,MultiAdapter,MultiItemEntit
 
 ## 2017/02/20
 
-我只能把亲亲小月写进代码里面。我想她，很想很想。
+>我只能把亲亲小月写进代码里面。我想她，很想很想。
 
 `compile 'com.github.qydq:an-aw-base:0.2.1'`
 

@@ -4,9 +4,9 @@ import android.util.Log;
 import android.widget.Button;
 
 import com.an.base.model.entity.ResponseBaseModel;
-import com.an.base.model.utils.XCallBack;
-import com.an.base.model.utils.XHttps;
-import com.an.base.model.utils.XProgressCallBack;
+import com.an.base.model.ytips.XCallBack;
+import com.an.base.model.ytips.XHttps;
+import com.an.base.model.ytips.XProgressCallBack;
 import com.an.base.view.SuperActivity;
 
 import org.xmlpull.v1.XmlPullParser;
