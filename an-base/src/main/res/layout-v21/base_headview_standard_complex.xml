@@ -116,7 +116,7 @@
                 android:layout_width="@dimen/CommDimenBarIconSmall"
                 android:layout_height="@dimen/CommDimenBarIconSmall"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/yy_drawable_selector_rightshare" />
+                android:src="@drawable/yy_drawable_selector_rightinfo" />
 
             <TextView
                 android:id="@+id/anTvRRight"

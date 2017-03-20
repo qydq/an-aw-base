@@ -3,6 +3,9 @@ package com.an.base.utils;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.graphics.drawable.AnimationDrawable;
+import android.text.TextUtils;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -24,10 +27,15 @@ import com.an.base.R;
  **********************************************************/
 public enum DUtilsDialog {
     INSTANCE;
+
+    private AnimationDrawable animationDrawable;
+    private Dialog dUtilsDialog;
+
     /**
      * 得到自定义的progressDialog
+     *
      * @param context
-     * @param msg 创建一个对话框，msg是提示语，isCancle是否可以取消对话框
+     * @param msg     创建一个对话框，msg是提示语，isCancle是否可以取消对话框
      * @return Dialog
      */
     public Dialog createDialog(Context context, String msg, boolean isCancle) {
@@ -51,13 +59,13 @@ public enum DUtilsDialog {
 
     /**
      * @param context
-     * @param thems 一般传入${R.style.AnProgressDialog}
-     * @param tips 对话框需要的内容提示
+     * @param thems    一般传入${R.style.AnProgressDialog}
+     * @param tips     对话框需要的内容提示
      * @param isCancle 是否可以取消
      * @return
      */
-    public ProgressDialog showProgressDialog(Context context,int thems,String tips, boolean isCancle) {
-        ProgressDialog progressDialog = new ProgressDialog(context,thems);
+    public ProgressDialog showProgressDialog(Context context, int thems, String tips, boolean isCancle) {
+        ProgressDialog progressDialog = new ProgressDialog(context, thems);
         progressDialog.setCancelable(isCancle);
         progressDialog.setCanceledOnTouchOutside(isCancle);
         LayoutInflater inflater = LayoutInflater.from(context);
@@ -73,4 +81,41 @@ public enum DUtilsDialog {
         window.setAttributes(params);
         return progressDialog;
     }
+
+    /**
+     * 得到自定义的progressDialog
+     *
+     * @param context
+     * @param isCancle 创建一个对话框，msg是提示语，isCancle是否可以取消对话框
+     * @return Dialog ?android:attr/progressBarStyleLarge,AnSimpleDialog
+     */
+    public Dialog createSimpleDialog(Context context, boolean isCancle, String tips) {
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View layout = inflater.inflate(R.layout.base_standard_simple_dialog, null);// 得到加载view
+        ImageView imageView = (ImageView) layout.findViewById(R.id.anDialogIv);
+        TextView tipTextView = (TextView) layout.findViewById(R.id.anDialogTv);// 提示文字
+        if (TextUtils.isEmpty(tips)) {
+            tipTextView.setText(context.getString(R.string.listview_loading));
+        } else {
+            tipTextView.setText(tips);
+        }
+        dUtilsDialog = new Dialog(context, R.style.AnSimpleDialog);
+        dUtilsDialog.setCancelable(isCancle);
+        dUtilsDialog.setContentView(layout);
+        dUtilsDialog.getWindow().getAttributes().gravity = Gravity.CENTER;
+        animationDrawable = (AnimationDrawable) imageView.getBackground();
+        if (animationDrawable != null && !animationDrawable.isRunning()) {
+            animationDrawable.start();
+        }
+        return dUtilsDialog;
+    }
+
+    public void dismissSimpleDialog() {
+        // TODO Auto-generated method stub
+        if (animationDrawable != null && animationDrawable.isRunning())
+            animationDrawable.stop();
+        if (dUtilsDialog != null)
+            dUtilsDialog.dismiss();
+    }
+
 }

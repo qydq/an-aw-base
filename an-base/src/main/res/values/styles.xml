@@ -62,6 +62,21 @@
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="colorAccent">#ffE91E63</item>
     </style>
+    <!--loding自定义dialog-->
+    <style name="AnSimpleProgressDialog" parent="@style/AnSimpleDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <!-- 自定义dialog -->
+    <style name="AnSimpleDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
     <!-- 自定义 通用字体内容的颜色 -->
     <style name="AnTvContentStyle">
         <item name="android:textColor">@color/CommColorTxtContent</item>

@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">an-base</string>
     <string name="CommStringBack">返回</string>
-    <string name="CommStringTitle">标题</string>
-    <string name="CommStringRight">账单</string>
+    <string name="CommStringTitle">中</string>
+    <string name="CommStringRight">右</string>
     <string name="CommStringArt">加入艺术圈</string>
     <string name="CommStringShare">分享</string>
 

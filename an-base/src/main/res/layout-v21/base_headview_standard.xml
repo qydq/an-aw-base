@@ -91,6 +91,6 @@
             android:layout_height="@dimen/CommDimenBarIconSmall"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="@dimen/DimenMargin08"
-            android:src="@drawable/yy_drawable_selector_rightinfo" />
+            android:src="@drawable/yy_drawable_selector_right" />
     </LinearLayout>
 </RelativeLayout>

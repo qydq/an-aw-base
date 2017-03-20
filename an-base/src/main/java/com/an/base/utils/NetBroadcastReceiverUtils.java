@@ -12,8 +12,14 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkInfo;
+import android.net.TrafficStats;
 import android.os.Build;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.NonNull;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class NetBroadcastReceiverUtils {
     /**
@@ -28,6 +34,19 @@ public class NetBroadcastReceiverUtils {
      * 无线网络
      */
     public static final int NETWORK_WIFI = 1;
+
+    private Context context;
+    private Handler mHandler;
+
+    private long lastTotalRxBytes = 0;
+    private long lastTimeStamp = 0;
+
+    TimerTask task = new TimerTask() {
+        @Override
+        public void run() {
+            showNetSpeed();
+        }
+    };
 
     //得到网络的连接状态，状态见上面的状态码。为NetBroadcastReceiverUtils提供服务。
     public static int getNetworkState(@NonNull Context context) {
@@ -111,4 +130,51 @@ public class NetBroadcastReceiverUtils {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         return cm.getActiveNetworkInfo();
     }
+
+    /*
+    * 网速判断
+    * */
+    private void showNetSpeed() {
+        long nowTotalRxBytes = getTotalRxBytes();
+        long nowTimeStamp = System.currentTimeMillis();
+        long speed = ((nowTotalRxBytes - lastTotalRxBytes) * 1000 / (nowTimeStamp - lastTimeStamp));//毫秒转换
+        long speed2 = ((nowTotalRxBytes - lastTotalRxBytes) * 1000 % (nowTimeStamp - lastTimeStamp));//毫秒转换
+
+        lastTimeStamp = nowTimeStamp;
+        lastTotalRxBytes = nowTotalRxBytes;
+
+        Message msg = mHandler.obtainMessage();
+        msg.what = 100;
+        msg.obj = String.valueOf(speed) + "." + String.valueOf(speed2) + " kb/s";
+        mHandler.sendMessage(msg);//更新界面
+    }
+
+    private long getTotalRxBytes() {
+        return TrafficStats.getUidRxBytes(context.getApplicationInfo().uid) == TrafficStats.UNSUPPORTED ? 0 : (TrafficStats.getTotalRxBytes() / 1024);//转为KB
+    }
+
+    /*
+    * 对外提供的方法。
+    * new NetWorkSpeedUtils(mContext, mHnadler).startShowNetSpeed();//网速监听
+    * private Handler mHnadler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case 100:
+                    textViewSpeed.setText("当前网速： " + msg.obj.toString());
+                    break;
+            }
+            super.handleMessage(msg);
+        }
+    };
+    * */
+
+    public void startShowNetSpeed(Context context, Handler mHandler) {
+        this.context = context;
+        this.mHandler = mHandler;
+        lastTotalRxBytes = getTotalRxBytes();
+        lastTimeStamp = System.currentTimeMillis();
+        new Timer().schedule(task, 1000, 1000); // 1s后启动任务，每2s执行一次
+    }
+
 }
