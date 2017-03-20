@@ -12,9 +12,9 @@
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:clickable="true"
-        android:paddingLeft="@dimen/DimenMargin"
         android:duplicateParentState="true"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/DimenMargin">
 
         <ImageView
             android:id="@+id/anIvBack"
@@ -52,7 +52,10 @@
         android:layout_height="48dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:gravity="center_vertical"
+        android:ellipsize="end"
+        android:maxEms="12"
+        android:gravity="center_vertical|center_horizontal"
+        android:maxLines="1"
         android:text="@string/CommStringTitle"
         android:textColor="@drawable/yy_drawable_selector_txt"
         android:textSize="@dimen/CommDimenBarTitleMax" />

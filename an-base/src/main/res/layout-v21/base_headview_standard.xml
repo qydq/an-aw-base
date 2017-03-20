@@ -54,7 +54,10 @@
         android:layout_height="48dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:gravity="center_vertical"
+        android:maxEms="12"
+        android:gravity="center_vertical|center_horizontal"
+        android:maxLines="1"
+        android:ellipsize="end"
         android:text="@string/CommStringTitle"
         android:textColor="@drawable/yy_drawable_selector_txt"
         android:textSize="@dimen/CommDimenBarTitleMax" />
