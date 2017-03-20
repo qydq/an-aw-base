@@ -99,6 +99,8 @@ aN¿ò¼ÜÖ§³Öandroid 4.4+Ê¹ÓÃ£¬¼æÈİĞÔ²âÊÔÍ¨¹ı£¬»ªÎªAndroid4.4 £¬Ğ¡Ã×Android5.1£¬ÈıĞ
 
 [µãÎÒÏÂÔØ](https://github.com/qydq/an-aw-base/raw/master/app/app-release.apk)
 
+[ÕÅÂ¶ÔÂÏÂÔØ²âÊÔ](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/assets/apk/zhangluyue.apk)
+
 **Tips**
 ---
 
