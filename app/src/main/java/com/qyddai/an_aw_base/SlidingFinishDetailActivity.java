@@ -20,6 +20,7 @@ import com.an.base.model.ytips.XCallBack;
 import com.an.base.model.ytips.XHttps;
 import com.an.base.utils.CaptureHelper;
 import com.an.base.utils.DUtilsBitmap;
+import com.an.base.utils.DUtilsStorage;
 import com.an.base.view.activity.SwipeFinishActivity;
 
 import org.xutils.view.annotation.ContentView;
@@ -83,7 +84,7 @@ public class SlidingFinishDetailActivity extends SwipeFinishActivity {
         anTvTitle = (TextView) findViewById(R.id.anTvTitle);
         anTvTitle.setText(R.string.SlidingFinishDetailActivity);
         //加载本地裁剪后SD卡的图片。face.jpg
-        skRoot = Environment.getExternalStorageDirectory();
+        skRoot = DUtilsStorage.INSTANCE.getskRootFile();
         String path = skRoot + "/" + IMAGE_FILE_NAME;
         File file = new File(path);
         imageCropUri = Uri.fromFile(file);
@@ -91,17 +92,14 @@ public class SlidingFinishDetailActivity extends SwipeFinishActivity {
             Bitmap bitmap = BitmapFactory.decodeFile(path);
             iv.setImageBitmap(bitmap);
         }
+        anTvRight = (TextView) findViewById(R.id.anTvRight);
 
         //初始化CaptureHelper
         captureHelper = new CaptureHelper(SlidingFinishDetailActivity.this, skRoot);
         anTvRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (skRoot.equals(android.os.Environment.MEDIA_MOUNTED)) {
-                    showSettingFaceDialog();
-                } else {
-                    showToast("没有sd卡");
-                }
+                showSettingFaceDialog();
             }
         });
     }

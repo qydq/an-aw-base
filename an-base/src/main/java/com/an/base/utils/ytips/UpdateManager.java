@@ -4,7 +4,7 @@ package com.an.base.utils.ytips;
  * @文件名称：UpdateManger
  * @文件作者：staryumou@163.com
  * @创建时间：2016/8/18
- * @文件描述：null
+ * @文件描述：提供一个软件更新的接口，这里需要服务器判断
  * @修改历史：2016/8/18
  **********************************************************/
 
@@ -24,6 +24,7 @@ import android.widget.ProgressBar;
 import com.an.base.R;
 import com.an.base.model.ytips.XHttps;
 import com.an.base.model.ytips.XProgressCallBack;
+import com.an.base.utils.DataService;
 
 import org.xutils.http.RequestParams;
 
@@ -45,16 +46,16 @@ public class UpdateManager {
     //返回的安装包url
     private String apkUrl;
 
+    private String apkName;
+
 
     private Dialog noticeDialog;
 
     private Dialog downloadDialog;
     /* 下载包安装路径 */
-    private static final String savePath = "/sdcard/an/";
+    private String savePath = "/sdcard/an/apk/";//默认保存在an/apk框架中sdcard写法不严谨
 
-    private String pageName;
-
-    private String saveFileName;
+    private String saveFileName;//操作的saveFileName
 
     /* 进度条与通知ui刷新的handler和msg常量 */
     private ProgressBar mProgress;
@@ -83,15 +84,24 @@ public class UpdateManager {
                     break;
             }
         }
-
-        ;
     };
 
-    public UpdateManager(Context context, String pageName, String apkUrl) {
+    public UpdateManager(Context context, String apkUrl, String apkName) {
         this.mContext = context;
         this.apkUrl = apkUrl;
-        this.pageName = pageName;
-        saveFileName = savePath + pageName + "/UpdateDemoRelease.apk";
+        this.apkName = apkName;
+        saveFileName = savePath + apkName + "_" + DataService.INSTANCE.getShotDateTime() + ".apk";//这里用时间区分。
+    }
+
+    /*savePath 参考 = DUtilsStorage.INSTANCE.getskRootPath()
+    * savePath = "/sdcard/an/apk/apkname_time.apk
+    * 备注后面不用加 “/”
+    * */
+    public UpdateManager(Context context, String savePath, String apkUrl, String apkName) {
+        this.mContext = context;
+        this.apkUrl = apkUrl;
+        this.savePath = savePath;
+        saveFileName = savePath + File.separator + apkName + "_" + DataService.INSTANCE.getShotDateTime() + ".apk";
     }
 
     //外部接口让主Activity调用
@@ -218,8 +228,7 @@ public class UpdateManager {
             }
 
             @Override
-            public void onLoading(long total, long current,
-                                  boolean isDownloading) {
+            public void onLoading(long total, long current, boolean isDownloading) {
                 super.onLoading(total, current, isDownloading);
                 mProgress.setMax((int) total);
                 progress = (int) current;
@@ -247,7 +256,6 @@ public class UpdateManager {
 //        i.setDataAndType(Uri.fromFile(new File(saveFileName)), "application/vnd.android.package-archive");
         i.setDataAndType(Uri.parse("file://" + apkfile.toString()), "application/vnd.android.package-archive");
         mContext.startActivity(i);
-
     }
 }
 
