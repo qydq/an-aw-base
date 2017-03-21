@@ -99,7 +99,7 @@ aN¿ò¼ÜÖ§³Öandroid 4.4+Ê¹ÓÃ£¬¼æÈİĞÔ²âÊÔÍ¨¹ı£¬»ªÎªAndroid4.4 £¬Ğ¡Ã×Android5.1£¬ÈıĞ
 
 [µãÎÒÏÂÔØ](https://github.com/qydq/an-aw-base/raw/master/app/app-release.apk)
 
-[ÏÂÔØ²âÊÔ-ÎÄ¼şÒÑ¼ÓÃÜ](https://github.com/qydq/an-aw-base/raw/master/app/zhangluyue_jiami.apk)
+[ÏÂÔØzhangluyue.apk-ÎÄ¼şÒÑ¼ÓÃÜ](https://github.com/qydq/an-aw-base/raw/master/app/zhangluyue_jiami.apk)
 
 **Tips**
 ---
@@ -634,4 +634,36 @@ compile 'com.github.qydq:an-aw-base:0.2.4'
 ĞŞ¸´ÁËÖ®Ç°´æÔÚµÄbug¡£
 Ôö¼ÓÁËµÚÒ»¸öActivityÀà £¬Í¼Æ¬µÄ·Å´óËõĞ¡¡£
 ÓÅ»¯´úÂë½á¹¹¡£
+
+## 2017/03/21  17£º48
+
+>½ñÌìÊÇĞ¡ÔÂÀë¿ªµÄµÚ67ÌìÁË£¬ÎÒÒ»Éú²¢ÎŞ¶à´ó±§¸º£¬Î¨¸´ÇóËıÄÜÔçÈÕ»ØĞÄ×ªÒâ£¬ÎÒÈô¸ºËı¶¨Ìì´òÀ×Åü²»µÃºÃËÀ¡£¸Ãan-aw-base»áÒ»Ö±¸üĞÂÏÂÈ¥¡£
+
+×îĞÂ±àÒë°æ±¾
+
+`compile 'com.github.qydq:an-aw-base:0.2.5'`
+
+¸üĞÂËµÃ÷£º
+
+²Ù×÷sdka¿¨µÄ¹¤¾ßÀàfileUtils,
+SimpleDecoration
+ĞŞ¸´dutilsdialogµÄbug
+netbroadcastReceiverutilsÌá¹©ÁËÍøÂçµÄ¼àÌı
+Ôö¼Ówrectangleview
+wzoomimageview
+ĞŞ¸Äpowerimageview
+Ìí¼ÓÁËÒ»Ğ©×ÊÔ´ÊôĞÔ
+
+--ÍêÉÆÁËDScrennUtils
+DUtilsStorage
+UpdataManager
+
+
+ÎªĞ¡ÔÂÖÆ×÷µÄapk,ÍâÁ´µÄĞÎÊ½·Åµ½ÕâÀï£¨ÒÑ¼ÓÃÜ£©,²¢ÇÒÆ¾½èËùÑ§×öÁËÒ»¸ö¼òµ¥µÄÏÂÔØÍøÒ³.
+
+[ÏÂÔØµØÖ·1£ºzhangluyue.apk](https://qydq.github.io/shiluohua/zhangluyue.html)
+
+[ÏÂÔØµØÖ·2£ºzhangluyue.apk](https://github.com/qydq/an-aw-base/blob/master/app/zhangluyue_download.md)
+
+[androidÊÖ»ú¿ÉÖ±½Óµã»÷ÏÂÔØ](https://github.com/qydq/an-aw-base/raw/master/app/zhangluyue_jiami.apk)
 
