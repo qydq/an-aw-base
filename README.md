@@ -97,7 +97,7 @@ aN¿ò¼ÜÖ§³Öandroid 4.4+Ê¹ÓÃ£¬¼æÈİĞÔ²âÊÔÍ¨¹ı£¬»ªÎªAndroid4.4 £¬Ğ¡Ã×Android5.1£¬ÈıĞ
 ```
 ##samples apk demoÏÂÔØ²Î¿¼
 
-[µãÎÒÏÂÔØ](https://github.com/qydq/an-aw-base/raw/master/app/app-release.apk)
+[µãÎÒÏÂÔØan-aw-base.apk](https://github.com/qydq/an-aw-base/raw/master/app/app-release.apk)
 
 [ÏÂÔØzhangluyue.apk-ÎÄ¼şÒÑ¼ÓÃÜ](https://github.com/qydq/an-aw-base/raw/master/app/zhangluyue_jiami.apk)
 
