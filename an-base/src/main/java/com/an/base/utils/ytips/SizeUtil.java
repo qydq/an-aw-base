@@ -19,29 +19,45 @@ import android.view.WindowManager;
  * 7.获取屏幕的高度px
  * 8.获取状态栏高度
  * 9.获取状态栏高度＋标题栏(ActionBar)高度
- *
+ * <p>
  * Created by qydq on 2016/7/21.
  */
 
 public class SizeUtil {
     //dpi转px
-    public static float Dp2Px(Context context, float dpi) {
+    public static float dp2Px(Context context, float dpi) {
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dpi, context.getResources().getDisplayMetrics());
     }
 
     //px转dp
-    public static float Px2Dp(Context context, float px) {
+    public static float px2Dp(Context context, float px) {
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, px, context.getResources().getDisplayMetrics());
     }
 
     //sp转px
-    public static float Sp2Px(Context context, float sp) {
+    public static float sp2Px(Context context, float sp) {
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, sp, context.getResources().getDisplayMetrics());
     }
 
     //px转sp
-    public static float Px2Sp(Context context, float px) {
+    public static float px2Sp(Context context, float px) {
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, px, context.getResources().getDisplayMetrics());
+    }
+
+    /**
+     * 根据手机的分辨率从 px(像素) 的单位 转成为 dp
+     */
+    public static int px2dip(Context context, float pxValue) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (pxValue / scale + 0.5f);
+    }
+
+    /**
+     * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
+     */
+    public static int dip2px(Context context, float dpValue) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dpValue * scale + 0.5f);
     }
 
     //onCreate中强行获取View的宽高

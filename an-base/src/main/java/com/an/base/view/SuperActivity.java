@@ -3,7 +3,10 @@ package com.an.base.view;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
+import android.view.Gravity;
+import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
 
@@ -11,6 +14,8 @@ import com.an.base.R;
 import com.an.base.utils.AndroidTranslucentBar;
 import com.an.base.utils.NetBroadcastReceiver;
 import com.an.base.utils.NetBroadcastReceiverUtils;
+
+import static com.an.base.AnApplication.AnTAG;
 
 
 /**
@@ -22,7 +27,6 @@ import com.an.base.utils.NetBroadcastReceiverUtils;
  */
 
 public abstract class SuperActivity extends BaseActivity implements NetBroadcastReceiver.NetEvevt {
-    protected static String TAG = "SuperActivity";
     protected SharedPreferences sp;
     public static NetBroadcastReceiver.NetEvevt evevt;//广播监听网络
     protected Context mContext;
@@ -39,7 +43,7 @@ public abstract class SuperActivity extends BaseActivity implements NetBroadcast
 //		EMChat.getInstance().init(this.getApplicationContext());
         mContext = this;
         //an框架的夜间模式。用来保存皮肤切换模式的sp
-        sp = this.getSharedPreferences(TAG, Context.MODE_PRIVATE);
+        sp = this.getSharedPreferences(AnTAG, Context.MODE_PRIVATE);
 
         Window window = getWindow();
         AndroidTranslucentBar.getInstance().setTranslucentBar(window);
@@ -101,6 +105,34 @@ public abstract class SuperActivity extends BaseActivity implements NetBroadcast
             public void run() {
                 Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT)
                         .show();
+            }
+        });
+    }
+
+    protected void showToastInCenter(final String msg) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast toast = Toast.makeText(mContext, msg, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER_VERTICAL, 0, 10);
+                toast.show();
+            }
+        });
+
+    }
+
+    protected void showSnackbar(final View ytipsView, final String msg) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Snackbar.make(ytipsView, msg, Snackbar.LENGTH_SHORT).show();
+//                setAction("Undo",
+//                        new View.OnClickListener() {
+//                            @Override
+//                            public void onClick(View v) {
+//                                Toast.makeText(getApplication(), "请输入内容后再试试", Toast.LENGTH_SHORT).show();
+//                            }
+//                        })
             }
         });
     }

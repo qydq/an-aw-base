@@ -3,6 +3,9 @@ package com.an.base.view.activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
+import android.view.Gravity;
+import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
 
@@ -91,7 +94,26 @@ public abstract class SwipeCloseActivity extends BaseActivity implements NetBroa
             }
         });
     }
+    protected void showToastInCenter(final String msg) {
+        runOnUiThread(new Runnable() {
 
+            @Override
+            public void run() {
+                Toast toast = Toast.makeText(mContext, msg, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER_VERTICAL, 0, 10);
+                toast.show();
+            }
+        });
+    }
+
+    protected void showSnackbar(final View ytipsView, final String msg) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Snackbar.make(ytipsView, msg, Snackbar.LENGTH_SHORT).show();
+            }
+        });
+    }
     /**
      * 各种对象、组件的初始化
      */

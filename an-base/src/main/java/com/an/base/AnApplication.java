@@ -30,6 +30,7 @@ import org.xutils.x;
 public class AnApplication extends Application {
 
     private static AnApplication instance;
+    public static String AnTAG = "an_tips";
 
 
     public static AnApplication getInstance() {

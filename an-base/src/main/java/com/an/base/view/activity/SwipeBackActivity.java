@@ -1,7 +1,11 @@
 package com.an.base.view.activity;
 
+import android.support.design.widget.Snackbar;
+import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
+import android.view.View;
+import android.widget.Toast;
 
 import com.an.base.view.SuperActivity;
 
@@ -89,7 +93,26 @@ public class SwipeBackActivity extends SuperActivity {
         int velocity = (int) mVelocityTracker.getYVelocity();
         return Math.abs(velocity);
     }
+    protected void showToastInCenter(final String msg) {
+        runOnUiThread(new Runnable() {
 
+            @Override
+            public void run() {
+                Toast toast = Toast.makeText(mContext, msg, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER_VERTICAL, 0, 10);
+                toast.show();
+            }
+        });
+    }
+
+    protected void showSnackbar(final View ytipsView, final String msg) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Snackbar.make(ytipsView, msg, Snackbar.LENGTH_SHORT).show();
+            }
+        });
+    }
     @Override
     public void initView() {
         

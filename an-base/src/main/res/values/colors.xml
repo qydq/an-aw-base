@@ -311,4 +311,5 @@
 
     <color name="CommColorBgSelector">#00000000</color>
     <color name="CommColorBgSelectorClicked">#25000000</color>
+    <color name="CommColorEditCursorColor">#ff7200</color>
 </resources>

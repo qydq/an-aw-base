@@ -24,7 +24,7 @@ public abstract class BaseFragment extends Fragment implements OnTouchListener {
     /**
      * 子类默认使用的日志输出标签
      */
-    protected String TAG = null;
+    protected String TAG = "";
 
     protected Context mContext = null;
     protected View view;

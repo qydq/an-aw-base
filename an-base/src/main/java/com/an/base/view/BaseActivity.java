@@ -29,7 +29,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     /**
      * 基类(Activity)所使用的TAG标签
      */
-    protected String TAG = null;
+    protected String TAG = "BaseActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

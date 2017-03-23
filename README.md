@@ -407,7 +407,7 @@ http://drakeet.me/android-studio
 		}
 		}·
 		
-## 权限相关。an-mave-base /AndroidManifest.xml	
+## 权限相关。an-aw-base /AndroidManifest.xml	
 
     <!-- 网络相关权限 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -637,7 +637,7 @@ compile 'com.github.qydq:an-aw-base:0.2.4'
 
 ## 2017/03/21  17：48
 
->今天是小月离开的第67天了，我一生并无多大抱负，唯复求她能早日回心转意，我若负她定天打雷劈不得好死。该an-aw-base会一直更新下去。
+>今天是小月离开的第67天了，我一生并无多大抱负，唯复求她能早日回心转意，我若再负她定天打雷劈不得好死。
 
 最新编译版本
 
