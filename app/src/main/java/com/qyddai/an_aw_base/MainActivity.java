@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.an.base.view.ParallaxActivity;
 import com.qyddai.an_aw_base.model.adapter.MainItemAdapter;
 import com.qyddai.an_aw_base.utils.ListViewDecoration;
 import com.qyddai.an_aw_base.view.LRecyclerViewActivity;
@@ -26,7 +27,7 @@ import com.qyddai.an_aw_base.view.activity.YYTipsActivity;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements OnItemClickListener {
+public class MainActivity extends ParallaxActivity implements OnItemClickListener {
 
     private RecyclerView recyclerView;
     private List<String> titles;
@@ -67,8 +68,7 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
     }
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void initView() {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

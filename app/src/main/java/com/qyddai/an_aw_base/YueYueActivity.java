@@ -1,17 +1,14 @@
 package com.qyddai.an_aw_base;
 
-import android.content.Intent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.an.base.view.activity.SwipeFinishActivity;
-import com.an.base.view.ytips.pickerview.TimePickerView;
+import com.an.base.view.ParallaxActivity;
 import com.an.base.view.widget.WRoundImageView;
-import com.qyddai.an_aw_base.view.activity.BeiSaiErActivity;
+import com.an.base.view.ytips.pickerview.TimePickerView;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -21,7 +18,7 @@ import java.util.Locale;
  * Created by qydda on 2017/2/21.
  */
 
-public class YueYueActivity extends SwipeFinishActivity implements View.OnClickListener {
+public class YueYueActivity extends ParallaxActivity implements View.OnClickListener {
     private WRoundImageView imageView1;
     private WRoundImageView imageView2;
     private WRoundImageView imageView3;
@@ -37,6 +34,7 @@ public class YueYueActivity extends SwipeFinishActivity implements View.OnClickL
 
     @Override
     public void initView() {
+
         setContentView(R.layout.sst_activity_yueyue);
         imageView1 = (WRoundImageView) findViewById(R.id.imageView1);
         imageView2 = (WRoundImageView) findViewById(R.id.imageView2);
@@ -170,14 +168,14 @@ public class YueYueActivity extends SwipeFinishActivity implements View.OnClickL
             case R.id.tvConfim:
 
                 if (editText.getText().toString().trim().equals("1217") || (editText.getText().toString().trim().contains("12-17")) && editText.getText().toString().trim().contains("19")) {
-                    showToast("成功");
-                    startActivity(new Intent(mContext, BeiSaiErActivity.class));
+//                    showToast("成功");
+//                    startActivity(new Intent(mContext, BeiSaiErActivity.class));
                 } else {
-                    showToast("输入错误");
+//                    showToast("输入错误");
                 }
                 break;
             case R.id.tvConfimChoose:
-                showToast("choose");
+//                showToast("choose");
                 //     TimePickerView 同样有上面设置样式的方法
                 TimePickerView mTimePickerView = new TimePickerView(this, TimePickerView.Type.YEAR_MONTH_DAY);
 
@@ -194,7 +192,7 @@ public class YueYueActivity extends SwipeFinishActivity implements View.OnClickL
                     @Override
                     public void onTimeSelect(Date date) {
                         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.CHINA);
-                        Toast.makeText(mContext, format.format(date), Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(mContext, format.format(date), Toast.LENGTH_SHORT).show();
                         editText.setText(format.format(date));
                     }
                 });

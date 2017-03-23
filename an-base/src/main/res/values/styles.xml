@@ -9,6 +9,15 @@
         <item name="anBackground">@android:color/white</item>
         <item name="anTextColor">@android:color/black</item>
     </style>
+    <!-- Base Parallax application theme. -->
+    <style name="ParallaxAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/Animation_Right</item>
+    </style>
 
     <style name="NoBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
@@ -242,5 +251,12 @@
         <item name="android:windowIsFloating">true</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowBackground">@color/CommBgPickerViewColor</item>
+    </style>
+
+    <style name="Animation_Right">
+        <item name="android:activityOpenEnterAnimation">@anim/pl_slide_from_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/pl_slide_out_to_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/pl_slide_in_from_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/pl_slide_out_to_right</item>
     </style>
 </resources>

@@ -15,8 +15,9 @@ import com.an.base.utils.NetBroadcastReceiverUtils;
 import com.an.base.view.BaseActivity;
 import com.an.base.view.widget.WSwipeCloseFrameLayout;
 
+import static com.an.base.AnApplication.AnTAG;
+
 public abstract class SwipeCloseActivity extends BaseActivity implements NetBroadcastReceiver.NetEvevt {
-    protected static String TAG = "SuperActivity";
     protected SharedPreferences sp;
     public static NetBroadcastReceiver.NetEvevt evevt;//广播监听网络
     protected Context mContext;
@@ -32,7 +33,7 @@ public abstract class SwipeCloseActivity extends BaseActivity implements NetBroa
 //		EMChat.getInstance().init(this.getApplicationContext());
         mContext = this;
         //an框架的夜间模式。用来保存皮肤切换模式的sp
-        sp = this.getSharedPreferences(TAG, Context.MODE_PRIVATE);
+        sp = this.getSharedPreferences(AnTAG, Context.MODE_PRIVATE);
         Window window = getWindow();
         AndroidTranslucentBar.getInstance().setTranslucentBar(window);
         //SwipeCloseActivity init
