@@ -667,3 +667,20 @@ UpdataManager
 
 [android手机可直接点击下载](https://github.com/qydq/an-aw-base/raw/master/app/zhangluyue_jiami.apk)
 
+## 2017/03/23  16:07:57
+
+>今天是小月离开的第70天了，在QQ空间说过再给一周的时间，这个电话是一定会打的，但不知道什么时候我有勇气打给你，或是你那一天会主动打给我。我真的被伤掉了，以这种方式，小月你真的满意了吗？我知道知道为何为何，就因为我动手了吗……。
+
+最新编译版本
+
+`compile 'com.github.qydq:an-aw-base:0.2.6'`
+
+build.gradle更新发布至jitpack和jcenter中心。
+
+compile 'cn.android.sunst:an-base:2.0.2'
+
+更新说明：
+
+这次升级是小幅度的升级，主要添加ParallaxActivity，整合Theme,更新app-release.apk,修复bug问题 
+
+然后是上午早些时候借助an-aw-base完成了[an-aw-zxing 二维码框架](https://github.com/qydq/an-aw-zxing)。
