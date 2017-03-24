@@ -81,8 +81,8 @@ public class UpdateManager {
             switch (msg.what) {
                 case DOWN_UPDATE:
                     mProgress.setProgress(progress);
-                    tvProgressLeft.setText(persentProgress + "%");
-                    tvProgressRight.setText(persentProgress + "/100");
+                    tvProgressLeft.setText(progress + "%");
+                    tvProgressRight.setText(progress + "/100");
                     break;
                 case DOWN_OVER:
                     installApk();
@@ -123,10 +123,6 @@ public class UpdateManager {
         this.updateMsg = updataMsg;
     }
 
-    public void setTvProgressVisible(int visible) {
-        tvProgressRight.setVisibility(visible);
-        tvProgressLeft.setVisibility(visible);
-    }
 
     private void showNoticeDialog() {
         Builder builder = new Builder(mContext);
