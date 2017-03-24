@@ -1,7 +1,5 @@
 package com.an.base.view;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
@@ -10,8 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-
-import static com.an.base.AnApplication.AnTAG;
 
 /**
  * Created by stary on 2016/8/18.
@@ -22,12 +18,10 @@ import static com.an.base.AnApplication.AnTAG;
  */
 
 public abstract class SuperFragment extends BaseFragment {
-    protected SharedPreferences sp;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        sp = mContext.getSharedPreferences(AnTAG, Context.MODE_PRIVATE);
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 

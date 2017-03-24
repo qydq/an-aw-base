@@ -1,6 +1,7 @@
 package com.an.base.view;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,6 +11,8 @@ import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 
 import org.xutils.x;
+
+import static com.an.base.AnApplication.AnTAG;
 
 /**
  * Created by stary on 2016/8/18.
@@ -28,7 +31,7 @@ public abstract class BaseFragment extends Fragment implements OnTouchListener {
 
     protected Context mContext = null;
     protected View view;
-
+    protected SharedPreferences sp;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -36,6 +39,7 @@ public abstract class BaseFragment extends Fragment implements OnTouchListener {
 
         view = inflater.inflate(getLayoutId(), null);
         this.mContext = inflater.getContext();
+        sp = mContext.getSharedPreferences(AnTAG, Context.MODE_PRIVATE);
 //可以解封，需引用ViewUtils这是注解部分。
 //        ViewUtils.inject(this, view);
         x.view().inject(this, inflater, container);
