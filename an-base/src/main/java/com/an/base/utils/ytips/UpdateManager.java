@@ -123,6 +123,10 @@ public class UpdateManager {
         this.updateMsg = updataMsg;
     }
 
+    public void setTvProgressVisible(int visible) {
+        tvProgressRight.setVisibility(visible);
+        tvProgressLeft.setVisibility(visible);
+    }
 
     private void showNoticeDialog() {
         Builder builder = new Builder(mContext);
@@ -248,7 +252,7 @@ public class UpdateManager {
                 super.onLoading(total, current, isDownloading);
                 mProgress.setMax((int) total);
                 progress = (int) current;
-                persentProgress = (int) (current * (100 / total));
+                persentProgress = progress * (100 / (int) total);
                 mHandler.sendEmptyMessage(DOWN_UPDATE);
             }
         });
