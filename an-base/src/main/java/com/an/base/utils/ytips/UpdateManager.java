@@ -20,6 +20,7 @@ import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.an.base.R;
 import com.an.base.model.ytips.XHttps;
@@ -59,6 +60,8 @@ public class UpdateManager {
 
     /* 进度条与通知ui刷新的handler和msg常量 */
     private ProgressBar mProgress;
+    private TextView tvProgressLeft;
+    private TextView tvProgressRight;
 
 
     private static final int DOWN_UPDATE = 1;
@@ -66,6 +69,8 @@ public class UpdateManager {
     private static final int DOWN_OVER = 2;
 
     private int progress;
+
+    private int persentProgress;//目前textView中显示的百分比。
 
     private Thread downLoadThread;
 
@@ -76,6 +81,8 @@ public class UpdateManager {
             switch (msg.what) {
                 case DOWN_UPDATE:
                     mProgress.setProgress(progress);
+                    tvProgressLeft.setText(persentProgress + "%");
+                    tvProgressRight.setText(persentProgress + "/100");
                     break;
                 case DOWN_OVER:
                     installApk();
@@ -109,6 +116,13 @@ public class UpdateManager {
         showNoticeDialog();
     }
 
+    /*
+    * 设置更新的内容提示
+    * */
+    public void setUpdateMsg(String updataMsg) {
+        this.updateMsg = updataMsg;
+    }
+
 
     private void showNoticeDialog() {
         Builder builder = new Builder(mContext);
@@ -133,11 +147,13 @@ public class UpdateManager {
 
     private void showDownloadDialog() {
         Builder builder = new Builder(mContext);
-        builder.setTitle("软件版本更新");
+        builder.setTitle("正在下载...");
 
         final LayoutInflater inflater = LayoutInflater.from(mContext);
         View v = inflater.inflate(R.layout.base_progress_update_standard, null);
         mProgress = (ProgressBar) v.findViewById(R.id.anProgressUpdateBar);
+        tvProgressLeft = (TextView) v.findViewById(R.id.tvProgressLeft);
+        tvProgressRight = (TextView) v.findViewById(R.id.tvProgressRight);
 
         builder.setView(v);
         builder.setNegativeButton("取消", new OnClickListener() {
@@ -232,6 +248,7 @@ public class UpdateManager {
                 super.onLoading(total, current, isDownloading);
                 mProgress.setMax((int) total);
                 progress = (int) current;
+                persentProgress = (int) (current * (100 / total));
                 mHandler.sendEmptyMessage(DOWN_UPDATE);
             }
         });

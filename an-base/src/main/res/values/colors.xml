@@ -246,7 +246,7 @@
     <color name="CommTxtMainTipsColor">#ADFF2F</color><!--文本特殊标记颜色-->
 
     <color name="CommStartColor">#c0000000</color><!--开始颜色，用于渐变-->
-    <color name="CommEndColor">#c0000000</color><!--结束颜色，用于渐变-->
+    <color name="CommEndColor">#d5d5d5</color><!--结束颜色，用于渐变-->
 
     <color name="CommColorBarTitle">#9a9a9a</color><!--bar,文本文字颜色-->
     <color name="CommColorBarTitleClicked">#38b7ea</color><!--bar文本文字选择颜色#cacaca-->
