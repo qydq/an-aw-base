@@ -2,7 +2,9 @@ package com.an.base.view;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.view.Gravity;
@@ -42,9 +44,14 @@ public abstract class SuperActivity extends BaseActivity implements NetBroadcast
         //环信集成功能，暂未开启。
 //		EMChat.getInstance().init(this.getApplicationContext());
         mContext = this;
-        //an框架的夜间模式。用来保存皮肤切换模式的sp
-        sp = this.getSharedPreferences(AnTAG, Context.MODE_PRIVATE);
-
+        //an框架的夜间模式。用来保存皮肤切换模式的sp，为了兼容性android6.0 到7.0做了如下判断。
+        //android7.0提供兼容性。
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.M) {
+            sp = this.getSharedPreferences(AnTAG, Context.MODE_PRIVATE);
+        }
+        if (Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+            sp = PreferenceManager.getDefaultSharedPreferences(mContext);
+        }
         Window window = getWindow();
         AndroidTranslucentBar.getInstance().setTranslucentBar(window);
         if (sp.getBoolean("isNight", false)) {

@@ -2,7 +2,9 @@ package com.an.base.view.activity;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.Snackbar;
 import android.view.Gravity;
 import android.view.View;
@@ -33,7 +35,12 @@ public abstract class SwipeCloseActivity extends BaseActivity implements NetBroa
 //		EMChat.getInstance().init(this.getApplicationContext());
         mContext = this;
         //an框架的夜间模式。用来保存皮肤切换模式的sp
-        sp = this.getSharedPreferences(AnTAG, Context.MODE_PRIVATE);
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.M) {
+            sp = this.getSharedPreferences(AnTAG, Context.MODE_PRIVATE);
+        }
+        if (Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+            sp = PreferenceManager.getDefaultSharedPreferences(mContext);
+        }
         Window window = getWindow();
         AndroidTranslucentBar.getInstance().setTranslucentBar(window);
         //SwipeCloseActivity init

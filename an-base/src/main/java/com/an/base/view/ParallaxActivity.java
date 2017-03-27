@@ -2,7 +2,9 @@ package com.an.base.view;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
@@ -44,7 +46,12 @@ public abstract class ParallaxActivity extends BaseActivity implements NetBroadc
         mContext = this;
         mHelper = new ParallaxBackActivityHelper(this);
         //an框架的夜间模式。用来保存皮肤切换模式的sp
-        sp = this.getSharedPreferences(AnTAG, Context.MODE_PRIVATE);
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.M) {
+            sp = this.getSharedPreferences(AnTAG, Context.MODE_PRIVATE);
+        }
+        if (Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+            sp = PreferenceManager.getDefaultSharedPreferences(mContext);
+        }
 
         Window window = getWindow();
         AndroidTranslucentBar.getInstance().setTranslucentBar(window);

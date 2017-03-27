@@ -20,7 +20,6 @@ import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import com.an.base.R;
 import com.an.base.model.ytips.XHttps;
@@ -60,8 +59,6 @@ public class UpdateManager {
 
     /* 进度条与通知ui刷新的handler和msg常量 */
     private ProgressBar mProgress;
-    private TextView tvProgressLeft;
-    private TextView tvProgressRight;
 
 
     private static final int DOWN_UPDATE = 1;
@@ -81,8 +78,6 @@ public class UpdateManager {
             switch (msg.what) {
                 case DOWN_UPDATE:
                     mProgress.setProgress(progress);
-                    tvProgressLeft.setText(progress + "%");
-                    tvProgressRight.setText(progress + "/100");
                     break;
                 case DOWN_OVER:
                     installApk();
@@ -152,8 +147,6 @@ public class UpdateManager {
         final LayoutInflater inflater = LayoutInflater.from(mContext);
         View v = inflater.inflate(R.layout.base_progress_update_standard, null);
         mProgress = (ProgressBar) v.findViewById(R.id.anProgressUpdateBar);
-        tvProgressLeft = (TextView) v.findViewById(R.id.tvProgressLeft);
-        tvProgressRight = (TextView) v.findViewById(R.id.tvProgressRight);
 
         builder.setView(v);
         builder.setNegativeButton("取消", new OnClickListener() {
