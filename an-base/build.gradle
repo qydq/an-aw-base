@@ -71,7 +71,7 @@ install {
             project {
                 packaging 'aar'
                 // 项目描述，复制我的话，这里需要修改。
-                name 'AndServer For Android'// 可选，项目名称。
+                name 'an-aw-base'// 可选，项目名称。
                 description 'The Android build the framework of the Http server.'// 可选，项目描述。
                 url siteUrl // 项目主页，这里是引用上面定义好。
 
@@ -139,7 +139,7 @@ bintray {
 
     configurations = ['archives']
     pkg {
-        repo = "an"  // 上传到maven库。（这里要特别注意，如果写了maven报404错误，请在bintray创建一个仓库，这里填改成你创建的仓库的名字，如何创建请看下图。）
+        repo = "test"  // 上传到maven库。（这里要特别注意，如果写了maven报404错误，请在bintray创建一个仓库，这里填改成你创建的仓库的名字，如何创建请看下图。）
         name = "an-aw-base"  // 发布到Bintray上的项目名字，这里的名字不是compile 'cn.android.sunst:an-base:2.0.3'中的aw。
         userOrg = 'qyddai@gmail.com' // Bintray的用户名，2016年11月更新。
         websiteUrl = siteUrl
