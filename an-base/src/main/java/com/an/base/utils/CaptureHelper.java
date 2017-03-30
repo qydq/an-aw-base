@@ -14,6 +14,7 @@ import android.os.Build;
 import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
+import android.support.v4.content.FileProvider;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -46,6 +47,7 @@ public class CaptureHelper {
      * 拍照生成的图片文件
      */
     private File mPhotoFile;
+    private Uri fileUri;
 
     /**
      * @param activity
@@ -61,13 +63,25 @@ public class CaptureHelper {
      */
     public void capture() {
         if (hasCamera()) {
-            createPhotoFile();
-            if (mPhotoFile == null) {
-                Toast.makeText(mActivity, "skRoot is null", Toast.LENGTH_SHORT).show();
-                return;
-            }
             Intent captureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            Uri fileUri = Uri.fromFile(mPhotoFile);
+            //android6.0以上实现StrictMode API政策禁
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                createPhotoFile();
+                if (mPhotoFile == null) {
+                    Toast.makeText(mActivity, "skRoot is null", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                //通过FileProvider创建一个content类型的Uri
+                fileUri = FileProvider.getUriForFile(mActivity, "com.an.base.takephoto.fileprovider", mPhotoFile);
+                captureIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION); //添加这一句表示对目标应用临时授权该Uri所代表的文件
+            } else {
+                createPhotoFile();
+                if (mPhotoFile == null) {
+                    Toast.makeText(mActivity, "skRoot is null", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                fileUri = Uri.fromFile(mPhotoFile);
+            }
             captureIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
             mActivity.startActivityForResult(captureIntent, RESULT_CAPTURE_CODE);
         } else {
@@ -119,13 +133,15 @@ public class CaptureHelper {
             cropHeightSize = 150;
         }
         Intent intent = new Intent("com.android.camera.action.CROP");
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            String url = getPath(mActivity, uri);
+            intent.setDataAndType(Uri.fromFile(new File(url)), "image/*");
+        } else if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
             String url = getPath(mActivity, uri);
             intent.setDataAndType(Uri.fromFile(new File(url)), "image/*");
         } else {
             intent.setDataAndType(uri, "image/*");
         }
-
         // 设置裁剪
         intent.putExtra("crop", "true");
         // aspectX aspectY 是宽高的比例
@@ -160,12 +176,19 @@ public class CaptureHelper {
             cropHeightSize = 150;
         }
         Intent intent = new Intent("com.android.camera.action.CROP");
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            Uri outputUri = FileProvider.getUriForFile(mActivity, "com.an.base.takephoto.fileprovider", cropFile);
+            Uri imageUri = FileProvider.getUriForFile(mActivity, "com.an.base.takephoto.fileprovider", cropFile);//通过FileProvider创建一个content类型的Uri
+        } else if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
             String url = getPath(mActivity, uri);
             intent.setDataAndType(Uri.fromFile(new File(url)), "image/*");
         } else {
             intent.setDataAndType(uri, "image/*");
         }
+
+        String url = getPath(mActivity, uri);
+        intent.setDataAndType(Uri.fromFile(new File(url)), "image/*");
+        intent.setDataAndType(uri, "image/*");
 
         // 设置裁剪
         intent.putExtra("crop", "true");

@@ -12,7 +12,7 @@ import android.widget.Toast;
 /**
  * Created by stary on 2016/8/18.
  * 文件名称：SuperFragment
- * 文件描述：
+ * 文件描述：Fragment超类
  * 作者：staryumou@163.com
  * 修改时间：2016/8/18
  */

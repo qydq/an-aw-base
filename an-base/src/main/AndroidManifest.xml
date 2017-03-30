@@ -19,6 +19,15 @@
         android:supportsRtl="true"
         android:theme="@style/AnAppTheme"
         android:windowSoftInputMode="stateAlwaysHidden">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.an.base.takephoto.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/base_takephoto_fileprovider" />
+        </provider>
         <receiver android:name=".utils.NetBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />

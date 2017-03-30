@@ -2,7 +2,9 @@ package com.an.base.view;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -32,6 +34,7 @@ public abstract class BaseFragment extends Fragment implements OnTouchListener {
     protected Context mContext = null;
     protected View view;
     protected SharedPreferences sp;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -39,7 +42,12 @@ public abstract class BaseFragment extends Fragment implements OnTouchListener {
 
         view = inflater.inflate(getLayoutId(), null);
         this.mContext = inflater.getContext();
-        sp = mContext.getSharedPreferences(AnTAG, Context.MODE_PRIVATE);
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.M) {
+            sp = mContext.getSharedPreferences(AnTAG, Context.MODE_PRIVATE);
+        }
+        if (Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+            sp = PreferenceManager.getDefaultSharedPreferences(mContext);
+        }
 //可以解封，需引用ViewUtils这是注解部分。
 //        ViewUtils.inject(this, view);
         x.view().inject(this, inflater, container);
