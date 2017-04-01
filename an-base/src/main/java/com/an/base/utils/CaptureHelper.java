@@ -1,7 +1,9 @@
 package com.an.base.utils;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.ClipData;
 import android.content.ContentUris;
 import android.content.Context;
 import android.content.Intent;
@@ -9,45 +11,93 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.an.base.utils.DUtilsStorage;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
 /**
- * <p/>拍照辅助类
- * Created by sunshuntao on 2016/5/21.
+ * <p/>拍照辅助类CaptureHelper
+ * Created by sunshuntao 莳萝花on 2016/5/21.
+ * <p>不适用缓存，以后个人开发杜绝采用缓存。
+ * 修改日期：2017年4月1日13:23:40（愚人节）
  */
 public class CaptureHelper {
-
     private final static String TIMESTAMP_FORMAT = "yyyy_MM_dd_HH_mm_ss";//拍照保存为年月日，时分秒的jpg照片。
-    public final static int RESULT_CAPTURE_CODE = 0x0011;// 拍照后返回结果码
-    public final static int RESULT_CAPTURE_CROP_CODE = 0x0001;// 拍照后裁剪返回结果码
-    public final static int RESULT_PHOTO_CROP_CODE = 0x0000;// 选择相册后裁剪返回结果码
-    public final static int RESULT_PHOTO_CODE = 0x0101;//选择相册后返回结果码
+    public final static int RESULT_CAPTURE_CODE = 0x0001;// 拍照后返回结果码
+    public final static int RESULT_CAPTURE_CROP_CODE = 0x0002;// 拍照后裁剪返回结果码
+    public final static int RESULT_PHOTO_CROP_CODE = 0x0003;// 选择相册后裁剪返回结果码
+    public final static int RESULT_PHOTO_CODE = 0x0004;//选择相册后返回结果码
 
-    private Activity mActivity;
+    public static final int CAMERA_REQUEST_PERMISSION_CODE = 1;//相机请求权限
+    public static final int PHOTO_REQUEST_PERMISSION_CODE = 2;//相册请求权限
+
+    private Activity mActivity;//上下文窗口。
     /**
      * 存放图片的目录
      */
-    private File skRoot;
+    private static File skRoot;//创建存放图片的目录文件
     /**
      * 拍照生成的图片文件
      */
-    private File mPhotoFile;
-    private Uri fileUri;
+    private static File mPhotoFile;//原始图片全路径地址
+    private static File cropFile;//裁剪的文件的File
+
+    private static Uri mPhotoUri;//原始图片全Uri途径
+    private static Uri imageCropUri;//裁剪文件的Uri
+
+
+    public static String AnTAG = "an_ytips";//an框架系列的资源文件都保存在an_ytips目录下面
+    public static String AnPictureTAG = "picture";
+
+    public File getSkRoot() {
+        return skRoot;
+    }
+
+    public Uri getImageCropUri() {
+        return imageCropUri;
+    }
+
+    public File getmPhotoFile() {
+        return mPhotoFile;
+    }
+
+    public File getCropFile() {
+        return cropFile;
+    }
+
+    public Uri getmPhotoUri() {
+        return mPhotoUri;
+    }
+
+    /**
+     * @param activity
+     */
+    public CaptureHelper(Activity activity) {
+        this.skRoot = new File(DUtilsStorage.INSTANCE.getskRootFile(), AnTAG + File.separator + AnPictureTAG);
+        this.mActivity = activity;
+    }
 
     /**
      * @param activity
@@ -58,170 +108,113 @@ public class CaptureHelper {
         this.skRoot = skRoot;
     }
 
+
     /**
      * 拍照，以时间命名，可以调用getPhoto得到时间命名的file照片。
+     * 默认会在系统保存时间命名的图片
      */
     public void capture() {
         if (hasCamera()) {
-            Intent captureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             //android6.0以上实现StrictMode API政策禁
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                createPhotoFile();
-                if (mPhotoFile == null) {
-                    Toast.makeText(mActivity, "skRoot is null", Toast.LENGTH_SHORT).show();
-                    return;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                final String permission = Manifest.permission.CAMERA;  //相机权限
+                final String permission1 = Manifest.permission.WRITE_EXTERNAL_STORAGE; //写入数据权限
+                if (ContextCompat.checkSelfPermission(mActivity, permission) != PackageManager.PERMISSION_GRANTED
+                        || ContextCompat.checkSelfPermission(mActivity, permission1) != PackageManager.PERMISSION_GRANTED) {  //先判断是否被赋予权限，没有则申请权限
+                    if (ActivityCompat.shouldShowRequestPermissionRationale(mActivity, permission)) {  //给出权限申请说明
+                        ActivityCompat.requestPermissions(mActivity, new String[]{Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE}, CAMERA_REQUEST_PERMISSION_CODE);
+                    } else { //直接申请权限
+                        ActivityCompat.requestPermissions(mActivity, new String[]{Manifest.permission.CAMERA}, CAMERA_REQUEST_PERMISSION_CODE); //申请权限，可同时申请多个权限，并根据用户是否赋予权限进行判断
+                    }
+                } else {  //赋予过权限，则直接调用相机拍照
+                    startCamera();
                 }
-                //通过FileProvider创建一个content类型的Uri
-                fileUri = FileProvider.getUriForFile(mActivity, "com.an.base.takephoto.fileprovider", mPhotoFile);
-                captureIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION); //添加这一句表示对目标应用临时授权该Uri所代表的文件
             } else {
-                createPhotoFile();
-                if (mPhotoFile == null) {
-                    Toast.makeText(mActivity, "skRoot is null", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                fileUri = Uri.fromFile(mPhotoFile);
+                startCamera();//低版本则不用考虑那么多
             }
-            captureIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
-            mActivity.startActivityForResult(captureIntent, RESULT_CAPTURE_CODE);
         } else {
-            Toast.makeText(mActivity, "打开错误", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mActivity, "没有检测到相机", Toast.LENGTH_SHORT).show();
         }
     }
 
     /**
-     * @param saveName          拍照后保存的名字
-     * @param isNoFaceDetection 不开启人脸识别拍照
+     * 打开相机获取图片
      */
-    public void capture(String saveName, boolean isNoFaceDetection) {
-        if (hasCamera()) {
-            Intent intentFromCapture = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            intentFromCapture.putExtra("return-data", false);
-            intentFromCapture.putExtra(MediaStore.EXTRA_OUTPUT,
-                    Uri.fromFile(new File(skRoot, saveName)));
-            intentFromCapture.putExtra("outputFormat", Bitmap.CompressFormat.JPEG.toString());
-            intentFromCapture.putExtra("noFaceDetection", isNoFaceDetection);
-            mActivity.startActivityForResult(intentFromCapture, RESULT_CAPTURE_CODE);
-        } else {
-            Toast.makeText(mActivity, "打开错误", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    /**
-     * 调用系统相册，并返回RESULT_PHOTO_CODE
-     */
-    public void photo() {
-        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-        intent.addCategory(Intent.CATEGORY_OPENABLE);
-        intent.setType("image/*");
-        mActivity.startActivityForResult(intent, RESULT_PHOTO_CODE);//4.4版本以上。
-    }
-
-    /**
-     * @param uri            原始uri。一般未data.getData()  裁剪图片方法实现,系统会自动根据android版本调用合适的方法。
-     * @param cropWidthSize  裁剪的宽度
-     * @param cropHeightSize 裁剪的高度
-     **/
-    public void startPhotoZoom(Uri uri, int cropWidthSize, int cropHeightSize) {
-        if (uri == null) {
-            Log.i("tag", "The uri is not exist.");
-            return;
-        }
-        //默认
-        if (cropHeightSize < 150) {
-            cropWidthSize = 150;
-            cropHeightSize = 150;
-        }
-        Intent intent = new Intent("com.android.camera.action.CROP");
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            String url = getPath(mActivity, uri);
-            intent.setDataAndType(Uri.fromFile(new File(url)), "image/*");
-        } else if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
-            String url = getPath(mActivity, uri);
-            intent.setDataAndType(Uri.fromFile(new File(url)), "image/*");
-        } else {
-            intent.setDataAndType(uri, "image/*");
-        }
-        // 设置裁剪
-        intent.putExtra("crop", "true");
-        // aspectX aspectY 是宽高的比例
-        intent.putExtra("aspectX", 1);
-        intent.putExtra("aspectY", 1);
-        // outputX outputY 是裁剪图片宽高
-        intent.putExtra("outputX", cropWidthSize);
-        intent.putExtra("outputY", cropHeightSize);
-        intent.putExtra("return-data", true);
+    private void startCamera() {
+        createPhotoFile();
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        intent.putExtra("return-data", false);
         intent.putExtra("outputFormat", Bitmap.CompressFormat.JPEG.toString());
-        intent.putExtra("noFaceDetection", true);
-        mActivity.startActivityForResult(intent, RESULT_PHOTO_CROP_CODE);
-    }
-
-    /**
-     * @param uri            原始uri。一般未data.getData()  裁剪图片方法实现,系统会自动根据android版本调用合适的方法。
-     * @param cropName       裁剪并保存名为cropName的jpg照片
-     * @param cropWidthSize  裁剪的宽度
-     * @param cropHeightSize 裁剪的高度
-     */
-    public void startPhotoZoom(Uri uri, String cropName, int cropWidthSize, int cropHeightSize) {
-        if (uri == null) {
-            Log.i("tag", "The uri is not exist.");
-            return;
-        }
-        String cropPath = skRoot + "/" + cropName;
-        File cropFile = new File(cropPath);
-        Uri imageCropUri = Uri.fromFile(cropFile);//裁剪后图片的Uri
-        //默认
-        if (cropHeightSize < 150) {
-            cropWidthSize = 150;
-            cropHeightSize = 150;
-        }
-        Intent intent = new Intent("com.android.camera.action.CROP");
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            Uri outputUri = FileProvider.getUriForFile(mActivity, "com.an.base.takephoto.fileprovider", cropFile);
-            Uri imageUri = FileProvider.getUriForFile(mActivity, "com.an.base.takephoto.fileprovider", cropFile);//通过FileProvider创建一个content类型的Uri
-        } else if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
-            String url = getPath(mActivity, uri);
-            intent.setDataAndType(Uri.fromFile(new File(url)), "image/*");
+        intent.putExtra("noFaceDetection", false);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            //第二参数是在manifest.xml定义 provider的authorities属性
+            mPhotoUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", mPhotoFile);
         } else {
-            intent.setDataAndType(uri, "image/*");
+            mPhotoUri = Uri.fromFile(mPhotoFile);
         }
+        //兼容版本处理，因为 intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION) 只在5.0以上的版本有效
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION); //添加这一句表示对目标应用临时授权该Uri所代表的文件
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            ClipData clip = ClipData.newUri(mActivity.getContentResolver(), "A photo", mPhotoUri);
+            intent.setClipData(clip);
+            intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+        } else {
+            List<ResolveInfo> resInfoList = mActivity.getPackageManager()
+                    .queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
+            for (ResolveInfo resolveInfo : resInfoList) {
+                String packageName = resolveInfo.activityInfo.packageName;
+                mActivity.grantUriPermission(packageName, mPhotoUri,
+                        Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+            }
+        }
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, mPhotoUri);
+        mActivity.startActivityForResult(intent, RESULT_CAPTURE_CODE);
 
-        String url = getPath(mActivity, uri);
-        intent.setDataAndType(Uri.fromFile(new File(url)), "image/*");
-        intent.setDataAndType(uri, "image/*");
-
-        // 设置裁剪
-        intent.putExtra("crop", "true");
-        // aspectX aspectY 是宽高的比例
-        intent.putExtra("aspectX", 1);
-        intent.putExtra("aspectY", 1);
-        // outputX outputY 是裁剪图片宽高
-        intent.putExtra("outputX", cropWidthSize);
-        intent.putExtra("outputY", cropHeightSize);
-        intent.putExtra("return-data", true);
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, imageCropUri);//输出裁剪后的名字为face.jpg
-        intent.putExtra("outputFormat", Bitmap.CompressFormat.JPEG.toString());
-        intent.putExtra("noFaceDetection", true);
-        mActivity.startActivityForResult(intent, RESULT_PHOTO_CROP_CODE);
+        if (true) {
+//            startCaptureZoom(IMAGE_FILE_MAX_NAME, IMAGE_FILE_NAME);
+        }
     }
-
+ /*
+    *
+    * 私有方法*/
 
     /**
-     * @param originName
-     * @param cropName
+     * 创建照片文件-time类型
      */
-    public void startCaptureZoom(String originName, String cropName) {
-        //拍照的原始未裁剪照片face_max.jpg
-        String imagePath = skRoot + "/" + originName;
-        File imageFile = new File(imagePath);
-        Uri imageUri = Uri.fromFile(imageFile);//原始图片的Uri
+    private void createPhotoFile() {
+        if (skRoot != null) {
+//            拍照保存为年月日，时分秒的jpg照片。存在mPhotoFile目录下面
+            String dataFormat = new SimpleDateFormat(TIMESTAMP_FORMAT).format(new Date());
+            mPhotoFile = new File(skRoot, dataFormat + ".jpg");
+        } else {
+            Toast.makeText(mActivity, "不存在该目录！", Toast.LENGTH_SHORT).show();
+        }
+    }
 
-        String cropPath = skRoot + "/" + cropName;
-        File cropFile = new File(cropPath);
-        Uri imageCropUri = Uri.fromFile(cropFile);//裁剪后图片的Uri
-
+    /**
+     * 裁剪照片-time类型（裁剪后图片保存为时间类型的图片）
+     */
+    public void startCaptureZoom() {
         Intent intent = new Intent("com.android.camera.action.CROP");
-        intent.setDataAndType(imageUri, "image/*");
+        //获取当前时间
+        String dataFormat = new SimpleDateFormat(TIMESTAMP_FORMAT).format(new Date());
+        String cropPath = skRoot + File.separator + dataFormat + ".jpg";
+        cropFile = new File(cropPath);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);//零时权限
+            //通过FileProvider创建一个content类型的Uri
+            mPhotoUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", mPhotoFile);
+            imageCropUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", cropFile);
+        } else {
+            //原始图片的Uri
+            mPhotoUri = Uri.fromFile(mPhotoFile);
+            //裁剪后图片的Uri
+            imageCropUri = Uri.fromFile(cropFile);
+        }
+        intent.setDataAndType(mPhotoUri, "image/*");
         intent.putExtra("crop", "true");
         intent.putExtra("aspectX", 1);
         intent.putExtra("aspectY", 1);
@@ -234,35 +227,274 @@ public class CaptureHelper {
         mActivity.startActivityForResult(intent, RESULT_CAPTURE_CROP_CODE);
     }
 
+//    -----------------------分割线----------2017年4月1日 10:12:29  晴雨莳萝-----------------
+
     /**
-     * 创建照片文件
+     * 拍照，以originName命名，可以调用getPhoto得到时间命名的file照片。
+     *
+     * @param originName        拍照后保存的名字
+     * @param isNoFaceDetection 是否开启人脸识别拍照
      */
-    private void createPhotoFile() {
-        if (skRoot != null) {
-            if (!skRoot.exists()) {//检查保存图片的目录存不存在
-                skRoot.mkdirs();
+    public void capture(String originName, boolean isNoFaceDetection) {
+        if (hasCamera()) {
+            //android6.0以上实现StrictMode API政策禁
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                final String permission = Manifest.permission.CAMERA;  //相机权限
+                final String permission1 = Manifest.permission.WRITE_EXTERNAL_STORAGE; //写入数据权限
+                if (ContextCompat.checkSelfPermission(mActivity, permission) != PackageManager.PERMISSION_GRANTED
+                        || ContextCompat.checkSelfPermission(mActivity, permission1) != PackageManager.PERMISSION_GRANTED) {  //先判断是否被赋予权限，没有则申请权限
+                    if (ActivityCompat.shouldShowRequestPermissionRationale(mActivity, permission)) {  //给出权限申请说明
+                        ActivityCompat.requestPermissions(mActivity, new String[]{Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE}, CAMERA_REQUEST_PERMISSION_CODE);
+                    } else { //直接申请权限
+                        ActivityCompat.requestPermissions(mActivity, new String[]{Manifest.permission.CAMERA}, CAMERA_REQUEST_PERMISSION_CODE); //申请权限，可同时申请多个权限，并根据用户是否赋予权限进行判断
+                    }
+                } else {  //赋予过权限，则直接调用相机拍照
+                    startCamera(originName, isNoFaceDetection);
+                }
+            } else {
+                Log.d("CaptureHelper", "--yy@@--方法名--androidO--");
+                startCamera(originName, isNoFaceDetection);
             }
-            String fileName = new SimpleDateFormat(TIMESTAMP_FORMAT).format(new Date());
-            mPhotoFile = new File(skRoot, fileName + ".jpg");
+
+        } else {
+            Toast.makeText(mActivity, "没有检测到相机", Toast.LENGTH_SHORT).show();
+        }
+    }
+ /*
+    *
+    * 私有方法*/
+
+    /**
+     * 打开相机获取图片
+     */
+    private void startCamera(String originName, boolean isNoFaceDetection) {
+        createPhotoFile(originName);
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        intent.putExtra("return-data", false);
+        intent.putExtra("outputFormat", Bitmap.CompressFormat.JPEG.toString());
+        intent.putExtra("noFaceDetection", isNoFaceDetection);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            //第二参数是在manifest.xml定义 provider的authorities属性
+            mPhotoUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", mPhotoFile);
+        } else {
+            mPhotoUri = Uri.fromFile(mPhotoFile);
+        }
+        //兼容版本处理，因为 intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION) 只在5.0以上的版本有效
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION); //添加这一句表示对目标应用临时授权该Uri所代表的文件
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            ClipData clip = ClipData.newUri(mActivity.getContentResolver(), "A photo", mPhotoUri);
+            intent.setClipData(clip);
+            intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+        } else {
+            List<ResolveInfo> resInfoList = mActivity.getPackageManager()
+                    .queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
+            for (ResolveInfo resolveInfo : resInfoList) {
+                String packageName = resolveInfo.activityInfo.packageName;
+                mActivity.grantUriPermission(packageName, mPhotoUri,
+                        Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+            }
+        }
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, mPhotoUri);
+        mActivity.startActivityForResult(intent, RESULT_CAPTURE_CODE);
+    }
+
+    /**
+     * 创建照片文件-用户自定义文件类型
+     */
+    private void createPhotoFile(String originName) {
+        if (skRoot != null) {
+            mPhotoFile = new File(skRoot, originName + ".jpg");
+            //可能有问题，待解决（存在这个照片删除再创建新的。
             if (mPhotoFile.exists()) {
                 mPhotoFile.delete();
-            }
+            }//防止创建不了
+            mPhotoFile = new File(skRoot, originName + ".jpg");
             try {
                 mPhotoFile.createNewFile();
             } catch (IOException e) {
                 e.printStackTrace();
-                mPhotoFile = null;
             }
         } else {
-            mPhotoFile = null;
             Toast.makeText(mActivity, "不存在该目录！", Toast.LENGTH_SHORT).show();
         }
     }
 
     /**
+     * 裁剪照片-用户自定义文件类型（裁剪后图片保存cropName类型的图片）
+     */
+    public void startCaptureZoom(String cropName) {
+        Intent intent = new Intent("com.android.camera.action.CROP");
+        String cropPath = skRoot + File.separator + cropName + ".jpg";
+        cropFile = new File(cropPath);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            //通过FileProvider创建一个content类型的Uri
+            mPhotoUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", mPhotoFile);
+            imageCropUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", cropFile);
+        } else {
+            //原始图片的Uri
+            mPhotoUri = Uri.fromFile(mPhotoFile);
+            //裁剪后图片的Uri
+            imageCropUri = Uri.fromFile(cropFile);
+        }
+        intent.setDataAndType(mPhotoUri, "image/*");
+        intent.putExtra("crop", "true");
+        intent.putExtra("aspectX", 1);
+        intent.putExtra("aspectY", 1);
+        intent.putExtra("outputX", 700);
+        intent.putExtra("outputY", 700);
+        intent.putExtra("return-data", false);
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, imageCropUri);
+        intent.putExtra("outputFormat", Bitmap.CompressFormat.JPEG.toString());
+        intent.putExtra("noFaceDetection", true);
+        mActivity.startActivityForResult(intent, RESULT_CAPTURE_CROP_CODE);
+    }
+
+//    -----------------------分割线----------2017年4月1日 10:12:29  晴雨莳萝-----------------
+
+    /**
+     * 调用系统相册，并返回RESULT_PHOTO_CODE
+     */
+    public void photo() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            //Android6.0开始，WRITE_EXTERNAL_STORAGE被认为是危险权限，需要动态申请
+            if (ContextCompat.checkSelfPermission(mActivity, Manifest.permission.WRITE_EXTERNAL_STORAGE) !=
+                    PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(mActivity, new String[]{
+                                Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                        PHOTO_REQUEST_PERMISSION_CODE);
+            } else
+                openAlbum();
+        } else {
+            openAlbum();
+        }
+    }
+
+    /*
+    *
+    * 私有方法*/
+    private void openAlbum() {
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        intent.addCategory(Intent.CATEGORY_OPENABLE);
+        intent.setType("image/*");
+        mActivity.startActivityForResult(intent, RESULT_PHOTO_CODE);
+    }
+
+    /*
+    * 知识点讲解，裁剪这里对系统图片进行裁剪提供两种方式让我们的activity可以得到这张裁剪后的图片
+    * ，startPhotoZoom有一个返回值，而且裁剪后图片也有返回码RESULT_PHOTO_CROP_CODE
+    * */
+
+    /**
+     * 注意：（这里必须需要Intent的data参数。）
+     * 裁剪照片保存为当前系统时间的照片--针对图库的裁剪。
+     *
+     * @param cropWidthSize  裁剪的宽度150
+     * @param cropHeightSize 裁剪的高度150
+     **/
+    public void startPhotoZoom(@NonNull Intent data, int cropWidthSize, int cropHeightSize) {
+        //默认
+        Intent intent = new Intent("com.android.camera.action.CROP");
+        String dataFormat = new SimpleDateFormat(TIMESTAMP_FORMAT).format(new Date());
+        String cropPath = skRoot + File.separator + dataFormat + ".jpg";
+        cropFile = new File(cropPath);
+
+        if (cropHeightSize < 150) {
+            cropWidthSize = 150;
+            cropHeightSize = 150;
+        }
+        if (data.getData() != null) {
+            String url = getPath(mActivity, data.getData());
+            mPhotoFile = new File(url);
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            //通过FileProvider创建一个content类型的Uri
+            mPhotoUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", mPhotoFile);
+            imageCropUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", cropFile);
+        } else {
+            //原始图片的Uri
+            mPhotoUri = Uri.fromFile(mPhotoFile);
+            //裁剪后图片的Uri
+            imageCropUri = Uri.fromFile(cropFile);
+        }
+        intent.setDataAndType(mPhotoUri, "image/*");
+        // 设置裁剪
+        intent.putExtra("crop", "true");
+        // aspectX aspectY 是宽高的比例
+        intent.putExtra("aspectX", 1);
+        intent.putExtra("aspectY", 1);
+        // outputX outputY 是裁剪图片宽高
+        intent.putExtra("outputX", cropWidthSize);
+        intent.putExtra("outputY", cropHeightSize);
+        intent.putExtra("return-data", true);
+        intent.putExtra("outputFormat", Bitmap.CompressFormat.JPEG.toString());
+        intent.putExtra("noFaceDetection", true);
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, imageCropUri);
+        mActivity.startActivityForResult(intent, RESULT_PHOTO_CROP_CODE);
+    }
+
+    /**
+     * 注意：（这里必须需要Intent的data参数。）
+     * 裁剪照片保存为当前cropName对图库的裁剪。
+     *
+     * @param cropName       裁剪并保存名为cropName的jpg照片
+     * @param cropWidthSize  裁剪的宽度
+     * @param cropHeightSize 裁剪的高度400*400
+     */
+    public void startPhotoZoom(Intent data, String cropName, int cropWidthSize, int cropHeightSize) {
+        Intent intent = new Intent("com.android.camera.action.CROP");
+        String cropPath = skRoot + File.separator + cropName + ".jpg";
+        cropFile = new File(cropPath);
+
+        if (data.getData() != null) {
+            String url = getPath(mActivity, data.getData());
+            mPhotoFile = new File(url);
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            //通过FileProvider创建一个content类型的Uri
+            mPhotoUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", mPhotoFile);
+            imageCropUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", cropFile);
+        } else {
+            //原始图片的Uri
+            mPhotoUri = Uri.fromFile(mPhotoFile);
+            //裁剪后图片的Uri
+            imageCropUri = Uri.fromFile(cropFile);
+        }
+        //默认
+        if (cropHeightSize < 150) {
+            cropWidthSize = 150;
+            cropHeightSize = 150;
+        }
+
+        intent.setDataAndType(mPhotoUri, "image/*");
+        // 设置裁剪
+        intent.putExtra("crop", "true");
+        // aspectX aspectY 是宽高的比例
+        intent.putExtra("aspectX", 1);
+        intent.putExtra("aspectY", 1);
+        // outputX outputY 是裁剪图片宽高
+        intent.putExtra("outputX", cropWidthSize);
+        intent.putExtra("outputY", cropHeightSize);
+        intent.putExtra("return-data", true);
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, imageCropUri);//输出裁剪后的名字为face.jpg
+        intent.putExtra("outputFormat", Bitmap.CompressFormat.JPEG.toString());
+        intent.putExtra("noFaceDetection", true);
+        mActivity.startActivityForResult(intent, RESULT_PHOTO_CROP_CODE);
+    }
+
+
+//    -----------------------分割线----------2017年4月1日 10:12:29  晴雨莳萝-----------------
+
+
+    /**
      * @param mBitmap  bitmap
      * @param saveName 保存的名字
-     * @ 该方法单独使用，保存名为saveName的照片到内存卡
+     * @ 该方法单独使用，保存名为saveName的照片到内存卡（不管是拍照后裁剪的照片，还是选择图库后的照片建议都保存起来，下次获取，这里保存不需要权限。）
      */
     public void saveBitmap(Bitmap mBitmap, String saveName) {
         File f = new File(skRoot, saveName);
@@ -281,6 +513,70 @@ public class CaptureHelper {
     }
 
     /**
+     * @param context
+     * @param data
+     * @return 得到原尺寸的的Bitmap对象
+     */
+
+    public static Bitmap getCompressBitmap(Context context, Intent data) {
+        mPhotoUri = data.getData();
+        if (mPhotoUri != null) {
+            InputStream inputStream = null;
+            try {
+                inputStream = context.getContentResolver().openInputStream(mPhotoUri);
+                BitmapFactory.Options options = new BitmapFactory.Options();
+                options.inJustDecodeBounds = true;
+                options.inPreferredConfig = Bitmap.Config.ARGB_8888;
+                BitmapFactory.decodeStream(inputStream, null, options);
+                int originalWidth = options.outWidth;
+                int originalHeight = options.outHeight;
+                if (originalHeight == -1 || originalWidth == -1) return null;
+                float height = 1280f;
+                float width = 960f;
+                int noCompress = 1;
+                if (originalWidth > originalHeight && originalWidth > width) {
+                    noCompress = (int) (originalWidth / width);
+                } else if (originalWidth < originalHeight && originalHeight > height) {
+                    noCompress = (int) (originalHeight / height);
+                }
+                if (noCompress <= 0) noCompress = 1;
+                BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();
+                bitmapOptions.inSampleSize = noCompress;
+                options.inJustDecodeBounds = true;
+                bitmapOptions.inPreferredConfig = Bitmap.Config.ARGB_8888;
+                inputStream = context.getContentResolver().openInputStream(mPhotoUri);
+                Bitmap bitmap = BitmapFactory.decodeStream(inputStream, null, bitmapOptions);
+                return CompressBitmap(bitmap);
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+            }
+        }
+        return null;
+    }
+
+    /**
+     * 压缩图片
+     *
+     * @param bitmap
+     * @return
+     */
+    private static Bitmap CompressBitmap(Bitmap bitmap) {
+        int options = 100;
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);  //先不压缩，数据保存到outputStream；
+        while (outputStream.toByteArray().length / 1024 > 350) {//循环判断如果压缩后图片是否大于400kb,大于继续压缩
+            outputStream.reset(); //重置
+            //第一个参数 ：图片格式 ，第二个参数： 图片质量，100为最高，0为最差  ，第三个参数：保存压缩后的数据的流
+            bitmap.compress(Bitmap.CompressFormat.JPEG, options, outputStream);
+            options -= 10;//每次都减少10
+        }
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(outputStream.toByteArray());
+        Bitmap decodeStream = BitmapFactory.decodeStream(inputStream, null, null);
+        return decodeStream;
+    }
+
+    /**
      * @return 存在返回true，不存在返回false
      * @ 判断系统中是否存在可以启动的相机应用，私人可以用。
      */
@@ -291,25 +587,7 @@ public class CaptureHelper {
         return list.size() > 0;
     }
 
-    /**
-     * 获取当前拍到的图片文件
-     *
-     * @return
-     */
-    public File getPhoto() {
-        return mPhotoFile;
-    }
-
-    /**
-     * 设置照片文件
-     *
-     * @param photoFile
-     */
-    public void setPhoto(File photoFile) {
-        this.mPhotoFile = photoFile;
-    }
-
-    //以下是关键，原本uri返回的是file:///...来着的，android4.4返回的是content:///...
+    //以下是关键，原本uri返回的是file:///...来着的，android4.4返回的是content:///...(该方法是否替换)
     @SuppressLint("NewApi")
     public static String getPath(final Context context, final Uri uri) {
 

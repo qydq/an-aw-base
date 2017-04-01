@@ -30,7 +30,12 @@ import org.xutils.x;
 public class AnApplication extends Application {
 
     private static AnApplication instance;
-    public static String AnTAG = "an_tips";
+    public static String AnTAG = "an_ytips";//an框架系列的资源文件都保存在an_ytips目录下面
+    public static String AnDataBaseTAG = "database.db";
+    public static String AnShared_PrefsTAG = "shared_prefrence";
+    public static String AnPictureTAG = "picture";
+    public static String AnMusicTAG = "music";
+    public static String AnDOWNLOADTAG = "download";
 
 
     public static AnApplication getInstance() {

@@ -21,12 +21,12 @@
         android:windowSoftInputMode="stateAlwaysHidden">
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.an.base.takephoto.fileprovider"
+            android:authorities="com.an.base.fileprovider.tackphoto"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/base_takephoto_fileprovider" />
+                android:resource="@xml/base_fileprovider_tackphoto" />
         </provider>
         <receiver android:name=".utils.NetBroadcastReceiver">
             <intent-filter>
