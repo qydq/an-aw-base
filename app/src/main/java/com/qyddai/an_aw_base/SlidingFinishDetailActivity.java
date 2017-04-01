@@ -116,7 +116,7 @@ public class SlidingFinishDetailActivity extends SwipeFinishActivity {
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 //通过FileProvider创建一个content类型的Uri
-                resultUri = FileProvider.getUriForFile(this, "com.an.base.takephoto.fileprovider", resultFile);
+                resultUri = FileProvider.getUriForFile(this, "com.an.base.fileprovider.takephoto", resultFile);
             } else {
                 //原始图片的Uri
                 resultUri = Uri.fromFile(resultFile);
