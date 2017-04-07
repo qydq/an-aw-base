@@ -35,7 +35,7 @@
         <attr name="pickerview_textColorCenter" format="color" />
         <attr name="pickerview_dividerColor" format="color" />
     </declare-styleable>
-    <declare-styleable name="PowerImageView">
+    <declare-styleable name="LuuePowerIv">
         <attr name="auto_play" format="boolean" />
     </declare-styleable>
     <declare-styleable name="WSlidingLayout">

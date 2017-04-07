@@ -1,4 +1,4 @@
-package com.an.base.view.ytips;
+package com.an.base.view.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -20,7 +20,7 @@ import java.lang.reflect.Field;
 /**
  * Created by qydda on 2017/2/23.
  */
-public class PowerImageView extends ImageView implements View.OnClickListener {
+public class LuuePowerIv extends ImageView implements View.OnClickListener {
     /**
      * 播放GIF动画的关键类
      */
@@ -57,7 +57,7 @@ public class PowerImageView extends ImageView implements View.OnClickListener {
      *
      * @param context
      */
-    public PowerImageView(Context context) {
+    public LuuePowerIv(Context context) {
         super(context);
     }
 
@@ -66,7 +66,7 @@ public class PowerImageView extends ImageView implements View.OnClickListener {
      *
      * @param context
      */
-    public PowerImageView(Context context, AttributeSet attrs) {
+    public LuuePowerIv(Context context, AttributeSet attrs) {
 
         this(context, attrs, 0);
     }
@@ -76,7 +76,7 @@ public class PowerImageView extends ImageView implements View.OnClickListener {
      *
      * @param context
      */
-    public PowerImageView(Context context, AttributeSet attrs, int defStyle) {
+    public LuuePowerIv(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.PowerImageView);
         int resourceId = getResourceId(a, context, attrs);
