@@ -13,17 +13,17 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-public class LuueCircleImageView extends ImageView {
-    public LuueCircleImageView(Context context) {
+public class LuueCircleIv extends ImageView {
+    public LuueCircleIv(Context context) {
         super(context);
     }
 
-    public LuueCircleImageView(Context context, AttributeSet attrs) {
+    public LuueCircleIv(Context context, AttributeSet attrs) {
 
         super(context, attrs);
     }
 
-    public LuueCircleImageView(Context context, AttributeSet attrs, int defStyle) {
+    public LuueCircleIv(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 

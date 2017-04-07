@@ -19,7 +19,7 @@ import android.widget.ImageView;
  * Created by sunshuntao on 16/4/9.
  * email : staryumou@163.com
  */
-public class LuueSmoothImageView extends ImageView {
+public class LuueSmoothIv extends ImageView {
 
     private static final int STATE_NORMAL = 0;
     private static final int STATE_TRANSFORM_IN = 1;
@@ -38,17 +38,17 @@ public class LuueSmoothImageView extends ImageView {
     private Paint mPaint;
 
 
-    public LuueSmoothImageView(Context context) {
+    public LuueSmoothIv(Context context) {
         super(context);
         init();
     }
 
-    public LuueSmoothImageView(Context context, AttributeSet attrs) {
+    public LuueSmoothIv(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public LuueSmoothImageView(Context context, AttributeSet attrs, int defStyle) {
+    public LuueSmoothIv(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init();
     }

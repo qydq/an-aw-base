@@ -24,7 +24,7 @@ import com.an.base.R;
  * A custom ListView that if user sliding left a item of this ListView,
  * This item will show a Button.
  */
-public class WSlidingDeleteListView extends ListView {
+public class YslidingDeleteListView extends ListView {
 
     public static final int MAX_DISTANCE = 100;
 
@@ -47,17 +47,17 @@ public class WSlidingDeleteListView extends ListView {
     private VelocityTracker mTracker;
     private static final int MAX_FLING_VELOCITY = ViewConfiguration.getMinimumFlingVelocity() * 10;
 
-    public WSlidingDeleteListView(Context context) {
+    public YslidingDeleteListView(Context context) {
         super(context);
         init(null);
     }
 
-    public WSlidingDeleteListView(Context context, AttributeSet attrs) {
+    public YslidingDeleteListView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(attrs);
     }
 
-    public WSlidingDeleteListView(Context context, AttributeSet attrs,
+    public YslidingDeleteListView(Context context, AttributeSet attrs,
                                   int defStyle) {
         super(context, attrs, defStyle);
         init(attrs);

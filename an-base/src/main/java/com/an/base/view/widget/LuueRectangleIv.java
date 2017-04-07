@@ -18,7 +18,7 @@ import com.an.base.R;
 /*
 * 两边举行圆角试图view
 * */
-public class WRectangleView extends ImageView {
+public class LuueRectangleIv extends ImageView {
     private Paint paint;
     private Bitmap sbmp;
     private float left;
@@ -26,17 +26,17 @@ public class WRectangleView extends ImageView {
     private float right;
     private float bottom;
 
-    public WRectangleView(Context context) {
+    public LuueRectangleIv(Context context) {
         this(context, null);
 
     }
 
-    public WRectangleView(Context context, AttributeSet attrs) {
+    public LuueRectangleIv(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
 
     }
 
-    public WRectangleView(Context context, AttributeSet attrs, int defStyle) {
+    public LuueRectangleIv(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         paint = new Paint();
     }

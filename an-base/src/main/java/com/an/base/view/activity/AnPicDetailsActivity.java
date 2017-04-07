@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import com.an.base.R;
 import com.an.base.view.SuperActivity;
-import com.an.base.view.widget.LuueSmoothImageView;
+import com.an.base.view.widget.LuueSmoothIv;
 
 import org.xutils.x;
 
@@ -22,7 +22,7 @@ import java.util.List;
 @SuppressLint("AllowBackup")
 public class AnPicDetailsActivity extends SuperActivity {
     List<String> mDatas;
-    private LuueSmoothImageView imageView;
+    private LuueSmoothIv imageView;
 
     @Override
     public void initView() {
@@ -39,7 +39,7 @@ public class AnPicDetailsActivity extends SuperActivity {
         int mWidth = intent.getIntExtra("width", 0);
         int mHeight = intent.getIntExtra("height", 0);
 
-        imageView = new LuueSmoothImageView(this);
+        imageView = new LuueSmoothIv(this);
         imageView.setOriginalInfo(mWidth, mHeight, mLocationX, mLocationY);
         imageView.transformIn();
         imageView.setLayoutParams(new ViewGroup.LayoutParams(-1, -1));
@@ -58,7 +58,7 @@ public class AnPicDetailsActivity extends SuperActivity {
      */
     @Override
     public void onBackPressed() {
-        imageView.setOnTransformListener(new LuueSmoothImageView.TransformListener() {
+        imageView.setOnTransformListener(new LuueSmoothIv.TransformListener() {
             @Override
             public void onTransformComplete(int mode) {
                 if (mode == 2) {

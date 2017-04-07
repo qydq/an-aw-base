@@ -7,7 +7,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <com.an.base.view.widget.WIoScrollView
+    <com.an.base.view.widget.YshrinkScrollView
         android:id="@+id/scrollView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -233,5 +233,5 @@
             </comulez.github.droplibrary.DropIndicator>
 
         </LinearLayout>
-    </com.an.base.view.widget.WIoScrollView>
+    </com.an.base.view.widget.YshrinkScrollView>
 </LinearLayout>

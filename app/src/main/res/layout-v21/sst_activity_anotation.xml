@@ -18,7 +18,7 @@
         android:layout_below="@+id/includeHead"
         android:text="SecondActivity" />
 
-    <com.an.base.view.widget.WIoScrollView
+    <com.an.base.view.widget.YshrinkScrollView
         android:id="@+id/scrollView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -109,6 +109,6 @@
                 android:layout_height="wrap_content"
                 android:text="Button" />
         </LinearLayout>
-    </com.an.base.view.widget.WIoScrollView>
+    </com.an.base.view.widget.YshrinkScrollView>
 
 </RelativeLayout>

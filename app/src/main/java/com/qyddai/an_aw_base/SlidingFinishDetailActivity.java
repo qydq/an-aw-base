@@ -7,11 +7,9 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.NonNull;
-import android.support.v4.content.FileProvider;
 import android.util.ArrayMap;
 import android.util.Log;
 import android.view.View;
@@ -25,13 +23,13 @@ import com.an.base.model.ytips.XHttps;
 import com.an.base.utils.CaptureHelper;
 import com.an.base.utils.DUtilsBitmap;
 import com.an.base.utils.DUtilsStorage;
-import com.an.base.view.activity.SwipeFinishActivity;
+import com.an.base.view.SuperActivity;
+import com.an.base.view.widget.LuueZoomIv;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Map;
 
 import static com.an.base.utils.CaptureHelper.CAMERA_REQUEST_PERMISSION_CODE;
@@ -45,9 +43,12 @@ import static com.an.base.utils.CaptureHelper.RESULT_PHOTO_CROP_CODE;
 /**
  * Created by qydda on 2016/12/6.
  */
-
+/*
+* 该类是对CaptureHelper类的调用的samples参考。
+* 备注：如果要获取uri,或则file 建议调用getResultFile或者getResultUri，如果是裁剪的也可以调用getCropFIle,getCropUr
+* */
 @ContentView(R.layout.sst_activity_finishdetail)
-public class SlidingFinishDetailActivity extends SwipeFinishActivity {
+public class SlidingFinishDetailActivity extends SuperActivity {
     //以下为headview_standard.xml
     @ViewInject(R.id.anLlBack)
     private LinearLayout anLlBack;
@@ -73,7 +74,10 @@ public class SlidingFinishDetailActivity extends SwipeFinishActivity {
     @ViewInject(R.id.anIvRRight)
     private ImageView anIvRRight;
     @ViewInject(R.id.iv)
-    private ImageView iv;
+//    private ImageView iv;
+//    private LuueDragImageView iv;
+//    private LuueScaleImageView iv;
+    private LuueZoomIv iv;
 
     private String[] items = new String[]{"图库", "拍照"};
     /* 头像名称 */
@@ -92,44 +96,31 @@ public class SlidingFinishDetailActivity extends SwipeFinishActivity {
     public static String AnPictureTAG = "picture";
 
     public boolean isCrop = false;
+    private int mFileMode = CaptureHelper.SELF_AN;
 
     @Override
     public void initView() {
         anTvTitle = (TextView) findViewById(R.id.anTvTitle);
         anTvRight = (TextView) findViewById(R.id.anTvRight);
 
-        //加载本地裁剪后SD卡的图片。shiluohua.jpg
-        skRoot = new File(DUtilsStorage.INSTANCE.getskRootFile(), AnTAG + File.separator + AnPictureTAG);
-
         //初始化CaptureHelper
-        captureHelper = new CaptureHelper(SlidingFinishDetailActivity.this, skRoot);
+        captureHelper = new CaptureHelper(SlidingFinishDetailActivity.this, mFileMode);
 
-/*        captureHelper = new DCaptureHelper(SlidingFinishDetailActivity.this);
-        skRoot = captureHelper.getSkRoot();*/
-
-        //只有保存后才可以去得到图片。
-        String path = skRoot + File.separator + RESULT_IMAGE_NAME + ".jpg";
-
-        resultFile = new File(path);
-
-        if (resultFile.exists()) {
-
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                //通过FileProvider创建一个content类型的Uri
-                resultUri = FileProvider.getUriForFile(this, "com.an.base.fileprovider.takephoto", resultFile);
-            } else {
-                //原始图片的Uri
-                resultUri = Uri.fromFile(resultFile);
-                //低版本可以用该方法加载内存中的一张图片。
-//                Bitmap bitmap = BitmapFactory.decodeFile(path);
-//                iv.setImageBitmap(bitmap);
+        if (mFileMode == CaptureHelper.SELF_CONTEXT) {
+            //data/data/com.package/cache/picture/RESULT_IMAGE_NAME.jpg
+            skRoot = new File(mContext.getCacheDir(), AnPictureTAG);
+            if (skRoot.exists() && skRoot != null) {
+                Bitmap bitmap = captureHelper.getBitmap(skRoot, RESULT_IMAGE_NAME);
+                if (bitmap != null)
+                    iv.setImageBitmap(bitmap);
             }
-            Bitmap bitmap = null;
-            try {
-                bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(resultUri));
-                iv.setImageBitmap(bitmap);
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
+        } else {
+            //sdcard/an_ytips/picture/RESULT_IMAGE_NAME.jpg
+            skRoot = new File(DUtilsStorage.INSTANCE.getskRootFile(), AnTAG + File.separator + AnPictureTAG);
+            if (skRoot.exists() && skRoot != null) {
+                Bitmap bitmap = captureHelper.getBitmap(skRoot, RESULT_IMAGE_NAME);
+                if (bitmap != null)
+                    iv.setImageBitmap(bitmap);
             }
         }
 
@@ -140,6 +131,7 @@ public class SlidingFinishDetailActivity extends SwipeFinishActivity {
                 showSettingFaceDialog();
             }
         });
+
     }
 
 
@@ -184,20 +176,25 @@ public class SlidingFinishDetailActivity extends SwipeFinishActivity {
                 //选取照片后返回。
                 case RESULT_PHOTO_CODE:
                     if (data != null) {
-
                         //是否需要裁剪，如果需要则裁剪，不需要则显示出图片
                         if (isCrop) {
                             //选取照片需要裁剪则调用该方法。
 //                        captureHelper.startPhotoZoom(data, 200, 200);//默认裁剪
                             captureHelper.startPhotoZoom(data, IMAGE_CROP_NAME, 200, 200);//保存文件名为IMAGE_CROP_NAME的裁剪图片
                         } else {
-                            Bitmap bitmap = captureHelper.getCompressBitmap(getApplication(), data);
-//                            int degree = PhotoRotateUtil.getBitmapDegree(data.getData().getPath());
-//                            bitmap = rotateBitmapByDegree(bitmap, degree);
-                            if (bitmap != null)
-                                iv.setImageBitmap(bitmap);
+                            Bitmap bitmap = captureHelper.getCompressBitmap(getApplication(), data, RESULT_IMAGE_NAME);
+                            if (bitmap != null) {
+                                resultFile = captureHelper.getResultFile();
+////                                int degree = captureHelper.getBitmapDegree(data.getData().getPath());
+//                                bitmap = captureHelper.rotateBitmapByDegree(bitmap, 90, RESULT_IMAGE_NAME);
+//                                iv.setImageBitmap(bitmap);
+
+                                captureHelper.saveBitmap(bitmap, RESULT_IMAGE_NAME);
+                                Bitmap bitmap1 = captureHelper.getBitmap(captureHelper.getSkRoot(), RESULT_IMAGE_NAME);
+                                iv.setImageBitmap(bitmap1);
+                                Log.d(TAG, "--yy@@-222-方法名--resultFile--" + resultFile.toString());
+                            }
                         }
-//                            captureHelper.saveBitmap(bitmap, RESULT_IMAGE_NAME);
                     }
 
                     break;
@@ -210,15 +207,30 @@ public class SlidingFinishDetailActivity extends SwipeFinishActivity {
                             Bitmap roundBitmap = DUtilsBitmap.INSTANCE.createReflectionImageWithOrigin(bitmap);
                             iv.setImageBitmap(roundBitmap);
                             //保存(有深意)
-                            captureHelper.saveBitmap(bitmap, RESULT_IMAGE_NAME);
+                            captureHelper.saveBitmap(roundBitmap, RESULT_IMAGE_NAME);
                         }
                     }
                     break;
                 //照相机照相以后返回。
                 case RESULT_CAPTURE_CODE:
-                    //需要裁剪照相后的图片调用该方法。（会保存名为IMAGE_FILE_NAME的值）
-//                    captureHelper.startCaptureZoom(IMAGE_CROP_NAME);
-                    captureHelper.startCaptureZoom();
+                    if (isCrop) {
+                        //需要裁剪照相后的图片调用该方法。（会保存名为IMAGE_FILE_NAME的值）
+                        captureHelper.startCaptureZoom(IMAGE_CROP_NAME);
+                        Log.d(TAG, "--yy@@--removeItemRESULT_CAPTURE_CODE--json--");
+//                        captureHelper.startCaptureZoom();
+                    } else {
+                        try {
+//                            //imageCropUri
+                            Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(captureHelper.getmPhotoUri()));
+                            Bitmap scaleBitmap = DUtilsBitmap.INSTANCE.zoomBitmap(bitmap, 15 / 6);
+                            Bitmap roundBitmap = DUtilsBitmap.INSTANCE.createReflectionImageWithOrigin(scaleBitmap);
+                            iv.setImageBitmap(roundBitmap);
+                            captureHelper.saveBitmap(roundBitmap, RESULT_IMAGE_NAME);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+
                     break;
                 //照相机拍照后裁剪图片的返回
                 case RESULT_CAPTURE_CROP_CODE:
@@ -236,9 +248,7 @@ public class SlidingFinishDetailActivity extends SwipeFinishActivity {
             }
         }
 
-        super.
-
-                onActivityResult(requestCode, resultCode, data);
+        super.onActivityResult(requestCode, resultCode, data);
 
     }
 

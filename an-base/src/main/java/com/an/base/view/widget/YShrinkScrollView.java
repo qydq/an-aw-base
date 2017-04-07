@@ -22,7 +22,7 @@ import android.widget.ScrollView;
  *  * @author sunshuntao
  *  
  */
-public class WIoScrollView extends ScrollView {
+public class YshrinkScrollView extends ScrollView {
     private static final String TAG = "WIoScrollView ";
     // 移动因子, 是一个百分比, 比如手指移动了100px, 那么View就只移动50px
 // 目的是达到一个延迟的效果
@@ -47,13 +47,13 @@ public class WIoScrollView extends ScrollView {
 
     View.OnTouchListener mGestureListener;
 
-    public WIoScrollView(Context context) {
+    public YshrinkScrollView(Context context) {
         super(context);
         mGestureDetector = new GestureDetector(new YSrollDetector());
         setFadingEdgeLength(0);
     }
 
-    public WIoScrollView(Context context, AttributeSet attrs) {
+    public YshrinkScrollView(Context context, AttributeSet attrs) {
         super(context, attrs);
         mGestureDetector = new GestureDetector(new YSrollDetector());
         setFadingEdgeLength(0);

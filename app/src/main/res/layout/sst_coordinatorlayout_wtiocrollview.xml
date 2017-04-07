@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.an.base.view.widget.WIoScrollView
+        <com.an.base.view.widget.YshrinkScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
@@ -170,7 +170,7 @@
                         android:layout_height="wrap_content" />
                 </LinearLayout>
             </LinearLayout>
-        </com.an.base.view.widget.WIoScrollView>
+        </com.an.base.view.widget.YshrinkScrollView>
 
         <include
             android:id="@+id/includeHead"

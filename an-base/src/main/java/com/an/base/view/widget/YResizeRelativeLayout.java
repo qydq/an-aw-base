@@ -9,19 +9,19 @@ import android.widget.RelativeLayout;
  * Created by qydda on 2016/12/21.
  */
 
-public class WResizeRelativeLayout extends RelativeLayout {
+public class YresizeRelativeLayout extends RelativeLayout {
 
     public static final int HIDE = 0;
     public static final int SHOW = 1;
 
     private Handler mainHandler = new Handler();
 
-    public WResizeRelativeLayout(Context context) {
+    public YresizeRelativeLayout(Context context) {
         super(context);
         // TODO Auto-generated constructor stub
     }
 
-    public WResizeRelativeLayout(Context context, AttributeSet attrs) {
+    public YresizeRelativeLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         // TODO Auto-generated constructor stub

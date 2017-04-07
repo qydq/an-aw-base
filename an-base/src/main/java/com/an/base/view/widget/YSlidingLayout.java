@@ -22,9 +22,9 @@ import com.an.base.R;
 
 /**
  * github:https://github.com/qydq/an-aw-base
- * Created by Linhh on 16/4/12.
+ * Created by qydq on 16/4/12.
  */
-public class WSlidingLayout extends FrameLayout {
+public class YslidingLayout extends FrameLayout {
 
     private int mTouchSlop;//系统允许最小的滑动判断值
     private int mBackgroundViewLayoutId = 0;
@@ -76,15 +76,15 @@ public class WSlidingLayout extends FrameLayout {
         public void onSlidingChangePointer(View view, int pointerId);
     }
 
-    public WSlidingLayout(Context context) {
+    public YslidingLayout(Context context) {
         this(context, null);
     }
 
-    public WSlidingLayout(Context context, AttributeSet attrs) {
+    public YslidingLayout(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public WSlidingLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+    public YslidingLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs);
     }

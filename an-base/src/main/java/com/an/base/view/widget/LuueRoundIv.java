@@ -32,7 +32,7 @@ import android.widget.ImageView;
  *
  * @author Alan
  */
-public class WRoundImageView extends ImageView {
+public class LuueRoundIv extends ImageView {
     private int mBorderThickness = 0;
     private Context mContext;
     private int defaultColor = 0xFFFFFFFF;
@@ -41,17 +41,17 @@ public class WRoundImageView extends ImageView {
     private int defaultWidth = 0;
     private int defaultHeight = 0;
 
-    public WRoundImageView(Context context) {
+    public LuueRoundIv(Context context) {
         super(context);
         mContext = context;
     }
 
-    public WRoundImageView(Context context, AttributeSet attrs) {
+    public LuueRoundIv(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
     }
 
-    public WRoundImageView(Context context, AttributeSet attrs, int defStyle) {
+    public LuueRoundIv(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         mContext = context;
     }

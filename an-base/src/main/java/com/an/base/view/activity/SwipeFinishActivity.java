@@ -17,13 +17,13 @@ import com.an.base.utils.AndroidTranslucentBar;
 import com.an.base.utils.NetBroadcastReceiver;
 import com.an.base.utils.NetBroadcastReceiverUtils;
 import com.an.base.view.BaseActivity;
-import com.an.base.view.widget.WSwipeFinishFrameLayout;
+import com.an.base.view.widget.YswipeFinishFrameLayout;
 
 import static com.an.base.AnApplication.AnTAG;
 
 
 public abstract class SwipeFinishActivity extends BaseActivity implements NetBroadcastReceiver.NetEvevt {
-    protected WSwipeFinishFrameLayout layout;
+    protected YswipeFinishFrameLayout layout;
     protected SharedPreferences sp;
     public static NetBroadcastReceiver.NetEvevt evevt;//广播监听网络
     protected Context mContext;
@@ -48,7 +48,7 @@ public abstract class SwipeFinishActivity extends BaseActivity implements NetBro
         Window window = getWindow();
         AndroidTranslucentBar.getInstance().setTranslucentBar(window);
         //SwipeFinishActivity init
-        layout = (WSwipeFinishFrameLayout) LayoutInflater.from(this).inflate(R.layout.base_swipe_finish, null);
+        layout = (YswipeFinishFrameLayout) LayoutInflater.from(this).inflate(R.layout.base_swipe_finish, null);
         layout.attachToActivity(this);
 
         //初始化视图

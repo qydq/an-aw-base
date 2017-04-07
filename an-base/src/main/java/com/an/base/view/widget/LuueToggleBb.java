@@ -18,7 +18,7 @@ import com.an.base.R;
 /**
  * @author ThinkPad
  */
-public class WToggleButton extends View {
+public class LuueToggleBb extends View {
     private SpringSystem springSystem;
     private Spring spring;
     /** */
@@ -93,16 +93,16 @@ public class WToggleButton extends View {
 
     private OnToggleChanged listener;
 
-    private WToggleButton(Context context) {
+    private LuueToggleBb(Context context) {
         super(context);
     }
 
-    public WToggleButton(Context context, AttributeSet attrs, int defStyleAttr) {
+    public LuueToggleBb(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         setup(attrs);
     }
 
-    public WToggleButton(Context context, AttributeSet attrs) {
+    public LuueToggleBb(Context context, AttributeSet attrs) {
         super(context, attrs);
         setup(attrs);
     }

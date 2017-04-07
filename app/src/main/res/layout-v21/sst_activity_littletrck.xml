@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <com.an.base.view.widget.WIoScrollView
+    <com.an.base.view.widget.YshrinkScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/includeHead"
@@ -136,5 +136,5 @@
                 android:text="v21"
                 android:textColor="?attr/anTextColor" />
         </RelativeLayout>
-    </com.an.base.view.widget.WIoScrollView>
+    </com.an.base.view.widget.YshrinkScrollView>
 </RelativeLayout>

@@ -10,16 +10,16 @@ import android.view.View;
  * Created by sunshuntao on 16/3/30.
  * email : staryumou@163.com
  */
-public class LuueVerticalViewPager extends ViewPager {
+public class LuueVerticalVp extends ViewPager {
     private float startX, startY;
 
 
-    public LuueVerticalViewPager(Context context) {
+    public LuueVerticalVp(Context context) {
         super(context);
         init();
     }
 
-    public LuueVerticalViewPager(Context context, AttributeSet attrs) {
+    public LuueVerticalVp(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }

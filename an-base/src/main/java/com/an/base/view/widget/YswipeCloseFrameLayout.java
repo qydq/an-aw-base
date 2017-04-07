@@ -13,7 +13,7 @@ import android.widget.Scroller;
 
 import com.an.base.R;
 
-public class WSwipeCloseFrameLayout extends FrameLayout {
+public class YswipeCloseFrameLayout extends FrameLayout {
     private Activity mActivity;
     private Scroller mScroller;
     /**
@@ -41,15 +41,15 @@ public class WSwipeCloseFrameLayout extends FrameLayout {
      */
     private int mShadowWidth;
 
-    public WSwipeCloseFrameLayout(Activity activity) {
+    public YswipeCloseFrameLayout(Activity activity) {
         this(activity, null);
     }
 
-    public WSwipeCloseFrameLayout(Activity activity, AttributeSet attrs) {
+    public YswipeCloseFrameLayout(Activity activity, AttributeSet attrs) {
         this(activity, attrs, 0);
     }
 
-    public WSwipeCloseFrameLayout(Activity activity, AttributeSet attrs, int defStyleAttr) {
+    public YswipeCloseFrameLayout(Activity activity, AttributeSet attrs, int defStyleAttr) {
         super(activity, attrs, defStyleAttr);
         initView(activity);
     }

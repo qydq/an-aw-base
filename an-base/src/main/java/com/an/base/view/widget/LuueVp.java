@@ -11,17 +11,17 @@ import android.view.MotionEvent;
  * @author 孙顺涛 ,em: staryumou@163.com
  */
 
-public class LuueViewPager extends ViewPager {
+public class LuueVp extends ViewPager {
     float curX = 0f;
     float downX = 0f;
     OnSingleTouchListener onSingleTouchListener;
 
-    public LuueViewPager(Context context) {
+    public LuueVp(Context context) {
         // TODO Auto-generated constructor stub
         super(context);
     }
 
-    public LuueViewPager(Context context, AttributeSet attrs) {
+    public LuueVp(Context context, AttributeSet attrs) {
         // TODO Auto-generated constructor stub
         super(context, attrs);
     }

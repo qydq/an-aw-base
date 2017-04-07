@@ -27,8 +27,8 @@ import java.util.List;
  * @author xiaanming
  * @blog http://blog.csdn.net/xiaanming
  */
-public class WSwipeFinishFrameLayout extends FrameLayout {
-    private static final String TAG = WSwipeFinishFrameLayout.class.getSimpleName();
+public class YswipeFinishFrameLayout extends FrameLayout {
+    private static final String TAG = YswipeFinishFrameLayout.class.getSimpleName();
     private View mContentView;
     private int mTouchSlop;
     private int downX;
@@ -50,11 +50,11 @@ public class WSwipeFinishFrameLayout extends FrameLayout {
     private static final int SHADOW_WIDTH = 16;
     private List<ViewPager> mViewPagers = new LinkedList<ViewPager>();
 
-    public WSwipeFinishFrameLayout(Context context, AttributeSet attrs) {
+    public YswipeFinishFrameLayout(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public WSwipeFinishFrameLayout(Context context, AttributeSet attrs, int defStyle) {
+    public YswipeFinishFrameLayout(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
         mScroller = new Scroller(context);

@@ -13,7 +13,7 @@ import android.view.View;
  * 
  * @author guolin
  */
-public class WZoomImageView extends View {
+public class LuueZoomIv extends View {
 
 	/**
 	 * 初始化状态常量
@@ -136,7 +136,7 @@ public class WZoomImageView extends View {
 	 * @param context
 	 * @param attrs
 	 */
-	public WZoomImageView(Context context, AttributeSet attrs) {
+	public LuueZoomIv(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		currentStatus = STATUS_INIT;
 	}

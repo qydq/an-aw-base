@@ -7,7 +7,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.an.base.view.ParallaxActivity;
-import com.an.base.view.widget.WRoundImageView;
+import com.an.base.view.widget.LuueRoundIv;
 import com.an.base.view.ytips.pickerview.TimePickerView;
 
 import java.text.SimpleDateFormat;
@@ -19,11 +19,11 @@ import java.util.Locale;
  */
 
 public class YueYueActivity extends ParallaxActivity implements View.OnClickListener {
-    private WRoundImageView imageView1;
-    private WRoundImageView imageView2;
-    private WRoundImageView imageView3;
-    private WRoundImageView imageView4;
-    private WRoundImageView imageViewTips;
+    private LuueRoundIv imageView1;
+    private LuueRoundIv imageView2;
+    private LuueRoundIv imageView3;
+    private LuueRoundIv imageView4;
+    private LuueRoundIv imageViewTips;
     private float offsetValue;
     private static Boolean occurFlag = true;
     private TextView tvTips3;
@@ -36,11 +36,11 @@ public class YueYueActivity extends ParallaxActivity implements View.OnClickList
     public void initView() {
 
         setContentView(R.layout.sst_activity_yueyue);
-        imageView1 = (WRoundImageView) findViewById(R.id.imageView1);
-        imageView2 = (WRoundImageView) findViewById(R.id.imageView2);
-        imageView3 = (WRoundImageView) findViewById(R.id.imageView3);
-        imageView4 = (WRoundImageView) findViewById(R.id.imageView4);
-        imageViewTips = (WRoundImageView) findViewById(R.id.imageViewTips);
+        imageView1 = (LuueRoundIv) findViewById(R.id.imageView1);
+        imageView2 = (LuueRoundIv) findViewById(R.id.imageView2);
+        imageView3 = (LuueRoundIv) findViewById(R.id.imageView3);
+        imageView4 = (LuueRoundIv) findViewById(R.id.imageView4);
+        imageViewTips = (LuueRoundIv) findViewById(R.id.imageViewTips);
         tvTips3 = (TextView) findViewById(R.id.tvTips3);
         tvConfimChoose = (TextView) findViewById(R.id.tvConfimChoose);
         editText = (EditText) findViewById(R.id.editText);

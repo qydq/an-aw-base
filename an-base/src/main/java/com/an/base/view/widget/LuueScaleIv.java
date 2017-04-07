@@ -25,7 +25,7 @@ import android.widget.ImageView;
  *
  * @author sunshuntao
  */
-public class LuueScaleImageView extends ImageView {
+public class LuueScaleIv extends ImageView {
 
     private Activity mActivity;
 
@@ -70,7 +70,7 @@ public class LuueScaleImageView extends ImageView {
     /**
      * 构造方法
      **/
-    public LuueScaleImageView(Context context) {
+    public LuueScaleIv(Context context) {
         super(context);
     }
 
@@ -92,7 +92,7 @@ public class LuueScaleImageView extends ImageView {
         this.screen_H = screen_H;
     }
 
-    public LuueScaleImageView(Context context, AttributeSet attrs) {
+    public LuueScaleIv(Context context, AttributeSet attrs) {
         super(context, attrs);
         MatrixTouchListener mListener = new MatrixTouchListener();
         setOnTouchListener(mListener);

@@ -18,7 +18,7 @@ import android.widget.ImageView;
  * @文件描述：null
  * @修改历史：2016/8/23
  **********************************************************/
-public class LuueDragImageView extends ImageView {
+public class LuueDragIv extends ImageView {
 
     static final int NONE = 0;
     static final int DRAG = 1;     //拖动中
@@ -47,7 +47,7 @@ public class LuueDragImageView extends ImageView {
      *
      * @param context
      */
-    public LuueDragImageView(Context context) {
+    public LuueDragIv(Context context) {
         super(context);
     }
 
@@ -56,7 +56,7 @@ public class LuueDragImageView extends ImageView {
      * @param context
      * @param paramAttributeSet
      */
-    public LuueDragImageView(Context context, AttributeSet paramAttributeSet) {
+    public LuueDragIv(Context context, AttributeSet paramAttributeSet) {
         super(context, paramAttributeSet);
     }
 
@@ -66,7 +66,7 @@ public class LuueDragImageView extends ImageView {
      * @param w
      * @param h
      */
-    public LuueDragImageView(Context context, int w, int h) {
+    public LuueDragIv(Context context, int w, int h) {
         super(context);
         this.setPadding(0, 0, 0, 0);
         screenW = w;
