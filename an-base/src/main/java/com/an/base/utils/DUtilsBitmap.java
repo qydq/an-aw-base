@@ -18,6 +18,7 @@ import android.graphics.Shader;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
+import android.view.View;
 
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
@@ -318,11 +319,11 @@ public enum DUtilsBitmap {
     }
 
     /**
-     * @param path 绝对路径
+     * @param path      绝对路径
      * @param reqWidth
      * @param reqHeight
-     * @ 为了避免OOM异常，最好在解析每张图片的时候都先检查一下图片的大小，从已知路径返回一张不会OOM的图片
      * @return
+     * @ 为了避免OOM异常，最好在解析每张图片的时候都先检查一下图片的大小，从已知路径返回一张不会OOM的图片
      */
     public Bitmap decodeBitmapFromPath(String path,
                                        int reqWidth, int reqHeight) {
@@ -357,5 +358,116 @@ public enum DUtilsBitmap {
             inSampleSize = heightRatio < widthRatio ? heightRatio : widthRatio;
         }
         return inSampleSize;
+    }
+
+    /**
+     * 把View绘制到Bitmap上
+     *
+     * @param comBitmap 需要绘制的View
+     * @param width     该View的宽度
+     * @param height    该View的高度
+     * @return 返回Bitmap对象
+     * add by csj 13-11-6
+     */
+    public Bitmap getViewBitmap(View comBitmap, int width, int height) {
+        Bitmap bitmap = null;
+        if (comBitmap != null) {
+            comBitmap.clearFocus();
+            comBitmap.setPressed(false);
+
+            boolean willNotCache = comBitmap.willNotCacheDrawing();
+            comBitmap.setWillNotCacheDrawing(false);
+
+            // Reset the drawing cache background color to fully transparent
+            // for the duration of this operation
+            int color = comBitmap.getDrawingCacheBackgroundColor();
+            comBitmap.setDrawingCacheBackgroundColor(0);
+            float alpha = comBitmap.getAlpha();
+            comBitmap.setAlpha(1.0f);
+
+            if (color != 0) {
+                comBitmap.destroyDrawingCache();
+            }
+
+            int widthSpec = View.MeasureSpec.makeMeasureSpec(width, View.MeasureSpec.EXACTLY);
+            int heightSpec = View.MeasureSpec.makeMeasureSpec(height, View.MeasureSpec.EXACTLY);
+            comBitmap.measure(widthSpec, heightSpec);
+            comBitmap.layout(0, 0, width, height);
+
+            comBitmap.buildDrawingCache();
+            Bitmap cacheBitmap = comBitmap.getDrawingCache();
+            if (cacheBitmap == null) {
+                Log.e("view.ProcessImageToBlur", "failed getViewBitmap(" + comBitmap + ")",
+                        new RuntimeException());
+                return null;
+            }
+            bitmap = Bitmap.createBitmap(cacheBitmap);
+            // Restore the view
+            comBitmap.setAlpha(alpha);
+            comBitmap.destroyDrawingCache();
+            comBitmap.setWillNotCacheDrawing(willNotCache);
+            comBitmap.setDrawingCacheBackgroundColor(color);
+        }
+        return bitmap;
+    }
+
+    public Bitmap getViewBitmap(View v) {
+        v.clearFocus();
+        v.setPressed(false);
+
+        boolean willNotCache = v.willNotCacheDrawing();
+        v.setWillNotCacheDrawing(false);
+
+        // Reset the drawing cache background color to fully transparent
+        // for the duration of this operation
+        int color = v.getDrawingCacheBackgroundColor();
+        v.setDrawingCacheBackgroundColor(0);
+
+        if (color != 0) {
+            v.destroyDrawingCache();
+        }
+        v.buildDrawingCache();
+        Bitmap cacheBitmap = v.getDrawingCache();
+        if (cacheBitmap == null) {
+            Log.e("Folder", "failed getViewBitmap(" + v + ")", new RuntimeException());
+            return null;
+        }
+
+        Bitmap bitmap = Bitmap.createBitmap(cacheBitmap);
+
+        // Restore the view
+        v.destroyDrawingCache();
+        v.setWillNotCacheDrawing(willNotCache);
+        v.setDrawingCacheBackgroundColor(color);
+
+        return bitmap;
+    }
+
+    public static Bitmap convertViewToBitmap(View view) {
+        view.destroyDrawingCache();
+        view.measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
+                View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
+        view.layout(0, 0, view.getMeasuredWidth(), view.getMeasuredHeight());
+        view.setDrawingCacheEnabled(true);
+        return view.getDrawingCache(true);
+    }
+
+    //把布局变成Bitmap
+    private Bitmap convertViewToBitmap2(View addViewContent) {
+
+        addViewContent.setDrawingCacheEnabled(true);
+
+        addViewContent.measure(
+                View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
+                View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
+        addViewContent.layout(0, 0,
+                addViewContent.getMeasuredWidth(),
+                addViewContent.getMeasuredHeight());
+
+        addViewContent.buildDrawingCache();
+        Bitmap cacheBitmap = addViewContent.getDrawingCache();
+        Bitmap bitmap = Bitmap.createBitmap(cacheBitmap);
+
+        return bitmap;
     }
 }
