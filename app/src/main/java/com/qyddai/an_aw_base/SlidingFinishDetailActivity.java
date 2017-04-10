@@ -21,8 +21,8 @@ import android.widget.TextView;
 import com.an.base.model.ytips.XCallBack;
 import com.an.base.model.ytips.XHttps;
 import com.an.base.utils.CaptureHelper;
-import com.an.base.utils.DUtilsBitmap;
-import com.an.base.utils.DUtilsStorage;
+import com.an.base.utils.YbitmapUtils;
+import com.an.base.utils.YstorageUtils;
 import com.an.base.view.SuperActivity;
 import com.an.base.view.widget.LuueZoomIv;
 
@@ -116,7 +116,7 @@ public class SlidingFinishDetailActivity extends SuperActivity {
             }
         } else {
             //sdcard/an_ytips/picture/RESULT_IMAGE_NAME.jpg
-            skRoot = new File(DUtilsStorage.INSTANCE.getskRootFile(), AnTAG + File.separator + AnPictureTAG);
+            skRoot = new File(YstorageUtils.INSTANCE.getskRootFile(), AnTAG + File.separator + AnPictureTAG);
             if (skRoot.exists() && skRoot != null) {
                 Bitmap bitmap = captureHelper.getBitmap(skRoot, RESULT_IMAGE_NAME);
                 if (bitmap != null)
@@ -204,7 +204,7 @@ public class SlidingFinishDetailActivity extends SuperActivity {
                         Bundle extras = data.getExtras();
                         if (extras != null) {
                             Bitmap bitmap = extras.getParcelable("data");
-                            Bitmap roundBitmap = DUtilsBitmap.INSTANCE.createReflectionImageWithOrigin(bitmap);
+                            Bitmap roundBitmap = YbitmapUtils.INSTANCE.createReflectionImageWithOrigin(bitmap);
                             iv.setImageBitmap(roundBitmap);
                             //保存(有深意)
                             captureHelper.saveBitmap(roundBitmap, RESULT_IMAGE_NAME);
@@ -222,8 +222,8 @@ public class SlidingFinishDetailActivity extends SuperActivity {
                         try {
 //                            //imageCropUri
                             Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(captureHelper.getmPhotoUri()));
-                            Bitmap scaleBitmap = DUtilsBitmap.INSTANCE.zoomBitmap(bitmap, 15 / 6);
-                            Bitmap roundBitmap = DUtilsBitmap.INSTANCE.createReflectionImageWithOrigin(scaleBitmap);
+                            Bitmap scaleBitmap = YbitmapUtils.INSTANCE.zoomBitmap(bitmap, 15 / 6);
+                            Bitmap roundBitmap = YbitmapUtils.INSTANCE.createReflectionImageWithOrigin(scaleBitmap);
                             iv.setImageBitmap(roundBitmap);
                             captureHelper.saveBitmap(roundBitmap, RESULT_IMAGE_NAME);
                         } catch (Exception e) {

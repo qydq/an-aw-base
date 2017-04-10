@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.an.base.utils.DUtilsDialog;
+import com.an.base.utils.YdialogUtils;
 import com.an.base.view.activity.SwipeFinishActivity;
 
 /**
@@ -41,7 +41,7 @@ public class SlidingFinishActivity extends SwipeFinishActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialog = DUtilsDialog.INSTANCE.
+                dialog = YdialogUtils.INSTANCE.
                         showProgressDialog(SlidingFinishActivity.this, R.style.AnProgressDialog, "正在登录```", true);
                 handler.postDelayed(new Runnable() {
                     @Override

@@ -13,7 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.an.base.R;
-import com.an.base.utils.DScreenUtil;
+import com.an.base.utils.YscreenUtils;
 import com.an.base.utils.DataService;
 import com.an.base.view.widget.PickerView;
 
@@ -132,7 +132,7 @@ public class TimeSelector {
             Window window = seletorDialog.getWindow();
             window.setGravity(Gravity.BOTTOM);
             WindowManager.LayoutParams lp = window.getAttributes();
-            int width = DScreenUtil.getInstance(context).getScreenWidth();
+            int width = YscreenUtils.getInstance(context).getScreenWidth();
             lp.width = width;
             window.setAttributes(lp);
         }

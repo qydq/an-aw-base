@@ -335,12 +335,12 @@ public class PermissionUtils {
     }
 
     // 判断是否缺少权限
-    private boolean lacksPermission(String permission) {
+    public boolean lacksPermission(String permission) {
         return ContextCompat.checkSelfPermission(mContext, permission) ==
                 PackageManager.PERMISSION_DENIED;
     }
 
-    public void requestCapturePermissions(String[] PERMISSIONS, int requestCode, String permission) {
+    public void requestPermissions(String[] PERMISSIONS, int requestCode, String permission) {
         if (ActivityCompat.shouldShowRequestPermissionRationale(mActivity, permission)) {  //给出权限申请说明
             ActivityCompat.requestPermissions(mActivity, PERMISSIONS, requestCode);
         } else { //直接申请权限

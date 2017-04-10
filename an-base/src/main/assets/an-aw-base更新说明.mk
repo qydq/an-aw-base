@@ -2,13 +2,16 @@ an-aw-base version 0.3 更新说明（孙顺涛，qydq，晴雨 ，莳萝花 ，qyddai，2017年4月
 
 对0.3以前也一并做一个简单说明。（后续会继续更新samples给大家参考）
 
-这次版本0.3是主要更新是为了an-aw-base能够适应android6.0以上的系统，权限问题，更加规范命名。
+这次版本0.3是主要更新是为了an-aw-base能够适应android6.0以上的系统，手机权限问题。
+
+D系列替换为Y系列。
 
 1.widget说明：
 
 (点击图片查看更直接)(使用说明参考相关文档，an框架使用说明（连接）)
 
-luue系列和y系列，组合起来的寓意代表luyue（拼音“露月”）本来an-aw-base灵感都来源于她，至少她也算是你真正的初恋啊，你依然爱她。
+“luue”系列和“y”系列的命名，组合起来的寓意代表lu + yue（拼音“露月”）an-aw-base从构建工程的那天灵感都来源于她，至少她也算是你真正的初恋啊。
+
 就算现在改框架也需要好多好多时间的，而且这些东西都是需要灵感，所以还是选择维护这个架构吧（可以修改任何人都会介意）。
 如果你（huaqiangu)看到不要怪师傅，我先认识她。我知道你觉得师傅对你来说是一个很重要的人，很多时候我喜欢直接，爱一个人就勇敢，虽然没有教到你什么，但你永远都是我的小骨。
 
@@ -81,8 +84,17 @@ provider参考，使用的时候，用下面com.an.base.fileprovider.tackphoto包名即可
             android:exported="false"
             android:grantUriPermissions="true">
 
+（7）修改CaptureHelper帮助类，并且兼容之前的版本。
+
 
 3.其它说明过的内容。
 
 （1）网络请求从model/utils包 --改为到model/ytips中
 
+（2）DBitmapUtils替换为YbitmapUtils
+DDialogUtils替换为YdialogUtils
+DScrenUtils替换为YscreenUtils
+DStorageUtils替换为YstorageUtils
+DUitlsUi更名为YuiUtils
+SizeUitl更名为SizeUtils
+FastBlurUtil更名为FastBlurUtils

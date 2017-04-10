@@ -138,7 +138,7 @@ public class CaptureHelper {
             if (!skRoot.exists())
                 skRoot.mkdirs();
         } else {
-            skRoot = new File(DUtilsStorage.INSTANCE.getskRootFile(), AnTAG + File.separator + AnPictureTAG);//root/an_ytips/picture
+            skRoot = new File(YstorageUtils.INSTANCE.getskRootFile(), AnTAG + File.separator + AnPictureTAG);//root/an_ytips/picture
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M && Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                 if (!skRoot.exists())
                     skRoot.mkdirs();
@@ -149,7 +149,7 @@ public class CaptureHelper {
 //                    permissionUtils.requestMultiPermissions(mPermissionGrant);
 //                    permissionUtils.requestPermission(PermissionUtils.CODE_WRITE_EXTERNAL_STORAGE, mPermissionGrant);
 //                    permissionUtils.requestPermission(PermissionUtils.CODE_CAMERA, mPermissionGrant);
-                    permissionUtils.requestCapturePermissions(PERMISSIONS, CAMERA_REQUEST_PERMISSION_CODE, permission);
+                    permissionUtils.requestPermissions(PERMISSIONS, CAMERA_REQUEST_PERMISSION_CODE, permission);
 
                 } else {
                     if (!skRoot.exists())
@@ -192,7 +192,7 @@ public class CaptureHelper {
 //                    permissionUtils.requestPermission(PermissionUtils.CODE_WRITE_EXTERNAL_STORAGE, mPermissionGrant);
 //                    permissionUtils.requestPermission(PermissionUtils.CODE_CAMERA, mPermissionGrant);
                     final String permission = Manifest.permission.CAMERA;  //相机权限
-                    permissionUtils.requestCapturePermissions(PERMISSIONS, CAMERA_REQUEST_PERMISSION_CODE, permission);
+                    permissionUtils.requestPermissions(PERMISSIONS, CAMERA_REQUEST_PERMISSION_CODE, permission);
                 } else {
                     startCamera();
                 }
@@ -308,7 +308,7 @@ public class CaptureHelper {
 //                    permissionUtils.requestPermission(PermissionUtils.CODE_WRITE_EXTERNAL_STORAGE, mPermissionGrant);
 //                    permissionUtils.requestPermission(PermissionUtils.CODE_CAMERA, mPermissionGrant);
                     final String permission = Manifest.permission.CAMERA;  //相机权限
-                    permissionUtils.requestCapturePermissions(PERMISSIONS, CAMERA_REQUEST_PERMISSION_CODE, permission);
+                    permissionUtils.requestPermissions(PERMISSIONS, CAMERA_REQUEST_PERMISSION_CODE, permission);
                 } else {
                     startCamera(originName, isNoFaceDetection);
                 }
@@ -420,7 +420,7 @@ public class CaptureHelper {
 //                permissionUtils.requestPermission(PermissionUtils.CODE_WRITE_EXTERNAL_STORAGE, mPermissionGrant);
 //                permissionUtils.requestPermission(PermissionUtils.CODE_CAMERA, mPermissionGrant);
                 final String permission = Manifest.permission.CAMERA;  //相机权限
-                permissionUtils.requestCapturePermissions(PERMISSIONS, PHOTO_REQUEST_PERMISSION_CODE, permission);
+                permissionUtils.requestPermissions(PERMISSIONS, PHOTO_REQUEST_PERMISSION_CODE, permission);
             } else {
                 openAlbum();
             }

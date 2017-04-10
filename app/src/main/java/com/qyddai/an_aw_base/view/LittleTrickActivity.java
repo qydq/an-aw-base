@@ -23,7 +23,7 @@ import android.widget.TextView;
 
 import com.an.base.contract.TaskDayNightContract;
 import com.an.base.presenter.TaskDayNightPresenter;
-import com.an.base.utils.DUtilsDialog;
+import com.an.base.utils.YdialogUtils;
 import com.an.base.utils.DataService;
 import com.an.base.utils.NetBroadcastReceiverUtils;
 import com.an.base.view.SuperActivity;
@@ -125,7 +125,7 @@ public class LittleTrickActivity extends SuperActivity implements TaskDayNightCo
         btnDialog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialog = DUtilsDialog.INSTANCE.
+                dialog = YdialogUtils.INSTANCE.
                         createDialog(mContext, "加载中```", true);
                 dialog.show();
 

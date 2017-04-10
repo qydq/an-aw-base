@@ -9,7 +9,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.an.base.R;
-import com.an.base.utils.DScreenUtil;
+import com.an.base.utils.YscreenUtils;
 import com.an.base.view.widget.PickerSimpleView;
 
 import java.util.ArrayList;
@@ -61,7 +61,7 @@ public class SexSelector {
             Window window = seletorDialog.getWindow();
             window.setGravity(Gravity.BOTTOM);
             WindowManager.LayoutParams lp = window.getAttributes();
-            int width = DScreenUtil.getInstance(context).getScreenWidth();
+            int width = YscreenUtils.getInstance(context).getScreenWidth();
             lp.width = width;
             window.setAttributes(lp);
         }
