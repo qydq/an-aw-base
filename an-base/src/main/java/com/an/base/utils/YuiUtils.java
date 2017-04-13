@@ -1,11 +1,13 @@
 package com.an.base.utils;
 
+import android.content.Context;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.ScaleAnimation;
+import android.view.inputmethod.InputMethodManager;
 
 /**
  * Created by Luue on 2016/6/18。
@@ -70,5 +72,36 @@ public class YuiUtils {
         });
         // 实现心跳的View
         view.startAnimation(animationSet);
+    }
+
+    /*
+    * 软键盘的操作 待加入
+    * */
+     /*
+    * 隐藏软键盘
+    * */
+    public void hindKeyboard(Context context) {
+        InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
+    }
+
+    public boolean isOpenKeyboard(Context context) {
+        InputMethodManager imm = (InputMethodManager) context.getSystemService(context.INPUT_METHOD_SERVICE);
+        return imm.isActive();
+    }
+
+    /**
+     * 判断软键盘是否弹出
+     */
+    public boolean isSHowKeyboard(Context context, View v) {
+        InputMethodManager imm = (InputMethodManager) context.getSystemService(context.INPUT_METHOD_SERVICE);
+        if (imm.hideSoftInputFromWindow(v.getWindowToken(), 0)) {
+            imm.showSoftInput(v, 0);
+            return true;
+            //软键盘已弹出
+        } else {
+            return false;
+            //软键盘未弹出
+        }
     }
 }

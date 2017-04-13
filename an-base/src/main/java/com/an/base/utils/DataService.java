@@ -288,6 +288,19 @@ public enum DataService {
         return lists;
     }
 
+//    //模糊查询
+//    public List likeString(List lists, String likename) {
+//        List results = new ArrayList();
+//        Pattern pattern = Pattern.compile(name);
+//        for (int i = 0; i < lists.size(); i++) {
+//            Matcher matcher = pattern.matcher(((Employee) lists.get(i)).getName());
+//            if (matcher.find()) {
+//                results.add(list.get(i));
+//            }
+//        }
+//        return results;
+//    }
+
     /**
      * 使用用户格式提取字符串日期
      *
