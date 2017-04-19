@@ -8,13 +8,13 @@
 
 [Äã´æ»îÔÚÎÒ¼ÇÒä×îÔ­Ê¼µÄ»ÄÔ­£¬¿Éµ­²»¿ÉÍü](https://zhuanlan.zhihu.com/p/25279447)
 
----2017Äê2ÔÂ20ÈÕ 16:18:35¡£
+---2017Äê2ÔÂ20ÈÕ 16:18:35¡£  <°æ±¾¸üĞÂÈÕÖ¾×îºó>
 
 # an-aw-base
 
-* ÏîÄ¿µÄÖ÷Òª¹¦ÄÜÊÇ×÷Îªan¿ò¼ÜµÄ»ùÀà£¨»ù´¡µÄan-base£©µÄ²Ö¿â£»Äã¿ÉÒÔ½èÖúgithub£¬jitpack £¬bintrary¿ìËÙ¼¯³É¡£
+* ÏîÄ¿µÄÖ÷Òª¹¦ÄÜÊÇ×÷Îª[an¿ò¼Ü](https://github.com/qydq/an)µÄ»ùÀà£¨»ù´¡µÄan-base£©µÄ²Ö¿â£»Äã¿ÉÒÔ½èÖújitpack £¬bintrary¿ìËÙ¼¯³É¡£
 
-* ¿ò¼ÜÀ´Ô´ÓÚ±¾ÈËan-maven-base¿ò¼Ü£¨ÒÑÍ£Ö¹Î¬»¤£©£¬an-aw-base¿ò¼ÜÈ¥³ıÁËan-maven-base¿ò¼Ü²»³£ÓÃµÄ¹¦ÄÜ£¬¸üÇáÁ¿ÌáÉıÁËĞÔÄÜ¡£
+* ¿ò¼ÜÀ´Ô´ÓÚ±¾ÈËan-maven-base¿ò¼Ü£¨ÒÑÔÚgithubÖĞÉ¾³ı£©£¬an-aw-base¿ò¼Ü¸üÇáÁ¿¸ü¹æ·¶¡£
 
 * ¿ò¼Ü¼Ü¹¹»ùÓÚMVP£¬ÀûÓÃan-aw-base¿ò¼Ü¿ÉÒÔ¿ìËÙ°ïÖú¿ª·¢ÕßÕë¶Ô¶àÖÖ³¡¾°µÄ¿ª·¢¡£
 
@@ -33,11 +33,10 @@
 
 
 **ÌØ±ğËµÃ÷**
-
 	
 >´´½¨Ê±¼ä <------2016Äê09ÔÂ17ÈÕ------->
 	
->2016Äê09ÔÂ17ÈÕ;×î½üĞŞ¸ÄÊ±¼ä£º2017Äê01ÔÂ13ÈÕ¡£
+>2016Äê09ÔÂ17ÈÕ;×î½üĞŞ¸ÄÊ±¼ä£º2017Äê04ÔÂ19ÈÕ¡£
 
 ########
 	
@@ -81,8 +80,9 @@ Step 2£º¼ÓÈëÒÔºó£¨ÔÚÄãµÄ×Óbuild.gradleÎÄ¼şÖĞÌí¼ÓÈçÏÂÒÀÀµ¹ØÏµ¡££©
 
 `compile 'cn.android.sunst:an-base:2.0.1'`
 
-Ê¹ÓÃÕûÌ×an¿ò¼ÜÔò¼ÓÈëÁíÒ»¸öÒÀÀµ£¬¾ßÌåÇë²Î¿¼url = https://github.com/qydq/an
-
+```groovy
+¿ÉÒÔ²Î¿¼[aN¿ò¼ÜgradleÒÀÀµ-¹Ì¶¨Ğ´·¨](https://zhuanlan.zhihu.com/p/26269611)
+```
 
 **Ê¹ÓÃ½¨Òé**
 
@@ -93,7 +93,7 @@ Step 2£º¼ÓÈëÒÔºó£¨ÔÚÄãµÄ×Óbuild.gradleÎÄ¼şÖĞÌí¼ÓÈçÏÂÒÀÀµ¹ØÏµ¡££©
 >Ê¹ÓÃ½¨ÒéÔÚ±àÒëµÄbuildµÄÊ±ºò×¢Òâan-aw-baseĞèÒªÔÚAPI=19»òÒÔÉÏ°æ±¾±àÒë¡£
 
 ```groovy
-aN¿ò¼ÜÖ§³Öandroid 4.4+Ê¹ÓÃ£¬¼æÈİĞÔ²âÊÔÍ¨¹ı£¬»ªÎªAndroid4.4 £¬Ğ¡Ã×Android5.1£¬ÈıĞÇAndroid5.1¡£
+aN¿ò¼ÜÖ§³Öandroid 4.4+Ê¹ÓÃ£¬¼æÈİĞÔ²âÊÔÍ¨¹ı£¬»ªÎªAndroid4.4 £¬Ğ¡Ã×Android5.1£¬ÈıĞÇAndroid5.1£¬»ªÎªAndroid6.0¡£
 ```
 ##samples apk demoÏÂÔØ²Î¿¼
 
@@ -117,13 +117,13 @@ aN¿ò¼ÜÖ§³Öandroid 4.4+Ê¹ÓÃ£¬¼æÈİĞÔ²âÊÔÍ¨¹ı£¬»ªÎªAndroid4.4 £¬Ğ¡Ã×Android5.1£¬ÈıĞ
 ```
 + an¿ò¼Ü°üº¬ÁËĞí¶àÊµÓÃµÄ¹¤¾ßÀà£¬ÏñMD5¼ÓÃÜ£¬Êı¾İĞ£Ñé£¬Ò¹¼äÄ£Ê½ÇĞ»»µÈ¡£
 
-+ an¿ò¼ÜÌá¹©»ù±¾weight,ÈçWSlidingDeleteListView,WToggleButton¡¢Ìá¹©ÁËrecyclerview,refreshlayout,swipelayoutÏµÁĞ¡£
++ an¿ò¼ÜÌá¹©»ù±¾weight,YslidingDeleteListView,YshrinkScrollView¡¢Ìá¹©ÁËrecyclerview,refreshlayout,swipelayoutÏµÁĞ¡£
 
 + an¿ò¼Ü¼ÓÈëÁËÁ½ÖÖÒ¹¼äÄ£Ê½µÄ¹¦ÄÜ¡£
 
 + an¿ò¼ÜÌá¹©ÁË¿ìËÙ¼àÌıÍøÂç±ä»¯µÄ·½·¨¡£
 
-+ an¿ò¼ÜºóÆÚ¹¦ÄÜÕıÔÚÍêÉÆÖĞ¡£
++ an¿ò¼ÜºóÆÚ¹¦ÄÜÕıÔÚ²»¶ÏÍêÉÆÖĞ¡£
 
 ---------
 
@@ -155,9 +155,9 @@ aN¿ò¼ÜÖ§³Öandroid 4.4+Ê¹ÓÃ£¬¼æÈİĞÔ²âÊÔÍ¨¹ı£¬»ªÎªAndroid4.4 £¬Ğ¡Ã×Android5.1£¬ÈıĞ
 
  <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_tips.png" width=280 height=480 />  <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_tips_ios.png" width=280 height=480 />  <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_recyclerview_partipal.png" width=280 height=480 />
 
-±¸×¢£ºÊ¹ÓÃ½éÉÜ´ı¸üĞÂÖÁÖªºõ¡£ÔİÊ±¿ÉÒÔ²Î¿¼![YYTipsActivity](https://github.com/qydq/an-aw-base/blob/master/app/src/main/java/com/qyddai/an_aw_base/view/activity/YYTipsActivity.java)
+±¸×¢£ºÊ¹ÓÃ½éÉÜ´ı¸üĞÂÖÁÖªºõ¡£ÔİÊ±¿ÉÒÔ²Î¿¼[YYTipsActivity](https://github.com/qydq/an-aw-base/blob/master/app/src/main/java/com/qyddai/an_aw_base/view/activity/YYTipsActivity.java)
  
-ËµÃ÷£ºÕâÊÇÒ»¸ö¸ß·Â IOS PickerView ¿Ø¼şµÄ¿â¡£´úÂëÀ´×Ô£ºhttps://github.com/saiwu-bigkoo/Android-PickerView £¬ÔÚÔ­ÓĞ´úÂë»ù´¡ÉÏ½øĞĞ·â×°£¬²¢Ìá¹©ÁËÒ»Ğ©ĞŞ¸ÄÊôĞÔ·½·¨¡£
+ËµÃ÷£ºÕâÊÇÒ»¸ö¸ß·Â IOS PickerView ¿Ø¼şµÄ¿â¡£´úÂë²Î¿¼£ºhttps://github.com/saiwu-bigkoo/Android-PickerView £¬ÔÚÔ­ÓĞ´úÂë»ù´¡ÉÏ½øĞĞ·â×°£¬²¢Ìá¹©ÁËÒ»Ğ©ĞŞ¸ÄÊôĞÔ·½·¨¡£
 
 ---------
 
@@ -177,7 +177,8 @@ aN¿ò¼ÜÖ§³Öandroid 4.4+Ê¹ÓÃ£¬¼æÈİĞÔ²âÊÔÍ¨¹ı£¬»ªÎªAndroid4.4 £¬Ğ¡Ã×Android5.1£¬ÈıĞ
 
 + **An¿ò¼ÜÃüÃû¹æ·¶**
 
-ÃüÃû¹æ·¶ÊÇÒ»¸öÏîÄ¿ÖĞ·Ç³£ÖØÒªµÄ²¿·Ö£¬ÈÎºÎÊÂÇé²»¹æ·¶²»½ö±ğÈË¿´²»¶®Äã£¬×Ô¼º¶¼²»ÁË½â×Ô¼º¡£<br>
+ÃüÃû¹æ·¶ÊÇÒ»¸öÏîÄ¿ÖĞ·Ç³£ÖØÒªµÄ²¿·Ö£¬¶¼ĞèÒªÁé¸Ğ¡£[ÃüÃû¹æ·¶×îĞÂ²Î¿¼](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/assets/an-aw-base%E6%9B%B4%E6%96%B0%E8%AF%B4%E6%98%8E.mk)<br>
+
 [An¿ò¼ÜÃüÃû¹æ·¶²Î¿¼](https://zhuanlan.zhihu.com/p/24155927)
 ```groovy
 		/*
@@ -473,6 +474,7 @@ http://drakeet.me/android-studio
 		private ImageView anIvRRight;
 		
 		//FINDVIEWBY ID
+		
 		anLlBack = (LinearLayout) findViewById(R.id.anLlBack);
         anTvBack = (TextView) findViewById(R.id.anTvBack);
         anPb = (ProgressBar) findViewById(R.id.anPb);
@@ -684,3 +686,31 @@ compile 'cn.android.sunst:an-base:2.0.2'
 Õâ´ÎÉı¼¶ÊÇĞ¡·ù¶ÈµÄÉı¼¶£¬Ö÷ÒªÌí¼ÓParallaxActivity£¬ÕûºÏTheme,¸üĞÂapp-release.apk,ĞŞ¸´bugÎÊÌâ 
 
 È»ºóÊÇÉÏÎçÔçĞ©Ê±ºò½èÖúan-aw-baseÍê³ÉÁË[an-aw-zxing ¶şÎ¬Âë¿ò¼Ü](https://github.com/qydq/an-aw-zxing)¡£
+
+## 2017/04/19  16:07:57
+
+>½ñÌìÊÇÕÅĞ¡ÔÂÀë¿ªµÄµÚ97Ìì£¬3ÔÂ28ºÅ¸øÄã´òÁËµÚÒ»´Îµç»°£¬ÎÒ¸øÄã³ªÁËÒ»Ê×ºÃÌıµÄ¸è£¨¶Ô£¬ºÜ½ÃÇé£©£¬À´×Ô17ËêµÄÃÀÉÙÅ®<Å¯Å¯>-Áº¾²Èã£¬ÎÒ¸æËßÄãËµ£¬¡±°®Ò»¸öÈË£¬Ï£ÍûËı¹ı¸üºÃ¡°ÔÚÖ»ÓĞÄãÒ»¸öÈËµÄQQºÅÉÏ¶¯Ì¬¡±±ğÍü¼ÇÎÒ¡°
+
+×îĞÂ±àÒë°æ±¾
+
+`compile 'com.github.qydq:an-aw-base:0.3'`
+
+build.gradle¸üĞÂ·¢²¼ÖÁjitpackºÍjcenterÖĞĞÄ¡£
+
+compile 'cn.android.sunst:an-base:2.0.3'
+
+¸üĞÂËµÃ÷£º
+
+android6.0ÒÔÉÏĞèÒª¶¯Ì¬ÉêÇëÈ¨ÏŞµÄÒıÆğµÄSercurity Exception¡£
+
+Ôö¼ÓÁËÊÊÅäandroid6.0ÒÔÉÏµÄÈ¨ÏŞ»úÖÆ£¨±ÈÈçan¿ò¼ÜÌá¹©ÁËPermissionUtils£©
+
+ÖØµã¶ÔCaptureHelper ĞŞ¸´[Android7.0(Android N)ÊÊÅä½Ì³Ì£¬ÅÄÕÕ-Ñ¡ÔñÏµÍ³Ïà²á](https://zhuanlan.zhihu.com/p/26266290)
+
+¼òµ¥¶ÔLuue ºÍ Y ÏµÁĞÃüÃû¹æ·¶µÄÕûºÏ¡£[ÃüÃû¹æ·¶×îĞÂ²Î¿¼](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/assets/an-aw-base%E6%9B%B4%E6%96%B0%E8%AF%B4%E6%98%8E.mk)<br>
+
+Íê³ÉÁË²¿·Ösamples demoµÄÌá¹©¡£
+
+¿¼ÂÇÏÂ´ÎÊÇ·ñÓ¦¸ÃÉı¼¶zhangluyue.apk-ÎÄ¼şÒÑ¼ÓÃÜ Èí¼ş£¨¹À¼ÆÃ»Ê±¼ä£©
+
+×¼±¸·¢²¼an-aw-base0.3
