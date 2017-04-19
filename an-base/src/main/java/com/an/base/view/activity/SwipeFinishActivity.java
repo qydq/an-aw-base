@@ -6,6 +6,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.view.Window;
 import android.widget.Toast;
 
 import com.an.base.R;
+import com.an.base.contract.SimpleDayNightContract;
 import com.an.base.utils.AndroidTranslucentBar;
 import com.an.base.utils.NetBroadcastReceiver;
 import com.an.base.utils.NetBroadcastReceiverUtils;
@@ -22,7 +24,7 @@ import com.an.base.view.widget.YswipeFinishFrameLayout;
 import static com.an.base.AnApplication.AnTAG;
 
 
-public abstract class SwipeFinishActivity extends BaseActivity implements NetBroadcastReceiver.NetEvevt {
+public abstract class SwipeFinishActivity extends BaseActivity implements NetBroadcastReceiver.NetEvevt, SimpleDayNightContract {
     protected YswipeFinishFrameLayout layout;
     protected SharedPreferences sp;
     public static NetBroadcastReceiver.NetEvevt evevt;//广播监听网络
@@ -31,6 +33,8 @@ public abstract class SwipeFinishActivity extends BaseActivity implements NetBro
      * 网络类型
      */
     private int netModel;
+
+    protected Window mWindow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +49,8 @@ public abstract class SwipeFinishActivity extends BaseActivity implements NetBro
         if (Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
             sp = PreferenceManager.getDefaultSharedPreferences(mContext);
         }
-        Window window = getWindow();
-        AndroidTranslucentBar.getInstance().setTranslucentBar(window);
+        //夜间模式第一种方式
+        windowTranslucent();
         //SwipeFinishActivity init
         layout = (YswipeFinishFrameLayout) LayoutInflater.from(this).inflate(R.layout.base_swipe_finish, null);
         layout.attachToActivity(this);
@@ -56,6 +60,21 @@ public abstract class SwipeFinishActivity extends BaseActivity implements NetBro
         //网络变化监听相关
         evevt = this;
         inspectNet();
+    }
+
+    public void windowTranslucent() {
+        mWindow = getWindow();
+        AndroidTranslucentBar.getInstance().setTranslucentBar(mWindow);
+        if (sp.getBoolean("isNight", false)) {
+            mWindow.getDecorView().setBackground(ContextCompat.getDrawable(mContext, R.drawable.yy_drawable_bgnigt_shape));
+        } else {
+            mWindow.getDecorView().setBackground(ContextCompat.getDrawable(mContext, R.drawable.yy_drawable_bgday_shape));
+        }
+    }
+
+    @Override
+    public void onWindowTranslucentBar(int colorId) {
+        mWindow.getDecorView().setBackground(ContextCompat.getDrawable(mContext, colorId));
     }
 
     /**

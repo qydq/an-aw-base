@@ -27,7 +27,7 @@ import com.an.base.utils.YdialogUtils;
 import com.an.base.utils.DataService;
 import com.an.base.utils.NetBroadcastReceiverUtils;
 import com.an.base.view.SuperActivity;
-import com.an.base.view.widget.WToggleButton;
+import com.an.base.view.widget.LuueToggleBb;
 import com.qyddai.an_aw_base.R;
 import com.qyddai.an_aw_base.SlidingFinishActivity;
 
@@ -50,7 +50,7 @@ public class LittleTrickActivity extends SuperActivity implements TaskDayNightCo
     private SharedPreferences.Editor editor;
     private Dialog dialog;
 
-    private WToggleButton toggleButton;
+    private LuueToggleBb toggleButton;
     private RelativeLayout relativeLayout;
     private LinearLayout linearLayout;
     private TextView textView;
@@ -77,7 +77,7 @@ public class LittleTrickActivity extends SuperActivity implements TaskDayNightCo
         _initTheme();
         setContentView(R.layout.sst_activity_littletrck);
 
-        toggleButton = (WToggleButton) findViewById(R.id.toggleBtn);
+        toggleButton = (LuueToggleBb) findViewById(R.id.toggleBtn);
         relativeLayout = (RelativeLayout) findViewById(R.id.activity_main);
         linearLayout = (LinearLayout) findViewById(R.id.anLlLayout);
         anLlRRight = (LinearLayout) findViewById(R.id.anLlRRight);
@@ -140,7 +140,7 @@ public class LittleTrickActivity extends SuperActivity implements TaskDayNightCo
             }
         });
         //开关切换事件
-        toggleButton.setOnToggleChanged(new WToggleButton.OnToggleChanged() {
+        toggleButton.setOnToggleChanged(new LuueToggleBb.OnToggleChanged() {
             @Override
             public void onToggle(boolean on) {
                 presenter.start();

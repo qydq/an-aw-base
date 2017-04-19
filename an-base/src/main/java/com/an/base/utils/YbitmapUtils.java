@@ -453,7 +453,7 @@ public enum YbitmapUtils {
     }
 
     //把布局变成Bitmap
-    private Bitmap convertViewToBitmap2(View addViewContent) {
+    public Bitmap convertViewToBitmap2(View addViewContent) {
 
         addViewContent.setDrawingCacheEnabled(true);
 

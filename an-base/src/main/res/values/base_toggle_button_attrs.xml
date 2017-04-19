@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="WToggleButton">
+    <declare-styleable name="LuueToggleBb">
         <attr name="tbBorderWidth" format="dimension"/>
         <attr name="tbOffBorderColor" format="reference|color"/>
         <attr name="tbOffColor" format="reference|color"/>

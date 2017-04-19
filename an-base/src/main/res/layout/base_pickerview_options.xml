@@ -16,19 +16,19 @@
         android:background="@color/CommBgPickerViewColor"
         android:orientation="horizontal">
 
-        <com.an.base.view.tips.pickerview.widget.wheelview.WheelView
+        <com.an.base.view.ytips.pickerview.widget.wheelview.WheelView
             android:id="@+id/options1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
 
-        <com.an.base.view.tips.pickerview.widget.wheelview.WheelView
+        <com.an.base.view.ytips.pickerview.widget.wheelview.WheelView
             android:id="@+id/options2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
-        <com.an.base.view.tips.pickerview.widget.wheelview.WheelView
+        <com.an.base.view.ytips.pickerview.widget.wheelview.WheelView
             android:id="@+id/options3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

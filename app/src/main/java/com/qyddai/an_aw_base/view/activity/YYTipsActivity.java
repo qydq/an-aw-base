@@ -4,6 +4,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.an.base.view.ParallaxActivity;
 import com.an.base.view.activity.SwipeFinishActivity;
 import com.an.base.view.ytips.pickerview.CityPickerView;
 import com.an.base.view.ytips.pickerview.OptionsPickerView;
@@ -25,7 +26,7 @@ import java.util.Locale;
  * Created by qydda on 2017/2/21.
  */
 
-public class YYTipsActivity extends SwipeFinishActivity {
+public class YYTipsActivity extends ParallaxActivity {
     private TimeSelector timeSelector;
     private DigitSelector digitSelector;
     private SexSelector sexSelector;

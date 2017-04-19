@@ -14,6 +14,7 @@ import android.view.Window;
 import android.widget.Toast;
 
 import com.an.base.R;
+import com.an.base.contract.SimpleDayNightContract;
 import com.an.base.utils.AndroidTranslucentBar;
 import com.an.base.utils.NetBroadcastReceiver;
 import com.an.base.utils.NetBroadcastReceiverUtils;
@@ -27,7 +28,7 @@ import static com.an.base.AnApplication.AnTAG;
  * <p>
  * 如有使用问题请访问https://github.com/qydq
  */
-public abstract class ParallaxActivity extends BaseActivity implements NetBroadcastReceiver.NetEvevt {
+public abstract class ParallaxActivity extends BaseActivity implements NetBroadcastReceiver.NetEvevt, SimpleDayNightContract {
     private ParallaxBackActivityHelper mHelper;
     /**
      * 网络类型
@@ -36,6 +37,7 @@ public abstract class ParallaxActivity extends BaseActivity implements NetBroadc
     protected SharedPreferences sp;
     public static NetBroadcastReceiver.NetEvevt evevt;//广播监听网络
     protected Context mContext;
+    protected Window mWindow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,19 +54,28 @@ public abstract class ParallaxActivity extends BaseActivity implements NetBroadc
         if (Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
             sp = PreferenceManager.getDefaultSharedPreferences(mContext);
         }
-
-        Window window = getWindow();
-        AndroidTranslucentBar.getInstance().setTranslucentBar(window);
-        if (sp.getBoolean("isNight", false)) {
-            window.getDecorView().setBackground(ContextCompat.getDrawable(mContext, R.drawable.yy_drawable_bgnigt_shape));
-        } else {
-            window.getDecorView().setBackground(ContextCompat.getDrawable(mContext, R.drawable.yy_drawable_bgday_shape));
-        }
+        //夜间模式第一种方式
+        windowTranslucent();
         //初始化视图
         initView();
         //网络变化监听相关
         evevt = this;
         inspectNet();
+    }
+
+    public void windowTranslucent() {
+        mWindow = getWindow();
+        AndroidTranslucentBar.getInstance().setTranslucentBar(mWindow);
+        if (sp.getBoolean("isNight", false)) {
+            mWindow.getDecorView().setBackground(ContextCompat.getDrawable(mContext, R.drawable.yy_drawable_bgnigt_shape));
+        } else {
+            mWindow.getDecorView().setBackground(ContextCompat.getDrawable(mContext, R.drawable.yy_drawable_bgday_shape));
+        }
+    }
+
+    @Override
+    public void onWindowTranslucentBar(int colorId) {
+        mWindow.getDecorView().setBackground(ContextCompat.getDrawable(mContext, colorId));
     }
 
     /**

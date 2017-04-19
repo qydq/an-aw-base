@@ -47,7 +47,6 @@ public class YueYueActivity extends ParallaxActivity implements View.OnClickList
         tvConfim = (TextView) findViewById(R.id.tvConfim);
         tvConfimChoose.setOnClickListener(this);
         tvConfim.setOnClickListener(this);
-
         offsetValue = getResources().getDimension(R.dimen.DimenNativeNational);
         imageView1.setAlpha(1.0f);
 

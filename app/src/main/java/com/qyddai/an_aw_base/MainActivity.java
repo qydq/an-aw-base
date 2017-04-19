@@ -4,9 +4,6 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -22,6 +19,7 @@ import com.qyddai.an_aw_base.view.LRecyclerViewActivity;
 import com.qyddai.an_aw_base.view.LittleTrickActivity;
 import com.qyddai.an_aw_base.view.RefreshLayoutActivity;
 import com.qyddai.an_aw_base.view.SwipeRecyclerActivity;
+import com.qyddai.an_aw_base.view.activity.PicsDetailActivity;
 import com.qyddai.an_aw_base.view.activity.YYTipsActivity;
 
 import java.util.Arrays;
@@ -56,7 +54,7 @@ public class MainActivity extends ParallaxActivity implements OnItemClickListene
                 startActivity(new Intent(this, YYTipsActivity.class));
                 break;
             case 6:
-//                startActivity(new Intent(this, ListDragSwipeActivity.class));
+                startActivity(new Intent(this, PicsDetailActivity.class));
                 break;
             case 7:
 //                startActivity(new Intent(this, DragSwipeFlagsActivity.class));

@@ -74,10 +74,10 @@ public class SlidingFinishDetailActivity extends SuperActivity {
     @ViewInject(R.id.anIvRRight)
     private ImageView anIvRRight;
     @ViewInject(R.id.iv)
-//    private ImageView iv;
+    private ImageView iv;
 //    private LuueDragImageView iv;
 //    private LuueScaleImageView iv;
-    private LuueZoomIv iv;
+//    private LuueZoomIv iv;
 
     private String[] items = new String[]{"图库", "拍照"};
     /* 头像名称 */

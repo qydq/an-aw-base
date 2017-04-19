@@ -24,6 +24,9 @@
             android:name=".view.activity.MyActivity"
             android:theme="@style/NoBarTheme" />
         <activity
+            android:name=".view.activity.PicsDetailActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
             android:name=".SplashActivity"
             android:theme="@style/NoBarTheme" />
         <activity android:name=".SlidingCloseActivity" />
@@ -141,6 +144,7 @@
             android:theme="@style/NoBarTheme" />
         <activity
             android:name=".view.activity.YYTipsActivity"
+            android:theme="@style/ParallaxAppTheme"
             android:label="@string/SectionAnimalActivity" />
         <activity
             android:name=".view.activity.YYChatTipsActivity"
@@ -174,6 +178,7 @@
             android:name=".view.activity.RefreshWebViewActivity"
             android:label="@string/SectionAnimalActivity"
             android:theme="@style/NoBarTheme" />
+
     </application>
 
 </manifest>

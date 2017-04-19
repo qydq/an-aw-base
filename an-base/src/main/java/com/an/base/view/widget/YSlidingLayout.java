@@ -90,11 +90,11 @@ public class YslidingLayout extends FrameLayout {
     }
 
     private void init(Context context, AttributeSet attrs) {
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.WSlidingLayout);
-        mBackgroundViewLayoutId = a.getResourceId(R.styleable.WSlidingLayout_background_view, mBackgroundViewLayoutId);
-        mSlidingMode = a.getInteger(R.styleable.WSlidingLayout_sliding_mode, SLIDING_MODE_BOTH);
-        mSlidingPointerMode = a.getInteger(R.styleable.WSlidingLayout_sliding_pointer_mode, SLIDING_POINTER_MODE_MORE);
-        mSlidingTopMaxDistance = a.getDimensionPixelSize(R.styleable.WSlidingLayout_top_max, SLIDING_DISTANCE_UNDEFINED);
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.YslidingLayout);
+        mBackgroundViewLayoutId = a.getResourceId(R.styleable.YslidingLayout_background_view, mBackgroundViewLayoutId);
+        mSlidingMode = a.getInteger(R.styleable.YslidingLayout_sliding_mode, SLIDING_MODE_BOTH);
+        mSlidingPointerMode = a.getInteger(R.styleable.YslidingLayout_sliding_pointer_mode, SLIDING_POINTER_MODE_MORE);
+        mSlidingTopMaxDistance = a.getDimensionPixelSize(R.styleable.YslidingLayout_top_max, SLIDING_DISTANCE_UNDEFINED);
         a.recycle();
         if (mBackgroundViewLayoutId != 0) {
             View view = View.inflate(getContext(), mBackgroundViewLayoutId, null);

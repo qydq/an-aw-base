@@ -78,7 +78,7 @@ public class LuuePowerIv extends ImageView implements View.OnClickListener {
      */
     public LuuePowerIv(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.PowerImageView);
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.LuuePowerIv);
         int resourceId = getResourceId(a, context, attrs);
         if (resourceId != 0) {
 // 当资源id不等于0时，就去获取该资源的流
@@ -87,7 +87,7 @@ public class LuuePowerIv extends ImageView implements View.OnClickListener {
             mMovie = Movie.decodeStream(is);
             if (mMovie != null) {
 // 如果返回值不等于null，就说明这是一个GIF图片，下面获取是否自动播放的属性
-                isAutoPlay = a.getBoolean(R.styleable.PowerImageView_auto_play, false);
+                isAutoPlay = a.getBoolean(R.styleable.LuuePowerIv_auto_play, false);
                 Bitmap bitmap = BitmapFactory.decodeStream(is);
                 mImageWidth = bitmap.getWidth();
                 mImageHeight = bitmap.getHeight();

@@ -30,14 +30,14 @@
                 android:layout_marginLeft="@dimen/CommDimenMargin"
                 android:layout_marginRight="@dimen/CommDimenMargin">
 
-                <com.an.base.view.widget.WRoundImageView
+                <com.an.base.view.widget.LuueRoundIv
                     android:id="@+id/imageView1"
                     android:layout_width="@dimen/DimenNativeNationalSMax"
                     android:layout_height="@dimen/DimenNativeNationalSMax"
                     android:layout_alignParentLeft="true"
                     android:src="@mipmap/yy" />
 
-                <com.an.base.view.widget.WRoundImageView
+                <com.an.base.view.widget.LuueRoundIv
                     android:id="@+id/imageViewTips"
                     android:layout_width="@dimen/DimenNativeNationalSMax"
                     android:layout_height="@dimen/DimenNativeNationalSMax"
@@ -45,7 +45,7 @@
                     android:gravity="center"
                     android:src="@mipmap/yy" />
 
-                <com.an.base.view.widget.WRoundImageView
+                <com.an.base.view.widget.LuueRoundIv
                     android:id="@+id/imageView2"
                     android:layout_width="@dimen/DimenNativeNationalSMax"
                     android:layout_height="@dimen/DimenNativeNationalSMax"
@@ -183,14 +183,14 @@
                 android:layout_marginLeft="@dimen/CommDimenMargin"
                 android:layout_marginRight="@dimen/CommDimenMargin">
 
-                <com.an.base.view.widget.WRoundImageView
+                <com.an.base.view.widget.LuueRoundIv
                     android:id="@+id/imageView3"
                     android:layout_width="@dimen/DimenNativeNationalSMax"
                     android:layout_height="@dimen/DimenNativeNationalSMax"
                     android:layout_alignParentLeft="true"
                     android:src="@mipmap/yy" />
 
-                <com.an.base.view.widget.WRoundImageView
+                <com.an.base.view.widget.LuueRoundIv
                     android:id="@+id/imageView4"
                     android:layout_width="@dimen/DimenNativeNationalSMax"
                     android:layout_height="@dimen/DimenNativeNationalSMax"

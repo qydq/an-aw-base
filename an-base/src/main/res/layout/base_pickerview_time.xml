@@ -16,31 +16,31 @@
         android:background="@color/CommBgPickerViewColor"
         android:orientation="horizontal">
 
-        <com.an.base.view.tips.pickerview.widget.wheelview.WheelView
+        <com.an.base.view.ytips.pickerview.widget.wheelview.WheelView
             android:id="@+id/year"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1.1" />
 
-        <com.an.base.view.tips.pickerview.widget.wheelview.WheelView
+        <com.an.base.view.ytips.pickerview.widget.wheelview.WheelView
             android:id="@+id/month"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1.1" />
 
-        <com.an.base.view.tips.pickerview.widget.wheelview.WheelView
+        <com.an.base.view.ytips.pickerview.widget.wheelview.WheelView
             android:id="@+id/day"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1.1" />
 
-        <com.an.base.view.tips.pickerview.widget.wheelview.WheelView
+        <com.an.base.view.ytips.pickerview.widget.wheelview.WheelView
             android:id="@+id/hour"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1.1" />
 
-        <com.an.base.view.tips.pickerview.widget.wheelview.WheelView
+        <com.an.base.view.ytips.pickerview.widget.wheelview.WheelView
             android:id="@+id/min"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

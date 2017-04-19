@@ -7,6 +7,7 @@
         <item>RefreshLayoutActivity</item>
         <item>LRecyclerView Activity</item>
         <item>YYTipsActivity Activity</item>
+        <item>Other Test</item>
 
     </string-array>
 
@@ -17,6 +18,7 @@
         <item>动画特性的列表刷新控件布局，带你实现完美的动画特效，更好的用户体验;base:0.2使用samples</item>
         <item>RecyclerView下拉刷新，自动加载更多；仿IOS侧滑Item删除菜单;base:0.2使用samples</item>
         <item>YYTipsActivity，该内容为测试控件位置，为了更好的完善an-aw-base，YY为月月。</item>
+        <item>Other Test 验证其他</item>
     </string-array>
     <string-array name="main_item1">
         <item>左右两侧都有</item>

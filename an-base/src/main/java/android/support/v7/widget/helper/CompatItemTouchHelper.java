@@ -16,7 +16,7 @@
 package android.support.v7.widget.helper;
 
 /**
- * Created by Yan Zhenjie on 2016/8/1.
+ * Created by qydq on 2016/8/1.
  */
 public class CompatItemTouchHelper extends ItemTouchHelper {
 

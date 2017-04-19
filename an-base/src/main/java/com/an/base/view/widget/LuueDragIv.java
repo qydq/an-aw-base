@@ -8,15 +8,15 @@ import android.widget.ImageView;
 /**
  * 继承ImageView 实现了多点触碰的拖动和缩放
  *
- * @author lihua
+ * @author qydq
  */
 
 /**********************************************************
- * @文件名称：LuueImageView
+ * @文件名称：LuueDragIv
  * @文件作者：staryumou@163.com
  * @创建时间：2016/8/23
- * @文件描述：null
- * @修改历史：2016/8/23
+ * @文件描述：可以拖动的ImageView
+ * @修改历史：2017/04/12
  **********************************************************/
 public class LuueDragIv extends ImageView {
 
@@ -53,6 +53,7 @@ public class LuueDragIv extends ImageView {
 
     /**
      * 该构造方法在静态引入XML文件中是必须的
+     *
      * @param context
      * @param paramAttributeSet
      */
@@ -62,6 +63,7 @@ public class LuueDragIv extends ImageView {
 
     /**
      * 该构造函数在动态创建时，指定图片的初始高宽
+     *
      * @param context
      * @param w
      * @param h

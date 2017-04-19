@@ -1,5 +1,6 @@
 package com.an.base.utils;
 
+import android.content.Context;
 import android.os.Environment;
 import android.os.StatFs;
 
@@ -91,6 +92,15 @@ public enum YstorageUtils {
      */
     public File getskRootDirectoryFile() {
         return Environment.getRootDirectory();
+    }
+
+    /***
+     * @return boolean getskCacheFile
+     * @ 获取手机上缓存的路径file，(该方法一定不会为空的。)
+     * android的存储建议放在该目录下面，该目录的下面不需要权限。
+     */
+    public File getskCacheFile(Context context) {
+        return context.getCacheDir();
     }
 
     /*

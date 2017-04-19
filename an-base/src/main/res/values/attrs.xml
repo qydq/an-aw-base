@@ -38,7 +38,7 @@
     <declare-styleable name="LuuePowerIv">
         <attr name="auto_play" format="boolean" />
     </declare-styleable>
-    <declare-styleable name="WSlidingLayout">
+    <declare-styleable name="YslidingLayout">
         <attr name="background_view" format="reference"/>
         <attr name="sliding_mode" format="enum">
             <enum name="both" value="0"/>

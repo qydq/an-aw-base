@@ -80,28 +80,13 @@ public class YuiUtils {
      /*
     * 隐藏软键盘
     * */
-    public void hindKeyboard(Context context) {
+    public static void hindKeyboard(Context context) {
         InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
     }
 
-    public boolean isOpenKeyboard(Context context) {
+    public static boolean isOpenKeyboard(Context context) {
         InputMethodManager imm = (InputMethodManager) context.getSystemService(context.INPUT_METHOD_SERVICE);
         return imm.isActive();
-    }
-
-    /**
-     * 判断软键盘是否弹出
-     */
-    public boolean isSHowKeyboard(Context context, View v) {
-        InputMethodManager imm = (InputMethodManager) context.getSystemService(context.INPUT_METHOD_SERVICE);
-        if (imm.hideSoftInputFromWindow(v.getWindowToken(), 0)) {
-            imm.showSoftInput(v, 0);
-            return true;
-            //软键盘已弹出
-        } else {
-            return false;
-            //软键盘未弹出
-        }
     }
 }

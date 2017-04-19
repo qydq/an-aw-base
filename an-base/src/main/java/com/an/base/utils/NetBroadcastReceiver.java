@@ -40,6 +40,6 @@ public class NetBroadcastReceiver extends BroadcastReceiver {
 
     // 自定义接口
     public interface NetEvevt {
-        public void onNetChange(int netModile);
+        void onNetChange(int netModile);
     }
 }

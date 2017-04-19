@@ -16,7 +16,7 @@ import android.view.View;
 import com.an.base.R;
 
 /**
- * @author ThinkPad
+ * @author qydq
  */
 public class LuueToggleBb extends View {
     private SpringSystem springSystem;
@@ -134,14 +134,14 @@ public class LuueToggleBb extends View {
             }
         });
 
-        TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.WToggleButton);
-        offBorderColor = typedArray.getColor(R.styleable.WToggleButton_tbOffBorderColor, offBorderColor);
-        onColor = typedArray.getColor(R.styleable.WToggleButton_tbOnColor, onColor);
-        spotColor = typedArray.getColor(R.styleable.WToggleButton_tbSpotColor, spotColor);
-        offColor = typedArray.getColor(R.styleable.WToggleButton_tbOffColor, offColor);
-        borderWidth = typedArray.getDimensionPixelSize(R.styleable.WToggleButton_tbBorderWidth, borderWidth);
-        defaultAnimate = typedArray.getBoolean(R.styleable.WToggleButton_tbAnimate, defaultAnimate);
-        isDefaultOn = typedArray.getBoolean(R.styleable.WToggleButton_tbAsDefaultOn, isDefaultOn);
+        TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.LuueToggleBb);
+        offBorderColor = typedArray.getColor(R.styleable.LuueToggleBb_tbOffBorderColor, offBorderColor);
+        onColor = typedArray.getColor(R.styleable.LuueToggleBb_tbOnColor, onColor);
+        spotColor = typedArray.getColor(R.styleable.LuueToggleBb_tbSpotColor, spotColor);
+        offColor = typedArray.getColor(R.styleable.LuueToggleBb_tbOffColor, offColor);
+        borderWidth = typedArray.getDimensionPixelSize(R.styleable.LuueToggleBb_tbBorderWidth, borderWidth);
+        defaultAnimate = typedArray.getBoolean(R.styleable.LuueToggleBb_tbAnimate, defaultAnimate);
+        isDefaultOn = typedArray.getBoolean(R.styleable.LuueToggleBb_tbAsDefaultOn, isDefaultOn);
         typedArray.recycle();
 
         borderColor = offBorderColor;

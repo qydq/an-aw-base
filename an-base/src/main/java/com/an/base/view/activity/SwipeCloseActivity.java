@@ -6,20 +6,23 @@ import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
 
+import com.an.base.R;
+import com.an.base.contract.SimpleDayNightContract;
 import com.an.base.utils.AndroidTranslucentBar;
 import com.an.base.utils.NetBroadcastReceiver;
 import com.an.base.utils.NetBroadcastReceiverUtils;
 import com.an.base.view.BaseActivity;
-import com.an.base.view.widget.WSwipeCloseFrameLayout;
+import com.an.base.view.widget.YswipeCloseFrameLayout;
 
 import static com.an.base.AnApplication.AnTAG;
 
-public abstract class SwipeCloseActivity extends BaseActivity implements NetBroadcastReceiver.NetEvevt {
+public abstract class SwipeCloseActivity extends BaseActivity implements NetBroadcastReceiver.NetEvevt, SimpleDayNightContract {
     protected SharedPreferences sp;
     public static NetBroadcastReceiver.NetEvevt evevt;//广播监听网络
     protected Context mContext;
@@ -27,6 +30,8 @@ public abstract class SwipeCloseActivity extends BaseActivity implements NetBroa
      * 网络类型
      */
     private int netModel;
+
+    protected Window mWindow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,16 +46,32 @@ public abstract class SwipeCloseActivity extends BaseActivity implements NetBroa
         if (Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
             sp = PreferenceManager.getDefaultSharedPreferences(mContext);
         }
-        Window window = getWindow();
-        AndroidTranslucentBar.getInstance().setTranslucentBar(window);
+        //夜间模式第一种方式
+        windowTranslucent();
+
         //SwipeCloseActivity init
-        WSwipeCloseFrameLayout rootView = new WSwipeCloseFrameLayout(this);
+        YswipeCloseFrameLayout rootView = new YswipeCloseFrameLayout(this);
         rootView.bindActivity(this);
         //初始化视图
         initView();
         //网络变化监听相关
         evevt = this;
         inspectNet();
+    }
+
+    public void windowTranslucent() {
+        mWindow = getWindow();
+        AndroidTranslucentBar.getInstance().setTranslucentBar(mWindow);
+        if (sp.getBoolean("isNight", false)) {
+            mWindow.getDecorView().setBackground(ContextCompat.getDrawable(mContext, R.drawable.yy_drawable_bgnigt_shape));
+        } else {
+            mWindow.getDecorView().setBackground(ContextCompat.getDrawable(mContext, R.drawable.yy_drawable_bgday_shape));
+        }
+    }
+
+    @Override
+    public void onWindowTranslucentBar(int colorId) {
+        mWindow.getDecorView().setBackground(ContextCompat.getDrawable(mContext, colorId));
     }
 
     /**
@@ -102,6 +123,7 @@ public abstract class SwipeCloseActivity extends BaseActivity implements NetBroa
             }
         });
     }
+
     protected void showToastInCenter(final String msg) {
         runOnUiThread(new Runnable() {
 
@@ -122,6 +144,7 @@ public abstract class SwipeCloseActivity extends BaseActivity implements NetBroa
             }
         });
     }
+
     /**
      * 各种对象、组件的初始化
      */
