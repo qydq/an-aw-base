@@ -32,6 +32,7 @@ import com.an.base.view.swipelayout.touch.OnItemStateChangedListener;
 import java.util.ArrayList;
 import java.util.List;
 
+
 /**
  * Created by Yan Zhenjie on 2016/7/27.
  */
