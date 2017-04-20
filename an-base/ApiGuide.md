@@ -1,10 +1,66 @@
 # Api Guide --aN框架API指导参考 
 
-aN框架API指导参考-Api Guide
+aN框架API指导参考-Api Guide  最近修改日期 2017年4月20日09:45:51
 
 ##  aN框架工具类参考。
 
 类 - 方法 - 说明 - 参数 - 返回值 
+
+### [!FastBlurUtils] StackBlur模糊算法，能得到非常良好的毛玻璃效果。
+
+|方法名称|方法说明|参数|返回|
+|:---------|:---|:---|---:|
+|doBlur|进行StackBlur模糊算法|Bitmap sentBitmap, int radius, boolean canReuseInBitmap|Bitmap|
+
+使用参考：
+
+Bitmap bitmap = FastBlurUtil.doBlur(sBitmap, 2, false);
+
+### [!FileUtils] 文件操作。
+
+|方法名称|方法说明|参数|返回|
+|:---------|:---|:---|---:|
+|copyAssetsToSD|复制assets目录下的文件到sd卡<br>父类可实现接口FileOperateCallback，监听是否复制成功|final String srcPath, final String sdPath|FileUtils|
+|getTotalCacheSize|得到总缓存大小|Context context|String|
+|clearAllCache|得到总缓存大小|Context context|String|
+|getFolderSize|得到文件目录下的大小|File file|long|
+|getFormatSize|格式化单位|double size|String|
+|cleanInternalCache|清除本应用内部缓存(/data/data/com.xxx.xxx/cache)|Context context|void|
+|cleanDatabases|清除本应用所有数据库(/data/data/com.xxx.xxx/databases) |Context context|void|
+|cleanSharedPreference|清除本应用SharedPreference(/data/data/com.xxx.xxx/shared_prefs) |Context context|void|
+|cleanDatabaseByName|按名字清除本应用数据库 |Context context, String dbName|void|
+|cleanFiles|清除/data/data/com.xxx.xxx/files下的内容 |Context context|void|
+|cleanExternalCache|清除外部cache下的内容(/mnt/sdcard/android/data/com.xxx.xxx/cache)|Context context|void|
+
+
+部分使用参考：
+```groovy
+String size = FileUtils.getTotalCacheSize(mContext);
+```
+
+```groovy
+FileUtils.copyAssetsToSD(filePath,sdPath);
+主类实现FileOperateCallback接口，并监听
+void onSuccess();
+void onFailed(String error);
+```
+
+### [!PermissionUtils] 为android6.0以上系统提供的权限检测工具类。
+
+|方法名称|方法说明|参数|返回|
+|:---------|:---|:---|---:|
+|requestPermission|请求权限|nt requestCode, PermissionGrant permissionGrant|void|
+|requestMultiPermissions|一次申请多个权限|PermissionGrant grant|void|
+|requestPermissionsResult|Need consistent with requestPermission|int requestCode, @NonNull String[] permissions,
+                                         @NonNull int[] grantResults, PermissionGrant permissionGrant|void|
+|getNoGrantedPermission|return no granted and shouldShowRequestPermissionRationale permissions|Activity activity, boolean isShouldRationale|ArrayList<String>|
+|lacksPermissions|判断权限集合|String... permissions|boolean|
+|lacksPermission|判断是否缺少权限|String permission|boolean|
+|requestPermissions|请求权限|String[] PERMISSIONS, int requestCode, String permission|void|
+
+使用参考：
+
+PermissionUtils.requestPermissions(PERMISSIONS, 2, permission);
 
 ### [!DUtilsBitmap](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/java/com/an/base/utils/DUtilsBitmap.java) 操作图片类的工具 ，（枚举单例模式）
 
