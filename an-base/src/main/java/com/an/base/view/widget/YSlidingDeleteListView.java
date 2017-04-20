@@ -30,6 +30,7 @@ public class YslidingDeleteListView extends ListView {
 
     private int mButtonID = -1;
 
+
     private float mLastMotionX, mLastMotionY;
 
     private View mItemView;

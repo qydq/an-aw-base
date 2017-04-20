@@ -36,6 +36,7 @@ public class YswipeFinishFrameLayout extends FrameLayout {
     private int tempX;
     private Scroller mScroller;
     private int viewWidth;
+
     private boolean isSilding;
     private boolean isFinish;
     private Drawable mShadowDrawable;

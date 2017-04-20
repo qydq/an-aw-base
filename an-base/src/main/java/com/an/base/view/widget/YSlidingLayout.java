@@ -96,6 +96,8 @@ public class YslidingLayout extends FrameLayout {
         mSlidingPointerMode = a.getInteger(R.styleable.YslidingLayout_sliding_pointer_mode, SLIDING_POINTER_MODE_MORE);
         mSlidingTopMaxDistance = a.getDimensionPixelSize(R.styleable.YslidingLayout_top_max, SLIDING_DISTANCE_UNDEFINED);
         a.recycle();
+
+
         if (mBackgroundViewLayoutId != 0) {
             View view = View.inflate(getContext(), mBackgroundViewLayoutId, null);
             setBackgroundView(view);

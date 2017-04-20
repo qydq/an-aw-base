@@ -57,11 +57,14 @@ public class YresizeRelativeLayout extends RelativeLayout {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 
+
     private KeyBordStateListener keyBordStateListener;
 
     public void setKeyBordStateListener(KeyBordStateListener keyBordStateListener) {
         this.keyBordStateListener = keyBordStateListener;
     }
+
+
 
     public interface KeyBordStateListener {
         public void onStateChange(int state);

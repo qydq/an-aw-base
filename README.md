@@ -380,17 +380,22 @@ http://drakeet.me/android-studio
 		//配置jitpack
 		apply plugin: 'com.github.dcendents.android-maven'
 		group = 'com.github.qydq'
+		
+		useLibrary 'org.apache.http.legacy'
+		
 		dependencies {
-		compile fileTree(dir: 'libs', include: ['*.jar'])
-		androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-		})
-		compile 'com.android.support:appcompat-v7:24.2.0'
-		testCompile 'junit:junit:4.12'
-		compile 'org.xutils:xutils:3.3.36'
-		compile 'com.google.code.gson:gson:2.7'
-		compile 'com.android.support:design:24.2.0'<!--android md新特性的引用-->
-		compile 'com.android.support:recyclerview-v7:24.2.0'
+     compile fileTree(dir: 'libs', include: ['*.jar'])
+     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+         exclude group: 'com.android.support', module: 'support-annotations'
+     })
+     compile 'com.android.support:appcompat-v7:25.1.1'
+     testCompile 'junit:junit:4.12'
+     compile 'org.xutils:xutils:3.4.0'
+     compile 'com.google.code.gson:gson:2.8.0'
+     compile 'com.android.support:design:25.1.1'
+     compile 'com.android.support:recyclerview-v7:25.1.1'
+     compile 'com.nineoldandroids:library:2.4.0'
+    }
 		//apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
 		
 ## an-aw-base > project /build.gradle
@@ -400,7 +405,7 @@ http://drakeet.me/android-studio
 			jcenter()
 		}
 		dependencies {
-			classpath 'com.android.tools.build:gradle:2.2.0-rc2'
+			classpath 'com.android.tools.build:gradle:2.2.3'
 			// jitpack发布github
 			classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
 			// NOTE: Do not place your application dependencies here; they belong
@@ -687,9 +692,9 @@ compile 'cn.android.sunst:an-base:2.0.2'
 
 然后是上午早些时候借助an-aw-base完成了[an-aw-zxing 二维码框架](https://github.com/qydq/an-aw-zxing)。
 
-## 2017/04/19  16:07:57
+## 2017/04/20  16:07:57
 
->今天是张小月离开的第97天，3月28号给你打了第一次电话，我给你唱了一首好听的歌（对，很矫情），来自17岁的美少女<暖暖>-梁静茹，我告诉你说，”爱一个人，希望她过更好“在只有你一个人的QQ号上动态”别忘记我“
+>今天是张小月离开的第98天，3月28号给你打了第一次电话，我给你唱了一首好听的歌（对，很矫情），来自17岁的美少女<暖暖>-梁静茹，我告诉你说，”爱一个人，希望她过更好“，在只有你一个人的QQ号上发动态说，”别忘记我“
 
 最新编译版本
 
@@ -701,16 +706,18 @@ compile 'cn.android.sunst:an-base:2.0.3'
 
 更新说明：
 
-android6.0以上需要动态申请权限的引起的Sercurity Exception。
+主要重点解决android6.0以上需要动态申请权限的引起的Sercurity Exception。
 
-增加了适配android6.0以上的权限机制（比如an框架提供了PermissionUtils）
+增加了适配android6.0以上的权限机制（an框架提供了PermissionUtils）
 
-重点对CaptureHelper 修复[Android7.0(Android N)适配教程，拍照-选择系统相册](https://zhuanlan.zhihu.com/p/26266290)
+重点对CaptureHelper 修复，可参考[Android7.0(Android N)适配教程，拍照-选择系统相册](https://zhuanlan.zhihu.com/p/26266290)
 
-简单对Luue 和 Y 系列命名规范的整合。[命名规范最新参考](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/assets/an-aw-base%E6%9B%B4%E6%96%B0%E8%AF%B4%E6%98%8E.mk)<br>
+对Luue 和 Y 系列命名规范的整合。[命名规范最新参考](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/assets/an-aw-base%E6%9B%B4%E6%96%B0%E8%AF%B4%E6%98%8E.mk)<br>
 
 完成了部分samples demo的提供。
 
-考虑下次是否应该升级zhangluyue.apk-文件已加密 软件（估计没时间）
+FileUtils中增加对缓存大小的判断，清除等内容。
+
+考虑下次是否应该升级zhangluyue.apk-文件已加密 软件（估计是没时间了）
 
 准备发布an-aw-base0.3

@@ -23,10 +23,11 @@ import android.widget.ScrollView;
  *  
  */
 public class YshrinkScrollView extends ScrollView {
-    private static final String TAG = "WIoScrollView ";
+    private static final String TAG = "YshrinkScrollView ";
     // 移动因子, 是一个百分比, 比如手指移动了100px, 那么View就只移动50px
 // 目的是达到一个延迟的效果
     private static final float MOVE_FACTOR = 0.5f;
+
     // 松开手指后, 界面回到正常位置需要的动画时间
     private static final int ANIM_TIME = 280;
     // ScrollView的子View， 也是ScrollView的唯一一个子View
@@ -42,6 +43,7 @@ public class YshrinkScrollView extends ScrollView {
     private boolean canPullUp = false;
     // 在手指滑动的过程中记录是否移动了布局
     private boolean isMoved = false;
+
 
     private GestureDetector mGestureDetector;
 
