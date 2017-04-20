@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 //配置jitpack
-/*apply plugin: 'com.github.dcendents.android-maven'
-group = 'com.github.qydq'*/
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.qydq'
 
 //配置bintray(笨的方法)
 //ext {
@@ -15,7 +15,7 @@ group = 'com.github.qydq'*/
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "24.0.3"
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
         minSdkVersion 19
