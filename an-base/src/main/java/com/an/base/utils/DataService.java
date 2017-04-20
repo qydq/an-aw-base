@@ -18,7 +18,9 @@ import java.util.regex.Pattern;
  * @文件作者：staryumou@163.com
  * @创建时间：2016/9/7
  * @文件描述：单利模式的MD5加密
- * @修改历史：2016/9/7
+ * @修改历史：2017/04/17
+ *
+ * 说明一下，如果是check类型则代表是正则判断某个ip，电话啊，如果是is则代表用的是java或其它判断
  **********************************************************/
 public enum DataService {
     INSTANCE;
@@ -69,6 +71,36 @@ public enum DataService {
         Matcher m = p.matcher(mobiles);
         return m.matches();
     }
+
+    /**
+     * @param str
+     * @return
+     * @ 验证是否为数字
+     */
+    public boolean checkNumeric(String str) {
+        Pattern pattern = Pattern.compile("[0-9]*");
+        Matcher isNum = pattern.matcher(str);
+        if (!isNum.matches()) {
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * @param str
+     * @return
+     * @ 验证是否为数字
+     */
+    public static boolean isNumeric(String str) {
+        for (int i = 0; i < str.length(); i++) {
+            System.out.println(str.charAt(i));
+            if (!Character.isDigit(str.charAt(i))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 
     /**
      * MD5加密
