@@ -22,7 +22,7 @@
                 android:layout_centerVertical="true"
                 android:padding="10dp"
                 android:text="取消"
-                android:textColor="@color/CommTxtPickerViewColor"
+                android:textColor="@drawable/yy_drawable_selector_txt_pickerview"
                 android:textSize="16sp" />
 
 
@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="请选择时间"
-                android:textColor="@color/CommTxtPickerViewColor"
+                android:textColor="@color/CommTxtPickerView_BarTitleColor"
                 android:textSize="20sp" />
 
 
@@ -44,7 +44,7 @@
                 android:layout_centerVertical="true"
                 android:padding="10dp"
                 android:text="选择"
-                android:textColor="@color/CommTxtPickerViewColor"
+                android:textColor="@drawable/yy_drawable_selector_txt_pickerview"
                 android:textSize="16sp" />
 
         </RelativeLayout>
@@ -52,7 +52,7 @@
         <View
             android:layout_width="fill_parent"
             android:layout_height="0.5dp"
-            android:background="#11112233" />
+            android:background="@color/CommColorLinePickerView" />
 
         <RelativeLayout
             android:layout_width="fill_parent"

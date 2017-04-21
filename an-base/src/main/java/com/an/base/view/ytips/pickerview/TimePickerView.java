@@ -16,7 +16,7 @@ import java.util.Date;
 
 /**
  * 时间选择器
- * Created by Sai on 15/11/22.
+ * Created by qydq on 15/11/22.
  */
 public class TimePickerView extends BasePickerView implements View.OnClickListener {
 

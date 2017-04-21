@@ -13,8 +13,8 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 /**
- * Created by zhouyou on 2016/12/5.
- * Class desc:
+ * Created by qydq on 2016/12/5.
+ * Class desc:城市选择器
  */
 public class CityPickerView extends OptionsPickerView {
 
@@ -46,10 +46,10 @@ public class CityPickerView extends OptionsPickerView {
         setOnOptionsSelectListener(new OnOptionsSelectListener() {
             @Override
             public void onOptionsSelect(int option1, int option2, int option3) {
-                if(mOnCitySelectListener != null){
-                    if(mListCity.size() > option1 && mListCity.get(option1).size() > option2){
-                        if(mListArea.size() > option1 && mListArea.get(option1).size() > option2
-                                && mListArea.get(option1).get(option2).size() > option3){
+                if (mOnCitySelectListener != null) {
+                    if (mListCity.size() > option1 && mListCity.get(option1).size() > option2) {
+                        if (mListArea.size() > option1 && mListArea.get(option1).size() > option2
+                                && mListArea.get(option1).get(option2).size() > option3) {
                             String prov = mListProvince.get(option1);
                             String city = mListCity.get(option1).get(option2);
                             String area = mListArea.get(option1).get(option2).get(option3);
@@ -62,7 +62,9 @@ public class CityPickerView extends OptionsPickerView {
         });
     }
 
-    /** 从assert文件夹中读取省市区的json文件，然后转化为json对象 */
+    /**
+     * 从assert文件夹中读取省市区的json文件，然后转化为json对象
+     */
     private void initJsonData() {
         AssetManager assets = mContext.getAssets();
         try {
@@ -77,8 +79,10 @@ public class CityPickerView extends OptionsPickerView {
         }
     }
 
-    /** 初始化Json数据，并释放Json对象 */
-    private void initJsonDatas(){
+    /**
+     * 初始化Json数据，并释放Json对象
+     */
+    private void initJsonDatas() {
         try {
             JSONArray jsonArray = mJsonObj.getJSONArray("citylist");
             for (int i = 0; i < jsonArray.length(); i++) {

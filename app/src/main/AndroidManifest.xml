@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AnAppTheme">
         <activity
-            android:name=".view.activity.MyActivity"
+            android:name=".MainActivity"
             android:theme="@style/ParallaxAppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +21,7 @@
             android:name=".YueYueActivity"
             android:theme="@style/ParallaxAppTheme" />
         <activity
-            android:name=".MainActivity"
+            android:name=".view.activity.MyActivity"
             android:theme="@style/NoBarTheme" />
         <activity
             android:name=".view.activity.PicsDetailActivity"

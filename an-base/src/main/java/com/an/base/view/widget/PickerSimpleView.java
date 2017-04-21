@@ -186,7 +186,7 @@ public class PickerSimpleView extends View {
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setStyle(Style.FILL);
         mPaint.setTextAlign(Align.CENTER);
-        mPaint.setColor(getResources().getColor(R.color.CommTxtPickerViewColor));
+        mPaint.setColor(getResources().getColor(R.color.CommTxtPickerView_BarColor_Nor));
         //第二个paint
         nPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         nPaint.setStyle(Style.FILL);

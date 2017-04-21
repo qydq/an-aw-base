@@ -287,14 +287,13 @@
     <color name="CommBgPickerViewColorTips">#f5f5f5</color><!--pickerview下面的背景颜色-->
     <color name="CommBgPickerViewColorClicked">#fff</color><!--pickerview下面的背景颜色-->
 
-    <color name="CommTxtPickerViewColor">#057dff</color>
-    <color name="CommTxtPickerViewColorClicked">#c2daf5</color>
-
-    <color name="pickerview_timebtn_nor">#057dff</color>
-    <color name="pickerview_timebtn_pre">#c2daf5</color>
-    <color name="pickerview_topbar_title">#000000</color>
-    <color name="pickerview_wheelview_textcolor_out">#a8a8a8</color>
-    <color name="pickerview_wheelview_textcolor_center">#2a2a2a</color>
+    <color name="CommTxtPickerView_BarColor_Nor">#057dff</color>
+    <color name="CommTxtPickerView_BarColor_Clicked">#c2daf5</color>
+    <color name="CommTxtPickerView_BarTitleColor">#000000</color>
+    <color name="CommTxtPickerView_CenterColor">#2a2a2a</color>
+    <color name="CommTxtPickerView_CenterColor_clicked">#2a2a2a</color>
+    <color name="CommTxtPickerView_OutColor">#a8a8a8</color>
+    <color name="CommColorLinePickerView">#d5d5d5</color><!--分割线的颜色-->
     <color name="bgColor_overlay">#60000000</color>
 
     <color name="CommTxtColorLevel1">#8a8a8a</color>
