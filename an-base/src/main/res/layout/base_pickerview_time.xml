@@ -12,6 +12,7 @@
     <LinearLayout
         android:id="@+id/timepicker"
         android:layout_width="fill_parent"
+        android:paddingRight="@dimen/DimenPadding"
         android:layout_height="wrap_content"
         android:background="@color/CommBgPickerViewColor"
         android:orientation="horizontal">

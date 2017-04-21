@@ -13,6 +13,7 @@
         android:id="@+id/optionspicker"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:paddingRight="@dimen/DimenPadding"
         android:background="@color/CommBgPickerViewColor"
         android:orientation="horizontal">
 
