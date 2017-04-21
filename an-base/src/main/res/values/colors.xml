@@ -296,6 +296,7 @@
     <color name="CommColorLinePickerView">#d5d5d5</color><!--分割线的颜色-->
     <color name="bgColor_overlay">#60000000</color>
 
+
     <color name="CommTxtColorLevel1">#8a8a8a</color>
     <color name="CommTxtColorLevel1Clicked">#778a8a8a</color>
     <color name="CommTxtColorLevel2">#38b7ea</color>
