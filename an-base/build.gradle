@@ -4,11 +4,11 @@ apply plugin: 'com.android.library'
 //group = 'com.github.qydq'
 
 //配置bintray(笨的方法)
-ext {
-    PUBLISH_GROUP_ID = 'cn.android.sunst'
-    PUBLISH_ARTIFACT_ID = 'an-base'
-    PUBLISH_VERSION = '2.0.4'
-}
+//ext {
+//    PUBLISH_GROUP_ID = 'cn.android.sunst'
+//    PUBLISH_ARTIFACT_ID = 'an-base'
+//    PUBLISH_VERSION = '2.0.4'
+//}
 
 //apply plugin: 'com.github.dcendents.android-maven'
 //apply plugin: 'com.jfrog.bintray'
@@ -50,7 +50,7 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
-    compile 'org.xutils:xutils:3.4.0'
+    compile 'org.xutils:xutils:3.5.0'
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'com.android.support:design:25.3.1'
     compile 'com.android.support:recyclerview-v7:25.3.1'
@@ -148,5 +148,5 @@ artifacts {
 //        publish = true // 是否是公开项目。
 //    }
 //}
-apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
+//apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
 //apply from: 'https://raw.githubusercontent.com/bingoogolapple/PublishAar/master/central-publish.gradle'
