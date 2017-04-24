@@ -1,13 +1,15 @@
-package com.an.base.utils.ytips;
+package com.an.base.utils.takephoto;
 
-import com.jph.takephoto.app.TakePhoto;
-import com.jph.takephoto.model.InvokeParam;
+
+import com.an.base.model.entity.InvokeParam;
+import com.an.base.utils.takephoto.interfaces.TakePhoto;
+import com.an.base.utils.ytips.PermissionManager;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
-public class TakePhotoInvocationHandler implements InvocationHandler{
+public class TakePhotoInvocationHandler implements InvocationHandler {
     private TakePhoto delegate;
     private InvokeListener listener;
     public static TakePhotoInvocationHandler of(InvokeListener listener){

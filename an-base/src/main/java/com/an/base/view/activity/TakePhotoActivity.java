@@ -5,13 +5,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.jph.takephoto.model.InvokeParam;
-import com.jph.takephoto.model.TContextWrap;
-import com.jph.takephoto.model.TResult;
-import com.jph.takephoto.permission.InvokeListener;
-import com.jph.takephoto.permission.PermissionManager;
-import com.jph.takephoto.permission.PermissionManager.TPermissionType;
-import com.jph.takephoto.permission.TakePhotoInvocationHandler;
+import com.an.base.R;
+import com.an.base.model.entity.InvokeParam;
+import com.an.base.model.entity.TContextWrap;
+import com.an.base.model.entity.TResult;
+import com.an.base.utils.takephoto.interfaces.TakePhoto;
+import com.an.base.utils.takephoto.interfaces.TakePhotoImpl;
+import com.an.base.utils.takephoto.InvokeListener;
+import com.an.base.utils.ytips.PermissionManager;
+import com.an.base.utils.ytips.PermissionManager.TPermissionType;
+import com.an.base.utils.takephoto.TakePhotoInvocationHandler;
 
 /**
  * 继承这个类来让Activity获取拍照的能力<br>
@@ -22,20 +25,23 @@ import com.jph.takephoto.permission.TakePhotoInvocationHandler;
  * GitHub:https://github.com/crazycodeboy
  * Eamil:crazycodeboy@gmail.com
  */
-public class TakePhotoActivity extends Activity implements TakePhoto.TakeResultListener,InvokeListener{
+public class TakePhotoActivity extends Activity implements TakePhoto.TakeResultListener, InvokeListener {
     private static final String TAG = TakePhotoActivity.class.getName();
     private TakePhoto takePhoto;
     private InvokeParam invokeParam;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         getTakePhoto().onCreate(savedInstanceState);
         super.onCreate(savedInstanceState);
     }
+
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         getTakePhoto().onSaveInstanceState(outState);
         super.onSaveInstanceState(outState);
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         getTakePhoto().onActivityResult(requestCode, resultCode, data);
@@ -45,38 +51,42 @@ public class TakePhotoActivity extends Activity implements TakePhoto.TakeResultL
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        TPermissionType type=PermissionManager.onRequestPermissionsResult(requestCode,permissions,grantResults);
-        PermissionManager.handlePermissionsResult(this,type,invokeParam,this);
+        PermissionManager.TPermissionType type = PermissionManager.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        PermissionManager.handlePermissionsResult(this, type, invokeParam, this);
     }
 
     /**
-     *  获取TakePhoto实例
+     * 获取TakePhoto实例
+     *
      * @return
      */
-    public TakePhoto getTakePhoto(){
-        if (takePhoto==null){
-            takePhoto= (TakePhoto) TakePhotoInvocationHandler.of(this).bind(new TakePhotoImpl(this,this));
+    public TakePhoto getTakePhoto() {
+        if (takePhoto == null) {
+            takePhoto = (TakePhoto) TakePhotoInvocationHandler.of(this).bind(new TakePhotoImpl(this, this));
         }
         return takePhoto;
     }
+
     @Override
     public void takeSuccess(TResult result) {
-        Log.i(TAG,"takeSuccess：" + result.getImage().getCompressPath());
+        Log.i(TAG, "takeSuccess：" + result.getImage().getCompressPath());
     }
+
     @Override
-    public void takeFail(TResult result,String msg) {
+    public void takeFail(TResult result, String msg) {
         Log.i(TAG, "takeFail:" + msg);
     }
+
     @Override
     public void takeCancel() {
-        Log.i(TAG, getResources().getString(com.jph.takephoto.R.string.msg_operation_canceled));
+        Log.i(TAG, getResources().getString(R.string.msg_operation_canceled));
     }
 
     @Override
     public TPermissionType invoke(InvokeParam invokeParam) {
-        TPermissionType type=PermissionManager.checkPermission(TContextWrap.of(this),invokeParam.getMethod());
-        if(TPermissionType.WAIT.equals(type)){
-            this.invokeParam=invokeParam;
+        TPermissionType type = PermissionManager.checkPermission(TContextWrap.of(this), invokeParam.getMethod());
+        if (TPermissionType.WAIT.equals(type)) {
+            this.invokeParam = invokeParam;
         }
         return type;
     }

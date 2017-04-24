@@ -1,6 +1,8 @@
-package com.an.base.utils.ytips;
+package com.an.base.utils.takephoto;
 
-import com.jph.takephoto.model.InvokeParam;
+
+import com.an.base.model.entity.InvokeParam;
+import com.an.base.utils.ytips.PermissionManager;
 
 /**
  * 授权管理回调

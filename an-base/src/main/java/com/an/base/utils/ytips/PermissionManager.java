@@ -9,10 +9,12 @@ import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.widget.Toast;
 
-import com.jph.takephoto.app.TakePhoto;
-import com.jph.takephoto.model.InvokeParam;
-import com.jph.takephoto.model.TContextWrap;
-import com.jph.takephoto.uitl.TConstant;
+
+import com.an.base.R;
+import com.an.base.model.entity.InvokeParam;
+import com.an.base.model.entity.TContextWrap;
+import com.an.base.utils.takephoto.TConstant;
+import com.an.base.utils.takephoto.interfaces.TakePhoto;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -128,20 +130,20 @@ public class PermissionManager {
                 String tip=null;
                 switch (type){
                     case DENIED:
-                        listener.takeFail(null,tip=activity.getResources().getString(com.jph.takephoto.R.string.tip_permission_camera_storage));
+                        listener.takeFail(null,tip=activity.getResources().getString(R.string.tip_permission_camera_storage));
                         break;
                     case ONLY_CAMERA_DENIED:
-                        listener.takeFail(null,tip=activity.getResources().getString(com.jph.takephoto.R.string.tip_permission_camera));
+                        listener.takeFail(null,tip=activity.getResources().getString(R.string.tip_permission_camera));
                         break;
                     case ONLY_STORAGE_DENIED:
-                        listener.takeFail(null,tip=activity.getResources().getString(com.jph.takephoto.R.string.tip_permission_storage));
+                        listener.takeFail(null,tip=activity.getResources().getString(R.string.tip_permission_storage));
                         break;
                     case GRANTED:
                         try {
                             invokeParam.getMethod().invoke(invokeParam.getProxy(),invokeParam.getArgs());
                         } catch (Exception e) {
                             e.printStackTrace();
-                            listener.takeFail(null,tip=activity.getResources().getString(com.jph.takephoto.R.string.tip_permission_camera_storage));
+                            listener.takeFail(null,tip=activity.getResources().getString(R.string.tip_permission_camera_storage));
                         }
                         break;
             default:
