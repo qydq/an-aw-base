@@ -4,11 +4,11 @@ apply plugin: 'com.android.library'
 //group = 'com.github.qydq'
 
 //配置bintray(笨的方法)
-//ext {
-//    PUBLISH_GROUP_ID = 'cn.android.sunst'
-//    PUBLISH_ARTIFACT_ID = 'an-base'
-//    PUBLISH_VERSION = '2.0.4'
-//}
+ext {
+    PUBLISH_GROUP_ID = 'cn.android.sunst'
+    PUBLISH_ARTIFACT_ID = 'an-base'
+    PUBLISH_VERSION = '2.1'
+}
 
 //apply plugin: 'com.github.dcendents.android-maven'
 //apply plugin: 'com.jfrog.bintray'
@@ -148,5 +148,5 @@ artifacts {
 //        publish = true // 是否是公开项目。
 //    }
 //}
-//apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
+apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
 //apply from: 'https://raw.githubusercontent.com/bingoogolapple/PublishAar/master/central-publish.gradle'

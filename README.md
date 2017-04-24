@@ -692,17 +692,17 @@ compile 'cn.android.sunst:an-base:2.0.2'
 
 然后是上午早些时候借助an-aw-base完成了[an-aw-zxing 二维码框架](https://github.com/qydq/an-aw-zxing)。
 
-## 2017/04/20  19:06:45
+## 2017/04/22  2017年4月22日15:28:55
 
->今天是张小月离开的第98天，3月28号给你打了第一次电话，我给你唱了一首好听的歌（对，很矫情），来自17岁的美少女<暖暖>-梁静茹，我告诉你说，”爱一个人，希望她过更好“，在只有你一个人的QQ号上发动态说，”别忘记我“
+>今天是张小月离开的第100天，3月28号给你打了第一次电话，我给你唱了一首好听的歌（对，很矫情），来自17岁的美少女<暖暖>-梁静茹，我告诉你说，”爱一个人，希望她过更好“，在只有你一个人的QQ号上发动态说，”别忘记我“
 
 最新编译版本
 
-`compile 'com.github.qydq:an-aw-base:0.3'`
+`compile 'com.github.qydq:an-aw-base:0.3.2'`
 
 build.gradle更新发布至jitpack和jcenter中心。
 
-compile 'cn.android.sunst:an-base:2.0.3'
+compile 'cn.android.sunst:an-base:2.1'
 
 更新说明：
 
@@ -720,4 +720,4 @@ FileUtils中增加对缓存大小的判断，清除等内容。
 
 考虑下次是否应该升级zhangluyue.apk-文件已加密 软件（估计是没时间了）
 
-准备发布an-aw-base0.3
+准备发布an-aw-base0.3.2   成功对应 jcenter compile 'cn.android.sunst:an-base:2.1'
