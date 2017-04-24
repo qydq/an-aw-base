@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvBeiPic"
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:background="@drawable/yy_drawable_selector_md_oppose"
-        android:gravity="center"
+        android:layout_height="@dimen/DimenNativeNational"
+        android:layout_marginTop="50dp"
         android:onClick="test"
-        android:text="测试an图片"
-        android:textColor="@color/CommColorWhite" />
+        android:text="tupian" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DimenNativeNational"
+        android:layout_marginTop="50dp"
+        android:onClick="fragment"
+        android:text="fragment中使用" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DimenNativeNational"
+        android:layout_marginTop="50dp"
+        android:onClick="activity"
+        android:text="activity中使用" />
 </LinearLayout>

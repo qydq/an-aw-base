@@ -1,14 +1,13 @@
 package com.qyddai.an_aw_base.view.activity;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 
 import com.an.base.model.entity.TImage;
 import com.an.base.model.entity.TResult;
 import com.an.base.view.activity.AnPicDetailsActivity;
-import com.an.base.view.activity.TakePhotoActivity;
+import com.an.base.view.activity.PtakePhotoActivity;
 import com.qyddai.an_aw_base.R;
 import com.qyddai.an_aw_base.utils.CustomHelper;
 
@@ -22,16 +21,8 @@ import java.util.ArrayList;
 * drawableId 可以传递一个drawable下面的图片的id
 * absPath 可以传递一个绝对路径地址ParallaxActivity
 * */
-public class PicsDetailActivity extends TakePhotoActivity {
+public class PicsDetailActivity extends PtakePhotoActivity {
     private CustomHelper customHelper;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        View contentView = LayoutInflater.from(this).inflate(R.layout.sst_activity_picdetail, null);
-        setContentView(contentView);
-        customHelper = CustomHelper.of(contentView);
-    }
 
     public void onClick(View view) {
         customHelper.onClick(view, getTakePhoto());
@@ -59,10 +50,13 @@ public class PicsDetailActivity extends TakePhotoActivity {
         startActivity(intent);
     }
 
-//    @Override
-//    public void initView() {
-//        setContentView(R.layout.);
-//    }
+    @Override
+    public void initView() {
+        View contentView = LayoutInflater.from(this).inflate(R.layout.sst_activity_picdetail, null);
+//        setContentView(R.layout.sst_activity_picdetail);
+        setContentView(contentView);
+        customHelper = CustomHelper.of(contentView);
+    }
 
     public void test(View view) {
         Intent intent = new Intent(getApplicationContext(), AnPicDetailsActivity.class);
@@ -80,8 +74,8 @@ public class PicsDetailActivity extends TakePhotoActivity {
         startActivity(intent);
     }
 
-//    @Override
-//    public void onWindowTranslucentBar(int colorId) {
-//        super.onWindowTranslucentBar(colorId);
-//    }
+    @Override
+    public void onWindowTranslucentBar(int colorId) {
+        super.onWindowTranslucentBar(colorId);
+    }
 }

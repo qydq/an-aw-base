@@ -182,6 +182,14 @@
             android:name=".view.activity.ResultActivity"
             android:label="@string/SectionAnimalActivity"
             android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.SimpleFragmentActivity"
+            android:label="@string/SectionAnimalActivity"
+            android:theme="@style/NoBarTheme" />
+        <activity
+            android:name=".view.activity.OtherActivity"
+            android:label="@string/SectionAnimalActivity"
+            android:theme="@style/NoBarTheme" />
     </application>
 
 </manifest>

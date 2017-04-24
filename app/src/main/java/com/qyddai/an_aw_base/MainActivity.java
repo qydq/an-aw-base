@@ -19,6 +19,7 @@ import com.qyddai.an_aw_base.view.LRecyclerViewActivity;
 import com.qyddai.an_aw_base.view.LittleTrickActivity;
 import com.qyddai.an_aw_base.view.RefreshLayoutActivity;
 import com.qyddai.an_aw_base.view.SwipeRecyclerActivity;
+import com.qyddai.an_aw_base.view.activity.OtherActivity;
 import com.qyddai.an_aw_base.view.activity.PicsDetailActivity;
 import com.qyddai.an_aw_base.view.activity.YYTipsActivity;
 
@@ -54,7 +55,7 @@ public class MainActivity extends ParallaxActivity implements OnItemClickListene
                 startActivity(new Intent(this, YYTipsActivity.class));
                 break;
             case 6:
-                startActivity(new Intent(this, PicsDetailActivity.class));
+                startActivity(new Intent(this, OtherActivity.class));
                 break;
             case 7:
 //                startActivity(new Intent(this, DragSwipeFlagsActivity.class));

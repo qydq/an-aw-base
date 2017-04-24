@@ -1,8 +1,8 @@
-package com.an.base.view.activity;
+package com.an.base.view.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 
 import com.an.base.R;
@@ -15,9 +15,8 @@ import com.an.base.utils.takephoto.interfaces.TakePhoto;
 import com.an.base.utils.takephoto.interfaces.TakePhotoImpl;
 import com.an.base.utils.ytips.PermissionManager;
 
-
 /**
- * 继承这个类来让Fragment获取拍照的能力<br>
+ * 继承这个类来让Activity获取拍照的能力<br>
  * Author: crazycodeboy
  * Date: 2016/9/21 0007 20:10
  * Version:3.0.0
@@ -25,25 +24,25 @@ import com.an.base.utils.ytips.PermissionManager;
  * GitHub:https://github.com/crazycodeboy
  * Eamil:crazycodeboy@gmail.com
  */
-public class TakePhotoFragment extends Fragment implements TakePhoto.TakeResultListener, InvokeListener {
-    private static final String TAG = TakePhotoFragment.class.getName();
-    private InvokeParam invokeParam;
+public class TakePhotoFragmentActivity extends FragmentActivity implements TakePhoto.TakeResultListener, InvokeListener {
+    private static final String TAG = TakePhotoFragmentActivity.class.getName();
     private TakePhoto takePhoto;
+    private InvokeParam invokeParam;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         getTakePhoto().onCreate(savedInstanceState);
         super.onCreate(savedInstanceState);
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(Bundle outState) {
         getTakePhoto().onSaveInstanceState(outState);
         super.onSaveInstanceState(outState);
     }
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         getTakePhoto().onActivityResult(requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data);
     }
@@ -52,7 +51,7 @@ public class TakePhotoFragment extends Fragment implements TakePhoto.TakeResultL
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         PermissionManager.TPermissionType type = PermissionManager.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        PermissionManager.handlePermissionsResult(getActivity(), type, invokeParam, this);
+        PermissionManager.handlePermissionsResult(this, type, invokeParam, this);
     }
 
     /**

@@ -72,6 +72,5 @@ public class ResultActivity extends Activity {
             Glide.with(this).load(new File(images.get(images.size() - 1).getCompressPath())).into(imageView1);
             linearLayout.addView(view);
         }
-
     }
 }
