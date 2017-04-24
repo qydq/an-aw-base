@@ -4,5 +4,6 @@
         <external-path
             name="an_ytips"
             path="" />
+        <!--<root-path path="" name="an_ytips" />-->
     </paths>
 </resources>
