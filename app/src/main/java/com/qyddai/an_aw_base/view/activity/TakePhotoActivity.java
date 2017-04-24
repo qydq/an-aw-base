@@ -21,7 +21,7 @@ import java.util.ArrayList;
 * drawableId 可以传递一个drawable下面的图片的id
 * absPath 可以传递一个绝对路径地址ParallaxActivity
 * */
-public class PicsDetailActivity extends PtakePhotoActivity {
+public class TakePhotoActivity extends PtakePhotoActivity {
     private CustomHelper customHelper;
 
     public void onClick(View view) {
@@ -45,7 +45,7 @@ public class PicsDetailActivity extends PtakePhotoActivity {
     }
 
     private void showImg(ArrayList<TImage> images) {
-        Intent intent = new Intent(this, ResultActivity.class);
+        Intent intent = new Intent(this, TakePhotoResultActivity.class);
         intent.putExtra("images", images);
         startActivity(intent);
     }

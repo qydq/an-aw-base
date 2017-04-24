@@ -34,11 +34,11 @@ public class OtherActivity extends ParallaxActivity {
     }
 
     public void fragment(View view) {
-        startActivity(new Intent(this,SimpleFragmentActivity.class));
+        startActivity(new Intent(this,TakePhotoFragmentActivity.class));
     }
 
     public void activity(View view) {
-        startActivity(new Intent(this, PicsDetailActivity.class));
+        startActivity(new Intent(this, TakePhotoActivity.class));
     }
 
     @Override

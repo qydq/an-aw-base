@@ -5,7 +5,7 @@ import android.view.View;
 
 import com.an.base.view.ParallaxActivity;
 import com.qyddai.an_aw_base.R;
-import com.qyddai.an_aw_base.view.fragment.SimpleFragment;
+import com.qyddai.an_aw_base.view.fragment.TakePhotoBaseFragment;
 
 
 /**
@@ -28,14 +28,14 @@ import com.qyddai.an_aw_base.view.fragment.SimpleFragment;
  * GitHub:https://github.com/crazycodeboy
  * Eamil:crazycodeboy@gmail.com
  */
-public class SimpleFragmentActivity extends ParallaxActivity {
-    SimpleFragment fragment;
+public class TakePhotoFragmentActivity extends ParallaxActivity {
+    TakePhotoBaseFragment fragment;
 
     @Override
     public void initView() {
-        setContentView(R.layout.simple_fragment_layout);
+        setContentView(R.layout.sst_fragment_takephoto);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.add(R.id.fragment1, fragment = new SimpleFragment(), "test");
+        transaction.add(R.id.fragment1, fragment = new TakePhotoBaseFragment(), "test");
         transaction.commit();
     }
 

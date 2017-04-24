@@ -22,7 +22,7 @@ public abstract class BaseDecorationFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.fragment_recyclerview_recycler, container, false);
+        final View view = inflater.inflate(R.layout.sst_fragment_basedecorationfragment, container, false);
 
         mList = (LRecyclerView) view.findViewById(R.id.list);
         mList.setPullRefreshEnabled(false);

@@ -38,14 +38,14 @@ import java.util.ArrayList;
  * GitHub:https://github.com/crazycodeboy
  * Eamil:crazycodeboy@gmail.com
  */
-public class ResultActivity extends Activity {
+public class TakePhotoResultActivity extends Activity {
     ArrayList<TImage> images;
     private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_result_layout);
+        setContentView(R.layout.sst_activity_takephoto_result);
         images = (ArrayList<TImage>) getIntent().getSerializableExtra("images");
         imageView = (ImageView) findViewById(R.id.imageView);
         showImg();
@@ -59,7 +59,7 @@ public class ResultActivity extends Activity {
             imageView.setImageBitmap(bitmap);
         }
         for (int i = 0, j = images.size(); i < j - 1; i += 2) {
-            View view = LayoutInflater.from(this).inflate(R.layout.image_show, null);
+            View view = LayoutInflater.from(this).inflate(R.layout.item_takephoto_image_show, null);
             ImageView imageView1 = (ImageView) view.findViewById(R.id.imgShow1);
             ImageView imageView2 = (ImageView) view.findViewById(R.id.imgShow2);
             Glide.with(this).load(new File(images.get(i).getCompressPath())).into(imageView1);
@@ -67,7 +67,7 @@ public class ResultActivity extends Activity {
             linearLayout.addView(view);
         }
         if (images.size() % 2 == 1) {
-            View view = LayoutInflater.from(this).inflate(R.layout.image_show, null);
+            View view = LayoutInflater.from(this).inflate(R.layout.item_takephoto_image_show, null);
             ImageView imageView1 = (ImageView) view.findViewById(R.id.imgShow1);
             Glide.with(this).load(new File(images.get(images.size() - 1).getCompressPath())).into(imageView1);
             linearLayout.addView(view);

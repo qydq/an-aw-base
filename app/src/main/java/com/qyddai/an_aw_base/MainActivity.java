@@ -20,7 +20,6 @@ import com.qyddai.an_aw_base.view.LittleTrickActivity;
 import com.qyddai.an_aw_base.view.RefreshLayoutActivity;
 import com.qyddai.an_aw_base.view.SwipeRecyclerActivity;
 import com.qyddai.an_aw_base.view.activity.OtherActivity;
-import com.qyddai.an_aw_base.view.activity.PicsDetailActivity;
 import com.qyddai.an_aw_base.view.activity.YYTipsActivity;
 
 import java.util.Arrays;

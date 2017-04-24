@@ -24,7 +24,7 @@
             android:name=".view.activity.MyActivity"
             android:theme="@style/NoBarTheme" />
         <activity
-            android:name=".view.activity.PicsDetailActivity"
+            android:name=".view.activity.TakePhotoActivity"
             android:theme="@style/NoBarTheme" />
         <activity
             android:name=".SplashActivity"
@@ -179,11 +179,11 @@
             android:label="@string/SectionAnimalActivity"
             android:theme="@style/NoBarTheme" />
         <activity
-            android:name=".view.activity.ResultActivity"
+            android:name=".view.activity.TakePhotoResultActivity"
             android:label="@string/SectionAnimalActivity"
             android:theme="@style/NoBarTheme" />
         <activity
-            android:name=".view.activity.SimpleFragmentActivity"
+            android:name=".view.activity.TakePhotoFragmentActivity"
             android:label="@string/SectionAnimalActivity"
             android:theme="@style/NoBarTheme" />
         <activity

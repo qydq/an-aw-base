@@ -12,7 +12,7 @@ import com.an.base.model.entity.TResult;
 import com.an.base.view.fragment.TakePhotoFragment;
 import com.qyddai.an_aw_base.R;
 import com.qyddai.an_aw_base.utils.CustomHelper;
-import com.qyddai.an_aw_base.view.activity.ResultActivity;
+import com.qyddai.an_aw_base.view.activity.TakePhotoResultActivity;
 
 import java.util.ArrayList;
 
@@ -37,7 +37,7 @@ import java.util.ArrayList;
  * GitHub:https://github.com/crazycodeboy
  * Eamil:crazycodeboy@gmail.com
  */
-public class SimpleFragment extends TakePhotoFragment {
+public class TakePhotoBaseFragment extends TakePhotoFragment {
     private CustomHelper customHelper;
 
     @Override
@@ -75,7 +75,7 @@ public class SimpleFragment extends TakePhotoFragment {
     }
 
     private void showImg(ArrayList<TImage> images) {
-        Intent intent = new Intent(getContext(), ResultActivity.class);
+        Intent intent = new Intent(getContext(), TakePhotoResultActivity.class);
         intent.putExtra("images", images);
         startActivity(intent);
     }
