@@ -53,7 +53,7 @@
 5.联系作者。
 
 
-# [![](https://jitpack.io/v/qydq/an-aw-base.svg)](https://jitpack.io/#qydq/an-aw-base)       [ ![Download](https://api.bintray.com/packages/qydq/an/an-aw-base/images/download.svg?version=an-aw-base%3A2.0.1) ](https://bintray.com/qydq/an/an-aw-base/an-aw-base%3A2.0.1/link)
+# [![](https://jitpack.io/v/qydq/an-aw-base.svg)](https://jitpack.io/#qydq/an-aw-base)       [ ![Download](https://api.bintray.com/packages/qydq/an/an-aw-base/images/download.svg?version=an-aw-base%3A2.1) ](https://bintray.com/qydq/an/an-aw-base/an-aw-base%3A2.1/link)
 
 #######
 
