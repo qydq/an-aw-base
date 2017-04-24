@@ -23,6 +23,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.content.FileProvider;
 import android.widget.Toast;
 
+import com.an.base.utils.takephoto.TConstant;
 import com.an.base.utils.ytips.PermissionUtils;
 
 import java.io.BufferedOutputStream;
@@ -216,7 +217,7 @@ public class CaptureHelper {
         intent.putExtra("noFaceDetection", false);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             //第二参数是在manifest.xml定义 provider的authorities属性
-            mPhotoUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", mPhotoFile);
+            mPhotoUri = FileProvider.getUriForFile(mActivity, TConstant.getFileProviderName(mContext), mPhotoFile);
         } else {
             mPhotoUri = Uri.fromFile(mPhotoFile);
         }
@@ -270,8 +271,8 @@ public class CaptureHelper {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);//零时权限
             //通过FileProvider创建一个content类型的Uri
-            mPhotoUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", mPhotoFile);
-            imageCropUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", cropFile);
+            mPhotoUri = FileProvider.getUriForFile(mActivity, TConstant.getFileProviderName(mContext), mPhotoFile);
+            imageCropUri = FileProvider.getUriForFile(mActivity, TConstant.getFileProviderName(mContext), cropFile);
         } else {
             //原始图片的Uri
             mPhotoUri = Uri.fromFile(mPhotoFile);
@@ -335,7 +336,7 @@ public class CaptureHelper {
         intent.putExtra("noFaceDetection", isNoFaceDetection);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             //第二参数是在manifest.xml定义 provider的authorities属性
-            mPhotoUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", mPhotoFile);
+            mPhotoUri = FileProvider.getUriForFile(mActivity, TConstant.getFileProviderName(mContext), mPhotoFile);
         } else {
             mPhotoUri = Uri.fromFile(mPhotoFile);
         }
@@ -388,8 +389,8 @@ public class CaptureHelper {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             //通过FileProvider创建一个content类型的Uri
-            mPhotoUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", mPhotoFile);
-            imageCropUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", cropFile);
+            mPhotoUri = FileProvider.getUriForFile(mActivity, TConstant.getFileProviderName(mContext), mPhotoFile);
+            imageCropUri = FileProvider.getUriForFile(mActivity, TConstant.getFileProviderName(mContext), cropFile);
         } else {
             //原始图片的Uri
             mPhotoUri = Uri.fromFile(mPhotoFile);
@@ -472,8 +473,8 @@ public class CaptureHelper {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             //通过FileProvider创建一个content类型的Uri
-            mPhotoUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", mPhotoFile);
-            imageCropUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", cropFile);
+            mPhotoUri = FileProvider.getUriForFile(mActivity, TConstant.getFileProviderName(mContext), mPhotoFile);
+            imageCropUri = FileProvider.getUriForFile(mActivity, TConstant.getFileProviderName(mContext), cropFile);
         } else {
             //原始图片的Uri
             mPhotoUri = Uri.fromFile(mPhotoFile);
@@ -514,8 +515,8 @@ public class CaptureHelper {
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             //通过FileProvider创建一个content类型的Uri
-            mPhotoUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", mPhotoFile);
-            imageCropUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", cropFile);
+            mPhotoUri = FileProvider.getUriForFile(mActivity, TConstant.getFileProviderName(mContext), mPhotoFile);
+            imageCropUri = FileProvider.getUriForFile(mActivity, TConstant.getFileProviderName(mContext), cropFile);
         } else {
             //原始图片的Uri
             mPhotoUri = Uri.fromFile(mPhotoFile);
@@ -642,7 +643,7 @@ public class CaptureHelper {
         if (resultFile.exists()) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 //通过FileProvider创建一个content类型的Uri
-                resultUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", resultFile);
+                resultUri = FileProvider.getUriForFile(mActivity, TConstant.getFileProviderName(mContext), resultFile);
             } else {
                 //原始图片的Uri
                 resultUri = Uri.fromFile(resultFile);
@@ -669,7 +670,7 @@ public class CaptureHelper {
         if (absoluteFile.exists()) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 //通过FileProvider创建一个content类型的Uri
-                resultUri = FileProvider.getUriForFile(mActivity, "com.an.base.fileprovider.tackphoto", absoluteFile);
+                resultUri = FileProvider.getUriForFile(mActivity, TConstant.getFileProviderName(mContext), absoluteFile);
             } else {
                 //原始图片的Uri
                 resultUri = Uri.fromFile(absoluteFile);
