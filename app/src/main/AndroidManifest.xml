@@ -178,7 +178,10 @@
             android:name=".view.activity.RefreshWebViewActivity"
             android:label="@string/SectionAnimalActivity"
             android:theme="@style/NoBarTheme" />
-
+        <activity
+            android:name=".view.activity.ResultActivity"
+            android:label="@string/SectionAnimalActivity"
+            android:theme="@style/NoBarTheme" />
     </application>
 
 </manifest>
