@@ -9,7 +9,7 @@ import com.an.base.model.entity.TResult;
 import com.an.base.view.activity.AnPicDetailsActivity;
 import com.an.base.view.activity.PtakePhotoActivity;
 import com.qyddai.an_aw_base.R;
-import com.qyddai.an_aw_base.utils.CustomHelper;
+import com.qyddai.an_aw_base.utils.TakePhotoHelper;
 
 import java.util.ArrayList;
 
@@ -22,7 +22,7 @@ import java.util.ArrayList;
 * absPath 可以传递一个绝对路径地址ParallaxActivity
 * */
 public class TakePhotoActivity extends PtakePhotoActivity {
-    private CustomHelper customHelper;
+    private TakePhotoHelper customHelper;
 
     public void onClick(View view) {
         customHelper.onClick(view, getTakePhoto());
@@ -55,7 +55,7 @@ public class TakePhotoActivity extends PtakePhotoActivity {
         View contentView = LayoutInflater.from(this).inflate(R.layout.sst_activity_picdetail, null);
 //        setContentView(R.layout.sst_activity_picdetail);
         setContentView(contentView);
-        customHelper = CustomHelper.of(contentView);
+        customHelper = TakePhotoHelper.of(contentView);
     }
 
     public void test(View view) {

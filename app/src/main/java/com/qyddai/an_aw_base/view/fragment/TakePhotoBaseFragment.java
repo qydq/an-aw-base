@@ -11,7 +11,7 @@ import com.an.base.model.entity.TImage;
 import com.an.base.model.entity.TResult;
 import com.an.base.view.fragment.TakePhotoFragment;
 import com.qyddai.an_aw_base.R;
-import com.qyddai.an_aw_base.utils.CustomHelper;
+import com.qyddai.an_aw_base.utils.TakePhotoHelper;
 import com.qyddai.an_aw_base.view.activity.TakePhotoResultActivity;
 
 import java.util.ArrayList;
@@ -38,7 +38,7 @@ import java.util.ArrayList;
  * Eamil:crazycodeboy@gmail.com
  */
 public class TakePhotoBaseFragment extends TakePhotoFragment {
-    private CustomHelper customHelper;
+    private TakePhotoHelper customHelper;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -50,7 +50,7 @@ public class TakePhotoBaseFragment extends TakePhotoFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.sst_activity_picdetail, null);
-        customHelper = CustomHelper.of(view);
+        customHelper = TakePhotoHelper.of(view);
         return view;
     }
 

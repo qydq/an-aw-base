@@ -117,5 +117,19 @@ public class MainActivity extends ParallaxActivity implements OnItemClickListene
             return getString(R.string.StringNoVersion);
         }
     }
+    //复写下面两个方法，退出时动画。
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(com.an.base.R.anim.aim_common_left_in,
+                com.an.base.R.anim.aim_common_right_out);
+    }
+    @Override
+    public void onBackPressed() {
+        if (!getSupportFragmentManager().popBackStackImmediate()) {
+//            scrollToFinishActivity();
+            finish();
+        }
+    }
 
 }

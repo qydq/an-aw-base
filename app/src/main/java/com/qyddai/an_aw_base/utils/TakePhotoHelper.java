@@ -37,14 +37,14 @@ import java.io.File;
  * GitHub:https://github.com/crazycodeboy
  * Eamil:crazycodeboy@gmail.com
  */
-public class CustomHelper {
+public class TakePhotoHelper {
     private View rootView;
     private RadioGroup rgCrop,rgCompress,rgFrom,rgCropSize,rgCropTool,rgShowProgressBar,rgPickTool,rgCompressTool,rgCorrectTool,rgRawFile;
     private EditText etCropHeight,etCropWidth,etLimit,etSize,etHeightPx,etWidthPx;
-    public static CustomHelper of(View rootView){
-        return new CustomHelper(rootView);
+    public static TakePhotoHelper of(View rootView){
+        return new TakePhotoHelper(rootView);
     }
-    private CustomHelper(View rootView) {
+    private TakePhotoHelper(View rootView) {
         this.rootView = rootView;
         init();
     }

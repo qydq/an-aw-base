@@ -1,4 +1,4 @@
-ÎÒµÄÇ×Ç×Ğ¡ÔÂ£¨İªÂÜ»¨£©£¬Äã±ğÀë¿ªÎÒ¡£
+ÎÒµÄÇ×Ç×Ğ¡ÔÂ£¨İªÂÜ»¨£©£¬Äã»ØÀ´ºÃ²»ºÃ¡£
 
 ÉúÃü²»¹ıÒ»³¡»Ã¾õ£¬ÎÒÖ»ÒªÄãÔÚ
 
@@ -12,7 +12,7 @@
 
 # an-aw-base
 
-* ÏîÄ¿µÄÖ÷Òª¹¦ÄÜÊÇ×÷Îª[an¿ò¼Ü](https://github.com/qydq/an)µÄ»ùÀà£¨»ù´¡µÄan-base£©µÄ²Ö¿â£»Äã¿ÉÒÔ½èÖújitpack £¬bintrary¿ìËÙ¼¯³É¡£
+* ÏîÄ¿µÄÖ÷Òª¹¦ÄÜÊÇ×÷Îª[an¿ò¼Ü](https://github.com/qydq/an)µÄ»ùÀà£¨»ù´¡µÄan-base£©µÄ²Ö¿â£»Äã¿ÉÒÔ½èÖújitpack £¬jcenter¿ìËÙ¼¯³É¡£
 
 * ¿ò¼ÜÀ´Ô´ÓÚ±¾ÈËan-maven-base¿ò¼Ü£¨ÒÑÔÚgithubÖĞÉ¾³ı£©£¬an-aw-base¿ò¼Ü¸üÇáÁ¿¸ü¹æ·¶¡£
 
@@ -74,15 +74,13 @@ allprojects {
 
 Step 2£º¼ÓÈëÒÔºó£¨ÔÚÄãµÄ×Óbuild.gradleÎÄ¼şÖĞÌí¼ÓÈçÏÂÒÀÀµ¹ØÏµ¡££©
 
-`compile 'com.github.qydq:an-aw-base:0.2.3'`
+`compile 'com.github.qydq:an-aw-base:0.3.3'`
 
 »òÕß¼ÓÈë£º
 
-`compile 'cn.android.sunst:an-base:2.0.1'`
+`compile 'cn.android.sunst:an-base:2.1'`
 
-```groovy
 ¿ÉÒÔ²Î¿¼[aN¿ò¼ÜgradleÒÀÀµ-¹Ì¶¨Ğ´·¨](https://zhuanlan.zhihu.com/p/26269611)
-```
 
 **Ê¹ÓÃ½¨Òé**
 
@@ -115,13 +113,21 @@ aN¿ò¼ÜÖ§³Öandroid 4.4+Ê¹ÓÃ£¬¼æÈİĞÔ²âÊÔÍ¨¹ı£¬»ªÎªAndroid4.4 £¬Ğ¡Ã×Android5.1£¬ÈıĞ
 
    iii. Ìá¹©±ã½İXCallBack ,XParseResponse ,XProgressCallBack²Ù×÷¡£`
 ```
-+ an¿ò¼Ü°üº¬ÁËĞí¶àÊµÓÃµÄ¹¤¾ßÀà£¬ÏñMD5¼ÓÃÜ£¬Êı¾İĞ£Ñé£¬Ò¹¼äÄ£Ê½ÇĞ»»µÈ¡£
++ an¿ò¼Ü°üº¬ÁËĞí¶àÊµÓÃµÄ¹¤¾ßÀà£¬ÏñMD5¼ÓÃÜ£¬Êı¾İĞ£Ñé£¬Ò¹¼äÄ£Ê½£¬³ß´ç£¬Í¼Æ¬´¦Àí£¬ÍøÂç£¬Ä£ºıËã·¨£¬¸üĞÂÈí¼ş£¬takephotoÏµÁĞ...¡£
 
-+ an¿ò¼ÜÌá¹©»ù±¾weight,YslidingDeleteListView,YshrinkScrollView¡¢Ìá¹©ÁËrecyclerview,refreshlayout,swipelayoutÏµÁĞ¡£
++ an¿ò¼ÜÌá¹©recyclerview,refreshlayout,swipelayoutÏµÁĞÁĞ±í¿Ø¼şºÍ³£ÓÃĞ¡¿Ø¼ş¡£
+
+```groovy
+   i.   ÈçYshrinkScrollView,YshrinkFrameLayout,YslidingLayout,YresizeRelativeLayout(YÏµÁĞµ¯ĞÔ£¬Ëõ·Å£¬ÉÏÏÂ»¬¶¯£¬¼üÅÌÁ¿¶È...`
+
+   ii.  LRecyclerView,SwipeMenuRecyclerView,BGAStickinessRefreshView£¨Èı´óÏµÁĞµÄÁĞ±í¿Ø¼ş...`
+
+   iii. LuueCircleIv,LuueRectangleIv,LuueRoundIv,LuueZoomIv,LuueToggleBb,LuueTouchIb£¨LuueÏµÁĞµÄÔ²£¬¾ØĞÎ£¬Ëõ·Å£¬ÇĞ»»...¡£`
+```
 
 + an¿ò¼Ü¼ÓÈëÁËÁ½ÖÖÒ¹¼äÄ£Ê½µÄ¹¦ÄÜ¡£
 
-+ an¿ò¼ÜÌá¹©ÁË¿ìËÙ¼àÌıÍøÂç±ä»¯µÄ·½·¨¡£
++ an¿ò¼ÜÌá¹©ÁË¿ìËÙ¼àÌıÍøÂç±ä»¯,ÍøËÙµÄ·½·¨¡£
 
 + an¿ò¼ÜºóÆÚ¹¦ÄÜÕıÔÚ²»¶ÏÍêÉÆÖĞ¡£
 

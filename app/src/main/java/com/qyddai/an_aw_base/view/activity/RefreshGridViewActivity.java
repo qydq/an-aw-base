@@ -53,6 +53,7 @@ public class RefreshGridViewActivity extends SuperActivity implements BGARefresh
         setContentView(R.layout.sst_activity_refreshlayout_gridview);
         mRefreshLayout = (BGARefreshLayout) findViewById(R.id.rl_gridview_refresh);
         mDataGv = (GridView) findViewById(R.id.lv_gridview_data);
+        anLlBack = (LinearLayout) findViewById(R.id.anLlBack);
         mRefreshLayout.setDelegate(this);
         mRefreshLayout.setRefreshScaleDelegate(new BGARefreshLayout.BGARefreshScaleDelegate() {
             @Override
