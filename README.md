@@ -1,67 +1,67 @@
-ÎÒµÄÇ×Ç×Ğ¡ÔÂ£¨İªÂÜ»¨£©£¬Äã»ØÀ´ºÃ²»ºÃ¡£
+æˆ‘çš„äº²äº²å°æœˆï¼ˆè³èèŠ±ï¼‰ï¼Œä½ å›æ¥å¥½ä¸å¥½ã€‚
 
-ÉúÃü²»¹ıÒ»³¡»Ã¾õ£¬ÎÒÖ»ÒªÄãÔÚ
+ç”Ÿå‘½ä¸è¿‡ä¸€åœºå¹»è§‰ï¼Œæˆ‘åªè¦XXXåœ¨
 
-ËıÀë¿ª¡£¸Ã¿ò¼ÜÒÑ¾­Ò»¸ö¶àÔÂÃ»ÓĞÎ¬»¤ÁË£¬¶ø½ñÖØÊ°¼ÇÒä£¬Ö»ÎªÇé¹Ê ¡£. ¡£
+XXXç¦»å¼€ã€‚è¯¥æ¡†æ¶å·²ç»ä¸€ä¸ªå¤šæœˆæ²¡æœ‰ç»´æŠ¤äº†ï¼Œè€Œä»Šé‡æ‹¾è®°å¿†ï¼Œåªä¸ºæƒ…æ•… ã€‚. ã€‚
 
-Ğ´¸øÕÅÂ¶ÔÂµÄÒ»ÆªÎÄÕÂ£¨ÒÑÊÖ³­Â¼£©
+å†™ç»™XXXçš„ä¸€ç¯‡æ–‡ç« ï¼ˆå·²æ‰‹æŠ„å½•ï¼‰
 
-[Äã´æ»îÔÚÎÒ¼ÇÒä×îÔ­Ê¼µÄ»ÄÔ­£¬¿Éµ­²»¿ÉÍü](https://zhuanlan.zhihu.com/p/25279447)
+ä½ å­˜æ´»åœ¨æˆ‘è®°å¿†æœ€åŸå§‹çš„è’åŸï¼Œå¯æ·¡ä¸å¯å¿˜
 
----2017Äê2ÔÂ20ÈÕ 16:18:35¡£  <°æ±¾¸üĞÂÈÕÖ¾×îºó>
+---2017å¹´2æœˆ20æ—¥ 16:18:35ã€‚  <ç‰ˆæœ¬æ›´æ–°æ—¥å¿—æœ€å>
 
 # an-aw-base
 
-* ÏîÄ¿µÄÖ÷Òª¹¦ÄÜÊÇ×÷Îª[an¿ò¼Ü](https://github.com/qydq/an)µÄ»ùÀà£¨»ù´¡µÄan-base£©µÄ²Ö¿â£»Äã¿ÉÒÔ½èÖújitpack £¬jcenter¿ìËÙ¼¯³É¡£
+* é¡¹ç›®çš„ä¸»è¦åŠŸèƒ½æ˜¯ä½œä¸º[anæ¡†æ¶](https://github.com/qydq/an)çš„åŸºç±»ï¼ˆåŸºç¡€çš„an-baseï¼‰çš„ä»“åº“ï¼›ä½ å¯ä»¥å€ŸåŠ©jitpack ï¼Œjcenterå¿«é€Ÿé›†æˆã€‚
 
-* ¿ò¼ÜÀ´Ô´ÓÚ±¾ÈËan-maven-base¿ò¼Ü£¨ÒÑÔÚgithubÖĞÉ¾³ı£©£¬an-aw-base¿ò¼Ü¸üÇáÁ¿¸ü¹æ·¶¡£
+* æ¡†æ¶æ¥æºäºæœ¬äººan-maven-baseæ¡†æ¶ï¼ˆå·²åœ¨githubä¸­åˆ é™¤ï¼‰ï¼Œan-aw-baseæ¡†æ¶æ›´è½»é‡æ›´è§„èŒƒã€‚
 
-* ¿ò¼Ü¼Ü¹¹»ùÓÚMVP£¬ÀûÓÃan-aw-base¿ò¼Ü¿ÉÒÔ¿ìËÙ°ïÖú¿ª·¢ÕßÕë¶Ô¶àÖÖ³¡¾°µÄ¿ª·¢¡£
+* æ¡†æ¶æ¶æ„åŸºäºMVPï¼Œåˆ©ç”¨an-aw-baseæ¡†æ¶å¯ä»¥å¿«é€Ÿå¸®åŠ©å¼€å‘è€…é’ˆå¯¹å¤šç§åœºæ™¯çš„å¼€å‘ã€‚
 
-±¾ÏîÄ¿µØÖ·£ºhttps://github.com/qydq/an-aw-base
+æœ¬é¡¹ç›®åœ°å€ï¼šhttps://github.com/qydq/an-aw-base
 
-**Ê¹ÓÃ½éÉÜ£ºÈçÏÂ¼ò½é»òÖªºõ£¬»ò¸öÈËÍøÒ×²©¿Í¡£**
+**ä½¿ç”¨ä»‹ç»ï¼šå¦‚ä¸‹ç®€ä»‹æˆ–çŸ¥ä¹ï¼Œæˆ–ä¸ªäººç½‘æ˜“åšå®¢ã€‚**
 
->ÖªºõÖ÷Ò³£ºhttps://zhihu.com/people/qydq
+>çŸ¥ä¹ä¸»é¡µï¼šhttps://zhihu.com/people/qydq
 
->²©¿ÍÖ÷Ò³£ºhttps://bgwan.blog.163.com
-
-
-**ÈçÓĞÊ¹ÓÃÎÊÌâÇë·¢ËÍµç×ÓÓÊ¼ş¡£**
-
->ÓÊ¼şµØÖ·£º staryumou@163.com  /  qyddai@gmail.com
+>åšå®¢ä¸»é¡µï¼šhttps://bgwan.blog.163.com
 
 
-**ÌØ±ğËµÃ÷**
+**å¦‚æœ‰ä½¿ç”¨é—®é¢˜è¯·å‘é€ç”µå­é‚®ä»¶ã€‚**
+
+>é‚®ä»¶åœ°å€ï¼š staryumou@163.com  /  qyddai@gmail.com
+
+
+**ç‰¹åˆ«è¯´æ˜**
 	
->´´½¨Ê±¼ä <------2016Äê09ÔÂ17ÈÕ------->
+>åˆ›å»ºæ—¶é—´ <------2016å¹´09æœˆ17æ—¥------->
 	
->2016Äê09ÔÂ17ÈÕ;×î½üĞŞ¸ÄÊ±¼ä£º2017Äê04ÔÂ19ÈÕ¡£
+>2016å¹´09æœˆ17æ—¥;æœ€è¿‘ä¿®æ”¹æ—¶é—´ï¼š2017å¹´04æœˆ19æ—¥ã€‚
 
 ########
 	
-**Ä¿Â¼**
+**ç›®å½•**
 	
-1.Ç°ÑÔ£¨°üº¬¸ÃÏîÄ¿Ö÷ÒªÊ¹ÓÃ·½·¨£¬¹¦ÄÜµÄ¼òµ¥¸ÅÊö;ÔËĞĞÅäÖÃ,¿ÉÑ¡£©¡£
+1.å‰è¨€ï¼ˆåŒ…å«è¯¥é¡¹ç›®ä¸»è¦ä½¿ç”¨æ–¹æ³•ï¼ŒåŠŸèƒ½çš„ç®€å•æ¦‚è¿°;è¿è¡Œé…ç½®,å¯é€‰ï¼‰ã€‚
 
-2.ÊµÏÖĞ§¹û£¨Èç¹ûÃ»ÓĞ¿ÉÒÔÊ¡ÂÔ£¬½¨Òé°üº¬£©¡£
+2.å®ç°æ•ˆæœï¼ˆå¦‚æœæ²¡æœ‰å¯ä»¥çœç•¥ï¼Œå»ºè®®åŒ…å«ï¼‰ã€‚
 
-3.Ê¹ÓÃ·½·¨£¨´úÂë£©¡£
+3.ä½¿ç”¨æ–¹æ³•ï¼ˆä»£ç ï¼‰ã€‚
 
-4.ÖØÒªÖªÊ¶µã£¨×Ü½á£¬Ë¼¿¼£©¡£
+4.é‡è¦çŸ¥è¯†ç‚¹ï¼ˆæ€»ç»“ï¼Œæ€è€ƒï¼‰ã€‚
 
-5.ÁªÏµ×÷Õß¡£
+5.è”ç³»ä½œè€…ã€‚
 
 
 # [![](https://jitpack.io/v/qydq/an-aw-base.svg)](https://jitpack.io/#qydq/an-aw-base)       [ ![Download](https://api.bintray.com/packages/qydq/an/an-aw-base/images/download.svg?version=an-aw-base%3A2.1) ](https://bintray.com/qydq/an/an-aw-base/an-aw-base%3A2.1/link)
 
 #######
 
-# 1. Ç°ÑÔ
+# 1. å‰è¨€
 
-**Ê¹ÓÃGradle¹¹½¨Ê±Ìí¼ÓÒÔÏÂÒÀÀµ¼´¿É** *£¨×¢£ºÒ²¿ÉÒÔÊ¹ÓÃÖ®Ç°µÄµÍÎÈ¶¨°æ±¾£©*
+**ä½¿ç”¨Gradleæ„å»ºæ—¶æ·»åŠ ä»¥ä¸‹ä¾èµ–å³å¯** *ï¼ˆæ³¨ï¼šä¹Ÿå¯ä»¥ä½¿ç”¨ä¹‹å‰çš„ä½ç¨³å®šç‰ˆæœ¬ï¼‰*
 
-Step 1£º¼ÓÈëÒÀÀµÖ®Ç°£¨ÔÚÄãµÄ¸ùbuild.gradleÎÄ¼şÖĞÔö¼ÓÈçÏÂ´úÂë¡££©
+Step 1ï¼šåŠ å…¥ä¾èµ–ä¹‹å‰ï¼ˆåœ¨ä½ çš„æ ¹build.gradleæ–‡ä»¶ä¸­å¢åŠ å¦‚ä¸‹ä»£ç ã€‚ï¼‰
 
 ```groovy
 allprojects {
@@ -72,137 +72,137 @@ allprojects {
 }
 ```
 
-Step 2£º¼ÓÈëÒÔºó£¨ÔÚÄãµÄ×Óbuild.gradleÎÄ¼şÖĞÌí¼ÓÈçÏÂÒÀÀµ¹ØÏµ¡££©
+Step 2ï¼šåŠ å…¥ä»¥åï¼ˆåœ¨ä½ çš„å­build.gradleæ–‡ä»¶ä¸­æ·»åŠ å¦‚ä¸‹ä¾èµ–å…³ç³»ã€‚ï¼‰
 
 `compile 'com.github.qydq:an-aw-base:0.3.3'`
 
-»òÕß¼ÓÈë£º
+æˆ–è€…åŠ å…¥ï¼š
 
 `compile 'cn.android.sunst:an-base:2.1'`
 
-¿ÉÒÔ²Î¿¼[aN¿ò¼ÜgradleÒÀÀµ-¹Ì¶¨Ğ´·¨](https://zhuanlan.zhihu.com/p/26269611)
+å¯ä»¥å‚è€ƒ[aNæ¡†æ¶gradleä¾èµ–-å›ºå®šå†™æ³•](https://zhuanlan.zhihu.com/p/26269611)
 
-**Ê¹ÓÃ½¨Òé**
+**ä½¿ç”¨å»ºè®®**
 
->Ê¹ÓÃ½¨Òé¼Ì³ĞSuperActivity£¬SuperFragment£¬BasePresenter£¬BaseView¡£
+>ä½¿ç”¨å»ºè®®ç»§æ‰¿SuperActivityï¼ŒSuperFragmentï¼ŒBasePresenterï¼ŒBaseViewã€‚
 
->Ê¹ÓÃ½¨ÒéÔÚAndroidManifest.xmlÖĞ¼ÓÈëandroid:theme="@style/AnAppTheme"/||/NoBarTheme(¸²¸ÇĞ´·¨)"`¡£
+>ä½¿ç”¨å»ºè®®åœ¨AndroidManifest.xmlä¸­åŠ å…¥android:theme="@style/AnAppTheme"/||/NoBarTheme(è¦†ç›–å†™æ³•)"`ã€‚
 
->Ê¹ÓÃ½¨ÒéÔÚ±àÒëµÄbuildµÄÊ±ºò×¢Òâan-aw-baseĞèÒªÔÚAPI=19»òÒÔÉÏ°æ±¾±àÒë¡£
+>ä½¿ç”¨å»ºè®®åœ¨ç¼–è¯‘çš„buildçš„æ—¶å€™æ³¨æ„an-aw-baseéœ€è¦åœ¨API=19æˆ–ä»¥ä¸Šç‰ˆæœ¬ç¼–è¯‘ã€‚
 
 ```groovy
-aN¿ò¼ÜÖ§³Öandroid 4.4+Ê¹ÓÃ£¬¼æÈİĞÔ²âÊÔÍ¨¹ı£¬»ªÎªAndroid4.4 £¬Ğ¡Ã×Android5.1£¬ÈıĞÇAndroid5.1£¬»ªÎªAndroid6.0¡£
+aNæ¡†æ¶æ”¯æŒandroid 4.4+ä½¿ç”¨ï¼Œå…¼å®¹æ€§æµ‹è¯•é€šè¿‡ï¼Œåä¸ºAndroid4.4 ï¼Œå°ç±³Android5.1ï¼Œä¸‰æ˜ŸAndroid5.1ï¼Œåä¸ºAndroid6.0ã€‚
 ```
-##samples apk demoÏÂÔØ²Î¿¼
+##samples apk demoä¸‹è½½å‚è€ƒ
 
-[µãÎÒÏÂÔØan-aw-base.apk](https://github.com/qydq/an-aw-base/raw/master/app/app-release.apk)
+[ç‚¹æˆ‘ä¸‹è½½an-aw-base.apk](https://github.com/qydq/an-aw-base/raw/master/app/app-release.apk)
 
-[ÏÂÔØzhangluyue.apk-ÎÄ¼şÒÑ¼ÓÃÜ](https://github.com/qydq/an-aw-base/raw/master/app/zhangluyue_jiami.apk)
+[ä¸‹è½½zhangluyue.apk-æ–‡ä»¶å·²åŠ å¯†](https://github.com/qydq/an-aw-base/raw/master/app/zhangluyue_jiami.apk)
 
 **Tips**
 ---
 
-+ an¿ò¼ÜÌá¹©ÁËSuperActivity,SuperFragment,BasePresenter,BaseViewµÈ»ùÀà·ûºÏGoogle Material Design¡£
++ anæ¡†æ¶æä¾›äº†SuperActivity,SuperFragment,BasePresenter,BaseViewç­‰åŸºç±»ç¬¦åˆGoogle Material Designã€‚
 
-+ an¿ò¼ÜÌá¹©ÁËÍøÂçÇëÇó»ùÓÚxutilsÄ£¿éµÄ·â×°£¬httpÊµÏÖXHttps¡£
-
-```groovy
-   i.   HTTPÊµÏÖÀûÓÃÁËXHttpsÌá¹©ÁËpost,get,upLoadFile,downLoadFile...`
-
-   ii.  ¼¯³ÉÒÔÉÏÔò¿ÉÒÔÊ¹ÓÃ×¢½â¹¦ÄÜ£¬¿ÉÒÔ²Î¿¼xUtils3¿ªÔ´ÏîÄ¿¡£`
-
-   iii. Ìá¹©±ã½İXCallBack ,XParseResponse ,XProgressCallBack²Ù×÷¡£`
-```
-+ an¿ò¼Ü°üº¬ÁËĞí¶àÊµÓÃµÄ¹¤¾ßÀà£¬ÏñMD5¼ÓÃÜ£¬Êı¾İĞ£Ñé£¬Ò¹¼äÄ£Ê½£¬³ß´ç£¬Í¼Æ¬´¦Àí£¬ÍøÂç£¬Ä£ºıËã·¨£¬¸üĞÂÈí¼ş£¬takephotoÏµÁĞ...¡£
-
-+ an¿ò¼ÜÌá¹©recyclerview,refreshlayout,swipelayoutÏµÁĞÁĞ±í¿Ø¼şºÍ³£ÓÃĞ¡¿Ø¼ş¡£
++ anæ¡†æ¶æä¾›äº†ç½‘ç»œè¯·æ±‚åŸºäºxutilsæ¨¡å—çš„å°è£…ï¼Œhttpå®ç°XHttpsã€‚
 
 ```groovy
-   i.   ÈçYshrinkScrollView,YshrinkFrameLayout,YslidingLayout,YresizeRelativeLayout(YÏµÁĞµ¯ĞÔ£¬Ëõ·Å£¬ÉÏÏÂ»¬¶¯£¬¼üÅÌÁ¿¶È...`
+   i.   HTTPå®ç°åˆ©ç”¨äº†XHttpsæä¾›äº†post,get,upLoadFile,downLoadFile...`
 
-   ii.  LRecyclerView,SwipeMenuRecyclerView,BGAStickinessRefreshView£¨Èı´óÏµÁĞµÄÁĞ±í¿Ø¼ş...`
+   ii.  é›†æˆä»¥ä¸Šåˆ™å¯ä»¥ä½¿ç”¨æ³¨è§£åŠŸèƒ½ï¼Œå¯ä»¥å‚è€ƒxUtils3å¼€æºé¡¹ç›®ã€‚`
 
-   iii. LuueCircleIv,LuueRectangleIv,LuueRoundIv,LuueZoomIv,LuueToggleBb,LuueTouchIb£¨LuueÏµÁĞµÄÔ²£¬¾ØĞÎ£¬Ëõ·Å£¬ÇĞ»»...¡£`
+   iii. æä¾›ä¾¿æ·XCallBack ,XParseResponse ,XProgressCallBackæ“ä½œã€‚`
+```
++ anæ¡†æ¶åŒ…å«äº†è®¸å¤šå®ç”¨çš„å·¥å…·ç±»ï¼ŒåƒMD5åŠ å¯†ï¼Œæ•°æ®æ ¡éªŒï¼Œå¤œé—´æ¨¡å¼ï¼Œå°ºå¯¸ï¼Œå›¾ç‰‡å¤„ç†ï¼Œç½‘ç»œï¼Œæ¨¡ç³Šç®—æ³•ï¼Œæ›´æ–°è½¯ä»¶ï¼Œtakephotoç³»åˆ—...ã€‚
+
++ anæ¡†æ¶æä¾›recyclerview,refreshlayout,swipelayoutç³»åˆ—åˆ—è¡¨æ§ä»¶å’Œå¸¸ç”¨å°æ§ä»¶ã€‚
+
+```groovy
+   i.   å¦‚YshrinkScrollView,YshrinkFrameLayout,YslidingLayout,YresizeRelativeLayout(Yç³»åˆ—å¼¹æ€§ï¼Œç¼©æ”¾ï¼Œä¸Šä¸‹æ»‘åŠ¨ï¼Œé”®ç›˜é‡åº¦...`
+
+   ii.  LRecyclerView,SwipeMenuRecyclerView,BGAStickinessRefreshViewï¼ˆä¸‰å¤§ç³»åˆ—çš„åˆ—è¡¨æ§ä»¶...`
+
+   iii. LuueCircleIv,LuueRectangleIv,LuueRoundIv,LuueZoomIv,LuueToggleBb,LuueTouchIbï¼ˆLuueç³»åˆ—çš„åœ†ï¼ŒçŸ©å½¢ï¼Œç¼©æ”¾ï¼Œåˆ‡æ¢...ã€‚`
 ```
 
-+ an¿ò¼Ü¼ÓÈëÁËÁ½ÖÖÒ¹¼äÄ£Ê½µÄ¹¦ÄÜ¡£
++ anæ¡†æ¶åŠ å…¥äº†ä¸¤ç§å¤œé—´æ¨¡å¼çš„åŠŸèƒ½ã€‚
 
-+ an¿ò¼ÜÌá¹©ÁË¿ìËÙ¼àÌıÍøÂç±ä»¯,ÍøËÙµÄ·½·¨¡£
++ anæ¡†æ¶æä¾›äº†å¿«é€Ÿç›‘å¬ç½‘ç»œå˜åŒ–,ç½‘é€Ÿçš„æ–¹æ³•ã€‚
 
-+ an¿ò¼ÜºóÆÚ¹¦ÄÜÕıÔÚ²»¶ÏÍêÉÆÖĞ¡£
++ anæ¡†æ¶åæœŸåŠŸèƒ½æ­£åœ¨ä¸æ–­å®Œå–„ä¸­ã€‚
 
 ---------
 
-# 2. ÊµÏÖĞ§¹û
+# 2. å®ç°æ•ˆæœ
 
-+ **ÏîÄ¿²¿·ÖĞ§¹û½ØÍ¼¡£ÈçÍ¼**
++ **é¡¹ç›®éƒ¨åˆ†æ•ˆæœæˆªå›¾ã€‚å¦‚å›¾**
 
  <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_main.png" width=280 height=480 />   <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_recyclerview.png" width=280 height=480 />  <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_littlertrick.png" width=280 height=480 />
 
-+ **an¿ò¼ÜÌá¹©Í¨ÓÃµÄ±êÌâÀ¸Í·¼¯³É£¨Êµ¼ÊÊ¹ÓÃÊ±±³¾°ÑÕÉ«CommMainBg£©¡£ÈçÍ¼**
++ **anæ¡†æ¶æä¾›é€šç”¨çš„æ ‡é¢˜æ å¤´é›†æˆï¼ˆå®é™…ä½¿ç”¨æ—¶èƒŒæ™¯é¢œè‰²CommMainBgï¼‰ã€‚å¦‚å›¾**
 
-£¨1£©ÆÕÍ¨×´Ì¬À¸²Î¿¼(anPb)<br>
+ï¼ˆ1ï¼‰æ™®é€šçŠ¶æ€æ å‚è€ƒ(anPb)<br>
 
  ![](https://github.com/qydq/an-aw-base/blob/master/screen/base_headview_standard.png)
  
- `ĞÂÔö£¬android:transitionName="anllbacktrans"£¬android:transitionName="anllrighttrans"`
+ `æ–°å¢ï¼Œandroid:transitionName="anllbacktrans"ï¼Œandroid:transitionName="anllrighttrans"`
 
-£¨2£©¸´ÔÓ×´Ì¬À¸²Î¿¼(anPb)<br>
+ï¼ˆ2ï¼‰å¤æ‚çŠ¶æ€æ å‚è€ƒ(anPb)<br>
 
  ![](https://github.com/qydq/an-aw-base/blob/master/screen/base_headview_standard_complex.png)
 
- `ĞÂÔö£¬android:transitionName="anllbacktrans"£¬android:transitionName="anllrighttrans"£¬ android:transitionName="anllrrighttrans"`
+ `æ–°å¢ï¼Œandroid:transitionName="anllbacktrans"ï¼Œandroid:transitionName="anllrighttrans"ï¼Œ android:transitionName="anllrrighttrans"`
  
-±¸×¢£ºĞÂÔö£¨²»Ó°ÏìÊ¹ÓÃ£©transitionÖ§³ÖMD¶¯»­£¨[TransitionÓÃ·¨Çëµã»÷-Ò»Æ¬·ãÒ¶_Áõ³¬](http://blog.csdn.net/qq_23547831/article/details/51821159)£©
+å¤‡æ³¨ï¼šæ–°å¢ï¼ˆä¸å½±å“ä½¿ç”¨ï¼‰transitionæ”¯æŒMDåŠ¨ç”»ï¼ˆ[Transitionç”¨æ³•è¯·ç‚¹å‡»-ä¸€ç‰‡æ«å¶_åˆ˜è¶…](http://blog.csdn.net/qq_23547831/article/details/51821159)ï¼‰
 
-+ **an¿ò¼ÜÌá¹©Í¨ÓÃµÄPickerView•rég£¬ÈÕÆÚßx“ñ¿Ø¼ş¡££¨Á½ÖÖ·½·¨Ê¹ÓÃ£©ÈçÍ¼**
++ **anæ¡†æ¶æä¾›é€šç”¨çš„PickerViewæ™‚é–“ï¼Œæ—¥æœŸé¸æ“‡æ§ä»¶ã€‚ï¼ˆä¸¤ç§æ–¹æ³•ä½¿ç”¨ï¼‰å¦‚å›¾**
 
-2017Äê2ÔÂ20ÈÕ ÀÏÆÅ ÔõÃ´°ì°¡ ±ğÀë¿ªÎÒ ºÃ²»ºÃ¡£
+2017å¹´2æœˆ20æ—¥ è€å©† æ€ä¹ˆåŠå•Š åˆ«ç¦»å¼€æˆ‘ å¥½ä¸å¥½ã€‚
 
  <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_tips.png" width=280 height=480 />  <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_tips_ios.png" width=280 height=480 />  <img src="https://github.com/qydq/an-aw-base/blob/master/screen/demo_recyclerview_partipal.png" width=280 height=480 />
 
-±¸×¢£ºÊ¹ÓÃ½éÉÜ´ı¸üĞÂÖÁÖªºõ¡£ÔİÊ±¿ÉÒÔ²Î¿¼[YYTipsActivity](https://github.com/qydq/an-aw-base/blob/master/app/src/main/java/com/qyddai/an_aw_base/view/activity/YYTipsActivity.java)
+å¤‡æ³¨ï¼šä½¿ç”¨ä»‹ç»å¾…æ›´æ–°è‡³çŸ¥ä¹ã€‚æš‚æ—¶å¯ä»¥å‚è€ƒ[YYTipsActivity](https://github.com/qydq/an-aw-base/blob/master/app/src/main/java/com/qyddai/an_aw_base/view/activity/YYTipsActivity.java)
  
-ËµÃ÷£ºÕâÊÇÒ»¸ö¸ß·Â IOS PickerView ¿Ø¼şµÄ¿â¡£´úÂë²Î¿¼£ºhttps://github.com/saiwu-bigkoo/Android-PickerView £¬ÔÚÔ­ÓĞ´úÂë»ù´¡ÉÏ½øĞĞ·â×°£¬²¢Ìá¹©ÁËÒ»Ğ©ĞŞ¸ÄÊôĞÔ·½·¨¡£
+è¯´æ˜ï¼šè¿™æ˜¯ä¸€ä¸ªé«˜ä»¿ IOS PickerView æ§ä»¶çš„åº“ã€‚ä»£ç å‚è€ƒï¼šhttps://github.com/saiwu-bigkoo/Android-PickerView ï¼Œåœ¨åŸæœ‰ä»£ç åŸºç¡€ä¸Šè¿›è¡Œå°è£…ï¼Œå¹¶æä¾›äº†ä¸€äº›ä¿®æ”¹å±æ€§æ–¹æ³•ã€‚
 
 ---------
 
-# 3. Ê¹ÓÃ·½·¨£¨´úÂë£©
+# 3. ä½¿ç”¨æ–¹æ³•ï¼ˆä»£ç ï¼‰
 
-[¼òµ¥°ïÖúÎÄµµ-aN¿ò¼ÜAPIÖ¸µ¼²Î¿¼](https://github.com/qydq/an-aw-base/blob/master/an-base/ApiGuide.md)
+[ç®€å•å¸®åŠ©æ–‡æ¡£-aNæ¡†æ¶APIæŒ‡å¯¼å‚è€ƒ](https://github.com/qydq/an-aw-base/blob/master/an-base/ApiGuide.md)
 
-[ÀûÓÃaN¿ò¼Ü¿ìËÙ¿ª·¢androidÓ¦ÓÃ³ÌĞò»ù±¾Ê¹ÓÃ·½·¨](https://zhuanlan.zhihu.com/p/24273705?refer=sunst)
+[åˆ©ç”¨aNæ¡†æ¶å¿«é€Ÿå¼€å‘androidåº”ç”¨ç¨‹åºåŸºæœ¬ä½¿ç”¨æ–¹æ³•](https://zhuanlan.zhihu.com/p/24273705?refer=sunst)
 
-[ÈçºÎÊ¹ÓÃAn¿ò¼ÜÌá¹©µÄWToggleButtonÊµÏÖÒ»¸öÆ¯ÁÁµÄÇĞ»»°´Å¥£¿](https://zhuanlan.zhihu.com/p/24275861?refer=sunst)
+[å¦‚ä½•ä½¿ç”¨Anæ¡†æ¶æä¾›çš„WToggleButtonå®ç°ä¸€ä¸ªæ¼‚äº®çš„åˆ‡æ¢æŒ‰é’®ï¼Ÿ](https://zhuanlan.zhihu.com/p/24275861?refer=sunst)
 
-[ÀûÓÃan¿ò¼ÜÌá¹©µÄWSlidingDeleteListView·ÂQQ»¬¶¯É¾³ı¡£](https://zhuanlan.zhihu.com/p/24408002?refer=sunst)
+[åˆ©ç”¨anæ¡†æ¶æä¾›çš„WSlidingDeleteListViewä»¿QQæ»‘åŠ¨åˆ é™¤ã€‚](https://zhuanlan.zhihu.com/p/24408002?refer=sunst)
 
-[ÀûÓÃan¿ò¼ÜÌá¹©µÄrecyclerviewÏµÁĞÊµÏÖÏÂÀ­Ë¢ĞÂ¡¢·ÖÒ³¼ÓÔØÊı¾İ](https://github.com/qydq/an-aw-base/blob/master/app/README.md)
+[åˆ©ç”¨anæ¡†æ¶æä¾›çš„recyclerviewç³»åˆ—å®ç°ä¸‹æ‹‰åˆ·æ–°ã€åˆ†é¡µåŠ è½½æ•°æ®](https://github.com/qydq/an-aw-base/blob/master/app/README.md)
 
 --------
 
-+ **An¿ò¼ÜÃüÃû¹æ·¶**
++ **Anæ¡†æ¶å‘½åè§„èŒƒ**
 
-ÃüÃû¹æ·¶ÊÇÒ»¸öÏîÄ¿ÖĞ·Ç³£ÖØÒªµÄ²¿·Ö£¬¶¼ĞèÒªÁé¸Ğ¡£[ÃüÃû¹æ·¶×îĞÂ²Î¿¼](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/assets/an-aw-base%E6%9B%B4%E6%96%B0%E8%AF%B4%E6%98%8E.mk)<br>
+å‘½åè§„èŒƒæ˜¯ä¸€ä¸ªé¡¹ç›®ä¸­éå¸¸é‡è¦çš„éƒ¨åˆ†ï¼Œéƒ½éœ€è¦çµæ„Ÿã€‚[å‘½åè§„èŒƒæœ€æ–°å‚è€ƒ](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/assets/an-aw-base%E6%9B%B4%E6%96%B0%E8%AF%B4%E6%98%8E.mk)<br>
 
-[An¿ò¼ÜÃüÃû¹æ·¶²Î¿¼](https://zhuanlan.zhihu.com/p/24155927)
+[Anæ¡†æ¶å‘½åè§„èŒƒå‚è€ƒ](https://zhuanlan.zhihu.com/p/24155927)
 ```groovy
 		/*
-		* ÀàµÄÉùÃ÷´ÎĞòÒÀ´ÎÊÇ£ºTAGÀà--View¿Ø¼ş--¾²Ì¬³ÉÔ±±äÁ¿--ÆÕÍ¨Àà³ÉÔ±±äÁ¿
-		* public ÔÚ×îÇ°·½µÄÎ»ÖÃ¡£
-		* private ÔÚpublicµÄÎ»ÖÃºóÃæ¡£
+		* ç±»çš„å£°æ˜æ¬¡åºä¾æ¬¡æ˜¯ï¼šTAGç±»--Viewæ§ä»¶--é™æ€æˆå‘˜å˜é‡--æ™®é€šç±»æˆå‘˜å˜é‡
+		* public åœ¨æœ€å‰æ–¹çš„ä½ç½®ã€‚
+		* private åœ¨publicçš„ä½ç½®åé¢ã€‚
 		* */
 ```
 
-+ **An¿ò¼Ü×´Ì¬À¸**
++ **Anæ¡†æ¶çŠ¶æ€æ **
 
-[ÀûÓÃaN¿ò¼Ü¿ìËÙ¿ª·¢androidÓ¦ÓÃ³ÌĞò»ù±¾Ê¹ÓÃ·½·¨](https://zhuanlan.zhihu.com/p/24273705?refer=sunst)
+[åˆ©ç”¨aNæ¡†æ¶å¿«é€Ÿå¼€å‘androidåº”ç”¨ç¨‹åºåŸºæœ¬ä½¿ç”¨æ–¹æ³•](https://zhuanlan.zhihu.com/p/24273705?refer=sunst)
 
-<font color=#0099ff size=12 face="ºÚÌå">±¸×¢£ºaN¿ò¼ÜÌá¹©Í¨ÓÃ×´Ì¬À¸¿ÉĞŞ¸Ä¸Äbase_drawable_backarrow£¬base_drawable_backarrow_clickÍ¼Æ¬£»ÎÄ×Ö¿ÉĞŞ¸ÄCommColorGray£¬CommColorWhite£»±êÌâÑÕÉ«CommTxtMainColor¿ÉĞŞ¸Ä£¬±êÌâ´óÒ»×ÖÌå´óĞ¡CommDimenBarTitleMax£¬*ĞŞ¸ÄµÄÊ±ºòÖ±½ÓÌæ»»¼´¿É*¡£</font>
+<font color=#0099ff size=12 face="é»‘ä½“">å¤‡æ³¨ï¼šaNæ¡†æ¶æä¾›é€šç”¨çŠ¶æ€æ å¯ä¿®æ”¹æ”¹base_drawable_backarrowï¼Œbase_drawable_backarrow_clickå›¾ç‰‡ï¼›æ–‡å­—å¯ä¿®æ”¹CommColorGrayï¼ŒCommColorWhiteï¼›æ ‡é¢˜é¢œè‰²CommTxtMainColorå¯ä¿®æ”¹ï¼Œæ ‡é¢˜å¤§ä¸€å­—ä½“å¤§å°CommDimenBarTitleMaxï¼Œ*ä¿®æ”¹çš„æ—¶å€™ç›´æ¥æ›¿æ¢å³å¯*ã€‚</font>
 
-£¨1£©ÆÕÍ¨×´Ì¬À¸²Î¿¼<br>
+ï¼ˆ1ï¼‰æ™®é€šçŠ¶æ€æ å‚è€ƒ<br>
 
-<font>Tips: ×óÓÒÎÄ±¾´óĞ¡CommDimenBarTitleSmall¿ÉĞŞ¸Ä;</font>
+<font>Tips: å·¦å³æ–‡æœ¬å¤§å°CommDimenBarTitleSmallå¯ä¿®æ”¹;</font>
 
 		<include
         android:id="@+id/includeHead"
@@ -210,9 +210,9 @@ aN¿ò¼ÜÖ§³Öandroid 4.4+Ê¹ÓÃ£¬¼æÈİĞÔ²âÊÔÍ¨¹ı£¬»ªÎªAndroid4.4 £¬Ğ¡Ã×Android5.1£¬ÈıĞ
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 		
-£¨2£©¸´ÔÓ×´Ì¬À¸²Î¿¼<br>
+ï¼ˆ2ï¼‰å¤æ‚çŠ¶æ€æ å‚è€ƒ<br>
 
-<font color=#0099ff size=12 face="ºÚÌå">Tips£ºaN¿ò¼ÜÌá¹©¸´ÔÓ×´Ì¬À¸¿ÉĞŞ¸Ä´Ó×óµ½ÓÒÍ¼Æ¬base_drawable_art£¬base_drawable_art_click£¬base_drawable_share£¬base_drawable_share_click¡£ÎÄ±¾´óĞ¡£¬CommDimenTxtSSmall£¬¿ÉĞŞ¸Ä¡£;</font>
+<font color=#0099ff size=12 face="é»‘ä½“">Tipsï¼šaNæ¡†æ¶æä¾›å¤æ‚çŠ¶æ€æ å¯ä¿®æ”¹ä»å·¦åˆ°å³å›¾ç‰‡base_drawable_artï¼Œbase_drawable_art_clickï¼Œbase_drawable_shareï¼Œbase_drawable_share_clickã€‚æ–‡æœ¬å¤§å°ï¼ŒCommDimenTxtSSmallï¼Œå¯ä¿®æ”¹ã€‚;</font>
 
 		<include
         android:id="@+id/includeHead"
@@ -220,47 +220,47 @@ aN¿ò¼ÜÖ§³Öandroid 4.4+Ê¹ÓÃ£¬¼æÈİĞÔ²âÊÔÍ¨¹ı£¬»ªÎªAndroid4.4 £¬Ğ¡Ã×Android5.1£¬ÈıĞ
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 		
-+ **AnÍ¨ÓÃÊôĞÔÖµ²¿·Ö²Î¿¼**
++ **Ané€šç”¨å±æ€§å€¼éƒ¨åˆ†å‚è€ƒ**
 
-£¨1£©StyleÍ¨ÓÃ²Î¿¼
+ï¼ˆ1ï¼‰Styleé€šç”¨å‚è€ƒ
 
-AnTvContentStyle ±ê×¼ÎÄ±¾ÄÚÈİ·ç¸ñ¡£
+AnTvContentStyle æ ‡å‡†æ–‡æœ¬å†…å®¹é£æ ¼ã€‚
 
-AnTvTitleStyle ±ê×¼ÎÄ±¾±êÌâ·ç¸ñ¡£
+AnTvTitleStyle æ ‡å‡†æ–‡æœ¬æ ‡é¢˜é£æ ¼ã€‚
 
-NoBarTheme ÎŞ±êÌâÀ¸¡£Ìá¹©£¨[¸²¸Çan¿ò¼ÜÄ¬ÈÏµÄAnAppThemeÍ¸Ã÷Ğ§¹ûµÄ×÷ÓÃ](https://github.com/qydq/an-aw-base/issues/6)£©¡£
+NoBarTheme æ— æ ‡é¢˜æ ã€‚æä¾›ï¼ˆ[è¦†ç›–anæ¡†æ¶é»˜è®¤çš„AnAppThemeé€æ˜æ•ˆæœçš„ä½œç”¨](https://github.com/qydq/an-aw-base/issues/6)ï¼‰ã€‚
 
-AnAppTheme an¿ò¼ÜÄ¬ÈÏµÄ·ç¸ñ¡£
+AnAppTheme anæ¡†æ¶é»˜è®¤çš„é£æ ¼ã€‚
 
-### Ê¹ÓÃ·½·¨
+### ä½¿ç”¨æ–¹æ³•
 
-+ **An¿ò¼ÜÒ¹¼äÄ£Ê½**
++ **Anæ¡†æ¶å¤œé—´æ¨¡å¼**
 
-£¨1£©¼òµ¥Ò¹¼äÄ£Ê½Ê¹ÓÃ<br>
+ï¼ˆ1ï¼‰ç®€å•å¤œé—´æ¨¡å¼ä½¿ç”¨<br>
 
-<font color=#0099ff size=12 face="ºÚÌå">±¸×¢£ºaN¿ò¼ÜÌá¹©ÁËÊı¾İ±£´æSp£¬Ö±½Ósp.edit¼´¿ÉµÃµ½Editor¶ÔÏó£»Èçeditor = sp.edit();</font>
+<font color=#0099ff size=12 face="é»‘ä½“">å¤‡æ³¨ï¼šaNæ¡†æ¶æä¾›äº†æ•°æ®ä¿å­˜Spï¼Œç›´æ¥sp.editå³å¯å¾—åˆ°Editorå¯¹è±¡ï¼›å¦‚editor = sp.edit();</font>
 
-	//ÓÃÀ´±£´æÆ¤·ôÇĞ»»Ä£Ê½µÄsp
+	//ç”¨æ¥ä¿å­˜çš®è‚¤åˆ‡æ¢æ¨¡å¼çš„sp
 	if (sp.getBoolean("isNight", false)) {
         getWindow().getDecorView().setBackground(ContextCompat.getDrawable(mContext,R.drawable.yy_drawable_bgday_shape));
-        tvChangModel.setText("ÏÖÔÚÊÇ°×Ìì£¬µã»÷ÇĞ»»ÍíÉÏ");
+        tvChangModel.setText("ç°åœ¨æ˜¯ç™½å¤©ï¼Œç‚¹å‡»åˆ‡æ¢æ™šä¸Š");
         editor.putBoolean("isNight", false);
         } else {
         getWindow().getDecorView().setBackground(ContextCompat.getDrawable(mContext,R.drawable.yy_drawable_bgnigt_shape));
-        tvChangModel.setText("ÏÖÔÚÊÇÍíÉÏ£¬µã»÷ÇĞ»»°×Ìì");
+        tvChangModel.setText("ç°åœ¨æ˜¯æ™šä¸Šï¼Œç‚¹å‡»åˆ‡æ¢ç™½å¤©");
         editor.putBoolean("isNight", true);
         }
-£¨2£©·ÂÖªºõ¼òÊéÒ¹¼äÄ£Ê½ÇĞ»»ÊµÏÖÌ×Â·<br>
+ï¼ˆ2ï¼‰ä»¿çŸ¥ä¹ç®€ä¹¦å¤œé—´æ¨¡å¼åˆ‡æ¢å®ç°å¥—è·¯<br>
 
-[Android ÀûÓÃan¿ò¼Ü¿ìËÙÊµÏÖÒ¹¼äÄ£Ê½µÄÁ½ÖÖÌ×Â·](https://zhuanlan.zhihu.com/p/22520818?refer=qyddai)
+[Android åˆ©ç”¨anæ¡†æ¶å¿«é€Ÿå®ç°å¤œé—´æ¨¡å¼çš„ä¸¤ç§å¥—è·¯](https://zhuanlan.zhihu.com/p/22520818?refer=qyddai)
 
-[Android ÀûÓÃan¿ò¼Ü¿ìËÙÊµÏÖÒ¹¼äÄ£Ê½µÄÁ½ÖÖÌ×Â·-¼ÓÇ¿°æ](https://zhuanlan.zhihu.com/p/24269723)
+[Android åˆ©ç”¨anæ¡†æ¶å¿«é€Ÿå®ç°å¤œé—´æ¨¡å¼çš„ä¸¤ç§å¥—è·¯-åŠ å¼ºç‰ˆ](https://zhuanlan.zhihu.com/p/24269723)
 
-+ **An¿ò¼ÜÌá¹©µÄWToggleButtonµÄÊ¹ÓÃ²Î¿¼** *£¨Ô´ÂëÖĞÅäºÏÒ¹¼äÄ£Ê½Ê¹ÓÃ£©*
++ **Anæ¡†æ¶æä¾›çš„WToggleButtonçš„ä½¿ç”¨å‚è€ƒ** *ï¼ˆæºç ä¸­é…åˆå¤œé—´æ¨¡å¼ä½¿ç”¨ï¼‰*
 
-[ÈçºÎÊ¹ÓÃAn¿ò¼ÜÌá¹©µÄWToggleButtonÊµÏÖÒ»¸öÆ¯ÁÁµÄÇĞ»»°´Å¥£¿](https://zhuanlan.zhihu.com/p/24275861?refer=sunst)
+[å¦‚ä½•ä½¿ç”¨Anæ¡†æ¶æä¾›çš„WToggleButtonå®ç°ä¸€ä¸ªæ¼‚äº®çš„åˆ‡æ¢æŒ‰é’®ï¼Ÿ](https://zhuanlan.zhihu.com/p/24275861?refer=sunst)
 
-<font color=#0099ff size=12 face="ºÚÌå">±¸×¢£ºDefault Size:width=50dp,height=30dp.£»Èçeditor = sp.edit();</font>
+<font color=#0099ff size=12 face="é»‘ä½“">å¤‡æ³¨ï¼šDefault Size:width=50dp,height=30dp.ï¼›å¦‚editor = sp.edit();</font>
 
 		xmlns:toggle="http://schemas.android.com/apk/res-auto"
 
@@ -276,11 +276,11 @@ AnAppTheme an¿ò¼ÜÄ¬ÈÏµÄ·ç¸ñ¡£
 			
 		private WToggleButton toggleBtn;
 		
-		    //ÇĞ»»¿ª¹Ø
+		    //åˆ‡æ¢å¼€å…³
 		toggleBtn.toggle();
-		//ÇĞ»»ÎŞ¶¯»­
+		//åˆ‡æ¢æ— åŠ¨ç”»
 		toggleBtn.toggle(false);
-		//¿ª¹ØÇĞ»»ÊÂ¼ş
+		//å¼€å…³åˆ‡æ¢äº‹ä»¶
 		toggleBtn.setOnToggleChanged(new OnToggleChanged(){
         @Override
         public void onToggle(boolean on) {
@@ -289,68 +289,68 @@ AnAppTheme an¿ò¼ÜÄ¬ÈÏµÄ·ç¸ñ¡£
 
 		toggleBtn.setToggleOn();
 		toggleBtn.setToggleOff();
-		//ÎŞ¶¯»­ÇĞ»»
+		//æ— åŠ¨ç”»åˆ‡æ¢
 		toggleBtn.setToggleOn(false);
 		toggleBtn.setToggleOff(false);
 
-		//½ûÓÃ¶¯»­
+		//ç¦ç”¨åŠ¨ç”»
 		toggleBtn.setAnimate(false);
 			
 
-+ **ÍøÂç×´Ì¬¼àÌı**
++ **ç½‘ç»œçŠ¶æ€ç›‘å¬**
 
-[ÍøÂç×´Ì¬¼àÌı-MainActivity.java-onNetChange](https://raw.githubusercontent.com/qydq/an-aw-base/master/app/src/main/java/com/qyddai/an_aw_base/MainActivity.java)
+[ç½‘ç»œçŠ¶æ€ç›‘å¬-MainActivity.java-onNetChange](https://raw.githubusercontent.com/qydq/an-aw-base/master/app/src/main/java/com/qyddai/an_aw_base/MainActivity.java)
 
-+ **DUtilsDialogÊ¹ÓÃ**
++ **DUtilsDialogä½¿ç”¨**
 
-[Android ÀûÓÃan¿ò¼Ü¿ìËÙ¼ÓÈëDialog¶Ô»°¿òÊ¾Àı´úÂë](https://zhuanlan.zhihu.com/p/24146818)
+[Android åˆ©ç”¨anæ¡†æ¶å¿«é€ŸåŠ å…¥Dialogå¯¹è¯æ¡†ç¤ºä¾‹ä»£ç ](https://zhuanlan.zhihu.com/p/24146818)
 
 //android:background="@color/CommColorDialog"<br>
-[An¿ò¼ÜÊ¾Àı-MainActivity.java¶ÔÓ¦ÆÕÍ¨dialog](https://raw.githubusercontent.com/qydq/an-aw-base/master/app/src/main/java/com/qyddai/an_aw_base/MainActivity.java)
+[Anæ¡†æ¶ç¤ºä¾‹-MainActivity.javaå¯¹åº”æ™®é€šdialog](https://raw.githubusercontent.com/qydq/an-aw-base/master/app/src/main/java/com/qyddai/an_aw_base/MainActivity.java)
 
 //android:background="@drawable/yy_shape_dialog_progress"<br>
-[An¿ò¼ÜÊ¾Àı-TestActivity.java¶ÔÓ¦ProgressDialog](https://github.com/qydq/an-aw-base/blob/master/app/src/main/java/com/qyddai/an_aw_base/TestActivity.java)
+[Anæ¡†æ¶ç¤ºä¾‹-TestActivity.javaå¯¹åº”ProgressDialog](https://github.com/qydq/an-aw-base/blob/master/app/src/main/java/com/qyddai/an_aw_base/TestActivity.java)
 
-+ **XHttpsÍøÂçÇëÇóÊ¹ÓÃ·½·¨**
++ **XHttpsç½‘ç»œè¯·æ±‚ä½¿ç”¨æ–¹æ³•**
 
-[AndroidÀûÓÃaN¿ò¼Ü¿ìËÙÊµÏÖÍøÂçÇëÇó(º¬ÉÏ´«ÏÂÔØÎÄ¼ş£©¸ß¼¶-¼ÓÇ¿°æ](https://zhuanlan.zhihu.com/p/24132012)
+[Androidåˆ©ç”¨aNæ¡†æ¶å¿«é€Ÿå®ç°ç½‘ç»œè¯·æ±‚(å«ä¸Šä¼ ä¸‹è½½æ–‡ä»¶ï¼‰é«˜çº§-åŠ å¼ºç‰ˆ](https://zhuanlan.zhihu.com/p/24132012)
 
-[aN¿ò¼ÜÊ¾Àı-XHttpsActivity.java£¨º¬×¢½â£¬ContentVIew£¬£©](https://raw.githubusercontent.com/qydq/an-aw-base/master/app/src/main/java/com/qyddai/an_aw_base/XHttpsActivity.java)
+[aNæ¡†æ¶ç¤ºä¾‹-XHttpsActivity.javaï¼ˆå«æ³¨è§£ï¼ŒContentVIewï¼Œï¼‰](https://raw.githubusercontent.com/qydq/an-aw-base/master/app/src/main/java/com/qyddai/an_aw_base/XHttpsActivity.java)
 
-+ **Ñ¡ÔñÆ÷£¨ÒÑÊ¡ÂÔyyÇ°×º£©**
++ **é€‰æ‹©å™¨ï¼ˆå·²çœç•¥yyå‰ç¼€ï¼‰**
 	
-|Ñ¡ÔñÆ÷Ãû³Æ|±³¾°ËµÃ÷|±ß¿ò|Ô²½Ç|
+|é€‰æ‹©å™¨åç§°|èƒŒæ™¯è¯´æ˜|è¾¹æ¡†|åœ†è§’|
 |:---------|:-------|:---|---:|
-|drawable_selector_md|CommColorRipple<br>CommColorTransparent<br>CommColorTransparentClicked|ÎŞ|ÎŞ|
-|drawable_selector_md_oppose|CommColorOpposeRipple<br>CommColorOpposeClicked<br>CommColorOppose|ÎŞ|ÎŞ|
+|drawable_selector_md|CommColorRipple<br>CommColorTransparent<br>CommColorTransparentClicked|æ— |æ— |
+|drawable_selector_md_oppose|CommColorOpposeRipple<br>CommColorOpposeClicked<br>CommColorOppose|æ— |æ— |
 |drawable_selector_md_shape|CommColorRipple<br>CommColorTransparent<br>CommColorTransparentClicked|CommColorBorder<br>CommColorBorderClicked|2dp|
 |drawable_selector_md_shape_oppose|CommColorOppose<br>CommColorOpposeClicked<br>CommColorOpposeRipple|CommColorBorder<br>CommColorBorderClicked|2dp|
-|drawable_selector_txt|CommBaseHeadviewTxtColorClicked<br>CommBaseHeadviewTxtColor|ÎŞ|ÎŞ|
-|drawable_selector_txt_oppose|CommBaseHeadviewTxtColor<br>CommBaseHeadviewTxtColorClicked|ÎŞ|ÎŞ|
-|drawable_selector_txt_pickerview|CommTxtPickerViewColorClicked<br>CommTxtPickerViewColor|ÎŞ|ÎŞ|
+|drawable_selector_txt|CommBaseHeadviewTxtColorClicked<br>CommBaseHeadviewTxtColor|æ— |æ— |
+|drawable_selector_txt_oppose|CommBaseHeadviewTxtColor<br>CommBaseHeadviewTxtColorClicked|æ— |æ— |
+|drawable_selector_txt_pickerview|CommTxtPickerViewColorClicked<br>CommTxtPickerViewColor|æ— |æ— |
 |drawable_selector_ll_shape|CommEndColor<br>CommStartColor<br>CommMainBgClicked<br>CommMainBg|CommColorLineClicked<br>CommColorLine|2dp|
 
 ---------
 
-# 4. ÖØÒªÖªÊ¶µã¡£
+# 4. é‡è¦çŸ¥è¯†ç‚¹ã€‚
 
-+ **[ÈçºÎÊ¹ÓÃMVP¼Ü¹¹´î½¨AndroidÓ¦ÓÃ³ÌĞò-(demo+½âÎö)-¼«¼ò°æ](https://zhuanlan.zhihu.com/p/24452403)**
++ **[å¦‚ä½•ä½¿ç”¨MVPæ¶æ„æ­å»ºAndroidåº”ç”¨ç¨‹åº-(demo+è§£æ)-æç®€ç‰ˆ](https://zhuanlan.zhihu.com/p/24452403)**
 
-+ **Android MVP¼Ü¹¹Ê¾ÀıÏîÄ¿½âÎö-¼ÓÇ¿°æ**
++ **Android MVPæ¶æ„ç¤ºä¾‹é¡¹ç›®è§£æ-åŠ å¼ºç‰ˆ**
 
-+ **[ÁĞ±í¿Ø¼ş½è¼øÊ¹ÓÃswipelayoutÏµÁĞ](https://github.com/qydq/an-aw-base/blob/master/an-base/README.md)**
++ **[åˆ—è¡¨æ§ä»¶å€Ÿé‰´ä½¿ç”¨swipelayoutç³»åˆ—](https://github.com/qydq/an-aw-base/blob/master/an-base/README.md)**
 		
 ---------
 
-# 5. ÁªÏµ×÷Õß¡£
+# 5. è”ç³»ä½œè€…ã€‚
 
-Athor IP£ºsunshuntao£¨qydq£©£¨İªÂÜ»¨£©¡£
+Athor IPï¼šsunshuntaoï¼ˆqydqï¼‰ï¼ˆsunst)
 
-Email£ºqyddai@gmail.com¡£
+Emailï¼šqyddai@gmail.comã€‚
 
-»¶Ó­´ó¼ÒÊ¹ÓÃaN¿ìËÙ¿ª·¢¿ò¼Ü¡£
+æ¬¢è¿å¤§å®¶ä½¿ç”¨aNå¿«é€Ÿå¼€å‘æ¡†æ¶ã€‚
 If it doesn't work, please send me a email, qyddai@gmail.com
-An¿ò¼Ü¿ÉÄÜ´æÔÚÒ»Ğ©È±Ïİ£¬ÓĞÎÊÌâ»¶Ó­´ó¼Ò·´À¡£¬ÊÕµ½ÓÊ¼şÎÒ»áµÚÒ»´ÎÊ±¼ä»Ø¸´´¦Àí¡£
+Anæ¡†æ¶å¯èƒ½å­˜åœ¨ä¸€äº›ç¼ºé™·ï¼Œæœ‰é—®é¢˜æ¬¢è¿å¤§å®¶åé¦ˆï¼Œæ”¶åˆ°é‚®ä»¶æˆ‘ä¼šç¬¬ä¸€æ¬¡æ—¶é—´å›å¤å¤„ç†ã€‚
 
 Or
 
@@ -362,28 +362,28 @@ http://drakeet.me/android-studio
 
 1.[xUtils3-- wyouflf](https://github.com/wyouflf/xUtils3)
 
-2.[ÑÏÕñ½ÜCSDN](http://my.csdn.net/yanzhenjie1003)
+2.[ä¸¥æŒ¯æ°CSDN](http://my.csdn.net/yanzhenjie1003)
 
-3.[Ò»Æ¬·ãÒ¶_Áõ³¬CSDN](http://blog.csdn.net/qq_23547831/article/details/46423599)
+3.[ä¸€ç‰‡æ«å¶_åˆ˜è¶…CSDN](http://blog.csdn.net/qq_23547831/article/details/46423599)
 
-4.[BGARefreshLayout-Android-refreshlayoutÏµÁĞ](https://github.com/bingoogolapple/BGARefreshLayout-Android/wiki/Advanced)
+4.[BGARefreshLayout-Android-refreshlayoutç³»åˆ—](https://github.com/bingoogolapple/BGARefreshLayout-Android/wiki/Advanced)
 
 
-#´òÉÍ
+#æ‰“èµ
 
-¾õµÃ±¾¿ò¼Ü¶ÔÄãÓĞ°ïÖú£¬²»·Á´òÉÍÔŞÖúÎÒÒ»ÏÂ£¬ÈÃÎÒÓĞ¶¯Á¦×ßµÄ¸üÔ¶¡£
+è§‰å¾—æœ¬æ¡†æ¶å¯¹ä½ æœ‰å¸®åŠ©ï¼Œä¸å¦¨æ‰“èµèµåŠ©æˆ‘ä¸€ä¸‹ï¼Œè®©æˆ‘æœ‰åŠ¨åŠ›èµ°çš„æ›´è¿œã€‚
 
  <img src="https://github.com/qydq/an-aw-base/blob/master/app/src/main/res/mipmap-xxhdpi/qydq_an_alipay.png" width=280 />
 
 ---------
 
-#### ºó¼Ç£º
+#### åè®°ï¼š
 
 
 ## an-base > module /build.gradle
 
 		apply plugin: 'com.android.library'
-		//ÅäÖÃjitpack
+		//é…ç½®jitpack
 		apply plugin: 'com.github.dcendents.android-maven'
 		group = 'com.github.qydq'
 		
@@ -412,30 +412,30 @@ http://drakeet.me/android-studio
 		}
 		dependencies {
 			classpath 'com.android.tools.build:gradle:2.2.3'
-			// jitpack·¢²¼github
+			// jitpackå‘å¸ƒgithub
 			classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
 			// NOTE: Do not place your application dependencies here; they belong
 			// in the individual module build.gradle files
 		}
-		}¡¤
+		}Â·
 		
-## È¨ÏŞÏà¹Ø¡£an-aw-base /AndroidManifest.xml	
+## æƒé™ç›¸å…³ã€‚an-aw-base /AndroidManifest.xml	
 
-    <!-- ÍøÂçÏà¹ØÈ¨ÏŞ -->
+    <!-- ç½‘ç»œç›¸å…³æƒé™ -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <!-- WIFI×´Ì¬¼àÌıÏà¹ØÈ¨ÏŞ-->
+    <!-- WIFIçŠ¶æ€ç›‘å¬ç›¸å…³æƒé™-->
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!-- ÍùSDCardĞ´ÈëÊı¾İÈ¨ÏŞ -->
+    <!-- å¾€SDCardå†™å…¥æ•°æ®æƒé™ -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!-- ÍùSDCard¶ÁÈ¡Êı¾İÈ¨ÏŞ -->
+    <!-- å¾€SDCardè¯»å–æ•°æ®æƒé™ -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <!-- ÔÚSDCard µÄ¹ÒÔØÈ¨ÏŞ -->
+    <!-- åœ¨SDCard çš„æŒ‚è½½æƒé™ -->
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
 		
 		
-## ±àÒë¼°Ïà¹ØSDKÅäÖÃ¡£
+## ç¼–è¯‘åŠç›¸å…³SDKé…ç½®ã€‚
 
 		android {
 			compileSdkVersion 25
@@ -451,15 +451,15 @@ http://drakeet.me/android-studio
 
 		}
 		
-		ËµÃ÷ÕâÀïÃæ£ºÔÚµ÷ÓÃµÄActivityÊ±Ó¦¸Ãsuper.onCreate(savedInstanceState);£¬»¹ÓĞsetBackUpµÄÊôĞÔ£¬½¨Òé²»ÒªÔÚµÍ°æ±¾ÓÃ¸ß°æ±¾µÄÄÚÈİ¡£
+		è¯´æ˜è¿™é‡Œé¢ï¼šåœ¨è°ƒç”¨çš„Activityæ—¶åº”è¯¥super.onCreate(savedInstanceState);ï¼Œè¿˜æœ‰setBackUpçš„å±æ€§ï¼Œå»ºè®®ä¸è¦åœ¨ä½ç‰ˆæœ¬ç”¨é«˜ç‰ˆæœ¬çš„å†…å®¹ã€‚
 		
 		
-## ¾ßÌå¹¦ÄÜµÄÊ¹ÓÃ¿ÉÒÔ²Î¿¼releaseµÄÈÕÖ¾ÎÄ¼ş£¬»òÕßÔÚÒÔºó»áÔÚ¸öÈËÖªºõ×öÒ»Ğ©½²½â¡£
+## å…·ä½“åŠŸèƒ½çš„ä½¿ç”¨å¯ä»¥å‚è€ƒreleaseçš„æ—¥å¿—æ–‡ä»¶ï¼Œæˆ–è€…åœ¨ä»¥åä¼šåœ¨ä¸ªäººçŸ¥ä¹åšä¸€äº›è®²è§£ã€‚
 
 
-[An¿ò¼Ü×¢½â²Î¿¼](https://raw.githubusercontent.com/qydq/an-aw-base/master/app/src/main/java/com/qyddai/an_aw_base/AnotationActivity.java)
+[Anæ¡†æ¶æ³¨è§£å‚è€ƒ](https://raw.githubusercontent.com/qydq/an-aw-base/master/app/src/main/java/com/qyddai/an_aw_base/AnotationActivity.java)
 
-		//ÒÔÏÂÎªheadview_standard.xml
+		//ä»¥ä¸‹ä¸ºheadview_standard.xml
 		@ViewInject(R.id.anLlBack)
 		private LinearLayout anLlBack;
 		@ViewInject(R.id.anTvBack)
@@ -476,7 +476,7 @@ http://drakeet.me/android-studio
 		@ViewInject(R.id.anIvRight)
 		private ImageView anIvRight;
 
-		//·Ö¸îÏß0000---complex
+		//åˆ†å‰²çº¿0000---complex
 		@ViewInject(R.id.anLlRRight)
 		private LinearLayout anLlRRight;
 		@ViewInject(R.id.anTvRRight)
@@ -503,227 +503,222 @@ http://drakeet.me/android-studio
 
 `compile 'com.github.qydq:an-aw-base:0.1.4'`
 
-an-aw-base¸üĞÂÈÕÖ¾£¬»áÔÚÕâÀïÃæ×öÒ»´Î¼ÍÂ¼£¬µ±Ç°an-aw-base
+an-aw-baseæ›´æ–°æ—¥å¿—ï¼Œä¼šåœ¨è¿™é‡Œé¢åšä¸€æ¬¡çºªå½•ï¼Œå½“å‰an-aw-base
 
-SlideBackActiivity,ĞŞ¸ÄÎªSwipeBackActivity
+SlideBackActiivity,ä¿®æ”¹ä¸ºSwipeBackActivity
 
-SlideCloseActivity,ĞŞ¸ÄÎªSwipeCloseActivity
+SlideCloseActivity,ä¿®æ”¹ä¸ºSwipeCloseActivity
 
-Ìí¼ÓSwipeFinishActivity£¨Í¨ÓÃ¡££©
+æ·»åŠ SwipeFinishActivityï¼ˆé€šç”¨ã€‚ï¼‰
 WIoScrollView,
 
-WSlideFrameLayout,ĞŞ¸ÄÎªWSwipeCloseFrameLayout
+WSlideFrameLayout,ä¿®æ”¹ä¸ºWSwipeCloseFrameLayout
 
-Ìí¼ÓWSwipeFinishFrameLayout
+æ·»åŠ WSwipeFinishFrameLayout
 
-yy_drawable_slidingclose_shadowĞŞ¸ÄÎªyy_drawable_swipe_shadow.xml
+yy_drawable_slidingclose_shadowä¿®æ”¹ä¸ºyy_drawable_swipe_shadow.xml
 
-ĞŞ¸ÄÎªSwipeCloseActivity¼Ì³ĞBaseActivity£¬ĞŞ¸´bug.¿ÉÓÃÆäËüÊôĞÔ¡£µ«ÉèÖÃ¼ä¸ô¡£
+ä¿®æ”¹ä¸ºSwipeCloseActivityç»§æ‰¿BaseActivityï¼Œä¿®å¤bug.å¯ç”¨å…¶å®ƒå±æ€§ã€‚ä½†è®¾ç½®é—´éš”ã€‚
 
-Ìí¼ÓÒ»¸öbase_swipe_finish Layout²¼¾Ö¡£
+æ·»åŠ ä¸€ä¸ªbase_swipe_finish Layoutå¸ƒå±€ã€‚
 
-Íê³ÉSwipeCloseActivity£¬SwipeFinishActivityÊ¹ÓÃ²Î¿¼Àı×Ó£¬ÏêÏ¸¼ûapp£¬srcÄ¿Â¼¡£
+å®ŒæˆSwipeCloseActivityï¼ŒSwipeFinishActivityä½¿ç”¨å‚è€ƒä¾‹å­ï¼Œè¯¦ç»†è§appï¼Œsrcç›®å½•ã€‚
 
-SwipeBackActivity //Îªµ¥¶ÀÊ¹ÓÃ¡£²»ÄÜÊ¹ÓÃan¿ò¼ÜÆäËü¹¦ÄÜ¡£
+SwipeBackActivity //ä¸ºå•ç‹¬ä½¿ç”¨ã€‚ä¸èƒ½ä½¿ç”¨anæ¡†æ¶å…¶å®ƒåŠŸèƒ½ã€‚
 
-SwipeCloseActivity //¼¯³ÉbaseActivity¿ÉÒÔÊ¹ÓÃan¿ò¼ÜËùÓĞ¹¦ÄÜ¡££¨ÄÚ²¿¿ÉĞŞ¸ÄÎªSwipeFinishActivity£©
+SwipeCloseActivity //é›†æˆbaseActivityå¯ä»¥ä½¿ç”¨anæ¡†æ¶æ‰€æœ‰åŠŸèƒ½ã€‚ï¼ˆå†…éƒ¨å¯ä¿®æ”¹ä¸ºSwipeFinishActivityï¼‰
 
-SwipeFinishActivity //¼¯³ÉbaseActivity£¬¿ÉÒÔÊ¹ÓÃan¿ò¼ÜËùÓĞ¹¦ÄÜ¡££¨Í¨ÓÃ£¬ÍÆ¼öÊ¹ÓÃ¡££©
+SwipeFinishActivity //é›†æˆbaseActivityï¼Œå¯ä»¥ä½¿ç”¨anæ¡†æ¶æ‰€æœ‰åŠŸèƒ½ã€‚ï¼ˆé€šç”¨ï¼Œæ¨èä½¿ç”¨ã€‚ï¼‰
 
 ## 2017/01/06
 
 `compile 'com.github.qydq:an-aw-base:0.1.5'`
 
-£¨1£©ÍêÉÆ
+ï¼ˆ1ï¼‰å®Œå–„
 
-½â¾öÁËWIoScrollViewºÍListViewÇ¶Ì×Ê±»¬¶¯³åÍ»µÄ½â¾ö°ì·¨£¬[Ïê¼ûissue](https://github.com/qydq/an-aw-base/issues)¡£
+è§£å†³äº†WIoScrollViewå’ŒListViewåµŒå¥—æ—¶æ»‘åŠ¨å†²çªçš„è§£å†³åŠæ³•ï¼Œ[è¯¦è§issue](https://github.com/qydq/an-aw-base/issues)ã€‚
 
-ÍêÉÆWIosCrollViewÖĞsetListViewHeightBasedOnChildren·½·¨·ÀÖ¹listViewÖ»ÏÔÊ¾²¿·Ö£¬[Ïê¼ûAPIÖ¸µ¼²Î¿¼](https://github.com/qydq/an-aw-base/blob/master/an-base/ApiGuide.md)
+å®Œå–„WIosCrollViewä¸­setListViewHeightBasedOnChildrenæ–¹æ³•é˜²æ­¢listViewåªæ˜¾ç¤ºéƒ¨åˆ†ï¼Œ[è¯¦è§APIæŒ‡å¯¼å‚è€ƒ](https://github.com/qydq/an-aw-base/blob/master/an-base/ApiGuide.md)
 
-ÍêÉÆWIosCrollViewÊ¹ÓÃ²Î¿¼£¬¼ûapi£¬sst_coordinnatorlayout_wtiocrollview.xml ¡­ 
+å®Œå–„WIosCrollViewä½¿ç”¨å‚è€ƒï¼Œè§apiï¼Œsst_coordinnatorlayout_wtiocrollview.xml â€¦ 
 
-ÍêÉÆDataServiceÖĞÔö¼ÓÁËÑéÖ¤×Ö·û´®ÊÇ·ñºÏ·¨islegalInput£¬[Ïê¼ûAPIÖ¸µ¼²Î¿¼](https://github.com/qydq/an-aw-base/blob/master/an-base/ApiGuide.md)
+å®Œå–„DataServiceä¸­å¢åŠ äº†éªŒè¯å­—ç¬¦ä¸²æ˜¯å¦åˆæ³•islegalInputï¼Œ[è¯¦è§APIæŒ‡å¯¼å‚è€ƒ](https://github.com/qydq/an-aw-base/blob/master/an-base/ApiGuide.md)
 
-¸üĞÂÁËApiGuideÖĞÖ¸µ¼ºÍREADME¡£
+æ›´æ–°äº†ApiGuideä¸­æŒ‡å¯¼å’ŒREADMEã€‚
 
-ĞÂÔö²¼¾ÖÎÄ¼ş¼ÓÈëÁËlayout-v21£¬Ö§³Öandroid¸ß°æ±¾headÇĞ»»µÄĞ§¹û,[Ïê¼ûAPIÖ¸µ¼²Î¿¼](https://github.com/qydq/an-aw-base/blob/master/an-base/ApiGuide.md)
+æ–°å¢å¸ƒå±€æ–‡ä»¶åŠ å…¥äº†layout-v21ï¼Œæ”¯æŒandroidé«˜ç‰ˆæœ¬headåˆ‡æ¢çš„æ•ˆæœ,[è¯¦è§APIæŒ‡å¯¼å‚è€ƒ](https://github.com/qydq/an-aw-base/blob/master/an-base/ApiGuide.md)
 
-ÍêÉÆÁËDUtilsBitmap¹¤¾ßÀà£¬Ö¼ÔÚ½â¾öandroidÊÖ»úOOMµÄ´¦Àí·½·¨£¬[Ïê¼ûAPIÖ¸µ¼²Î¿¼](https://github.com/qydq/an-aw-base/blob/master/an-base/ApiGuide.md)
+å®Œå–„äº†DUtilsBitmapå·¥å…·ç±»ï¼Œæ—¨åœ¨è§£å†³androidæ‰‹æœºOOMçš„å¤„ç†æ–¹æ³•ï¼Œ[è¯¦è§APIæŒ‡å¯¼å‚è€ƒ](https://github.com/qydq/an-aw-base/blob/master/an-base/ApiGuide.md)
 
-£¨2£©Ôö¼Ó
+ï¼ˆ2ï¼‰å¢åŠ 
 
-ĞÂÔöCaptureHelperÅÄÕÕ¸¨Öú¹¤¾ßÀà£¬ÏòÏÂÖ§³Ö»ªÎª£¬Ğ¡Ã×µÍ°æ±¾¼æÈİĞÔÎÊÌâ[samples²Î¿¼SlidingFinishDetailActivity](https://raw.githubusercontent.com/qydq/an-aw-base/master/app/src/main/java/com/qyddai/an_aw_base/SlidingFinishDetailActivity.java)¡£
+æ–°å¢CaptureHelperæ‹ç…§è¾…åŠ©å·¥å…·ç±»ï¼Œå‘ä¸‹æ”¯æŒåä¸ºï¼Œå°ç±³ä½ç‰ˆæœ¬å…¼å®¹æ€§é—®é¢˜[sampleså‚è€ƒSlidingFinishDetailActivity](https://raw.githubusercontent.com/qydq/an-aw-base/master/app/src/main/java/com/qyddai/an_aw_base/SlidingFinishDetailActivity.java)ã€‚
 
-ListView ,RecycleviewµÄ´ı¸üĞÂ×´Ì¬£¬mdµÄĞÂÌØĞÔ¼´½«ÔÚÏÂÒ»¸ö°æ±¾ÌåÏÖ³öÀ´¡££¨´úÂëÒÑÉÏ´«£©
+ListView ,Recycleviewçš„å¾…æ›´æ–°çŠ¶æ€ï¼Œmdçš„æ–°ç‰¹æ€§å³å°†åœ¨ä¸‹ä¸€ä¸ªç‰ˆæœ¬ä½“ç°å‡ºæ¥ã€‚ï¼ˆä»£ç å·²ä¸Šä¼ ï¼‰
 
 
-`compile 'com.github.qydq:an-aw-base:0.1.5'`Ó¦¸ÃÓëmaven-jcenter¶ÔÓ¦ÆğÀ´ÁË¡£
+`compile 'com.github.qydq:an-aw-base:0.1.5'`åº”è¯¥ä¸maven-jcenterå¯¹åº”èµ·æ¥äº†ã€‚
 
 
 ## 2017/01/12
 
 `compile 'com.github.qydq:an-aw-base:0.2'`
 
-£¨1£©ÍêÉÆ
+ï¼ˆ1ï¼‰å®Œå–„
 
-È¥³ı¿ò¼ÜÎŞÓÃµÄ´úÂë£¬±¾×Å½âñîµÄÔ­Ôò¼õÉÙ´úÂëÌå»ı¡£
+å»é™¤æ¡†æ¶æ— ç”¨çš„ä»£ç ï¼Œæœ¬ç€è§£è€¦çš„åŸåˆ™å‡å°‘ä»£ç ä½“ç§¯ã€‚
 
-ÍêÉÆan¿ò¼Üsample¡£
+å®Œå–„anæ¡†æ¶sampleã€‚
 
-ÍêÉÆswipelayouÏµÁĞ¡£
+å®Œå–„swipelayouç³»åˆ—ã€‚
 
-£¨2£©Ôö¼Ó
+ï¼ˆ2ï¼‰å¢åŠ 
 
-ĞÂÔö2+1£¨ÉÏ¸ö°æ±¾µÄswipelayout°üÏµÁĞ£©=3ÖÖÀà±ğµÄrecyclerview£»
+æ–°å¢2+1ï¼ˆä¸Šä¸ªç‰ˆæœ¬çš„swipelayoutåŒ…ç³»åˆ—ï¼‰=3ç§ç±»åˆ«çš„recyclerviewï¼›
 
-Ö§³ÖÏÂÀ­Ë¢ĞÂ£¬×Ô¶¯¼ÓÔØ¸ü¶à£¬¶¯»­ÌØĞÔµÄÁĞ±íË¢ĞÂ¿Ø¼ş²¼¾Ö£¬´øÄãÊµÏÖÍêÃÀ¶¯»­ÌØĞ§£¬·ÂIOSµÄ²à»¬É¾³ı£¨ÉÏ¸ö°æ±¾Ò²ÓĞ£©¡£
+æ”¯æŒä¸‹æ‹‰åˆ·æ–°ï¼Œè‡ªåŠ¨åŠ è½½æ›´å¤šï¼ŒåŠ¨ç”»ç‰¹æ€§çš„åˆ—è¡¨åˆ·æ–°æ§ä»¶å¸ƒå±€ï¼Œå¸¦ä½ å®ç°å®Œç¾åŠ¨ç”»ç‰¹æ•ˆï¼Œä»¿IOSçš„ä¾§æ»‘åˆ é™¤ï¼ˆä¸Šä¸ªç‰ˆæœ¬ä¹Ÿæœ‰ï¼‰ã€‚
 
-sampleÖ÷Òª²Î¿¼£¬refreshlayout,swipelayout,recyclerview°üÏÂÃæ¡£
+sampleä¸»è¦å‚è€ƒï¼Œrefreshlayout,swipelayout,recyclerviewåŒ…ä¸‹é¢ã€‚
 
-tips:Õë¶ÔrecyclerviewÌí¼ÓÁËÈçÏÂ¸¨Öú£¬ListBaseAdapter,MultiAdapter,MultiItemEntity,SuperViewHolder¡£
+tips:é’ˆå¯¹recyclerviewæ·»åŠ äº†å¦‚ä¸‹è¾…åŠ©ï¼ŒListBaseAdapter,MultiAdapter,MultiItemEntity,SuperViewHolderã€‚
 
-¾ßÌåµÄÊ¹ÓÃ»áÔÚºóÃæ¸üĞÂÁ½Æª²©¿Í¡£
+å…·ä½“çš„ä½¿ç”¨ä¼šåœ¨åé¢æ›´æ–°ä¸¤ç¯‡åšå®¢ã€‚
 
 ## 2017/02/20
 
->ÎÒÖ»ÄÜ°ÑÇ×Ç×Ğ¡ÔÂĞ´½ø´úÂëÀïÃæ¡£ÎÒÏëËı£¬ºÜÏëºÜÏë¡£
+>æˆ‘åªèƒ½æŠŠäº²äº²å°æœˆå†™è¿›ä»£ç é‡Œé¢ã€‚æˆ‘æƒ³å¥¹ï¼Œå¾ˆæƒ³å¾ˆæƒ³ã€‚
 
 `compile 'com.github.qydq:an-aw-base:0.2.1'`
 
-£¨1£©ÍêÉÆ
+ï¼ˆ1ï¼‰å®Œå–„
 
-ÍêÉÆan¿ò¼Üsample¡£LRecyclerView fix bug£¬ÓÅ»¯¡£
+å®Œå–„anæ¡†æ¶sampleã€‚LRecyclerView fix bugï¼Œä¼˜åŒ–ã€‚
 
 
-£¨2£©Ôö¼Ó
+ï¼ˆ2ï¼‰å¢åŠ 
 
-ÎŞÔö¼ÓÄÚÈİ
+æ— å¢åŠ å†…å®¹
 
 ## 2017/02/22
 
->ÀÏÆÅ Äã±ğÀë¿ªÎÒÀ²£¬ÎÒÏëÄã£¬ÇóÄãÀ²¡£
+>è€å©† ä½ åˆ«ç¦»å¼€æˆ‘å•¦ï¼Œæˆ‘æƒ³ä½ ï¼Œæ±‚ä½ å•¦ã€‚
 
 `compile 'com.github.qydq:an-aw-base:0.2.2'`
 
-£¨1£©ÍêÉÆ
+ï¼ˆ1ï¼‰å®Œå–„
 
-ÍêÉÆan¿ò¼Üsample¡£LRecyclerView fix bug£¬ÓÅ»¯´úÂë£¬ÈçÊôĞÔÊ²Ã´µÄ£¬Íê³ÉÑ¡Ôñ¿Ø¼şµÄdemo¡£¹ØÓÚÎÒÃÇ£¬¼ì²é¸üĞÂ¡£
-
-
-£¨2£©Ôö¼Ó
-
-Ôö¼ÓandroidÖĞ¿ÉÄÜÓÃµ½µÄ¿Ø¼ş£¬Ìá¹©ÁËÁ½ÖÖÑ¡ÔñÆ÷¡£
+å®Œå–„anæ¡†æ¶sampleã€‚LRecyclerView fix bugï¼Œä¼˜åŒ–ä»£ç ï¼Œå¦‚å±æ€§ä»€ä¹ˆçš„ï¼Œå®Œæˆé€‰æ‹©æ§ä»¶çš„demoã€‚å…³äºæˆ‘ä»¬ï¼Œæ£€æŸ¥æ›´æ–°ã€‚
 
 
-ÖØÒªÏÂÒ»²½¹¤×÷ÄÚÈİ£¬×¼±¸ÔÚÕâ¸öÏîÄ¿µÄ»ù´¡ÉÏ£¨ÎªÇ×°®µÄ×ÏÏ¼¹«Ö÷£¬Ğ¡ÔÂÍ¬Ñ§£©¿ª·¢Ò»¿î¼´Ê±Í¨ĞÅÈí¼ş£¬Ï£ÍûÀÏÆÅÄÜ¹»Ï²»¶£¬Ò²Ï£ÍûËıÄÜ¹»»ØÀ´¡£
+ï¼ˆ2ï¼‰å¢åŠ 
 
-Ö÷ÒªÊµÏÖµÄ¹¦ÄÜÓ¦¸Ã¾ß±¸
-
-1.»ù±¾µÄÁÄÌì¹¦ÄÜ£¬·şÎñÆ÷£¬£¨²ÉÓÃ¹«Ë¾£¬ĞèÒª¼¼ÇÉ£©¡£
-
-2.°æ±¾¸üĞÂ¹¦ÄÜ¡£
-
-3.ÍÆËÍµÄ¹¦ÄÜ¡£
+å¢åŠ androidä¸­å¯èƒ½ç”¨åˆ°çš„æ§ä»¶ï¼Œæä¾›äº†ä¸¤ç§é€‰æ‹©å™¨ã€‚
 
 
-### ÕÅÂ¶ÔÂ  ÕÅÂ¶ÔÂ ÕÅÂ¶ÔÂ  
+é‡è¦ä¸‹ä¸€æ­¥å·¥ä½œå†…å®¹ï¼Œå‡†å¤‡åœ¨è¿™ä¸ªé¡¹ç›®çš„åŸºç¡€ä¸Šï¼ˆä¸ºäº²çˆ±çš„ç´«éœå…¬ä¸»ï¼Œå°æœˆåŒå­¦ï¼‰å¼€å‘ä¸€æ¬¾å³æ—¶é€šä¿¡è½¯ä»¶ï¼Œå¸Œæœ›è€å©†èƒ½å¤Ÿå–œæ¬¢ï¼Œä¹Ÿå¸Œæœ›å¥¹èƒ½å¤Ÿå›æ¥ã€‚
+
+ä¸»è¦å®ç°çš„åŠŸèƒ½åº”è¯¥å…·å¤‡
+
+1.åŸºæœ¬çš„èŠå¤©åŠŸèƒ½ï¼ŒæœåŠ¡å™¨ï¼Œï¼ˆé‡‡ç”¨å…¬å¸ï¼Œéœ€è¦æŠ€å·§ï¼‰ã€‚
+
+2.ç‰ˆæœ¬æ›´æ–°åŠŸèƒ½ã€‚
+
+3.æ¨é€çš„åŠŸèƒ½ã€‚
 
 
-## 2017/03/10  09£º50
+## 2017/03/10  09ï¼š50
 
->¶¼Ëµ×Ö¼£ÀïÃæ¿î¿îÉîÇé£¬¶øÎÒÈ´°Ñ´úÂëµ±×ö×Ö£¬Äî³ÉÊ«¾ä£¬Ïë×ÅËı¡£
+>éƒ½è¯´å­—è¿¹é‡Œé¢æ¬¾æ¬¾æ·±æƒ…ï¼Œè€Œæˆ‘å´æŠŠä»£ç å½“åšå­—ï¼Œå¿µæˆè¯—å¥ï¼Œæƒ³ç€å¥¹ã€‚
 
 `compile 'com.github.qydq:an-aw-base:0.2.4'`
 
-build.gradle¸üĞÂ·¢²¼ÖÁjitpackºÍjcenterÖĞĞÄ¡£
+build.gradleæ›´æ–°å‘å¸ƒè‡³jitpackå’Œjcenterä¸­å¿ƒã€‚
 compile 'cn.android.sunst:an-base:2.0.1'
 
-¸üĞÂËµÃ÷£º
+æ›´æ–°è¯´æ˜ï¼š
 
 compile 'com.github.qydq:an-aw-base:0.2.4'
-¶ÔÓ¦ sunst:an-base:2.0.1
-Ìá¹©ÁËÒ»×éLuueWeightView¿Ø¼ş£¨À´Ô´ÓÚan-maven-base¿ò¼Ü£©
-Ìá¹©ÁË¸üĞÂÈí¼şµÄ²Ù×÷¡£
-ĞŞ¸´ÁËÖ®Ç°´æÔÚµÄbug¡£
-Ôö¼ÓÁËµÚÒ»¸öActivityÀà £¬Í¼Æ¬µÄ·Å´óËõĞ¡¡£
-ÓÅ»¯´úÂë½á¹¹¡£
+å¯¹åº” sunst:an-base:2.0.1
+æä¾›äº†ä¸€ç»„LuueWeightViewæ§ä»¶ï¼ˆæ¥æºäºan-maven-baseæ¡†æ¶ï¼‰
+æä¾›äº†æ›´æ–°è½¯ä»¶çš„æ“ä½œã€‚
+ä¿®å¤äº†ä¹‹å‰å­˜åœ¨çš„bugã€‚
+å¢åŠ äº†ç¬¬ä¸€ä¸ªActivityç±» ï¼Œå›¾ç‰‡çš„æ”¾å¤§ç¼©å°ã€‚
+ä¼˜åŒ–ä»£ç ç»“æ„ã€‚
 
-## 2017/03/21  17£º48
+## 2017/03/21  17ï¼š48
 
->½ñÌìÊÇĞ¡ÔÂÀë¿ªµÄµÚ67ÌìÁË£¬ÎÒÒ»Éú²¢ÎŞ¶à´ó±§¸º£¬Î¨¸´ÇóËıÄÜÔçÈÕ»ØĞÄ×ªÒâ£¬ÎÒÈôÔÙ¸ºËı¶¨Ìì´òÀ×Åü²»µÃºÃËÀ¡£
+>ä»Šå¤©æ˜¯å°æœˆç¦»å¼€çš„ç¬¬67å¤©äº†ï¼Œæˆ‘ä¸€ç”Ÿå¹¶æ— å¤šå¤§æŠ±è´Ÿï¼Œå”¯å¤æ±‚å¥¹èƒ½æ—©æ—¥å›å¿ƒè½¬æ„ï¼Œæˆ‘è‹¥å†è´Ÿå¥¹å®šå¤©æ‰“é›·åŠˆä¸å¾—å¥½æ­»ã€‚
 
-×îĞÂ±àÒë°æ±¾
+æœ€æ–°ç¼–è¯‘ç‰ˆæœ¬
 
 `compile 'com.github.qydq:an-aw-base:0.2.5'`
 
-¸üĞÂËµÃ÷£º
+æ›´æ–°è¯´æ˜ï¼š
 
-²Ù×÷sdka¿¨µÄ¹¤¾ßÀàfileUtils,
+æ“ä½œsdkaå¡çš„å·¥å…·ç±»fileUtils,
 SimpleDecoration
-ĞŞ¸´dutilsdialogµÄbug
-netbroadcastReceiverutilsÌá¹©ÁËÍøÂçµÄ¼àÌı
-Ôö¼Ówrectangleview
+ä¿®å¤dutilsdialogçš„bug
+netbroadcastReceiverutilsæä¾›äº†ç½‘ç»œçš„ç›‘å¬
+å¢åŠ wrectangleview
 wzoomimageview
-ĞŞ¸Äpowerimageview
-Ìí¼ÓÁËÒ»Ğ©×ÊÔ´ÊôĞÔ
+ä¿®æ”¹powerimageview
+æ·»åŠ äº†ä¸€äº›èµ„æºå±æ€§
 
---ÍêÉÆÁËDScrennUtils
+--å®Œå–„äº†DScrennUtils
 DUtilsStorage
 UpdataManager
 
 
-ÎªĞ¡ÔÂÖÆ×÷µÄapk,ÍâÁ´µÄĞÎÊ½·Åµ½ÕâÀï£¨ÒÑ¼ÓÃÜ£©,²¢ÇÒÆ¾½èËùÑ§×öÁËÒ»¸ö¼òµ¥µÄÏÂÔØÍøÒ³.
+ä¸ºå°æœˆåˆ¶ä½œçš„apk,å¤–é“¾çš„å½¢å¼æ”¾åˆ°è¿™é‡Œï¼ˆå·²åŠ å¯†ï¼‰,å¹¶ä¸”å‡­å€Ÿæ‰€å­¦åšäº†ä¸€ä¸ªç®€å•çš„ä¸‹è½½ç½‘é¡µ.
 
-[ÏÂÔØµØÖ·1£ºzhangluyue.apk](https://qydq.github.io/shiluohua/zhangluyue.html)
+[ä¸‹è½½åœ°å€1ï¼šzhangluyue.apk](https://qydq.github.io/shiluohua/zhangluyue.html)
 
-[ÏÂÔØµØÖ·2£ºzhangluyue.apk](https://github.com/qydq/an-aw-base/blob/master/app/zhangluyue_download.md)
+[ä¸‹è½½åœ°å€2ï¼šzhangluyue.apk](https://github.com/qydq/an-aw-base/blob/master/app/zhangluyue_download.md)
 
-[androidÊÖ»ú¿ÉÖ±½Óµã»÷ÏÂÔØ](https://github.com/qydq/an-aw-base/raw/master/app/zhangluyue_jiami.apk)
+[androidæ‰‹æœºå¯ç›´æ¥ç‚¹å‡»ä¸‹è½½](https://github.com/qydq/an-aw-base/raw/master/app/zhangluyue_jiami.apk)
 
 ## 2017/03/23  16:07:57
 
->½ñÌìÊÇĞ¡ÔÂÀë¿ªµÄµÚ70ÌìÁË£¬ÔÚQQ¿Õ¼äËµ¹ıÔÙ¸øÒ»ÖÜµÄÊ±¼ä£¬Õâ¸öµç»°ÊÇÒ»¶¨»á´òµÄ£¬µ«²»ÖªµÀÊ²Ã´Ê±ºòÎÒÓĞÓÂÆø´ò¸øÄã£¬»òÊÇÄãÄÇÒ»Ìì»áÖ÷¶¯´ò¸øÎÒ¡£ÎÒÕæµÄ±»ÉËµôÁË£¬ÒÔÕâÖÖ·½Ê½£¬Ğ¡ÔÂÄãÕæµÄÂúÒâÁËÂğ£¿ÎÒÖªµÀÖªµÀÎªºÎÎªºÎ£¬¾ÍÒòÎªÎÒ¶¯ÊÖÁËÂğ¡­¡­¡£
-
-×îĞÂ±àÒë°æ±¾
+æœ€æ–°ç¼–è¯‘ç‰ˆæœ¬
 
 `compile 'com.github.qydq:an-aw-base:0.2.6'`
 
-build.gradle¸üĞÂ·¢²¼ÖÁjitpackºÍjcenterÖĞĞÄ¡£
+build.gradleæ›´æ–°å‘å¸ƒè‡³jitpackå’Œjcenterä¸­å¿ƒã€‚
 
 compile 'cn.android.sunst:an-base:2.0.2'
 
-¸üĞÂËµÃ÷£º
+æ›´æ–°è¯´æ˜ï¼š
 
-Õâ´ÎÉı¼¶ÊÇĞ¡·ù¶ÈµÄÉı¼¶£¬Ö÷ÒªÌí¼ÓParallaxActivity£¬ÕûºÏTheme,¸üĞÂapp-release.apk,ĞŞ¸´bugÎÊÌâ 
+è¿™æ¬¡å‡çº§æ˜¯å°å¹…åº¦çš„å‡çº§ï¼Œä¸»è¦æ·»åŠ ParallaxActivityï¼Œæ•´åˆTheme,æ›´æ–°app-release.apk,ä¿®å¤bugé—®é¢˜ 
 
-È»ºóÊÇÉÏÎçÔçĞ©Ê±ºò½èÖúan-aw-baseÍê³ÉÁË[an-aw-zxing ¶şÎ¬Âë¿ò¼Ü](https://github.com/qydq/an-aw-zxing)¡£
+ç„¶åæ˜¯ä¸Šåˆæ—©äº›æ—¶å€™å€ŸåŠ©an-aw-baseå®Œæˆäº†[an-aw-zxing äºŒç»´ç æ¡†æ¶](https://github.com/qydq/an-aw-zxing)ã€‚
 
-## 2017/04/22  2017Äê4ÔÂ22ÈÕ15:28:55
+## 2017/04/22  2017å¹´4æœˆ22æ—¥15:28:55
 
->½ñÌìÊÇÕÅĞ¡ÔÂÀë¿ªµÄµÚ100Ìì£¬3ÔÂ28ºÅ¸øÄã´òÁËµÚÒ»´Îµç»°£¬ÎÒ¸øÄã³ªÁËÒ»Ê×ºÃÌıµÄ¸è£¨¶Ô£¬ºÜ½ÃÇé£©£¬À´×Ô17ËêµÄÃÀÉÙÅ®<Å¯Å¯>-Áº¾²Èã£¬ÎÒ¸æËßÄãËµ£¬¡±°®Ò»¸öÈË£¬Ï£ÍûËı¹ı¸üºÃ¡°£¬ÔÚÖ»ÓĞÄãÒ»¸öÈËµÄQQºÅÉÏ·¢¶¯Ì¬Ëµ£¬¡±±ğÍü¼ÇÎÒ¡°
+>ä»Šå¤©æ˜¯XXXç¦»å¼€çš„ç¬¬100å¤©ï¼Œ3æœˆ28å·ç»™XXXæ‰“äº†ç¬¬ä¸€æ¬¡ç”µè¯ï¼Œ
 
-×îĞÂ±àÒë°æ±¾
+æœ€æ–°ç¼–è¯‘ç‰ˆæœ¬
 
 `compile 'com.github.qydq:an-aw-base:0.3.2'`
 
-build.gradle¸üĞÂ·¢²¼ÖÁjitpackºÍjcenterÖĞĞÄ¡£
+build.gradleæ›´æ–°å‘å¸ƒè‡³jitpackå’Œjcenterä¸­å¿ƒã€‚
 
 compile 'cn.android.sunst:an-base:2.1'
 
-¸üĞÂËµÃ÷£º
+æ›´æ–°è¯´æ˜ï¼š
 
-Ö÷ÒªÖØµã½â¾öandroid6.0ÒÔÉÏĞèÒª¶¯Ì¬ÉêÇëÈ¨ÏŞµÄÒıÆğµÄSercurity Exception¡£
+ä¸»è¦é‡ç‚¹è§£å†³android6.0ä»¥ä¸Šéœ€è¦åŠ¨æ€ç”³è¯·æƒé™çš„å¼•èµ·çš„Sercurity Exceptionã€‚
 
-Ôö¼ÓÁËÊÊÅäandroid6.0ÒÔÉÏµÄÈ¨ÏŞ»úÖÆ£¨an¿ò¼ÜÌá¹©ÁËPermissionUtils£©
+å¢åŠ äº†é€‚é…android6.0ä»¥ä¸Šçš„æƒé™æœºåˆ¶ï¼ˆanæ¡†æ¶æä¾›äº†PermissionUtilsï¼‰
 
-ÖØµã¶ÔCaptureHelper ĞŞ¸´£¬¿É²Î¿¼[Android7.0(Android N)ÊÊÅä½Ì³Ì£¬ÅÄÕÕ-Ñ¡ÔñÏµÍ³Ïà²á](https://zhuanlan.zhihu.com/p/26266290)
+é‡ç‚¹å¯¹CaptureHelper ä¿®å¤ï¼Œå¯å‚è€ƒ[Android7.0(Android N)é€‚é…æ•™ç¨‹ï¼Œæ‹ç…§-é€‰æ‹©ç³»ç»Ÿç›¸å†Œ](https://zhuanlan.zhihu.com/p/26266290)
 
-¶ÔLuue ºÍ Y ÏµÁĞÃüÃû¹æ·¶µÄÕûºÏ¡£[ÃüÃû¹æ·¶×îĞÂ²Î¿¼](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/assets/an-aw-base%E6%9B%B4%E6%96%B0%E8%AF%B4%E6%98%8E.mk)<br>
+å¯¹Luue å’Œ Y ç³»åˆ—å‘½åè§„èŒƒçš„æ•´åˆã€‚[å‘½åè§„èŒƒæœ€æ–°å‚è€ƒ](https://github.com/qydq/an-aw-base/blob/master/an-base/src/main/assets/an-aw-base%E6%9B%B4%E6%96%B0%E8%AF%B4%E6%98%8E.mk)<br>
 
-Íê³ÉÁË²¿·Ösamples demoµÄÌá¹©¡£
+å®Œæˆäº†éƒ¨åˆ†samples demoçš„æä¾›ã€‚
 
-FileUtilsÖĞÔö¼Ó¶Ô»º´æ´óĞ¡µÄÅĞ¶Ï£¬Çå³ıµÈÄÚÈİ¡£
+FileUtilsä¸­å¢åŠ å¯¹ç¼“å­˜å¤§å°çš„åˆ¤æ–­ï¼Œæ¸…é™¤ç­‰å†…å®¹ã€‚
 
-¿¼ÂÇÏÂ´ÎÊÇ·ñÓ¦¸ÃÉı¼¶zhangluyue.apk-ÎÄ¼şÒÑ¼ÓÃÜ Èí¼ş£¨¹À¼ÆÊÇÃ»Ê±¼äÁË£©
+è€ƒè™‘ä¸‹æ¬¡æ˜¯å¦åº”è¯¥å‡çº§zhangluyue.apk-æ–‡ä»¶å·²åŠ å¯† è½¯ä»¶ï¼ˆä¼°è®¡æ˜¯æ²¡æ—¶é—´äº†ï¼‰
 
-×¼±¸·¢²¼an-aw-base0.3.2   ³É¹¦¶ÔÓ¦ jcenter compile 'cn.android.sunst:an-base:2.1'
+å‡†å¤‡å‘å¸ƒan-aw-base0.3.2   æˆåŠŸå¯¹åº” jcenter compile 'cn.android.sunst:an-base:2.1'
